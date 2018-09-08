@@ -15,8 +15,9 @@ import {
   faUser,
   faWrench,
   faUniversity,
-  faEnvelope,
-  faPhone
+  faGlobe,
+  faAdjust,
+  faUniversalAccess
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -26,8 +27,9 @@ library.add(
   faUser,
   faUniversity,
   faWrench,
-  faEnvelope,
-  faPhone
+  faGlobe,
+  faAdjust,
+  faUniversalAccess
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));

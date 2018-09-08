@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Card from "./Card";
+import { format } from "date-fns";
+import pt from "date-fns/locale/pt";
 class Noticias extends Component {
   state = {};
   constructor() {
@@ -9,7 +11,10 @@ class Noticias extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:8080/api/contents?type=Noticia&count=4")
+    fetch(
+      "http://localhost:8080/api/contents?type=Noticia&count=" +
+        this.props.quantidade
+    )
       .then(recebidoJson => {
         return recebidoJson.json();
       })
@@ -19,26 +24,31 @@ class Noticias extends Component {
   }
   render() {
     return (
-      <div className="col col-lg-8 pr-4">
-        <div className="d-flex justify-content-between mb-3">
-          <h4>Notícias</h4>
-          <button type="button" className="btn btn-outline-info">
-            Ver todas as notícias
-          </button>
-        </div>
-        <div className="card-columns" style={{ columnCount: 2 }}>
-          {this.state.noticias.map(noticia => (
-            <Card
-              key={noticia.titulo}
-              titulo={noticia.titulo}
-              subtitulo={noticia.subtitulo}
-              timestamp={noticia.timestamp}
-              imagem={noticia.imagem}
-              imagem_descricao={noticia.imagem_descricao}
-            />
-          ))}
-        </div>
+      <div
+        className="card-columns"
+        style={{ columnCount: this.props.quantidade_por_linha }}
+      >
+        {this.state.noticias.map(noticia => (
+          <Card
+            key={noticia.titulo}
+            titulo={noticia.titulo.substring(0, 100).concat("...")}
+            subtitulo={noticia.subtitulo.substring(0, 100).concat("...")}
+            rodape={this.FormatarData(noticia)}
+            link={"/noticia/" + noticia.id}
+            imagem={noticia.imagem}
+            imagem_descricao={noticia.imagem_descricao}
+          />
+        ))}
       </div>
+    );
+  }
+
+  FormatarData(noticia) {
+    return (
+      "Postado em: " +
+      format(new Date(noticia.timestamp), "dddd, DD/MM/YYYY", {
+        locale: pt
+      })
     );
   }
 }

@@ -1,0 +1,26 @@
+body {
+  padding-top: 80px;
+}
+@media (max-width: 600px) {
+}
+@media (min-width: 600px) {
+  .navbar {
+    max-height: 80px;
+    transition: max-height 0.25s ease-in;
+  }
+  .small {
+    max-height: 50px;
+    transition: max-height 0.25s ease-in;
+  }
+
+  .small svg {
+    display: none !important;
+  }
+
+  .small h5 {
+    display: none;
+  }
+  .small small {
+    display: none;
+  }
+}

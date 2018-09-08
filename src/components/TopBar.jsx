@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LogoDC from "../images/logos/logo_DC.png";
+import { Link } from "react-router-dom";
 const Menus = [
   {
     Titulo: "Ensino",
@@ -34,15 +35,32 @@ const Menus = [
 ];
 
 class TopBar extends Component {
+  state = { small: false };
+  constructor() {
+    super();
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+  componentWillMount() {
+    // When this component mounts, begin listening for scroll changes
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    // If this component is unmounted, stop listening
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  handleScroll(e) {
+    if (!this.state.small && window.pageYOffset > 0) {
+      this.setState({ small: true });
+    } else if (window.pageYOffset === 0) {
+      this.setState({ small: false });
+    }
+  }
   render() {
     return (
-      <header>
+      <header className="fixed-top">
         {this.BarraTopo}
-        <nav
-          className="navbar navbar-expand-md navbar-light bg-white shadow menu-superior "
-          data-toggle="affix"
-          data-parent="body"
-        >
+        <nav id="menu" className={this.NavBarClasses()}>
           <div className="container">
             <a className="navbar-brand " href="/">
               <img
@@ -90,21 +108,28 @@ class TopBar extends Component {
     );
   }
 
+  NavBarClasses() {
+    return "navbar navbar-expand-md navbar-light bg-white border-bottom ".concat(
+      this.state.small ? "small" : ""
+    );
+  }
+
   renderMenuElement(menu) {
     return (
       <li key={menu.Titulo} className="nav-item dropdown text-center">
-        <a
+        <Link
           className="nav-link"
           data-toggle="dropdown"
           href="#"
           role="button"
           aria-haspopup="true"
           aria-expanded="false"
+          to={menu.Titulo}
         >
           <FontAwesomeIcon icon={menu.Icone} className="d-inline-block" />
 
           <div> {menu.Titulo}</div>
-        </a>
+        </Link>
         {this.renderSubMenu(menu)}
       </li>
     );
@@ -114,9 +139,9 @@ class TopBar extends Component {
     return menu.SubMenus ? (
       <div className="dropdown-menu">
         {menu.SubMenus.map(submenu => (
-          <a key={submenu} className="dropdown-item" href="#">
+          <Link key={submenu} to={submenu} className="dropdown-item" href="#">
             {submenu}
-          </a>
+          </Link>
         ))}
       </div>
     ) : (
@@ -126,16 +151,61 @@ class TopBar extends Component {
   BarraTopo = (
     <div className="text-light bg-dark container-fluid ">
       <div className="container">
-        <div className="d-flex">
-          <div className="mr-auto p-2" />
-          <div className="p-2 mr-2">
-            <FontAwesomeIcon icon="phone" className="mr-2" />
-            Telefone: (16) 3351-8232
-          </div>
-          <div className="p-2">
-            <FontAwesomeIcon icon="envelope" className="mr-2" />
-            Email: dc@ufscar.br
-          </div>
+        <div
+          className="d-flex justify-content-between align-items-center py-1"
+          id="acessibilidade"
+        >
+          <ul id="atalhos" className="list-inline mb-0 d-none d-lg-block">
+            <li className="list-inline-item ">
+              <a
+                className="badge badge-dark font-weight-normal"
+                href="#conteudo"
+              >
+                Ir para o conteúdo
+              </a>
+            </li>
+            <li className="list-inline-item ">
+              <a className="badge badge-dark font-weight-normal" href="#topo">
+                Ir para o topo
+              </a>
+            </li>
+
+            <li className="list-inline-item ">
+              <a className="badge badge-dark font-weight-normal" href="#rodape">
+                Ir para o rodapé
+              </a>
+            </li>
+          </ul>
+          <ul id="botoes" className="list-inline mb-0 ml-auto">
+            <li className="list-inline-item ">
+              <a
+                className="badge badge-dark font-weight-normal"
+                href="acessibilidade.html"
+              >
+                <FontAwesomeIcon icon="universal-access" className="mr-1" />
+                Acessibilidade
+              </a>
+            </li>
+            <li className="list-inline-item ">
+              <a
+                className="badge badge-dark font-weight-normal"
+                href="#"
+                id="bt_contraste"
+              >
+                <FontAwesomeIcon icon="adjust" className="mr-1" />
+                Alto contraste
+              </a>
+            </li>
+            <li className="list-inline-item ">
+              <a
+                className="badge badge-dark font-weight-normal"
+                href="mapa.html"
+              >
+                <FontAwesomeIcon icon="globe" className="mr-1" />
+                Mapa do site
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

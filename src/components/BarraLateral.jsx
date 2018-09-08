@@ -5,7 +5,7 @@ import LinksRapidos from "./LinksRapidos";
 class BarraLateral extends Component {
   render() {
     return (
-      <div className="col pl-3 border-left">
+      <div className="col-sm-4 pl-3 border-left">
         <Eventos />
         <LinksRapidos />
       </div>
