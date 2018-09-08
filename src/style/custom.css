@@ -1,8 +1,31 @@
 body {
   padding-top: 80px;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 676px) {
+  .card-columns {
+    column-count: 1 !important;
+  }
 }
+
+@media (min-width: 676px) {
+  .mais-noticias .card-columns {
+    column-count: 3 !important;
+  }
+  .card-columns {
+    column-count: 1 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .mais-noticias .card-columns {
+    column-count: 4 !important;
+  }
+  .card-columns {
+    column-count: 2 !important;
+  }
+}
+
 @media (min-width: 600px) {
   .navbar {
     max-height: 80px;

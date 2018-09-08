@@ -5,10 +5,19 @@ class MaisNoticias extends Component {
   render() {
     return (
       <main role="main" className="container mt-5">
-        <div className="row mt-5">
+        <div className="row mt-5 mais-noticias" id="conteudo">
           <div className="col">
             <ul class="nav nav-tabs mb-4">
-              <h2> Notícias</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="/">Início</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Todas as noticias
+                  </li>
+                </ol>
+              </nav>
               <li class="nav-item dropdown ml-auto">
                 <a
                   class="nav-link dropdown-toggle"

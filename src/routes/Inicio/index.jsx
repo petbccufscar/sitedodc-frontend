@@ -12,7 +12,7 @@ class Inicio extends Component {
         <BannerRotativo />
         <main role="main" className="container">
           <BotoesArea />
-          <div className="row" id="conteudo">
+          <div className="row inicio" id="conteudo">
             <div className="col">
               <div className="d-flex justify-content-between mb-3">
                 <h4>Notícias</h4>
