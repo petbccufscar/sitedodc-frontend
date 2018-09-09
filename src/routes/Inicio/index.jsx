@@ -22,7 +22,7 @@ class Inicio extends Component {
               </div>
               <Noticias quantidade_por_linha="2" quantidade="12" />
             </div>
-            <BarraLateral />
+            <BarraLateral> </BarraLateral>
           </div>
         </main>
       </React.Fragment>

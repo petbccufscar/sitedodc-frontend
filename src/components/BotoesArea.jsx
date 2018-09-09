@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class BotoesArea extends Component {
   render() {
@@ -10,24 +11,24 @@ class BotoesArea extends Component {
           id="botoes-area"
           aria-label="First group"
         >
-          <button
-            type="button"
-            className="btn btn-light py-4 px-md-5 pl-sm-5 border-right text-primary"
+          <Link
+            to="/area-aluno"
+            className="btn btn-light py-4 px-md-5 pl-sm-5 text-primary"
           >
             Área do aluno
-          </button>
-          <button
-            type="button"
+          </Link>
+          <Link
+            to="/area-visitante"
             className="btn btn-light py-4 px-md-4  text-primary"
           >
             Área do visitante
-          </button>
-          <button
-            type="button"
+          </Link>
+          <Link
+            to="/area-docente"
             className="btn btn-light py-4 px-md-5 pr-sm-5 text-primary"
           >
             Área do docente
-          </button>
+          </Link>
         </div>
       </div>
     );
