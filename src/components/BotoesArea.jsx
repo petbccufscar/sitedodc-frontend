@@ -7,12 +7,7 @@ class BotoesArea extends Component {
         <div
           className="btn-group mr-2 col-auto shadow p-0"
           role="group"
-          style={{
-            marginTop: "-60px",
-            borderRadius: "20px",
-            overflow: "hidden",
-            marginBottom: "70px"
-          }}
+          id="botoes-area"
           aria-label="First group"
         >
           <button

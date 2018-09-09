@@ -36,7 +36,7 @@ class BannerRotativo extends Component {
     return (
       <div
         id="carrossel"
-        className="carousel slide carousel-fade"
+        className="carousel slide carousel-fade d-none d-md-block"
         data-ride="carousel"
       >
         {GetCarrosseis(this.state.carrosseis)}

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Noticias from "../../components/Noticias";
+import Breadcrumb from "../../components/Breadcrumb";
 
 class MaisNoticias extends Component {
   render() {
@@ -8,16 +9,7 @@ class MaisNoticias extends Component {
         <div className="row mt-5 mais-noticias" id="conteudo">
           <div className="col">
             <ul class="nav nav-tabs mb-4">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-                    <a href="/">Início</a>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">
-                    Todas as noticias
-                  </li>
-                </ol>
-              </nav>
+              <Breadcrumb path={this.props.location.pathname} />
               <li class="nav-item dropdown ml-auto">
                 <a
                   class="nav-link dropdown-toggle"
