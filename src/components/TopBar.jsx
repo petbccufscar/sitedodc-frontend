@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LogoDC from "../images/logos/logo_DC.png";
 import { Link } from "react-router-dom";
+import MenuButton from "./MenuButton";
 const Menus = [
   {
     Titulo: "Ensino",
@@ -58,7 +59,7 @@ class TopBar extends Component {
   }
   render() {
     return (
-      <header className="fixed-top">
+      <header className="fixed-top ">
         {this.BarraTopo}
         <nav id="menu" className={this.NavBarClasses()}>
           <div className="container">
@@ -117,35 +118,23 @@ class TopBar extends Component {
   renderMenuElement(menu) {
     return (
       <li key={menu.Titulo} className="nav-item dropdown text-center">
-        <Link
-          className="nav-link"
-          data-toggle="dropdown"
-          href="#"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded="false"
-          to={menu.Titulo}
-        >
-          <FontAwesomeIcon icon={menu.Icone} className="d-inline-block" />
-
-          <div> {menu.Titulo}</div>
-        </Link>
+        <MenuButton titulo={menu.Titulo} icone={menu.Icone} />
         {this.renderSubMenu(menu)}
       </li>
     );
   }
 
   renderSubMenu(menu) {
-    return menu.SubMenus ? (
-      <div className="dropdown-menu">
-        {menu.SubMenus.map(submenu => (
-          <Link key={submenu} to={submenu} className="dropdown-item" href="#">
-            {submenu}
-          </Link>
-        ))}
-      </div>
-    ) : (
-      ""
+    return (
+      menu.SubMenus && (
+        <div className="dropdown-menu">
+          {menu.SubMenus.map(submenu => (
+            <Link key={submenu} to={submenu} className="dropdown-item" href="#">
+              {submenu}
+            </Link>
+          ))}
+        </div>
+      )
     );
   }
   BarraTopo = (
@@ -156,60 +145,34 @@ class TopBar extends Component {
           id="acessibilidade"
         >
           <ul id="atalhos" className="list-inline mb-0 d-none d-lg-block">
-            <li className="list-inline-item ">
-              <a
-                className="badge badge-dark font-weight-normal"
-                href="#conteudo"
-              >
-                Ir para o conteúdo
-              </a>
-            </li>
-            <li className="list-inline-item ">
-              <a className="badge badge-dark font-weight-normal" href="#topo">
-                Ir para o topo
-              </a>
-            </li>
-
-            <li className="list-inline-item ">
-              <a className="badge badge-dark font-weight-normal" href="#rodape">
-                Ir para o rodapé
-              </a>
-            </li>
+            {this.BadgeLink("Ir para o topo", "#")}
+            {this.BadgeLink("Ir para o conteudo", "#conteudo")}
+            {this.BadgeLink("Ir para o rodapé", "#rodape")}
           </ul>
           <ul id="botoes" className="list-inline mb-0 ml-auto">
-            <li className="list-inline-item ">
-              <a
-                className="badge badge-dark font-weight-normal"
-                href="acessibilidade.html"
-              >
-                <FontAwesomeIcon icon="universal-access" className="mr-1" />
-                Acessibilidade
-              </a>
-            </li>
-            <li className="list-inline-item ">
-              <a
-                className="badge badge-dark font-weight-normal"
-                href="#"
-                id="bt_contraste"
-              >
-                <FontAwesomeIcon icon="adjust" className="mr-1" />
-                Alto contraste
-              </a>
-            </li>
-            <li className="list-inline-item ">
-              <a
-                className="badge badge-dark font-weight-normal"
-                href="mapa.html"
-              >
-                <FontAwesomeIcon icon="globe" className="mr-1" />
-                Mapa do site
-              </a>
-            </li>
+            {this.BadgeLink(
+              "Acessibilidade",
+              "acessibilidade.html",
+              "universal-access"
+            )}
+            {this.BadgeLink("Alto contraste", "#", "adjust")}
+            {this.BadgeLink("Mapa do site", "mapa.html", "globe")}
           </ul>
         </div>
       </div>
     </div>
   );
+
+  BadgeLink(texto, link, icone) {
+    return (
+      <li className="list-inline-item ">
+        <a className="badge badge-dark font-weight-normal" href={link}>
+          <FontAwesomeIcon icon={icone} className="mr-1" />
+          {texto}
+        </a>
+      </li>
+    );
+  }
 }
 
 export default TopBar;

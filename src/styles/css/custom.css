@@ -3835,9 +3835,9 @@ button.close {
   padding: 1rem;
   border-top: 1px solid #e9ecef; }
   .modal-footer > :not(:first-child) {
-    margin-left: 0.25rem; }
+    margin-left: .25rem; }
   .modal-footer > :not(:last-child) {
-    margin-right: 0.25rem; }
+    margin-right: .25rem; }
 
 .modal-scrollbar-measure {
   position: absolute;

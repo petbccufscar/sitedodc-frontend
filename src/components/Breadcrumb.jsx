@@ -6,11 +6,11 @@ class Breadcrumb extends Component {
       .substring(1)
       .split("/")
       .map(path => {
-        return path.replace("-", " ");
+        return this.Capitalize(path.replace("-", " "));
       });
 
     return (
-      <nav aria-label="breadcrumb">
+      <nav aria-label="breadcrumb" className="mb-4  ">
         <ol class="breadcrumb">
           <span className="mr-2">Você está em:</span>
           <li class="breadcrumb-item">
@@ -26,6 +26,9 @@ class Breadcrumb extends Component {
         </ol>
       </nav>
     );
+  }
+  Capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 }
 

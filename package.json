@@ -14,7 +14,8 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "sanitize-html": "^1.18.5"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/styles/scss -o src/styles/css",

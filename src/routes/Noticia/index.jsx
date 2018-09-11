@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
 import Breadcrumb from "../../components/Breadcrumb";
+import sanitizeHtml from "sanitize-html";
 class Noticia extends Component {
   state = {};
   constructor() {
@@ -10,16 +11,18 @@ class Noticia extends Component {
       noticia: []
     };
   }
+
   componentDidMount() {
     const id = this.props.match.params.id;
     fetch("http://localhost:8080/api/content?type=Noticia&id=" + id)
-      .then(recebidoJson => {
-        return recebidoJson.json();
+      .then(res => {
+        return res.json();
       })
-      .then(noticia => {
-        this.setState({ noticia: noticia.data });
+      .then(json => {
+        this.setState({ noticia: json.data });
       });
   }
+
   render() {
     return this.state.noticia.map(noticia => {
       return (
@@ -40,7 +43,11 @@ class Noticia extends Component {
                 </h4>
                 <small>{noticia.subtitulo}</small>
               </div>
-              <div dangerouslySetInnerHTML={{ __html: noticia.conteudo }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sanitizeHtml(noticia.conteudo)
+                }}
+              />
             </div>
           </div>
         </div>

@@ -5,6 +5,10 @@ import Rodape from "./Rodape";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import MaisNoticias from "../routes/MaisNoticias";
 import Noticia from "../routes/Noticia";
+import AreaAluno from "../routes/AreaAluno";
+import AreaDocente from "../routes/AreaDocente";
+import AreaVisitante from "../routes/AreaVisitante";
+
 class App extends Component {
   render() {
     return (
@@ -16,6 +20,9 @@ class App extends Component {
           <Route exact path="/inicio" component={Inicio} />
           <Route exact path="/mais-noticias" component={MaisNoticias} />
           <Route exact path="/noticia/:id" component={Noticia} />
+          <Route exact path="/area-aluno" component={AreaAluno} />
+          <Route exact path="/area-docente" component={AreaDocente} />
+          <Route exact path="/area-visitante" component={AreaVisitante} />
 
           <Rodape />
         </React.Fragment>

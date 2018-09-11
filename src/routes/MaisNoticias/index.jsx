@@ -5,7 +5,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 class MaisNoticias extends Component {
   render() {
     return (
-      <main role="main" className="container mt-5">
+      <main role="main" className="container mt-5" id="conteudo">
         <div className="row mt-5 mais-noticias" id="conteudo">
           <div className="col">
             <ul class="nav nav-tabs mb-4">

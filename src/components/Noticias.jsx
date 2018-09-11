@@ -15,11 +15,11 @@ class Noticias extends Component {
       "http://localhost:8080/api/contents?type=Noticia&count=" +
         this.props.quantidade
     )
-      .then(recebidoJson => {
-        return recebidoJson.json();
+      .then(res => {
+        return res.json();
       })
-      .then(recebidoObject => {
-        this.setState({ noticias: recebidoObject.data });
+      .then(json => {
+        this.setState({ noticias: json.data });
       });
   }
   render() {
