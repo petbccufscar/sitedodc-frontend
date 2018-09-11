@@ -20,7 +20,7 @@ class Inicio extends Component {
                   Ver todas as notícias
                 </Link>
               </div>
-              <Noticias quantidade_por_linha="2" quantidade="12" />
+              <Noticias quantidade_por_linha="2" quantidade="4" />
             </div>
             <BarraLateral> </BarraLateral>
           </div>

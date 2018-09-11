@@ -6350,3 +6350,8 @@ body {
       column-count: 4 !important; }
     .small .card-columns {
       column-count: 2 !important; } }
+
+#rodape {
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2); }

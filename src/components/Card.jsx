@@ -2,34 +2,45 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 class Card extends Component {
   render() {
-    var temImagem = this.props.imagem !== "";
     return (
       <div className="card">
-        {this.ImagemCard(temImagem)}
+        {this.ImagemCard(this.props.imagem, this.props.imagem_descricao)}
 
-        <div className="card-body">
+        <div className="card-body d-flex flex-column">
           <h5 className="card-title">{this.props.titulo}</h5>
           <p className="card-text">{this.props.subtitulo}</p>
-          <Link to={this.props.link} className="btn btn-primary">
-            Ler mais
-          </Link>
+          <a
+            href={this.props.link}
+            className="btn btn-outline-info mt-auto d-block"
+          >
+            {this.props.botaoTexto}
+          </a>
         </div>
-        <div className="card-footer">
-          <small className="text-muted">{this.props.rodape}</small>
-        </div>
+
+        {this.RodapeCard(this.props.rodape)}
       </div>
     );
   }
 
-  ImagemCard(temImagem) {
-    return temImagem ? (
-      <img
-        className="card-img-top"
-        src={"http://localhost:8080/" + this.props.imagem}
-        alt={this.props.imagem_descricao}
-      />
-    ) : (
-      ""
+  RodapeCard(rodape) {
+    return (
+      rodape && (
+        <div className="card-footer">
+          <small className="text-muted">{this.props.rodape}</small>
+        </div>
+      )
+    );
+  }
+
+  ImagemCard(imagem, imagem_descricao) {
+    return (
+      imagem && (
+        <img
+          className="card-img-top"
+          src={"http://localhost:8080/" + imagem}
+          alt={imagem_descricao}
+        />
+      )
     );
   }
 }

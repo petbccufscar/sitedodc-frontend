@@ -31,6 +31,7 @@ class Noticias extends Component {
         {this.state.noticias.map(noticia => (
           <Card
             key={noticia.titulo}
+            botaoTexto="Ler mais"
             titulo={noticia.titulo.substring(0, 100).concat("...")}
             subtitulo={noticia.subtitulo.substring(0, 100).concat("...")}
             rodape={this.FormatarData(noticia)}

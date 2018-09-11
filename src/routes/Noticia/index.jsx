@@ -3,6 +3,18 @@ import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
 import Breadcrumb from "../../components/Breadcrumb";
 import sanitizeHtml from "sanitize-html";
+const allowedTags = [
+  "b",
+  "i",
+  "em",
+  "strong",
+  "a",
+  "li",
+  "ul",
+  "p",
+  "span",
+  "ol"
+];
 class Noticia extends Component {
   state = {};
   constructor() {
@@ -31,7 +43,6 @@ class Noticia extends Component {
             <Breadcrumb path={this.props.location.pathname} />
           </div>
           <div className="row">
-            {this.Imagem(noticia.imagem)}
             <div className="col">
               <div className="mb-2 pb-2 border-bottom">
                 <h4>
@@ -43,9 +54,19 @@ class Noticia extends Component {
                 </h4>
                 <small>{noticia.subtitulo}</small>
               </div>
+              {this.Imagem(noticia.imagem)}
+
               <div
                 dangerouslySetInnerHTML={{
-                  __html: sanitizeHtml(noticia.conteudo)
+                  __html: sanitizeHtml(noticia.conteudo, {
+                    allowedTags: allowedTags,
+                    allowedAttributes: {
+                      a: ["href", "style"],
+                      span: ["style"],
+                      li: ["style"],
+                      p: ["style"]
+                    }
+                  })
                 }}
               />
             </div>
@@ -63,12 +84,13 @@ class Noticia extends Component {
   Imagem(url) {
     return url !== "" ? (
       <div
-        className="col-3 d-none d-md-block pl-0"
+        className="my-3 "
         style={{
           backgroundImage: "url('http://localhost:8080" + url + "')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          borderRadius: "4px"
+          borderRadius: "4px",
+          height: "300px"
         }}
       />
     ) : (
