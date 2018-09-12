@@ -7,7 +7,7 @@
 
 # TODO
 
-- Router
+- Router (Done)
 - Todas as paginas alem da pagina inicial
 - Otimizar o código
 
