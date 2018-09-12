@@ -1,8 +1,9 @@
 # Como rodar:
 
+- Faça o setup do backend (https://github.com/petbccufscar/sitedodc-backend)
 - Instale o nodejs
 - Rode o npm install na pasta do projeto
-- Utilize o npm run para inicializar o mesmo
+- Utilize o npm start para inicializar o mesmo
 
 # TODO
 
