@@ -1,20 +1,8 @@
 import React, { Component } from "react";
-function GetCarrosseis(carrosseis) {
-  const carrosselHTML = carrosseis.map((carrosel, index) => (
-    <div
-      key={carrosel.uuid}
-      className={index === 0 ? "carousel-item active" : "carousel-item"}
-    >
-      <img
-        className="d-block w-100"
-        src={"http://localhost:8080" + carrosel.url_foto}
-        alt={carrosel.descricao}
-      />
-    </div>
-  ));
+import banner1 from "../images/banner1.jpg";
+import banner2 from "../images/banner2.jpg";
+import banner3 from "../images/banner3.jpg";
 
-  return carrosselHTML;
-}
 class BannerRotativo extends Component {
   state = {};
   constructor() {
@@ -23,15 +11,7 @@ class BannerRotativo extends Component {
       carrosseis: []
     };
   }
-  componentDidMount() {
-    fetch("http://localhost:8080/api/contents?type=Rotativo")
-      .then(recebidoJson => {
-        return recebidoJson.json();
-      })
-      .then(recebidoObject => {
-        this.setState({ carrosseis: recebidoObject.data });
-      });
-  }
+
   render() {
     return (
       <div
@@ -39,7 +19,27 @@ class BannerRotativo extends Component {
         className="carousel slide carousel-fade d-none d-md-block"
         data-ride="carousel"
       >
-        {GetCarrosseis(this.state.carrosseis)}
+        <div key="1" className="carousel-item active">
+          <img
+            className="d-block w-100"
+            src={banner1}
+            alt="descrição qualquer"
+          />
+        </div>
+        <div key="2" className="carousel-item">
+          <img
+            className="d-block w-100"
+            src={banner2}
+            alt="descrição qualquer"
+          />
+        </div>
+        <div key="3" className="carousel-item">
+          <img
+            className="d-block w-100"
+            src={banner3}
+            alt="descrição qualquer"
+          />
+        </div>
       </div>
     );
   }

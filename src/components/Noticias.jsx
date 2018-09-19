@@ -12,14 +12,14 @@ class Noticias extends Component {
   }
   componentDidMount() {
     fetch(
-      "http://localhost:8080/api/contents?type=Noticia&count=" +
+      "https://sitedodc-backend.herokuapp.com/noticia?_limit=" +
         this.props.quantidade
     )
       .then(res => {
         return res.json();
       })
       .then(json => {
-        this.setState({ noticias: json.data });
+        this.setState({ noticias: json });
       });
   }
   render() {
@@ -30,24 +30,24 @@ class Noticias extends Component {
       >
         {this.state.noticias.map(noticia => (
           <Card
-            key={noticia.titulo}
+            key={noticia["Título"]}
             botaoTexto="Ler mais"
-            titulo={noticia.titulo.substring(0, 100).concat("...")}
-            subtitulo={noticia.subtitulo.substring(0, 100).concat("...")}
-            rodape={this.FormatarData(noticia)}
-            link={"/noticia/" + noticia.id}
-            imagem={noticia.imagem}
-            imagem_descricao={noticia.imagem_descricao}
+            titulo={noticia["Título"].substring(0, 100).concat("...")}
+            subtitulo={noticia["Descrição"].substring(0, 100).concat("...")}
+            rodape={this.FormatarData(noticia["Data de postagem"])}
+            link={"/noticia/" + noticia["_id"]}
+            imagem={noticia["Imagem"]}
+            imagem_descricao={"noticia.imagem_descricao"}
           />
         ))}
       </div>
     );
   }
 
-  FormatarData(noticia) {
+  FormatarData(data) {
     return (
       "Postado em: " +
-      format(new Date(noticia.timestamp), "dddd, DD/MM/YYYY", {
+      format(new Date(data), "dddd, DD/MM/YYYY", {
         locale: pt
       })
     );

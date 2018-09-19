@@ -6331,7 +6331,7 @@ body {
   .card-columns {
     column-count: 2 !important; }
   #botoes-area {
-    margin-top: -60px;
+    margin-top: -40px;
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 70px; }

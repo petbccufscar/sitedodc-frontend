@@ -8,12 +8,12 @@ class Eventos extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:8080/api/contents?type=Evento&count=4")
+    fetch("https://sitedodc-backend.herokuapp.com/evento?_limit=4")
       .then(recebidoJson => {
         return recebidoJson.json();
       })
       .then(eventos => {
-        this.setState({ eventos: eventos.data });
+        this.setState({ eventos: eventos });
       });
   }
   render() {
@@ -35,11 +35,11 @@ class Eventos extends Component {
   }
 
   Evento(evento) {
-    let data = evento.data.split("-"); // ANO-MES-DIA
+    let data = evento["Data do evento"].substring(0, 10).split("-"); // ANO-MES-DIA
     return (
       <a
-        key={evento.titulo}
-        href={evento.link}
+        key={evento["Título"]}
+        href="#"
         style={{ textDecoration: "none" }}
         className="d-flex flex-row align-items-start border-bottom"
       >
@@ -52,7 +52,7 @@ class Eventos extends Component {
           <h3 className="text-secondary font-weight-light mb-0">14:00</h3>
         </div>
         <div className="p-2 align-self-center text-primary ml-2">
-          <h5>{evento.titulo}</h5>
+          <h5>{evento["Título"]}</h5>
         </div>
       </a>
     );
