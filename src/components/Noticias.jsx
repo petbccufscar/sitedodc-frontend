@@ -34,7 +34,7 @@ class Noticias extends Component {
             botaoTexto="Ler mais"
             titulo={noticia["Título"].substring(0, 100).concat("...")}
             subtitulo={noticia["Descrição"].substring(0, 100).concat("...")}
-            rodape={this.FormatarData(noticia["Data de postagem"])}
+            rodape={this.FormatarData(noticia["createdAt"])}
             link={"/noticia/" + noticia["_id"]}
             imagem={noticia["Imagem"]}
             imagem_descricao={"noticia.imagem_descricao"}
