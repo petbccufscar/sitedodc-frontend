@@ -12,7 +12,7 @@ class Noticias extends Component {
   }
   componentDidMount() {
     fetch(
-      "https://sitedodc-backend.herokuapp.com/noticia?_limit=" +
+      "https://sitedodc-backend.herokuapp.com/noticia?_sort=createdAt:desc&_limit=" +
         this.props.quantidade
     )
       .then(res => {
