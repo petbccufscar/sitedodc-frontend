@@ -1,10 +1,12 @@
 $primary: #275e87;
 $secondary: #f89700;
+$light: #e0e0e0;
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
   padding-top: 100px;
 }
+
 @include media-breakpoint-down(md) {
   .card-columns {
     column-count: 1 !important;
@@ -15,6 +17,11 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 70px;
+  }
+
+  #links-rapidos .img {
+    max-width: 50px;
+    max-height: 50px;
   }
 }
 @include media-breakpoint-up(md) {
