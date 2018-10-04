@@ -6315,6 +6315,13 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   padding-top: 100px; }
 
+#links-rapidos a {
+  max-width: 68px;
+  max-height: 68px; }
+
+#areas li {
+  display: inline; }
+
 @media (max-width: 991.98px) {
   .card-columns {
     column-count: 1 !important; }
@@ -6323,10 +6330,7 @@ body {
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 70px; }
-  #links-rapidos .img {
-    max-width: 50px;
-    max-height: 50px; } }
+    margin-bottom: 70px; } }
 
 @media (min-width: 768px) {
   .mais-noticias .card-columns {

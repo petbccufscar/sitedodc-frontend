@@ -7,6 +7,17 @@ body {
   padding-top: 100px;
 }
 
+#links-rapidos {
+  a {
+    max-width: 68px;
+    max-height: 68px;
+  }
+}
+
+#areas li {
+  display: inline;
+}
+
 @include media-breakpoint-down(md) {
   .card-columns {
     column-count: 1 !important;
@@ -17,11 +28,6 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 70px;
-  }
-
-  #links-rapidos .img {
-    max-width: 50px;
-    max-height: 50px;
   }
 }
 @include media-breakpoint-up(md) {
