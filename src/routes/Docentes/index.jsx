@@ -10,7 +10,6 @@ class Docentes extends Component {
         <Breadcrumb path={this.props.location.pathname} />
 
         <h1 class="display-6">Docentes</h1>
-        {/* TODO: pegar indo das cards na api Strapi */}
         <Docente />
       </main>
     );

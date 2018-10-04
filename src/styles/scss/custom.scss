@@ -8,10 +8,12 @@ body {
 }
 
 #links-rapidos {
-  a {
-    max-width: 68px;
-    max-height: 68px;
-  }
+  max-width: 68px;
+  max-height: 68px;
+  object-fit: cover;
+  // img {
+  //   object-fit: scale-down;
+  // }
 }
 
 #areas li {

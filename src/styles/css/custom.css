@@ -6315,9 +6315,10 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   padding-top: 100px; }
 
-#links-rapidos a {
+#links-rapidos {
   max-width: 68px;
-  max-height: 68px; }
+  max-height: 68px;
+  object-fit: cover; }
 
 #areas li {
   display: inline; }
