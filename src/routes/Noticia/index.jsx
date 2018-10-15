@@ -27,7 +27,7 @@ class Noticia extends Component {
         <Breadcrumbs>
           <Breadcrumb endereco="#">Inicio</Breadcrumb>
           <Breadcrumb endereco="/mais-noticias">Noticias</Breadcrumb>
-          <Breadcrumb>{this.state.noticia["Título"]}</Breadcrumb>
+          <Breadcrumb bold>{this.state.noticia["Título"]}</Breadcrumb>
         </Breadcrumbs>
         <NoticiaCompleta noticia={this.state.noticia} />
       </React.Fragment>

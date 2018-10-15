@@ -7,7 +7,7 @@ class AreaAluno extends Component {
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb>Area do aluno</Breadcrumb>
+          <Breadcrumb bold>Area do aluno</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
           <div class="row mt-4">

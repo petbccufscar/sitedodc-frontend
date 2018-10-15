@@ -67,10 +67,9 @@ class AreaDocentes extends Component {
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb>Area do docente</Breadcrumb>
+          <Breadcrumb bold>Area do docente</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-          <h2 className="mb-3">Área do Docente</h2>
           <h4>Sistemas</h4>
           <div className="card-deck mb-4">
             {Sistemas.map(link => {
