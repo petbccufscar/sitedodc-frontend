@@ -13,7 +13,7 @@ export const Breadcrumb = props => (
     {props.endereco ? (
       <Link to={props.endereco}>{props.children}</Link>
     ) : (
-      <a>{props.children}</a>
+      props.children
     )}
   </li>
 );
