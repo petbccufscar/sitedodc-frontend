@@ -1,20 +1,6 @@
 import React, { Component } from "react";
-import { format } from "date-fns";
-import pt from "date-fns/locale/pt";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import sanitizeHtml from "sanitize-html";
-const allowedTags = [
-  "b",
-  "i",
-  "em",
-  "strong",
-  "a",
-  "li",
-  "ul",
-  "p",
-  "span",
-  "ol"
-];
+import NoticiaCompleta from "../../components/NoticiaCompleta";
 class Noticia extends Component {
   state = {};
   constructor() {
@@ -26,79 +12,25 @@ class Noticia extends Component {
 
   componentDidMount() {
     const id = this.props.match.params.id;
-    fetch("http://localhost:8080/api/content?type=Noticia&id=" + id)
-      .then(res => {
-        return res.json();
+    fetch("https://sitedodc-backend.herokuapp.com/Noticia/" + id)
+      .then(recebidoJson => {
+        return recebidoJson.json();
       })
-      .then(json => {
-        this.setState({ noticia: json.data });
+      .then(noticia => {
+        this.setState({ noticia: noticia });
       });
   }
-
   render() {
-    return this.state.noticia.map(noticia => {
-      return (
-        <div className="container mt-5">
-          <div className="row">
-            <Breadcrumbs>
-              <Breadcrumb endereco="#">Inicio</Breadcrumb>
-              <Breadcrumb endereco="/mais-noticias">Noticias</Breadcrumb>
-              <Breadcrumb>{noticia.titulo}</Breadcrumb>
-            </Breadcrumbs>
-          </div>
-          <div className="row">
-            <div className="col">
-              <div className="mb-2 pb-2 border-bottom">
-                <h4>
-                  <span className="mr-2 badge badge-primary">
-                    {this.FormatarData(noticia.timestamp)}
-                  </span>
-
-                  {noticia.titulo}
-                </h4>
-                <small>{noticia.subtitulo}</small>
-              </div>
-              {this.Imagem(noticia.imagem)}
-
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: sanitizeHtml(noticia.conteudo, {
-                    allowedTags: allowedTags,
-                    allowedAttributes: {
-                      a: ["href", "style"],
-                      span: ["style"],
-                      li: ["style"],
-                      p: ["style"]
-                    }
-                  })
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      );
-    });
-  }
-  FormatarData(data) {
-    return format(new Date(data), "DD/MM/YYYY", {
-      locale: pt
-    });
-  }
-
-  Imagem(url) {
-    return url !== "" ? (
-      <div
-        className="my-3 "
-        style={{
-          backgroundImage: "url('http://localhost:8080" + url + "')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          borderRadius: "4px",
-          height: "300px"
-        }}
-      />
-    ) : (
-      ""
+    console.log(this.state.noticia);
+    return (
+      <React.Fragment>
+        <Breadcrumbs>
+          <Breadcrumb endereco="#">Inicio</Breadcrumb>
+          <Breadcrumb endereco="/mais-noticias">Noticias</Breadcrumb>
+          <Breadcrumb>{this.state.noticia["Título"]}</Breadcrumb>
+        </Breadcrumbs>
+        <NoticiaCompleta noticia={this.state.noticia} />
+      </React.Fragment>
     );
   }
 }
