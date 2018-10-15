@@ -16,16 +16,16 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <TopBar />
-
-          <Route exact path="/" component={Inicio} />
-          <Route exact path="/inicio" component={Inicio} />
-          <Route exact path="/mais-noticias" component={MaisNoticias} />
-          <Route exact path="/noticia/:id" component={Noticia} />
-          <Route exact path="/area-aluno" component={AreaAluno} />
-          <Route exact path="/area-docente" component={AreaDocente} />
-          <Route exact path="/area-visitante" component={AreaVisitante} />
-          <Route exact path="/docentes" component={Docentes} />
-
+          <main role="main" id="conteudo" class="container-fluid m-0 p-0">
+            <Route exact path="/" component={Inicio} />
+            <Route exact path="/inicio" component={Inicio} />
+            <Route exact path="/mais-noticias" component={MaisNoticias} />
+            <Route exact path="/noticia/:id" component={Noticia} />
+            <Route exact path="/area-aluno" component={AreaAluno} />
+            <Route exact path="/area-docente" component={AreaDocente} />
+            <Route exact path="/area-visitante" component={AreaVisitante} />
+            <Route exact path="/docentes" component={Docentes} />
+          </main>
           <Rodape />
         </React.Fragment>
       </Router>

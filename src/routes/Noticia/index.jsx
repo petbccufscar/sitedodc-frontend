@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
-import Breadcrumb from "../../components/Breadcrumb";
+import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import sanitizeHtml from "sanitize-html";
 const allowedTags = [
   "b",
@@ -40,7 +40,11 @@ class Noticia extends Component {
       return (
         <div className="container mt-5">
           <div className="row">
-            <Breadcrumb path={this.props.location.pathname} />
+            <Breadcrumbs>
+              <Breadcrumb endereco="#">Inicio</Breadcrumb>
+              <Breadcrumb endereco="/mais-noticias">Noticias</Breadcrumb>
+              <Breadcrumb>{noticia.titulo}</Breadcrumb>
+            </Breadcrumbs>
           </div>
           <div className="row">
             <div className="col">
