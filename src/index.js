@@ -17,6 +17,8 @@ import {
   faUniversity,
   faGlobe,
   faAdjust,
+  faMicroscope,
+  faEnvelope,
   faUniversalAccess
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -25,10 +27,12 @@ library.add(
   faBook,
   faHome,
   faUser,
-  faUniversity,
   faWrench,
+  faUniversity,
   faGlobe,
   faAdjust,
+  faMicroscope,
+  faEnvelope,
   faUniversalAccess
 );
 

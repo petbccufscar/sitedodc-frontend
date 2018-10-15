@@ -1,10 +1,25 @@
 $primary: #275e87;
 $secondary: #f89700;
+$light: #e0e0e0;
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 body {
   padding-top: 100px;
 }
+
+#links-rapidos {
+  max-width: 68px;
+  max-height: 68px;
+  object-fit: cover;
+  // img {
+  //   object-fit: scale-down;
+  // }
+}
+
+#areas li {
+  display: inline;
+}
+
 @include media-breakpoint-down(md) {
   .card-columns {
     column-count: 1 !important;

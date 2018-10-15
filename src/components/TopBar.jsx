@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LogoDC from "../images/logos/logo_DC.png";
+import LogoDC from "../images/logos/logo_DC_noText.png";
 import { Link } from "react-router-dom";
 import MenuButton from "./MenuButton";
 const Menus = [

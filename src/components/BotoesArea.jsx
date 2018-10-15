@@ -6,7 +6,7 @@ class BotoesArea extends Component {
     return (
       <div className="row justify-content-around">
         <div
-          className="btn-group mr-2 col-auto shadow p-0"
+          className="btn-group btn-light mr-2 col-auto p-0"
           role="group"
           id="botoes-area"
           aria-label="First group"

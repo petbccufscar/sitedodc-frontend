@@ -8,6 +8,7 @@ import Noticia from "../routes/Noticia";
 import AreaAluno from "../routes/AreaAluno";
 import AreaDocente from "../routes/AreaDocente";
 import AreaVisitante from "../routes/AreaVisitante";
+import Docentes from "../routes/Docentes";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
           <Route exact path="/area-aluno" component={AreaAluno} />
           <Route exact path="/area-docente" component={AreaDocente} />
           <Route exact path="/area-visitante" component={AreaVisitante} />
+          <Route exact path="/docentes" component={Docentes} />
 
           <Rodape />
         </React.Fragment>
