@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 const BreadcrumbDivisor = () => (
   <div className="divider-breadcrumbs">
@@ -9,7 +10,11 @@ const BreadcrumbDivisor = () => (
 export const Breadcrumb = props => (
   <li className="item-breadcrumb">
     <BreadcrumbDivisor />
-    <a href={props.endereco}>{props.children}</a>
+    {props.endereco ? (
+      <Link to={props.endereco}>{props.children}</Link>
+    ) : (
+      props.children
+    )}
   </li>
 );
 export const Breadcrumbs = props => (
