@@ -9,7 +9,7 @@ class Docentes extends Component {
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb>Docentes</Breadcrumb>
+          <Breadcrumb bold>Docentes</Breadcrumb>
         </Breadcrumbs>
 
         <div className="container">

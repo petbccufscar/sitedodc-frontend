@@ -8,7 +8,11 @@ const BreadcrumbDivisor = () => (
   </div>
 );
 export const Breadcrumb = props => (
-  <li className="item-breadcrumb">
+  <li
+    className={
+      props.bold ? "item-breadcrumb font-weight-bold" : "item-breadcrumb"
+    }
+  >
     <BreadcrumbDivisor />
     {props.endereco ? (
       <Link to={props.endereco}>{props.children}</Link>

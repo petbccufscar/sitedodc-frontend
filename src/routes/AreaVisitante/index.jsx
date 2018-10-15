@@ -7,10 +7,9 @@ class AreaVisitante extends Component {
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb>Area do visitante</Breadcrumb>
+          <Breadcrumb bold>Area do visitante</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-          <h1 class="display-6">Área do Visitante</h1>
           <div class="row mt-4">
             <div class="col-md-3 col-lg-3 col-xl-2" id="menu_area">
               <div
