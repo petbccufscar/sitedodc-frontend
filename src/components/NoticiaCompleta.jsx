@@ -17,7 +17,7 @@ const Noticia = ({ noticia }) => (
     <ReactMarkdown source={noticia["Conteúdo"]} />
   </div>
 );
-const Data = ({ data }) => (
+const Data = ({ data = "01/01/2018" }) => (
   <span className="mr-2 badge badge-primary">
     {format(new Date(data), "DD/MM/YYYY", {
       locale: pt
