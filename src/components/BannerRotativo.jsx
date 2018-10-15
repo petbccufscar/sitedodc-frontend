@@ -3,6 +3,12 @@ import banner1 from "../images/banner1.jpg";
 import banner2 from "../images/banner2.jpg";
 import banner3 from "../images/banner3.jpg";
 
+const Banner = ({ key, banner, active }) => (
+  <div key={key} className={active ? "carousel-item active" : "carousel-item"}>
+    <img className="d-block w-100" src={banner} alt="descrição qualquer" />
+  </div>
+);
+
 class BannerRotativo extends Component {
   state = {};
   constructor() {
@@ -19,27 +25,9 @@ class BannerRotativo extends Component {
         className="carousel slide carousel-fade d-none d-md-block"
         data-ride="carousel"
       >
-        <div key="1" className="carousel-item active">
-          <img
-            className="d-block w-100"
-            src={banner1}
-            alt="descrição qualquer"
-          />
-        </div>
-        <div key="2" className="carousel-item">
-          <img
-            className="d-block w-100"
-            src={banner2}
-            alt="descrição qualquer"
-          />
-        </div>
-        <div key="3" className="carousel-item">
-          <img
-            className="d-block w-100"
-            src={banner3}
-            alt="descrição qualquer"
-          />
-        </div>
+        <Banner key="1" banner={banner1} active />
+        <Banner key="2" banner={banner3} />
+        <Banner key="3" banner={banner2} />
       </div>
     );
   }

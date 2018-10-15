@@ -25,7 +25,7 @@ class Noticia extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="#">Inicio</Breadcrumb>
+          <Breadcrumb endereco="/">Inicio</Breadcrumb>
           <Breadcrumb endereco="/mais-noticias">Noticias</Breadcrumb>
           <Breadcrumb bold>{this.state.noticia["Título"]}</Breadcrumb>
         </Breadcrumbs>
