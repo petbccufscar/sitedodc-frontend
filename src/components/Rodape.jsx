@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class Rodape extends Component {
   render() {
     return (
-      <footer id="rodape" className="footer  mt-5 border-top">
+      <footer id="rodape" className="footer  mt-5">
         <div className="container py-5   text-dark text-center text-md-left">
           <div className="row justify-content-center">
             <div className="col-md-6 col-lg-6 col-xl-4 mt-2">

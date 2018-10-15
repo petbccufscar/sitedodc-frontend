@@ -69,7 +69,7 @@ class Docente extends Component {
   }
 
   renderAreas(docente) {
-    if (docente["Áreas"].length == 0) {
+    if (docente["Áreas"].length === 0) {
       return;
     } else {
       return (

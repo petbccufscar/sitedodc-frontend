@@ -6313,7 +6313,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  padding-top: 100px; }
+  padding-top: 110px; }
 
 #links-rapidos {
   max-width: 68px;
@@ -6360,6 +6360,19 @@ body {
       column-count: 2 !important; } }
 
 #rodape {
-  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1); }
+
+.item-breadcrumb {
+  display: inline-block;
+  list-style: none; }
+  .item-breadcrumb a {
+    line-height: 80px; }
+
+.divider-breadcrumbs {
+  display: inline !important;
+  padding: 3px 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  margin: 0px 20px; }
