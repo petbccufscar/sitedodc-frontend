@@ -22,7 +22,7 @@ const Menus = [
   {
     Titulo: "Pessoas",
     Icone: "user",
-    SubMenus: ["Alunos", "Docentes", "Colaboradores", "Funcionários"]
+    SubMenus: ["Alunos", "Docentes", "Colaboradores", "Colaboradores"]
   },
   {
     Titulo: "Institucional",
@@ -118,7 +118,11 @@ class TopBar extends Component {
   renderMenuElement(menu) {
     return (
       <li key={menu.Titulo} className="nav-item dropdown text-center">
-        <MenuButton titulo={menu.Titulo} icone={menu.Icone} />
+        <MenuButton
+          titulo={menu.Titulo}
+          endereco={"/" + menu.Titulo}
+          icone={menu.Icone}
+        />
         {this.renderSubMenu(menu)}
       </li>
     );
@@ -129,7 +133,12 @@ class TopBar extends Component {
       menu.SubMenus && (
         <div className="dropdown-menu">
           {menu.SubMenus.map(submenu => (
-            <Link key={submenu} to={submenu} className="dropdown-item" href="#">
+            <Link
+              key={submenu}
+              to={"/" + submenu}
+              className="dropdown-item"
+              href="#"
+            >
               {submenu}
             </Link>
           ))}
