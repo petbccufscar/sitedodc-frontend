@@ -1,17 +1,21 @@
 import React, { Component } from "react";
-import Breadcrumb from "../../components/Breadcrumb";
+import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import Avatar from "../../images/avatar.png";
 import Docente from "../../components/Docente";
 
 class Docentes extends Component {
   render() {
     return (
-      <main role="main" id="conteudo" class="container mt-5">
-        <Breadcrumb path={this.props.location.pathname} />
+      <React.Fragment>
+        <Breadcrumbs>
+          <Breadcrumb endereco="/">Inicio</Breadcrumb>
+          <Breadcrumb bold>Docentes</Breadcrumb>
+        </Breadcrumbs>
 
-        <h1 class="display-6">Docentes</h1>
-        <Docente />
-      </main>
+        <div className="container">
+          <Docente />
+        </div>
+      </React.Fragment>
     );
   }
 }

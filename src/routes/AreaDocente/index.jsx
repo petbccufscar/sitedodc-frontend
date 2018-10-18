@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Breadcrumb from "../../components/Breadcrumb";
+import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import Card from "../../components/Card";
 
 const Sistemas = [
@@ -64,53 +64,53 @@ const Suporte = [
 class AreaDocentes extends Component {
   render() {
     return (
-      <main role="main" id="conteudo" class="container mt-5">
-        <Breadcrumb path={this.props.location.pathname} />
-
-        <h2 className="mb-3">Área do Docente</h2>
-        <h4>Sistemas</h4>
-
-        <div className="card-deck mb-4">
-          {Sistemas.map(link => {
-            return (
-              <Card
-                botaoTexto="Ir para link"
-                titulo={link.Titulo}
-                link={link.Link}
-                subtitulo={link.Subtitulo}
-              />
-            );
-          })}
+      <React.Fragment>
+        <Breadcrumbs>
+          <Breadcrumb endereco="/">Inicio</Breadcrumb>
+          <Breadcrumb bold>Area do docente</Breadcrumb>
+        </Breadcrumbs>
+        <div className="container">
+          <h4>Sistemas</h4>
+          <div className="card-deck mb-4">
+            {Sistemas.map(link => {
+              return (
+                <Card
+                  botaoTexto="Ir para link"
+                  titulo={link.Titulo}
+                  link={link.Link}
+                  subtitulo={link.Subtitulo}
+                />
+              );
+            })}
+          </div>
+          <h4>Documentos</h4>
+          <div className="card-deck mb-4">
+            {Documentos.map(link => {
+              return (
+                <Card
+                  botaoTexto="Ir para link"
+                  titulo={link.Titulo}
+                  link={link.Link}
+                  subtitulo={link.Subtitulo}
+                />
+              );
+            })}
+          </div>
+          <h4>Suporte</h4>
+          <div className="card-deck">
+            {Suporte.map(link => {
+              return (
+                <Card
+                  botaoTexto="Ir para link"
+                  titulo={link.Titulo}
+                  link={link.Link}
+                  subtitulo={link.Subtitulo}
+                />
+              );
+            })}
+          </div>
         </div>
-        <h4>Documentos</h4>
-
-        <div className="card-deck mb-4">
-          {Documentos.map(link => {
-            return (
-              <Card
-                botaoTexto="Ir para link"
-                titulo={link.Titulo}
-                link={link.Link}
-                subtitulo={link.Subtitulo}
-              />
-            );
-          })}
-        </div>
-        <h4>Suporte</h4>
-
-        <div className="card-deck">
-          {Suporte.map(link => {
-            return (
-              <Card
-                botaoTexto="Ir para link"
-                titulo={link.Titulo}
-                link={link.Link}
-                subtitulo={link.Subtitulo}
-              />
-            );
-          })}
-        </div>
-      </main>
+      </React.Fragment>
     );
   }
 }

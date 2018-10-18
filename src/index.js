@@ -19,7 +19,9 @@ import {
   faAdjust,
   faMicroscope,
   faEnvelope,
-  faUniversalAccess
+  faUniversalAccess,
+  faAngleRight,
+  faExclamationTriangle
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -33,7 +35,9 @@ library.add(
   faAdjust,
   faMicroscope,
   faEnvelope,
-  faUniversalAccess
+  faUniversalAccess,
+  faAngleRight,
+  faExclamationTriangle
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));
