@@ -34,12 +34,14 @@ class Docente extends Component {
     return (
         <Card
         key={docente["Nome"]}
-        botaoTexto="Página"
+        img_esquerda
         titulo={docente["Nome"]}
         subtitulo={docente["Tipo"] + "-" +  docente["Horas"] + "h/DE"}
         rodape={this.renderAreas(docente)}
         link={"/docente/" + docente["_id"]}
-        imagem={docente["Imagem"]}
+        //imagem={docente["Imagem"]}
+        imagem="https://picsum.photos/100/100/?random"
+
         />
     );
   }
@@ -58,7 +60,7 @@ class Docente extends Component {
   }
 
   listAreas(areas) {
-    let list = areas.map(area => <line>{area["Área"]}; </line>);
+    let list = areas.map(area => <a>{area["Área"]}; </a>);
     return list;
   }
 }
