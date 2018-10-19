@@ -10,6 +10,8 @@ import AreaDocente from "../routes/AreaDocente";
 import AreaVisitante from "../routes/AreaVisitante";
 import Docentes from "../routes/Docentes";
 import NaoEncontrado from "./NaoEncontrado";
+import PaginaDocente from "./PaginaDocente";
+import Docente from "../routes/Docente";
 
 class App extends Component {
   render() {
@@ -27,6 +29,7 @@ class App extends Component {
               <Route exact path="/area-docente" component={AreaDocente} />
               <Route exact path="/area-visitante" component={AreaVisitante} />
               <Route exact path="/docentes" component={Docentes} />
+              <Route exact path="/docente/:id" component={Docente}/>
               <Route path="*" component={NaoEncontrado} />
             </Switch>
           </main>

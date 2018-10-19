@@ -6315,6 +6315,11 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   padding-top: 110px; }
 
+#img-docente {
+  width: 230px;
+  height: 230px;
+  object-fit: cover; }
+
 .links-rapidos {
   max-width: 68px;
   max-height: 68px;

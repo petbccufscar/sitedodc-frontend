@@ -12,6 +12,7 @@ class Docentes extends Component {
           <Breadcrumb bold>Docentes</Breadcrumb>
         </Breadcrumbs>
 
+        
         <div className="container">
           <Docente />
         </div>
