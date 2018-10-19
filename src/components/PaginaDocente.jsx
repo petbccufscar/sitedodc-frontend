@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Avatar from "../images/avatar.png"
+import Botao from "../components/Botao"
 
 const Docente = ({docente, areas}) => (
     
@@ -22,9 +23,9 @@ const Docente = ({docente, areas}) => (
                 <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
                 Email: {docente["Email"]}
             </p>
-            <a href={docente["Área"]} className="btn btn-primary text-white mr-3">Lattes</a>
-            <a href={docente["Site pessoal"]} className="btn btn-primary text-white mr-3">Página Pessoal</a>
             
+            <Botao link={docente["Lattes"]} texto="Lattes"/>
+            <Botao link={docente["Site pessoal"]} texto="Página Pessoal"/>            
         </div>
         </div>
         

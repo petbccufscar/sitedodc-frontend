@@ -12,6 +12,7 @@ import Docentes from "../routes/Docentes";
 import NaoEncontrado from "./NaoEncontrado";
 import PaginaDocente from "./PaginaDocente";
 import Docente from "../routes/Docente";
+import Grupos from "../routes/Grupos";
 
 class App extends Component {
   render() {
@@ -30,6 +31,7 @@ class App extends Component {
               <Route exact path="/area-visitante" component={AreaVisitante} />
               <Route exact path="/docentes" component={Docentes} />
               <Route exact path="/docente/:id" component={Docente}/>
+              <Route exact path="/grupos" component={Grupos}/>
               <Route path="*" component={NaoEncontrado} />
             </Switch>
           </main>
