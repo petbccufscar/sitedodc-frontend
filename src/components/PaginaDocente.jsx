@@ -22,8 +22,7 @@ const Docente = ({docente, areas}) => (
             <p className="card-text">
                 <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
                 Email: {docente["Email"]}
-            </p>
-            
+            </p> 
             <Botao link={docente["Lattes"]} texto="Lattes"/>
             <Botao link={docente["Site pessoal"]} texto="Página Pessoal"/>            
         </div>
