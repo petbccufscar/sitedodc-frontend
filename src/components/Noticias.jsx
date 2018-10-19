@@ -31,12 +31,13 @@ class Noticias extends Component {
         {this.state.noticias.map(noticia => (
           <Card
             key={noticia["Título"]}
-            botaoTexto="Ler mais"
+            img_topo
             titulo={noticia["Título"].substring(0, 100).concat("...")}
             subtitulo={noticia["Descrição"].substring(0, 100).concat("...")}
             rodape={this.FormatarData(noticia["createdAt"])}
             link={"/noticia/" + noticia["_id"]}
-            imagem={noticia["Imagem"]}
+            //imagem={noticia["Imagem"]}
+            imagem="https://picsum.photos/300/100/?random"
             imagem_descricao={"noticia.imagem_descricao"}
           />
         ))}
