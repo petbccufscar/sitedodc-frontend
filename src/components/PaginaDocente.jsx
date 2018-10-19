@@ -22,7 +22,7 @@ const Docente = ({docente, areas}) => (
                 <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
                 Email: {docente["Email"]}
             </p>
-            <a href={docente["Área"]} className="btn btn-primary text-white mr-3">Lattes</a>
+            <a href={docente["Lattes"]} className="btn btn-primary text-white mr-3">Lattes</a>
             <a href={docente["Site pessoal"]} className="btn btn-primary text-white mr-3">Página Pessoal</a>
             
         </div>
