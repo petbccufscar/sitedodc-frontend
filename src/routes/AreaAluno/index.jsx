@@ -6,12 +6,12 @@ class AreaAluno extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb bold>Area do aluno</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
+          <Breadcrumb bold>Área do aluno</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
           <div class="row mt-4">
-            <div class="col-md-3 col-lg-3 col-xl-2" id="menu_area">
+            <div class="col-md-3" id="menu_area">
               <div
                 class="border-right pr-2"
                 id="menu_area"
@@ -19,8 +19,8 @@ class AreaAluno extends Component {
                 data-parent="main"
                 data-offset="75"
               >
-                <ul class="nav nav-pills flex-column border p-2" role="tablist">
-                  <h6 class="border-bottom p-2">Graduação</h6>
+                <ul class="nav nav-pills flex-column  pr-2" role="tablist">
+                  <h6 class=" p-2">Graduação</h6>
 
                   <li class="nav-item">
                     <a
@@ -89,7 +89,7 @@ class AreaAluno extends Component {
                     </a>
                   </li>
 
-                  <h6 class="border-bottom p-2">Pós-Graduação</h6>
+                  <h6 class=" p-2 mt-4 ">Pós-Graduação</h6>
 
                   <li class="nav-item">
                     <a
@@ -120,7 +120,7 @@ class AreaAluno extends Component {
               </div>
             </div>
 
-            <div class="col">
+            <div class="col pl-0">
               <div class="container tab-content" id="conteudo_area">
                 <div
                   class="tab-pane fade show active"
@@ -128,7 +128,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-home-tab"
                 >
-                  <h1>Home</h1>
+                  <h4>Home</h4>
                   <hr />
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -178,7 +178,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-suporte-tab"
                 >
-                  <h1>Suporte</h1>
+                  <h4>Suporte</h4>
                   <hr />
                 </div>
 
@@ -188,7 +188,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-estagio-tab"
                 >
-                  <h1>Distribuição de Disciplinas</h1>
+                  <h4>Distribuição de Disciplinas</h4>
                   <hr />
                 </div>
 
@@ -198,7 +198,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-dist-disciplina-tab"
                 >
-                  <h1>Estágio</h1>
+                  <h4>Estágio</h4>
                   <hr />
                 </div>
 
@@ -208,7 +208,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-documentos-tab"
                 >
-                  <h1>Documentos</h1>
+                  <h4>Documentos</h4>
                   <hr />
                 </div>
 
@@ -218,7 +218,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="pos-graduacao-home-tab"
                 >
-                  <h1>Home</h1>
+                  <h4>Home</h4>
                   <hr />
 
                   <p>
@@ -245,7 +245,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="pos-graduacao-documentos-tab"
                 >
-                  <h1>Documentos</h1>
+                  <h4>Documentos</h4>
                   <hr />
                 </div>
               </div>

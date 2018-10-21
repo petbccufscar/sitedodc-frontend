@@ -7,7 +7,7 @@ class MaisNoticias extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb bold>Notícias</Breadcrumb>
         </Breadcrumbs>
         <div className="container">

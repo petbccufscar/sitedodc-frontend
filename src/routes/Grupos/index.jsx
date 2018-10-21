@@ -8,7 +8,7 @@ class Grupos extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb bold>Grupos de extensão</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
