@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const BotaoArea = ({ area = "aluno", texto = "Área do aluno" }) => (
   <Link
     to={"/area-" + area}
-    className="btn btn-light py-4 px-md-5 pl-sm-5 text-primary"
+    className="btn btn-light py-4 px-md-5  text-primary"
   >
     {texto}
   </Link>

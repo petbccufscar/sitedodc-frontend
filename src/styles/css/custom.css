@@ -6371,7 +6371,8 @@ body {
 
 .item-breadcrumb {
   display: inline-block;
-  list-style: none; }
+  list-style: none;
+  margin-right: 20px; }
   .item-breadcrumb a {
     line-height: 80px; }
 
@@ -6380,7 +6381,7 @@ body {
   padding: 3px 10px;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 50%;
-  margin: 0px 20px; }
+  margin-right: 20px; }
 
 .card a {
   text-decoration: none; }

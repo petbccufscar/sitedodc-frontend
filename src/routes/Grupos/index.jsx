@@ -9,11 +9,9 @@ class Grupos extends Component {
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb bold>Grupos</Breadcrumb>
+          <Breadcrumb bold>Grupos de extensão</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-            <h1 className="ml-5">Grupos de extensão</h1>
-
             <Grupo titulo="PET-BCC"
                 descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis leo tellus, in elementum felis pretium volutpat.
                 Quisque eget malesuada nibh. Integer at justo sit amet ligula sollicitudin dapibus. Aenean varius eu ex sed tempus.

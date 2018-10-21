@@ -9,18 +9,15 @@ const Grupo = ({
   link,
   foto,
 }) => (
-    <div class="container ">
-    <div class="row mt-4 justify-content-center">
-        <div class="col-lg-4 col-md-6 text-lg-right mb-2">
-            <img src={foto} class="img-responsive rounded" alt="..." 
-            height="200" width="300"/>
-        </div>
-        <div class="col-lg-8 col-md-6">
+    <div className="row mt-4  ml-0 mr-0">
+        <div className="col-md-4 mb-2 pl-0 rounded" style={{ minHeight:"200px" ,backgroundImage:'url('+foto+')', backgroundSize:"cover", backgroundPosition:"center"}}>
+    
+        </div>  
+        <div className="col-md-8">
             <h3>{titulo}</h3>
-            <p class="text-justify">{descricao}</p>
+            <p className="text-justify">{descricao}</p>
             <p><Botao texto="VISITAR SITE" link={link} small={true}/></p>
         </div>
-    </div>
 </div>
 );
 
