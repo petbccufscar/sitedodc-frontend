@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Evento from "./Evento";
 import { Link } from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class Eventos extends Component {
   state = {};
@@ -30,7 +30,7 @@ class Eventos extends Component {
             className="btn btn-link"
           >
             Ver mais eventos   <FontAwesomeIcon className="ml-2" icon="plus" />
-        </Link>
+          </Link>
         </div>
         {this.state.eventos.map(evento => (
           <Evento titulo={evento["Título"]} data={evento["Data do evento"]} />

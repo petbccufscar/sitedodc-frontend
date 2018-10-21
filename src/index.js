@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App";
 
-import "./styles/css/custom.css";
+import "./styles/scss/custom.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";

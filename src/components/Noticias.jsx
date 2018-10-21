@@ -7,7 +7,8 @@ class Noticias extends Component {
   constructor() {
     super();
     this.state = {
-      noticias: []
+      noticias: [],
+      ready:false
     };
   }
   componentDidMount() {
@@ -19,7 +20,8 @@ class Noticias extends Component {
         return res.json();
       })
       .then(json => {
-        this.setState({ noticias: json });
+        this.setState({ noticias: json, ready:true });
+      
       });
   }
   render() {
@@ -28,7 +30,7 @@ class Noticias extends Component {
         className="card-columns"
         style={{ columnCount: this.props.quantidade_por_linha }}
       >
-        {this.state.noticias.map(noticia => (
+        {this.state.ready && this.state.noticias.map(noticia => (
           <Card
             key={noticia["Título"]}
             img_topo
