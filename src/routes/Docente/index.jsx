@@ -30,7 +30,7 @@ class Docente extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb endereco="/Docentes">Docentes</Breadcrumb>
           <Breadcrumb bold>{this.state.docente["Nome"]}</Breadcrumb>
         </Breadcrumbs>

@@ -66,8 +66,8 @@ class AreaDocentes extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb bold>Area do docente</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
+          <Breadcrumb bold>Área do docente</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
           <h4>Sistemas</h4>

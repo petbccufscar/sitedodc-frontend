@@ -6,20 +6,24 @@ class AreaVisitante extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
-          <Breadcrumb bold>Area do visitante</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
+          <Breadcrumb bold>Área do visitante</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
           <div class="row mt-4">
-            <div class="col-md-3 col-lg-3 col-xl-2" id="menu_area">
+            <div class="col-md-3" id="menu_area">
               <div
                 id="side-menu"
+                class="border-right pr-2"
+
                 data-toggle="affix"
                 data-stick-class="affix-sidebar"
                 data-parent="main"
                 data-offset="85"
               >
-                <ul class="nav nav-pills flex-column border p-2" role="tablist">
+                <ul class="nav nav-pills flex-column pr-2" role="tablist">
+                <h6 class=" p-2">Informações</h6>
+
                   <li class="nav-item">
                     <a
                       class="nav-link active"
@@ -83,7 +87,7 @@ class AreaVisitante extends Component {
                   role="tabpanel"
                   aria-labelledby="motivacao-tab"
                 >
-                  <h1>Motivação para Estudar na UFSCar</h1>
+                  <h4>Motivação para Estudar na UFSCar</h4>
                   <hr />
 
                   <p>
@@ -134,7 +138,7 @@ class AreaVisitante extends Component {
                   role="tabpanel"
                   aria-labelledby="ingresso-tab"
                 >
-                  <h1>Como Ingressar?</h1>
+                  <h4>Como Ingressar?</h4>
                   <hr />
                   <p>
                     Cras porttitor dolor vel nunc pulvinar, ut malesuada nisl
@@ -156,7 +160,7 @@ class AreaVisitante extends Component {
                   role="tabpanel"
                   aria-labelledby="auxilios-tab"
                 >
-                  <h1>Auxílios Permanência</h1>
+                  <h4>Auxílios Permanência</h4>
                   <hr />
                   <p>
                     Cras porttitor dolor vel nunc pulvinar, ut malesuada nisl
@@ -178,7 +182,7 @@ class AreaVisitante extends Component {
                   role="tabpanel"
                   aria-labelledby="saocarlos"
                 >
-                  <h1>Sobre São Carlos</h1>
+                  <h4>Sobre São Carlos</h4>
                   <hr />
                   <p>
                     Cras porttitor dolor vel nunc pulvinar, ut malesuada nisl
