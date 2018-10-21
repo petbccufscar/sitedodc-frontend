@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Evento from "./Evento";
+import { Link } from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 class Eventos extends Component {
   state = {};
@@ -21,16 +23,19 @@ class Eventos extends Component {
   render() {
     return (
       <div>
-        <h4 className="mb-3">Eventos</h4>
+        <div className="d-flex justify-content-between mb-3">
+          <h4>Eventos</h4>
+          <Link
+            to="/"
+            className="btn btn-link"
+          >
+            Ver mais eventos   <FontAwesomeIcon className="ml-2" icon="plus" />
+        </Link>
+        </div>
         {this.state.eventos.map(evento => (
           <Evento titulo={evento["Título"]} data={evento["Data do evento"]} />
         ))}
-        <button
-          type="button"
-          className="btn btn-outline-secondary btn-lg mt-4 btn-block"
-        >
-          Ver mais
-        </button>
+
       </div>
     );
   }
