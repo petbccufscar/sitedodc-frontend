@@ -31,6 +31,26 @@ body {
   display: inline;
 }
 
+@include media-breakpoint-down(sm) {
+  #breadcrumb {
+    padding-bottom: 10px; 
+
+    .divider-breadcrumbs {
+      margin-right: 10px;
+      padding: 1px 8px 1px 8px;
+      align-self: center;  
+    }
+    .item-breadcrumb {
+      display: flex;
+      margin-right: 10px;
+      margin: 5px;
+      a {
+        line-height: 20px;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-down(md) {
   .card-columns {
     column-count: 1 !important;
@@ -43,16 +63,6 @@ body {
     margin-bottom: 70px;
   }
 
-  #breadcrumb {
-    font-size: 80%;
-    .divider-breadcrumbs {
-      margin-right: 10px;
-      padding: 1px 6px 3px 6px;  
-    }
-    .item-breadcrumb {
-      margin-right: 10px;
-    }
-  }
 }
 @include media-breakpoint-up(md) {
   .mais-noticias .card-columns {
