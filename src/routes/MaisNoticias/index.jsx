@@ -4,7 +4,6 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 
 class MaisNoticias extends Component {
   render() {
-    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <Breadcrumbs>

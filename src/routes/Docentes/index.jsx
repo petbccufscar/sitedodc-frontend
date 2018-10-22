@@ -4,7 +4,6 @@ import Docente from "../../components/Docente";
 
 class Docentes extends Component {
   render() {
-    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <Breadcrumbs>

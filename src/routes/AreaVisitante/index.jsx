@@ -3,7 +3,6 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 
 class AreaVisitante extends Component {
   render() {
-    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <Breadcrumbs>
