@@ -7,6 +7,7 @@ import BannerRotativo from "../../components/BannerRotativo";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 class Inicio extends Component {
   render() {
+    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <BannerRotativo />

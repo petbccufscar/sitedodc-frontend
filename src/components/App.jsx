@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TopBar from "./TopBar";
 import Inicio from "../routes/Inicio";
 import Rodape from "./Rodape";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MaisNoticias from "../routes/MaisNoticias";
 import Noticia from "../routes/Noticia";
 import AreaAluno from "../routes/AreaAluno";
@@ -43,3 +43,4 @@ class App extends Component {
 }
 
 export default App;
+

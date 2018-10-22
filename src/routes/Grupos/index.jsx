@@ -5,6 +5,7 @@ import Grupo from "../../components/Grupo";
 // TODO: pegar da api
 class Grupos extends Component {
   render() {
+    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <Breadcrumbs>
