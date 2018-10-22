@@ -7,7 +7,8 @@ class Noticias extends Component {
   constructor() {
     super();
     this.state = {
-      noticias: []
+      noticias: [],
+      ready:false
     };
   }
   componentDidMount() {
@@ -19,7 +20,8 @@ class Noticias extends Component {
         return res.json();
       })
       .then(json => {
-        this.setState({ noticias: json });
+        this.setState({ noticias: json, ready:true });
+      
       });
   }
   render() {
@@ -28,15 +30,16 @@ class Noticias extends Component {
         className="card-columns"
         style={{ columnCount: this.props.quantidade_por_linha }}
       >
-        {this.state.noticias.map(noticia => (
+        {this.state.ready && this.state.noticias.map(noticia => (
           <Card
             key={noticia["Título"]}
-            botaoTexto="Ler mais"
+            img_topo
             titulo={noticia["Título"].substring(0, 100).concat("...")}
             subtitulo={noticia["Descrição"].substring(0, 100).concat("...")}
             rodape={this.FormatarData(noticia["createdAt"])}
             link={"/noticia/" + noticia["_id"]}
-            imagem={noticia["Imagem"]}
+            //imagem={noticia["Imagem"]}
+            imagem="https://picsum.photos/300/100/?random"
             imagem_descricao={"noticia.imagem_descricao"}
           />
         ))}

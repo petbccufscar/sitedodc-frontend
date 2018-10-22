@@ -9,22 +9,34 @@ const Card = ({
   link,
   imagem,
   imagem_descricao,
-  botaoTexto
+  img_esquerda,
+  img_topo
 }) => (
   <div className="card hoverable" key={key}>
-    {imagem && (
+    { imagem && img_topo && (
       <img
         className="card-img-top"
-        src={"http://localhost:8080/" + imagem}
+        src={imagem}
         alt={imagem_descricao}
       />
     )}
 
-    <div className="card-body d-flex flex-column">
+    <div className="card-body d-flex flex-row">
+    {imagem && img_esquerda && (
+      <div className="mr-4">
+      <img
+      className="rounded-circle"
+        src={imagem}
+        alt={imagem_descricao}
+      />
+      </div>
+    )}
+    <div>
       <a href={link}>
         <h5 className="card-title">{titulo}</h5>
         <p className="card-text">{subtitulo}</p>
       </a>
+      </div>
     </div>
 
     {rodape && (

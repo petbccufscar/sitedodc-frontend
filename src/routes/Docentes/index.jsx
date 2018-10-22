@@ -8,7 +8,7 @@ class Docentes extends Component {
     return (
       <React.Fragment>
         <Breadcrumbs>
-          <Breadcrumb endereco="/">Inicio</Breadcrumb>
+          <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb bold>Docentes</Breadcrumb>
         </Breadcrumbs>
 
