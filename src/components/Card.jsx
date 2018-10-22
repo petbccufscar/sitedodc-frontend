@@ -23,8 +23,8 @@ const Card = ({
     <div className="card-body d-flex flex-row">
     {imagem && img_esquerda && (
       <div className="mr-4">
-      <img
-      className="rounded-circle"
+      <img id="card-img-rounded"
+      className="rounded-circle img-fluid"
         src={imagem}
         alt={imagem_descricao}
       />

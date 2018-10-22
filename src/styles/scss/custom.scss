@@ -11,15 +11,20 @@ body {
   width: 230px;
   height: 230px;
   object-fit: cover;
+  object-position: top;
+}
+
+#card-img-rounded {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .links-rapidos {
   max-width: 68px;
   max-height: 68px;
   object-fit: cover;
-  // img {
-  //   object-fit: scale-down;
-  // }
 }
 
 #areas li {
@@ -36,6 +41,17 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 70px;
+  }
+
+  #breadcrumb {
+    font-size: 80%;
+    .divider-breadcrumbs {
+      margin-right: 10px;
+      padding: 1px 6px 3px 6px;  
+    }
+    .item-breadcrumb {
+      margin-right: 10px;
+    }
   }
 }
 @include media-breakpoint-up(md) {
