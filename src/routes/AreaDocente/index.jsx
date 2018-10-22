@@ -63,6 +63,7 @@ const Suporte = [
 
 class AreaDocentes extends Component {
   render() {
+    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <Breadcrumbs>

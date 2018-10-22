@@ -26,6 +26,7 @@ class Docente extends Component {
   }
 
   render() {
+    window.scrollTo(0,0);
     console.log(this.state.docente);
     return (
       <React.Fragment>

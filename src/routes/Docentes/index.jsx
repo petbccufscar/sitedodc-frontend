@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import Avatar from "../../images/avatar.png";
 import Docente from "../../components/Docente";
 
 class Docentes extends Component {
   render() {
+    window.scrollTo(0,0);
     return (
       <React.Fragment>
         <Breadcrumbs>
