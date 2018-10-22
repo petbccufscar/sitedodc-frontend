@@ -13,12 +13,14 @@ import NaoEncontrado from "./NaoEncontrado";
 import PaginaDocente from "./PaginaDocente";
 import Docente from "../routes/Docente";
 import Grupos from "../routes/Grupos";
+import ScrollToTop from "./ScrollToTop";
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router onUpdate={() => window.scrollTo(0, 0)}>
         <React.Fragment>
+        <ScrollToTop>
           <TopBar />
           <main role="main" id="conteudo" class="container-fluid m-0 p-0">
             <Switch>
@@ -36,9 +38,14 @@ class App extends Component {
             </Switch>
           </main>
           <Rodape />
+          </ScrollToTop>
         </React.Fragment>
       </Router>
     );
+  }
+
+  componentDidUpdate() {
+    window.scrollTo(0,0);
   }
 }
 

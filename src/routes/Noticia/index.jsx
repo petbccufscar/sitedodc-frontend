@@ -21,7 +21,6 @@ class Noticia extends Component {
       });
   }
   render() {
-    window.scrollTo(0,0);
     console.log(this.state.noticia);
     return (
       <React.Fragment>
