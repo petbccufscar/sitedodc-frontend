@@ -11,19 +11,45 @@ body {
   width: 230px;
   height: 230px;
   object-fit: cover;
+  object-position: top;
+}
+
+#card-img-rounded {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .links-rapidos {
   max-width: 68px;
   max-height: 68px;
   object-fit: cover;
-  // img {
-  //   object-fit: scale-down;
-  // }
 }
 
 #areas li {
   display: inline;
+}
+
+@include media-breakpoint-down(sm) {
+  #breadcrumb {
+    padding-bottom: 10px; 
+
+    .divider-breadcrumbs {
+      margin-right: 10px;
+      padding: 1px 8px 1px 8px;
+      align-self: center;  
+    }
+    .item-breadcrumb {
+      display: flex;
+      margin-right: 10px;
+      margin: 5px;
+      a {
+        line-height: 20px;
+      }
+    }
+
+  }
 }
 
 @include media-breakpoint-down(md) {
@@ -37,6 +63,7 @@ body {
     overflow: hidden;
     margin-bottom: 70px;
   }
+
 }
 @include media-breakpoint-up(md) {
   .mais-noticias .card-columns {

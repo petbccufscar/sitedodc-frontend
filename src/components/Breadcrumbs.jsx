@@ -14,7 +14,7 @@ export const Breadcrumb = ({ endereco, bold, children }) => (
   </li>
 );
 export const Breadcrumbs = ({ children }) => (
-  <nav id="breadcrumb" className="container-fluid m-0 shadow-sm mb-5">
+  <nav id="breadcrumb" className="container-fluid m-0 shadow-sm mb-5 overflow-inline">
     <div className="container">
       <ul className="m-0 p-0">{children}</ul>
     </div>
