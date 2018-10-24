@@ -22,7 +22,9 @@ import {
   faUniversalAccess,
   faAngleRight,
   faExclamationTriangle,
-  faPlus
+  faPlus,
+  faGlobeAmericas,
+  faLink
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -39,7 +41,9 @@ library.add(
   faUniversalAccess,
   faAngleRight,
   faExclamationTriangle,
-  faPlus
+  faPlus,
+  faGlobeAmericas,
+  faLink
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));

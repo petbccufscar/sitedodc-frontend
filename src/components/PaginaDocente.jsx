@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Avatar from "../images/avatar.png"
-import Botao from "../components/Botao"
+import { Link } from "react-router-dom";
+
 
 const Docente = ({docente, areas}) => (
     
@@ -23,8 +23,14 @@ const Docente = ({docente, areas}) => (
                 <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
                 Email: {docente["Email"]}
             </p> 
-            <Botao link={docente["Lattes"]} texto="Lattes"/>
-            <Botao link={docente["Site pessoal"]} texto="Página Pessoal"/>            
+            <a href={docente["Lattes"]} className="mr-4">
+                <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
+                Lattes
+            </a>
+            <a href={docente["Site pessoal"]} className="mr-4">
+                <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
+                Página Pessoal
+            </a>           
         </div>
         </div>
         
