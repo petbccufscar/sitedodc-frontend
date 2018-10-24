@@ -49,14 +49,24 @@ class Docente extends Component {
   renderAreas(docente) {
     if (docente["Áreas"].length === 0) {
       return;
-    } else {
+    } else if (docente["Áreas"].length > 3) {
       return (
-        <p className="card-text">
+        <p className="card-text" id="areas-docente">
           <FontAwesomeIcon icon="microscope" className="d-inline-block mr-2" />
-          Áreas: {this.listAreas(docente["Áreas"])}
+          Áreas: {this.listAreasSlice(docente["Áreas"])} ...
         </p>
       );
-    }
+    } else return (
+      <p className="card-text" id="areas-docente">
+          <FontAwesomeIcon icon="microscope" className="d-inline-block mr-2" />
+          Áreas: {this.listAreas(docente["Áreas"])} 
+        </p>
+    );
+  }
+
+  listAreasSlice(areas) {
+    let list = areas.map(area => <a>{area["Área"]}; </a>);
+    return list.reverse().slice(0,3);
   }
 
   listAreas(areas) {

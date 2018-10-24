@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Botao from "../components/Botao"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // TODO: pegar da api
 const Grupo = ({
@@ -16,7 +16,12 @@ const Grupo = ({
         <div className="col-md-8">
             <h3>{titulo}</h3>
             <p className="text-justify">{descricao}</p>
-            <p><Botao texto="VISITAR SITE" link={link} small={true}/></p>
+            <p>
+                <Link to={link}>
+                    <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
+                    Visitar Site
+                </Link>
+            </p>
         </div>
 </div>
 );

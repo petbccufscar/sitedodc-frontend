@@ -31,6 +31,10 @@ body {
   display: inline;
 }
 
+#areas-docente {
+  display: inline-block;
+}
+
 @include media-breakpoint-down(sm) {
   #breadcrumb {
     padding-bottom: 10px; 
