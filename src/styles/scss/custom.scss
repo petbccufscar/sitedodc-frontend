@@ -84,6 +84,7 @@ body {
   }
   .small {
     max-height: 50px;
+    
     svg {
       display: none !important;
     }
@@ -91,7 +92,7 @@ body {
       display: none;
     }
     small {
-      display: none;
+      font-size: 100%;
     }
     .mais-noticias {
       .card-columns {

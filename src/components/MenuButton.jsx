@@ -13,7 +13,7 @@ const MenuButton = ({ titulo, endereco, icone }) => (
   >
     <FontAwesomeIcon icon={icone} className="d-inline-block" />
 
-    <div>{titulo}</div>
+    <div><small>{titulo}</small></div>
   </Link>
 );
 

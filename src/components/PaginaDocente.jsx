@@ -8,7 +8,7 @@ const Docente = ({docente, areas}) => (
     <div className="container">
         <div className="row">
         <div class="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
-            <img id="img-docente" className="rounded" src="https://picsum.photos/230/230/?random"/>
+            <img id="img-docente" className="rounded-circle" src="https://picsum.photos/230/230/?random"/>
         </div>
         <div class="col-sm col-lg-9 col-md-8" id="docente-conteudo">
             <h3 className="text-center text-sm-left">{docente["Nome"]}</h3>
