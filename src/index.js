@@ -6,7 +6,6 @@ import "./styles/scss/custom.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faGraduationCap,

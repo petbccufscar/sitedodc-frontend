@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
@@ -12,7 +12,7 @@ const Noticia = ({ noticia }) => (
       <small>{noticia["Descrição"]}</small>
     </div>
     {noticia.Imagem && (
-      <img src={noticia.Imagem} class="img-fluid" alt="Responsive image" />
+      <img src={noticia.Imagem} class="img-fluid" alt="Responsive" />
     )}
     <ReactMarkdown source={noticia["Conteúdo"]} />
   </div>

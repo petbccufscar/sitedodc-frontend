@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import PaginaDocente from "../../components/PaginaDocente";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -34,7 +33,36 @@ class Docente extends Component {
           <Breadcrumb endereco="/Docentes">Docentes</Breadcrumb>
           <Breadcrumb bold>{this.state.docente["Nome"]}</Breadcrumb>
         </Breadcrumbs>
-        <PaginaDocente docente={this.state.docente} areas={this.renderAreas(this.state.docente["Áreas"])} />
+        <div className="container">
+        <div className="row">
+        <div class="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
+            <img id="img-docente" className="rounded-circle" src="https://picsum.photos/230/230/?random" alt="imagem do docente"/>
+        </div>
+        <div class="col-sm col-lg-9 col-md-8" id="docente-conteudo">
+            <h3 className="text-center text-sm-left">{this.state.docente["Nome"]}</h3>
+            <h5 className="text-muted text-center text-sm-left">{this.state.docente["Tipo"] + "-" +  this.state.docente["Horas"] + "h/DE"}</h5>
+            <p className="text-justify">{this.state.docente["Descrição"]}</p>
+            <p className="card-text">
+                <FontAwesomeIcon icon="graduation-cap" className="d-inline-block mr-2" />
+                Nível: {this.state.docente["Nível"]}
+            </p>
+            <p>{this.renderAreas(this.state.docente["Áreas"])}</p>
+            <p className="card-text">
+                <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
+                Email: {this.state.docente["Email"]}
+            </p> 
+            <a href={this.state.docente["Lattes"]} className="mr-4">
+                <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
+                Lattes
+            </a>
+            <a href={this.state.docente["Site pessoal"]} className="mr-4">
+                <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
+                Página Pessoal
+            </a>           
+        </div>
+        </div>
+        
+    </div>
       </React.Fragment>
     );
   }

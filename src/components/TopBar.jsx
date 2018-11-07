@@ -63,9 +63,9 @@ class TopBar extends Component {
         {this.BarraTopo}
         <nav id="menu" className={this.NavBarClasses()}>
           <div className="container">
-            <a className="navbar-brand " href="/">
+            <a className="navbar-brand d-flex flex-row" href="/">
               <img
-                className="d-inline-block align-baseline mr-3 "
+                className="d-inline-block align-self-center mr-3 "
                 src={LogoDC}
                 width="50"
                 height="35"
@@ -111,7 +111,7 @@ class TopBar extends Component {
 
   NavBarClasses() {
     return "navbar navbar-expand-md navbar-light bg-white border-bottom ".concat(
-      this.state.small ? "small" : ""
+      this.state.small ? "navbar-small" : ""
     );
   }
 
@@ -177,7 +177,7 @@ class TopBar extends Component {
       <li className="list-inline-item ">
         <a className="badge badge-dark font-weight-normal" href={link}>
           <FontAwesomeIcon icon={icone} className="mr-1" />
-          {texto}
+          <span className="d-none d-sm-inline-block">{texto}</span>
         </a>
       </li>
     );
