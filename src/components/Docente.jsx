@@ -36,7 +36,7 @@ class Docente extends Component {
         key={docente["Nome"]}
         img_esquerda
         titulo={docente["Nome"]}
-        subtitulo={docente["Tipo"] + "-" +  docente["Horas"] + "h/DE"}
+        subtitulo={docente["Tipo"] + "-" +  docente["Horas"] + "h/DE" + " - " + "Ramal: " + docente["Ramal"] }
         rodape={this.renderAreas(docente)}
         link={"/docente/" + docente["_id"]}
         //imagem={docente["Imagem"]}

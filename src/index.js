@@ -23,7 +23,8 @@ import {
   faExclamationTriangle,
   faPlus,
   faGlobeAmericas,
-  faLink
+  faLink,
+  faPhone
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -42,7 +43,8 @@ library.add(
   faExclamationTriangle,
   faPlus,
   faGlobeAmericas,
-  faLink
+  faLink,
+  faPhone
 );
 
 ReactDOM.render(<App />, document.getElementById("root"));
