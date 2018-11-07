@@ -1,17 +1,18 @@
-import React, { Component } from "react";
+import React  from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NaoEncontrado = () => (
-  <div class="d-flex justify-content-center p-5 mt-3">
-    <FontAwesomeIcon icon="exclamation-triangle" className="mr-5" size="4x" />
+  <div class="d-flex justify-content-center flex-wrap p-5 mt-3">
+  <div>
+    <FontAwesomeIcon icon="exclamation-triangle" className="mr-0 mr-sm-5 mb-5 mb-sm-0 " size="5x" />
+    </div>
     <div>
-      <h5>Ops! Não conseguimos encontrar a pagina que você queria =( </h5>
-      <div>
+      <h5>Ops! Não conseguimos encontrar a pagina que você queria.</h5>
+      <small>
         Se você acha que isso é um erro, nos avise
-        <button type="button" class="btn btn-sm btn-primary ml-2">
-          Aqui
+        <button type="button" class="btn btn-sm btn-link">clicando aqui
         </button>
-      </div>
+      </small>
     </div>
   </div>
 );

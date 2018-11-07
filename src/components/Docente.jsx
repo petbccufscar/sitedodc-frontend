@@ -65,12 +65,12 @@ class Docente extends Component {
   }
 
   listAreasSlice(areas) {
-    let list = areas.map(area => <a>{area["Área"]}; </a>);
+    let list = areas.map(area => <a href={"/docentes/por-area/"+area["Área"]}>{area["Área"]}; </a>);
     return list.reverse().slice(0,3);
   }
 
   listAreas(areas) {
-    let list = areas.map(area => <a>{area["Área"]}; </a>);
+    let list = areas.map(area => <a href={"/docentes/por-area/"+area["Área"]}>{area["Área"]}; </a>);
     return list;
   }
 }

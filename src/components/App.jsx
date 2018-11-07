@@ -10,7 +10,6 @@ import AreaDocente from "../routes/AreaDocente";
 import AreaVisitante from "../routes/AreaVisitante";
 import Docentes from "../routes/Docentes";
 import NaoEncontrado from "./NaoEncontrado";
-import PaginaDocente from "./PaginaDocente";
 import Docente from "../routes/Docente";
 import Grupos from "../routes/Grupos";
 import ScrollToTop from "./ScrollToTop";

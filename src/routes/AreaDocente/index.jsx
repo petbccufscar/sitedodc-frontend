@@ -42,7 +42,7 @@ const Suporte = [
   {
     Titulo: "Criação de salas no Moodle",
     Link: "#",
-    Subtitulo: "Gu);a de como criar salas no Moodle."
+    Subtitulo: "Guia de como criar salas no Moodle."
   },
   {
     Titulo: "Sistema de suporte",

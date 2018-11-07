@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 const Evento = ({ titulo, data }) => (
   <a
     key={titulo}
-    href="#"
+    href="www.algo.br"
     style={{ textDecoration: "none" }}
     className="d-flex flex-row align-items-start border-bottom"
   >

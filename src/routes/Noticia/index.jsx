@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import NoticiaCompleta from "../../components/NoticiaCompleta";
+import NoticiaCompleta from "./components/NoticiaCompleta";
 class Noticia extends Component {
   state = {};
   constructor() {

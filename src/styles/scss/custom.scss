@@ -86,7 +86,7 @@ body {
     max-height: 80px;
     transition: max-height 100ms linear;
   }
-  .small {
+  .navbar-small {
     max-height: 50px;
     
     svg {
@@ -94,9 +94,13 @@ body {
     }
     h5 {
       display: none;
-    }
+    } 
     small {
-      font-size: 100%;
+      font-size:100%;
+
+    }
+    .navbar-brand small {
+    display: none;
     }
     .mais-noticias {
       .card-columns {

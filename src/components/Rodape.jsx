@@ -5,7 +5,7 @@ class Rodape extends Component {
       <footer id="rodape" className="footer  mt-5">
         <div className="container py-5   text-dark text-center text-md-left">
           <div className="row justify-content-center">
-            <div className="col-md-6 col-lg-6 col-xl-4 mt-2">
+            <div className="col-md-4">
               <h6 className="text-uppercase font-weight-bold">
                 Departamento de Computação <small>UFSCar</small>
               </h6>
@@ -21,8 +21,9 @@ class Rodape extends Component {
               </ul>
             </div>
 
-            <div className="col-md-8 col-offset-1">
+            <div className="col-md-8">
               <iframe
+              title="Iframe do Google Maps"
                 height="220px"
                 width="100%"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.8238490302215!2d-47.88273818439348!3d-21.979722710974197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8711e42fdad05%3A0x6a0cd2ccbce13d28!2sDepartamento+de+Computa%C3%A7%C3%A3o%2C+Universidade+Federal+de+S%C3%A3o+Carlos!5e0!3m2!1sen!2sus!4v1480425559308"
