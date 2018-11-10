@@ -36,7 +36,7 @@ class Docente extends Component {
         key={docente["Nome"]}
         img_esquerda
         titulo={docente["Nome"]}
-        subtitulo={docente["Tipo"] + "-" +  docente["Horas"] + "h/DE"}
+        subtitulo={docente["Tipo"] + "-" +  docente["Horas"] + "h/DE" + " - " + "Ramal: " + docente["Ramal"] }
         rodape={this.renderAreas(docente)}
         link={"/docente/" + docente["_id"]}
         //imagem={docente["Imagem"]}
@@ -65,12 +65,12 @@ class Docente extends Component {
   }
 
   listAreasSlice(areas) {
-    let list = areas.map(area => <a>{area["Área"]}; </a>);
+    let list = areas.map(area => <a href={"/docentes/por-area/"+area["Área"]}>{area["Área"]}; </a>);
     return list.reverse().slice(0,3);
   }
 
   listAreas(areas) {
-    let list = areas.map(area => <a>{area["Área"]}; </a>);
+    let list = areas.map(area => <a href={"/docentes/por-area/"+area["Área"]}>{area["Área"]}; </a>);
     return list;
   }
 }

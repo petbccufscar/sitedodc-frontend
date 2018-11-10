@@ -20,7 +20,7 @@ class LinksRapidos extends Component {
   }
   render() {
     return (
-      <div className=" mt-4">
+      <div className=" pt-5 pt-md-4">
         <h4 className="mb-3">Links rápidos</h4>
         <div className="d-flex flex-wrap">
           {this.state.links.map(link => (

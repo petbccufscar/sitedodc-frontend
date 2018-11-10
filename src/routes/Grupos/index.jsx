@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import Grupo from "../../components/Grupo";
+import Grupo from "./components/Grupo";
 
 // TODO: pegar da api
 class Grupos extends Component {

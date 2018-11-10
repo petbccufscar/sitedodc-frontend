@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Noticias from "../../components/Noticias";
-import BarraLateral from "../../components/BarraLateral";
-import BotoesArea from "../../components/BotoesArea";
+import BarraLateral from "./components/BarraLateral";
+import BotoesArea from "./components/BotoesArea";
 import { Link } from "react-router-dom";
-import BannerRotativo from "../../components/BannerRotativo";
+import BannerRotativo from "./components/BannerRotativo";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 class Inicio extends Component {
   render() {
