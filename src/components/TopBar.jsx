@@ -22,7 +22,7 @@ const Menus = [
   {
     Titulo: "Pessoas",
     Icone: "user",
-    SubMenus: ["Alunos", "Docentes", "Colaboradores"]
+    SubMenus: ["Alunos", "Docentes", "tecnico-administrativos", "Colaboradores"]
   },
   {
     Titulo: "Institucional",
