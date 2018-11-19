@@ -7,7 +7,7 @@ const Menus = [
   {
     Titulo: "Ensino",
     Icone: "graduation-cap",
-    SubMenus: ["Graduação", "Pós-Graduação"]
+    SubMenus: ["Graduacao", "pos-graduacao"]
   },
   {
     Titulo: "Pesquisa",
