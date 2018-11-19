@@ -12,7 +12,13 @@ import Docentes from "../routes/Docentes";
 import NaoEncontrado from "./NaoEncontrado";
 import Docente from "../routes/Docente";
 import Grupos from "../routes/Grupos";
-import TecnicoAdministrativos from "../routes/TecnicoAdministrativos"
+import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
+import Graduacao from "../routes/Graduacao";
+import PosGraduacao from "../routes/PosGraduacao";
+import Laboratorios from "../routes/Laboratorios";
+import Catalogo from "../routes/Catalogo";
+import Alunos from "../routes/Alunos";
+import Sobre from "../routes/Sobre";
 import ScrollToTop from "./ScrollToTop";
 
 class App extends Component {
@@ -35,6 +41,12 @@ class App extends Component {
               <Route exact path="/docente/:id" component={Docente}/>
               <Route exact path="/grupos" component={Grupos}/>
               <Route exact path="/tecnico-administrativos" component={TecnicoAdministrativos}/>
+              <Route exact path="/graduacao" component={Graduacao}/>
+              <Route exact path="/pos-graduacao" component={PosGraduacao}/>
+              <Route exact path="/laboratorios" component={Laboratorios}/>
+              <Route exact path="/catalogo" component={Catalogo}/>
+              <Route exact path="/alunos" component={Alunos}/>
+              <Route exact path="/sobre" component={Sobre}/>
               <Route path="*" component={NaoEncontrado} />
             </Switch>
           </main>
