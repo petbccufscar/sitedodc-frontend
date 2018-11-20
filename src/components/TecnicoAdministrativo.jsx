@@ -10,7 +10,7 @@ const TecnicoAdministrativo = () => (
         key="0"
         img_esquerda
         titulo="Nicanor José Costa"
-        subtitulo="Coordenador dos cursos BCC e ENC"
+        subtitulo="Secretaria de Coordenação de Cursos"
         imagem="https://picsum.photos/100/100/?random"
         />
 
@@ -18,7 +18,7 @@ const TecnicoAdministrativo = () => (
         key="0"
         img_esquerda
         titulo="Nicanor José Costa"
-        subtitulo="Coordenador dos cursos BCC e ENC"
+        subtitulo="Secretaria de Coordenação de Cursos"
         imagem="https://picsum.photos/100/100/?random"
         />
 
@@ -26,7 +26,7 @@ const TecnicoAdministrativo = () => (
         key="0"
         img_esquerda
         titulo="Nicanor José Costa"
-        subtitulo="Coordenador dos cursos BCC e ENC"
+        subtitulo="Secretaria de Coordenação de Cursos"
         imagem="https://picsum.photos/100/100/?random"
         />
 
@@ -34,7 +34,7 @@ const TecnicoAdministrativo = () => (
         key="0"
         img_esquerda
         titulo="Nicanor José Costa"
-        subtitulo="Coordenador dos cursos BCC e ENC"
+        subtitulo="Secretaria de Coordenação de Cursos"
         imagem="https://picsum.photos/100/100/?random"
         />
     </div>
