@@ -2,156 +2,160 @@ $primary: #275e87;
 $secondary: #f89700;
 $light: #e0e0e0;
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
-
 body {
-  padding-top: 110px;
+    padding-top: 110px;
 }
 
 #img-docente {
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  object-position: top;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: top;
 }
 
 #card-img-rounded {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: top;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .links-rapidos {
-  max-width: 68px;
-  max-height: 68px;
-  object-fit: cover;
+    max-width: 68px;
+    max-height: 68px;
+    object-fit: cover;
 }
 
 #areas li {
-  display: inline;
+    display: inline;
 }
 
 #areas-docente {
-  display: inline-block;
+    display: inline-block;
 }
 
 @include media-breakpoint-down(sm) {
-  #breadcrumb {
-    padding-bottom: 10px; 
-
-    .divider-breadcrumbs {
-      margin-right: 10px;
-      padding: 1px 8px 1px 8px;
-      align-self: center;  
+    #breadcrumb {
+        padding-bottom: 10px;
+        .divider-breadcrumbs {
+            margin-right: 10px;
+            padding: 1px 8px 1px 8px;
+            align-self: center;
+        }
+        .item-breadcrumb {
+            display: flex;
+            margin-right: 10px;
+            margin: 5px;
+            a {
+                line-height: 20px;
+            }
+        }
     }
-    .item-breadcrumb {
-      display: flex;
-      margin-right: 10px;
-      margin: 5px;
-      a {
-        line-height: 20px;
-      }
-    }
-
-  }
 }
 
 @include media-breakpoint-down(md) {
-  .card-columns {
-    column-count: 1 !important;
-  }
-  #botoes-area {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 70px;
-  }
-
+    .card-columns {
+        column-count: 1 !important;
+    }
+    #botoes-area {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
 }
-@include media-breakpoint-up(md) {
-  .mais-noticias .card-columns {
-    column-count: 4 !important;
-  }
-  .card-columns {
-    column-count: 2 !important;
-  }
-  #botoes-area {
-    margin-top: -120px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 80px;
-  }
-  .navbar {
-    max-height: 80px;
-    transition: max-height 100ms linear;
-  }
-  .navbar-small {
-    max-height: 50px;
+.navbar-collapse {
+  .navbar-nav {
     
-    svg {
-      display: none !important;
-    }
-    h5 {
-      display: none;
-    } 
-    small {
-      font-size:100%;
+  }
+}
 
-    }
-    .navbar-brand small {
-    display: none;
-    }
-    .mais-noticias {
-      .card-columns {
+@include media-breakpoint-up(md) {
+    .mais-noticias .card-columns {
         column-count: 4 !important;
-      }
     }
     .card-columns {
-      column-count: 2 !important;
+        column-count: 2 !important;
     }
-  }
+    #botoes-area {
+        margin-top: -120px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 80px;
+    }
+    .navbar {
+        max-height: 80px;
+        transition: max-height 100ms linear;
+    }
+    .navbar-small {
+        max-height: 50px;
+        svg {
+            display: none !important;
+        }
+        h5 {
+            display: none;
+        }
+        small {
+            font-size: 100%;
+        }
+        .navbar-brand small {
+            display: none;
+        }
+
+    }
+    .mais-noticias {
+        .card-columns {
+            column-count: 4 !important;
+        }
+    }
+    .card-columns {
+        column-count: 2 !important;
+    }
 }
 
 #rodape {
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .item-breadcrumb {
-  display: inline-block;
-  list-style: none;
-  margin-right: 20px;
-  a {
-    line-height: 80px;
-  }
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    a {
+        line-height: 80px;
+    }
 }
+
 .divider-breadcrumbs {
-  display: inline !important;
-  padding: 3px 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  margin-right:20px;
+    display: inline !important;
+    padding: 3px 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .card {
-  a {
-    text-decoration: none;
-  }
+    a {
+        text-decoration: none;
+    }
 }
+
 .hoverable {
-  transition: all linear 300ms;
-  &:hover {
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-  }
+    transition: all linear 300ms;
+    &:hover {
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    }
 }
+
 .btn-white {
-  background-color:white;
-  color: $primary;
-  &:hover {
-    background-color:$light;
+    background-color: white;
+    color: $primary;
+    &:hover {
+        background-color: $light;
     }
 }

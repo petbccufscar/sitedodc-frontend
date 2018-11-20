@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const MenuButton = ({ titulo, endereco, icone }) => (
+const MenuButton = ({ titulo, endereco, icone, dropdown }) => (
   <Link
     className="nav-link"
-    data-toggle="dropdown"
+    data-toggle={dropdown?"dropdown":""}
     role="button"
     aria-haspopup="true"
     aria-expanded="false"
