@@ -20,6 +20,7 @@ import Catalogo from "../routes/Catalogo";
 import Alunos from "../routes/Alunos";
 import Sobre from "../routes/Sobre";
 import ScrollToTop from "./ScrollToTop";
+import LinhaDoTempo from "../routes/LinhaDoTempo";
 
 class App extends Component {
   render() {
@@ -47,6 +48,8 @@ class App extends Component {
               <Route exact path="/catalogo" component={Catalogo}/>
               <Route exact path="/alunos" component={Alunos}/>
               <Route exact path="/sobre" component={Sobre}/>
+              <Route exact path="/linha-do-tempo" component={LinhaDoTempo}/>
+
               <Route path="*" component={NaoEncontrado} />
             </Switch>
           </main>

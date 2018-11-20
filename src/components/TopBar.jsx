@@ -78,14 +78,12 @@ class TopBar extends Component {
                     <Link
                       to={"/graduacao"}
                       className="dropdown-item"
-                      href="#"
                     >
                       Graduação
             </Link>
                     <Link
                       to={"/pos-graducao"}
                       className="dropdown-item"
-                      href="#"
                     >
                       Pós-graduação
             </Link>
@@ -102,14 +100,12 @@ class TopBar extends Component {
                     <Link
                       to={"/catalogo"}
                       className="dropdown-item"
-                      href="#"
                     >
                       Catalogo
             </Link>
                     <Link
                       to={"/laboratorios"}
                       className="dropdown-item"
-                      href="#"
                     >
                       Laboratórios
             </Link>
@@ -181,14 +177,18 @@ class TopBar extends Component {
                     <Link
                       to={"/sobre"}
                       className="dropdown-item"
-                      href="#"
                     >
                       Sobre
+            </Link>
+            <Link
+                      to={"/linha-do-tempo"}
+                      className="dropdown-item"
+                    >
+                      Linha do tempo
             </Link>
                     <Link
                       to={"/contato"}
                       className="dropdown-item"
-                      href="#"
                     >
                       Contato
             </Link>
