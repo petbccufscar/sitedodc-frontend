@@ -34,7 +34,7 @@ class TopBar extends Component {
         <BarraDeAcessibilidade></BarraDeAcessibilidade>
         <nav id="menu" className={this.NavBarClasses()}>
           <div className="container">
-            <a className="navbar-brand d-flex flex-row" href="/">
+            <Link className="navbar-brand d-flex flex-row" to="/">
               <img
                 className="d-inline-block align-self-center mr-3 "
                 src={LogoDC}
@@ -51,7 +51,7 @@ class TopBar extends Component {
                   Universidade Federal de São Carlos
                 </small>
               </div>
-            </a>
+            </Link>
             <button
               className="navbar-toggler ml-3"
               type="button"
@@ -77,29 +77,59 @@ class TopBar extends Component {
                     dropdown
                   />
                   <div className="dropdown-menu">
-                  
-                      <span className="pb-2 pl-3  d-block"> Graduação
+
+                    <span className="pb-2 pl-3  d-block"> Graduação
 
                       </span>
-                      <Link
+                    <Link
                       to={"/graduacao/bcc"}
                       className="dropdown-item"
                     >
-                     <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Ciencia da computação</Link>
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Ciência da computação</Link>
                     <Link
                       to={"/graduacao/enc"}
                       className="dropdown-item"
                     >
-                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Engenharia da computação</Link>
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Engenharia da computação</Link>
+                      <Link
+                      to={"/graduacao/si"}
+                      className="dropdown-item"
+                    >
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Sistemas de Informação</Link>
+                      <Link
+                      to={"/graduacao/estagio"}
+                      className="dropdown-item"
+                    >
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Estágio</Link>
+                    
+                      
+                      <Link
+                      to={"/graduacao/alunos-externos"}
+                      className="dropdown-item"
+                    >
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Alunos externos</Link>
+                      <Link
+                      to={"/graduacao/tcc"}
+                      className="dropdown-item"
+                    >
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>TCC</Link>
+                    
+                    
                     <span className="pb-2 pt-3 pl-3  d-block">Pós-graduação
 
                       </span>
                     <Link
-                      to={"/pos-graducao"}
+                    
+                      to={"/pos-graducao/ppgcc"}
                       className="dropdown-item"
                     >
-                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>PPGCC
-PPGCC            </Link>
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>PPGCC</Link>
+                      <Link
+                    
+                    to={"/pos-graducao/lato-sensu"}
+                    className="dropdown-item"
+                  >
+                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon> Lato Sensu</Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
@@ -193,7 +223,7 @@ PPGCC            </Link>
                     >
                       Sobre
             </Link>
-            <Link
+                    <Link
                       to={"/linha-do-tempo"}
                       className="dropdown-item"
                     >
@@ -208,7 +238,7 @@ PPGCC            </Link>
                   </div>
                 </li>
 
-                             <li className="nav-item dropdown text-center">
+                <li className="nav-item dropdown text-center">
                   <MenuButton
                     titulo="Suporte"
                     endereco={"/suporte"}
@@ -222,17 +252,17 @@ PPGCC            </Link>
                     >
                       Links úteis
             </Link>
-            <Link
+                    <Link
                       to={"/suporte/reportar"}
                       className="dropdown-item"
                     >
                       Reportar problemas
             </Link>
-             
+
                   </div>
                 </li>
-                
-                
+
+
               </ul>
             </div>
           </div>
