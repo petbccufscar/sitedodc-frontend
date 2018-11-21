@@ -14,6 +14,7 @@ class Rodape extends Component {
               <ul className="list-unstyled">
                 <li>Universidade Federal de São Carlos</li>
                 <li>Rod. Washington Luís, km 235 - Jardim Guanabara</li>
+                <li>Caixa Postal 676</li>
                 <li>CEP: 13565-905 - São Carlos/SP</li>
                 <li>E-mail: dc@ufscar.br</li>
                 <li>Telefone: +55 16 3351-8232</li>

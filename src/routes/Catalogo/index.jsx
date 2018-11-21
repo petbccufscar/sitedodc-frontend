@@ -1,9 +1,14 @@
-import React, { Component } from "react";
+import React, { Component, ReactDOM } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import PrintCatalogo from "../../images/print-catalogo.png";
+import ReactIframeResizer from 'react-iframe-resizer-super';
 
+const iframeResizerOptions = { 
+  checkOrigin: false,
+   heightCalculationMethod: 'documentElementScroll'
+};
 
 class Catalogo extends Component {
+
   render() {
     return (
       <React.Fragment>
@@ -13,11 +18,11 @@ class Catalogo extends Component {
         </Breadcrumbs>
 
         <div className="container">
-          <h5 className="mb-4">Retirado do documento de conteúdo</h5>
-          <img src={PrintCatalogo}/>
+        <ReactIframeResizer fframeResizerOptions={iframeResizerOptions}  src="http://dctemp.dc.ufscar.br/static/lattes/index.html"></ReactIframeResizer>
         </div>
         
       </React.Fragment>
+      
     );
   }
 }
