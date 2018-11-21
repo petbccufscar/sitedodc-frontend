@@ -3,6 +3,8 @@ import LogoDC from "../images/logos/logo_DC_noText.png";
 import { Link } from "react-router-dom";
 import MenuButton from "./MenuButton";
 import BarraDeAcessibilidade from "./BarraDeAcessibilidade";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 class TopBar extends Component {
   state = { small: false };
@@ -75,18 +77,29 @@ class TopBar extends Component {
                     dropdown
                   />
                   <div className="dropdown-menu">
-                    <Link
-                      to={"/graduacao"}
+                  
+                      <span className="pb-2 pl-3  d-block"> Graduação
+
+                      </span>
+                      <Link
+                      to={"/graduacao/bcc"}
                       className="dropdown-item"
                     >
-                      Graduação
-            </Link>
+                     <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Ciencia da computação</Link>
+                    <Link
+                      to={"/graduacao/enc"}
+                      className="dropdown-item"
+                    >
+                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Engenharia da computação</Link>
+                    <span className="pb-2 pt-3 pl-3  d-block">Pós-graduação
+
+                      </span>
                     <Link
                       to={"/pos-graducao"}
                       className="dropdown-item"
                     >
-                      Pós-graduação
-            </Link>
+                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>PPGCC
+PPGCC            </Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">

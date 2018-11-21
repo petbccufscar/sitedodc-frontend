@@ -22,6 +22,9 @@ import Sobre from "../routes/Sobre";
 import ScrollToTop from "./ScrollToTop";
 import LinhaDoTempo from "../routes/LinhaDoTempo";
 import LinksSuporte from "../routes/LinksSuporte";
+import FormularioSuporte from "../routes/FormularioSuporte";
+import BCC from "../routes/bcc";
+import ENC from "../routes/enc";
 
 class App extends Component {
   render() {
@@ -51,6 +54,10 @@ class App extends Component {
               <Route exact path="/sobre" component={Sobre}/>
               <Route exact path="/linha-do-tempo" component={LinhaDoTempo}/>
               <Route exact path="/suporte/links" component={LinksSuporte}/>
+              <Route exact path="/graduacao/bcc" component={BCC}/>
+              <Route exact path="/graduacao/enc" component={ENC}/>
+
+              <Route exact path="/suporte/reportar" component={FormularioSuporte}/>
 
 
               <Route path="*" component={NaoEncontrado} />
