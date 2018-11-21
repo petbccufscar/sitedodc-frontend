@@ -194,14 +194,32 @@ class TopBar extends Component {
             </Link>
                   </div>
                 </li>
-                <li className="nav-item text-center">
+
+                             <li className="nav-item dropdown text-center">
                   <MenuButton
                     titulo="Suporte"
                     endereco={"/suporte"}
                     icone="wrench"
+                    dropdown
                   />
-
+                  <div className="dropdown-menu">
+                    <Link
+                      to={"/suporte/links"}
+                      className="dropdown-item"
+                    >
+                      Links úteis
+            </Link>
+            <Link
+                      to={"/suporte/reportar"}
+                      className="dropdown-item"
+                    >
+                      Reportar problemas
+            </Link>
+             
+                  </div>
                 </li>
+                
+                
               </ul>
             </div>
           </div>

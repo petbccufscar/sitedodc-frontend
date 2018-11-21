@@ -21,6 +21,7 @@ import Alunos from "../routes/Alunos";
 import Sobre from "../routes/Sobre";
 import ScrollToTop from "./ScrollToTop";
 import LinhaDoTempo from "../routes/LinhaDoTempo";
+import LinksSuporte from "../routes/LinksSuporte";
 
 class App extends Component {
   render() {
@@ -49,6 +50,8 @@ class App extends Component {
               <Route exact path="/alunos" component={Alunos}/>
               <Route exact path="/sobre" component={Sobre}/>
               <Route exact path="/linha-do-tempo" component={LinhaDoTempo}/>
+              <Route exact path="/suporte/links" component={LinksSuporte}/>
+
 
               <Route path="*" component={NaoEncontrado} />
             </Switch>
