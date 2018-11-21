@@ -144,7 +144,7 @@ class TopBar extends Component {
                       to={"/catalogo"}
                       className="dropdown-item"
                     >
-                      Catalogo
+                      Catálogo
             </Link>
                     <Link
                       to={"/laboratorios"}
