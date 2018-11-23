@@ -9,7 +9,7 @@ class ENC extends Component {
           <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb endereco="/graduacao">Graduação</Breadcrumb>
 
-          <Breadcrumb bold>Engenharia da coputação</Breadcrumb>
+          <Breadcrumb bold>Engenharia da computação</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
           <div class="row mt-4">

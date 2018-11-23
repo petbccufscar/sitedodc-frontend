@@ -24,7 +24,8 @@ const Card = ({
     {imagem && img_esquerda && (
       <div className="mr-4">
       <img id="card-img-rounded"
-      className="rounded-circle img-fluid"
+      style={{width:"100px", height:"100px"}}
+      className="rounded-circle "
         src={imagem}
         alt={imagem_descricao}
       />

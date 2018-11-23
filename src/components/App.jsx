@@ -44,7 +44,7 @@ class App extends Component {
               <Route exact path="/area-visitante" component={AreaVisitante} />
               <Route exact path="/docentes" component={Docentes} />
               <Route exact path="/docente/:id" component={Docente}/>
-              <Route exact path="/grupos" component={Grupos}/>
+              <Route exact path="/alunos-em-acao" component={Grupos}/>
               <Route exact path="/tecnico-administrativos" component={TecnicoAdministrativos}/>
               <Route exact path="/graduacao" component={Graduacao}/>
               <Route exact path="/pos-graduacao" component={PosGraduacao}/>

@@ -85,12 +85,12 @@ class TopBar extends Component {
                       to={"/graduacao/bcc"}
                       className="dropdown-item"
                     >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Ciência da computação</Link>
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"></FontAwesomeIcon>Ciência da Computação</Link>
                     <Link
                       to={"/graduacao/enc"}
                       className="dropdown-item"
                     >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Engenharia da computação</Link>
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Engenharia da Computação</Link>
                       <Link
                       to={"/graduacao/si"}
                       className="dropdown-item"
@@ -120,16 +120,16 @@ class TopBar extends Component {
                       </span>
                     <Link
                     
-                      to={"/pos-graducao/ppgcc"}
+                      to={"/pos-graducao/stricto"}
                       className="dropdown-item"
                     >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>PPGCC</Link>
+                      <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Stricto Sensu</Link>
                       <Link
                     
                     to={"/pos-graducao/lato-sensu"}
                     className="dropdown-item"
                   >
-                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon> Lato Sensu</Link>
+                    <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Lato Sensu</Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
@@ -144,7 +144,7 @@ class TopBar extends Component {
                       to={"/catalogo"}
                       className="dropdown-item"
                     >
-                      Catalogo
+                      Catálogo
             </Link>
                     <Link
                       to={"/laboratorios"}
@@ -163,11 +163,11 @@ class TopBar extends Component {
                   />
                   <div className="dropdown-menu">
                     <Link
-                      to={"/grupos"}
+                      to={"/alunos-em-acao"}
                       className="dropdown-item"
                       href="#"
                     >
-                      Grupos
+                      Alunos em ação
             </Link>
                     <Link
                       to={"/projetos-e-acoes"}
@@ -228,6 +228,12 @@ class TopBar extends Component {
                       className="dropdown-item"
                     >
                       Linha do tempo
+            </Link>
+            <Link
+                      to={"/infraestrutura"}
+                      className="dropdown-item"
+                    >
+                      Infraestrutura
             </Link>
                     <Link
                       to={"/contato"}
