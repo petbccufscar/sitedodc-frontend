@@ -1,50 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Card = ({
+const  Card = ({
+  className,
   key,
-  titulo = "Sem titulo",
-  subtitulo = "Sem subtitulo",
-  rodape,
-  link,
-  imagem,
-  imagem_descricao,
-  img_esquerda,
-  img_topo
+  children
 }) => (
-  <div className="card hoverable" key={key}>
-    { imagem && img_topo && (
-      <img
-        className="card-img-top"
-        src={imagem}
-        alt={imagem_descricao}
-      />
-    )}
-
-    <div className="card-body d-flex flex-row">
-    {imagem && img_esquerda && (
-      <div className="mr-4">
-      <img id="card-img-rounded"
-      style={{width:"100px", height:"100px"}}
-      className="rounded-circle "
-        src={imagem}
-        alt={imagem_descricao}
-      />
-      </div>
-    )}
-    <div>
-      <a href={link}>
-        <h5 className="card-title">{titulo}</h5>
-        <p className="card-text">{subtitulo}</p>
-      </a>
-      </div>
+    <div className={"card "+ className} key={key}>
+      {children}
     </div>
+  );
 
-    {rodape && (
-      <div className="card-footer">
-        <small className="text-muted">{rodape}</small>
-      </div>
-    )}
+export const CardImage = ({ img, alt }) => (
+
+  <img
+    className="card-img-top"
+    src={img}
+    alt={alt}
+  />
+)
+
+export const CardBody = ({ img, alt, children }) => (
+
+  <div className="card-body d-flex flex-row">
+    {children}
   </div>
-);
+)
+
+export const CardFooter = ({ children }) => (
+
+  <div className="card-footer bg-white">
+    {children}
+  </div>
+)
 
 export default Card;

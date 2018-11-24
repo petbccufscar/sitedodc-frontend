@@ -26,14 +26,6 @@ body {
     object-fit: cover;
 }
 
-#areas li {
-    display: inline;
-}
-
-#areas-docente {
-    display: inline-block;
-}
-
 @include media-breakpoint-down(sm) {
     #breadcrumb {
         padding-bottom: 10px;
@@ -145,6 +137,7 @@ body {
         -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
         -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+        border-color: rgba(0,0,0,0.3);
     }
 }
 
@@ -154,4 +147,9 @@ body {
     &:hover {
         background-color: $light;
     }
+}
+.badge-extra-light {
+    color: #212529;
+    background-color: #f7f7f7;
+    border:1px solid rgba(0,0,0,0.1)
 }

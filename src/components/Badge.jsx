@@ -1,9 +1,10 @@
 import React from "react";
 
-const Badge = ({ link, children }) => (
+const Badge = ({ link, children, color="dark" }) => (
 
+    
     <li className="list-inline-item ">
-        <a className="badge badge-dark font-weight-normal" href={link}>
+        <a className={"badge badge-"+ color +" font-weight-normal"} href={link}>
             {children}
         </a>
     </li>
