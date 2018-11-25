@@ -40,6 +40,7 @@ class Noticias extends Component {
         {this.state.ready ? this.state.noticias.map(noticia => (
           <Card
             key={noticia["Título"]}
+            className="hoverable"
           >
             <CardImage
               img="https://picsum.photos/300/100/?random"
