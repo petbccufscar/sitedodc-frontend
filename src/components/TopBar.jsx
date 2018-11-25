@@ -65,11 +65,11 @@ class TopBar extends Component {
             </button>
 
             <div
-              className="collapse navbar-collapse  "
+              className="collapse navbar-collapse "
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ml-auto">
-                <li className="nav-item dropdown text-center">
+                <li className="nav-item dropdown  text-center">
                   <MenuButton
                     titulo="Ensino"
                     endereco={"/ensino"}
@@ -282,6 +282,7 @@ class TopBar extends Component {
       this.state.small ? "navbar-small" : ""
     );
   }
+
 }
 
 export default TopBar;

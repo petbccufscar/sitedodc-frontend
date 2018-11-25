@@ -39,16 +39,19 @@ class Noticias extends Component {
             <CardImage
               img="https://picsum.photos/300/100/?random"
               alt={"noticia.imagem_descricao"}
-              />
+            />
             <CardBody>
               <Link to={"/noticia/" + noticia["_id"]} >
                 <h5 className="card-title">{noticia["Título"].substring(0, 100).concat("...")}</h5>
                 <p className="card-text">{noticia["Descrição"].substring(0, 100).concat("...")}
                 </p>
               </Link>
-
             </CardBody>
-            <CardFooter><small>{this.FormatarData(noticia["createdAt"])}</small></CardFooter>
+            <CardFooter>
+              <small>
+                {this.FormatarData(noticia["createdAt"])}
+              </small>
+            </CardFooter>
           </Card>
         ))}
       </div>

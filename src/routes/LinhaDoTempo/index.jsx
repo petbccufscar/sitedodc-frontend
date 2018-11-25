@@ -37,9 +37,9 @@ class LinhaDoTempo extends React.Component {
               </div>
 
               <h3>Vídeos</h3>
-              <div className="d-flex flex-row flex-wrap mt-3">
-                <div className="flex-fill mr-3 "><iframe frameborder="0" width="100%" height="290" src="http://www.youtube.com/embed/65ErgsOfEtE"></iframe></div>
-                <div className="flex-fill " ><iframe frameborder="0" width="100%" height="290" src="http://www.youtube.com/embed/UEklyABA7uc" ></iframe></div>
+              <div className="d-flex flex-row flex-wrap justify-content-between mt-3">
+                <div className="flex-fill "><iframe frameBorder="0" width="100%" height="290" src="http://www.youtube.com/embed/65ErgsOfEtE"></iframe></div>
+                <div className="flex-fill " ><iframe frameBorder="0" width="100%" height="290" src="http://www.youtube.com/embed/UEklyABA7uc" ></iframe></div>
               </div>
             </Event>
             <Event interval={"1972"} title={"Fundação"}>

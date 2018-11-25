@@ -23,9 +23,9 @@ class LinksRapidos extends Component {
       <div className=" pt-5 pt-md-4">
         <h4 className="mb-3">Links rápidos</h4>
         <div className="d-flex flex-wrap">
-          {this.state.links.map(link => (
+          {this.state.links.map((link,index) => (
             //<LinkRapido link={link.Link} imagem={link.Imagem} />
-            <LinkRapido link={link.Link} />
+            <LinkRapido link={link.Link} key={index} />
           ))}
         </div>
       </div>

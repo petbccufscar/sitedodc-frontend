@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MenuButton = ({ titulo, endereco, icone, dropdown }) => (
   <Link
-    className="nav-link ml-2"
+    className="nav-link ml-2 d-flex d-sm-block py-3 py-sm-0 align-items-center "
     data-toggle={dropdown?"dropdown":""}
     role="button"
     aria-haspopup="true"
@@ -13,7 +13,7 @@ const MenuButton = ({ titulo, endereco, icone, dropdown }) => (
   >
     <FontAwesomeIcon icon={icone} className="d-inline-block" />
 
-    <div><small>{titulo}</small></div>
+    <div className="pl-3 pl-sm-0"><small>{titulo}</small></div>
   </Link>
 );
 
