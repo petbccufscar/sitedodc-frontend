@@ -3,6 +3,9 @@ import Noticias from "../../components/Noticias";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 
 class MaisNoticias extends Component {
+  shouldComponentUpdate () {
+    return false;
+  }
   render() {
     return (
       <React.Fragment>

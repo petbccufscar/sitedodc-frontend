@@ -14,7 +14,7 @@ class Laboratorios extends Component {
 
         <div className="container">
           <h5 className="mb-4">Retirado do documento de conteúdo</h5>
-          <img src={Labs}/>
+          <img alt="Descrição do conteúdo" src={Labs}/>
         </div>
         
       </React.Fragment>

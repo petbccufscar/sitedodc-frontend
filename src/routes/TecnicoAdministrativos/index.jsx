@@ -3,6 +3,9 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import TecnicoAdministrativo from "../../components/TecnicoAdministrativo"
 
 class TecnicoAdministrativos extends Component {
+  shouldComponentUpdate () {
+    return false;
+  }
   render() {
     return (
       <React.Fragment>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "./Card";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

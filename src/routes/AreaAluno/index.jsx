@@ -10,8 +10,8 @@ class AreaAluno extends Component {
           <Breadcrumb bold>Área do aluno</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-          <div class="row mt-4">
-            <div class="col-md-3" id="menu_area">
+          <div class="row mt-4 ">
+            <div class="col-md-3 mb-5" id="menu_area">
               <div
                 class="border-right pr-2"
                 id="menu_area"
@@ -188,7 +188,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-estagio-tab"
                 >
-                  <h4>Distribuição de Disciplinas</h4>
+                  <h4>Estagio</h4>
                   <hr />
                 </div>
 
@@ -198,7 +198,7 @@ class AreaAluno extends Component {
                   role="tabpanel"
                   aria-labelledby="graduacao-dist-disciplina-tab"
                 >
-                  <h4>Estágio</h4>
+                  <h4>Distribuição de disciplinas</h4>
                   <hr />
                 </div>
 

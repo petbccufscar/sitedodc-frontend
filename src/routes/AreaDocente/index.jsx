@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import Card from "../../components/Card";
+import Card, { CardBody } from "../../components/Card";
 
 const Sistemas = [
   {
@@ -72,42 +72,57 @@ class AreaDocentes extends Component {
         <div className="container">
           <h4>Sistemas</h4>
           <div className="card-deck mb-4">
-            {Sistemas.map(link => {
-              return (
-                <Card
-                  botaoTexto="Ir para link"
-                  titulo={link.Titulo}
-                  link={link.Link}
-                  subtitulo={link.Subtitulo}
-                />
-              );
-            })}
+            {Sistemas.map(link => (
+              <Card className="hoverable">
+                <CardBody>
+                  <a href={link.Link} >
+                    <h5 className="card-title">
+                      {link.Titulo}
+                    </h5>
+                    <p
+                      className="card-text">{link.Subtitulo}
+                    </p>
+                  </a>
+                </CardBody>
+              </Card>
+            )
+            )}
           </div>
           <h4>Documentos</h4>
           <div className="card-deck mb-4">
-            {Documentos.map(link => {
-              return (
-                <Card
-                  botaoTexto="Ir para link"
-                  titulo={link.Titulo}
-                  link={link.Link}
-                  subtitulo={link.Subtitulo}
-                />
-              );
-            })}
+            {Documentos.map(link => (
+              <Card className="hoverable">
+                <CardBody>
+                  <a href={link.Link} >
+                    <h5 className="card-title">
+                      {link.Titulo}
+                    </h5>
+                    <p
+                      className="card-text">{link.Subtitulo}
+                    </p>
+                  </a>
+                </CardBody>
+              </Card>
+            )
+            )}
           </div>
           <h4>Suporte</h4>
           <div className="card-deck">
-            {Suporte.map(link => {
-              return (
-                <Card
-                  botaoTexto="Ir para link"
-                  titulo={link.Titulo}
-                  link={link.Link}
-                  subtitulo={link.Subtitulo}
-                />
-              );
-            })}
+            {Suporte.map(link => (
+              <Card className="hoverable">
+                <CardBody>
+                  <a href={link.Link} >
+                    <h5 className="card-title">
+                      {link.Titulo}
+                    </h5>
+                    <p
+                      className="card-text">{link.Subtitulo}
+                    </p>
+                  </a>
+                </CardBody>
+              </Card>
+            )
+            )}
           </div>
         </div>
       </React.Fragment>

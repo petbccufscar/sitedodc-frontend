@@ -1,23 +1,31 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import DocenteCard from "./components/docente_card"
+import { Facebook } from 'react-content-loader'
+
 class Docentes extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.state.ready !== nextState.ready) {
+            return true;
+        }
+        return false;
+    }
     state = {};
     constructor() {
         super();
         this.state = {
-            docentes: []
+            docentes: [],
+            ready: false
         };
     }
-    componentDidMount() {
-        fetch("https://sitedodc-backend.herokuapp.com/docente")
-            .then(recebidoJson => {
-                return recebidoJson.json();
-            })
-            .then(docentes => {
-              console.log(docentes);
-                this.setState({ docentes: docentes });
-            });
+    async componentDidMount() {
+        try {
+            const response = await fetch("https://sitedodc-backend.herokuapp.com/docente");
+            const json = await response.json();
+            this.setState({ docentes: json, ready: true });
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     render() {
@@ -33,10 +41,13 @@ class Docentes extends Component {
                     <div
                         className="card-columns"
                         style={{ columnCount: this.props.quantidade_por_linha }}
-                    >{
-                            this.state.docentes.map(docente =>
-                                (<DocenteCard docente={docente} />)
-                            )
+                    >
+                        {
+                            this.state.ready ?
+                                this.state.docentes.map(docente =>
+                                    (<DocenteCard docente={docente} />)
+                                )
+                                : <Facebook />
                         }
                     </div>
                 </div>

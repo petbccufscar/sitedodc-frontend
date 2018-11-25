@@ -14,7 +14,7 @@ class Graduacao extends Component {
 
         <div className="container">
           <h5 className="mb-4">Retirado do documento de conteúdo</h5>
-          <img src={Grad}/>
+          <img alt="Descrição do conteudo" src={Grad}/>
         </div>
         
       </React.Fragment>

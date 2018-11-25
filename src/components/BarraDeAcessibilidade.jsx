@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Badge from "./Badge";
-const BarraDeAcessibilidade = ({ }) => (
+const BarraDeAcessibilidade = () => (
     <div className="text-light bg-dark container-fluid ">
         <div className="container">
             <div

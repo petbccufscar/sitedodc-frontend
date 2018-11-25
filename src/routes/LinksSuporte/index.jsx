@@ -43,6 +43,9 @@ const Suporte = [
 ];
 
 class LinksSuporte extends Component {
+    shouldComponentUpdate () {
+        return false;
+      }
     render() {
         return (
             <React.Fragment>

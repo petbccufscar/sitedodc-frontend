@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 class Rodape extends Component {
+  shouldComponentUpdate () {
+    return false;
+  }
   render() {
     return (
       <footer id="rodape" className="footer  mt-5">

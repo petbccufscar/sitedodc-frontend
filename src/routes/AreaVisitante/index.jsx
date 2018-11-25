@@ -11,7 +11,7 @@ class AreaVisitante extends Component {
         </Breadcrumbs>
         <div className="container">
           <div class="row mt-4">
-            <div class="col-md-3" id="menu_area">
+            <div class="col-md-3 mb-3" id="menu_area">
               <div
                 id="side-menu"
                 class="border-right pr-2"
