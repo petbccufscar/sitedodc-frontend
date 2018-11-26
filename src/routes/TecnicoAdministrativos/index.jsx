@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import TecnicoAdministrativo from "../../components/TecnicoAdministrativo"
+import TecnicoAdministrativo from "./components/TecnicoAdministrativo";
 
 class TecnicoAdministrativos extends Component {
   render() {
