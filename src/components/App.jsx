@@ -17,6 +17,7 @@ import Graduacao from "../routes/Graduacao";
 import PosGraduacao from "../routes/PosGraduacao";
 import Laboratorios from "../routes/Laboratorios";
 import Catalogo from "../routes/Catalogo";
+import AnosAlunos from "../routes/AnosAlunos";
 import Alunos from "../routes/Alunos";
 import Sobre from "../routes/Sobre";
 import ScrollToTop from "./ScrollToTop";
@@ -50,7 +51,8 @@ class App extends Component {
               <Route exact path="/pos-graduacao" component={PosGraduacao}/>
               <Route exact path="/laboratorios" component={Laboratorios}/>
               <Route exact path="/catalogo" component={Catalogo}/>
-              <Route exact path="/alunos" component={Alunos}/>
+              <Route exact path="/alunos" component={AnosAlunos}/>
+              <Route exact path="/alunos/:curso/:ano" component={Alunos}/>
               <Route exact path="/sobre" component={Sobre}/>
               <Route exact path="/linha-do-tempo" component={LinhaDoTempo}/>
               <Route exact path="/suporte/links" component={LinksSuporte}/>
