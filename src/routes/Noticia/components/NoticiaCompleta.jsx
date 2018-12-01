@@ -2,8 +2,9 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
+
 const Noticia = ({ noticia }) => (
-  <div className="container">
+  <React.Fragment>
     <div className="mb-4 pb-4 border-bottom">
       <h4>
         <Data data={noticia["createdAt"]} />
@@ -15,7 +16,7 @@ const Noticia = ({ noticia }) => (
       <img src={noticia.Imagem} class="img-fluid" alt="Responsive" />
     )}
     <ReactMarkdown source={noticia["Conteúdo"]} />
-  </div>
+    </React.Fragment>
 );
 const Data = ({ data = "01/01/2018" }) => (
   <span className="mr-2 badge badge-primary">

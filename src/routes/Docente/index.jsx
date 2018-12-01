@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DocenteLoader from "./DocenteLoader";
 
 
 class Docente extends Component {
@@ -8,21 +9,22 @@ class Docente extends Component {
   constructor() {
     super();
     this.state = {
-      docente: []
+      docente: [],
+      ready:false
     };
     
   }
-
-  componentDidMount() {
-    const id = this.props.match.params.id;
-    fetch("https://sitedodc-backend.herokuapp.com/Docente/" + id)
-      .then(recebidoJson => {
-        return recebidoJson.json();
-      })
-      .then(docente => {
-        this.setState({ docente: docente });
-      });
+  async componentDidMount() {
+    try {
+      const id = this.props.match.params.id;
+      const response = await fetch("https://sitedodc-backend.herokuapp.com/Docente/" + id);
+      const json = await response.json();
+      this.setState({ docente: json, ready: true });
+    } catch (error) {
+      console.log(error);
+    }
   }
+
 
   render() {
     console.log(this.state.docente);
@@ -31,9 +33,10 @@ class Docente extends Component {
         <Breadcrumbs>
           <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb endereco="/Docentes">Docentes</Breadcrumb>
-          <Breadcrumb bold>{this.state.docente["Nome"]}</Breadcrumb>
+          <Breadcrumb bold>Visualizando docente</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
+        {this.state.ready ? (
         <div className="row">
         <div class="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
             <img id="img-docente" className="rounded-circle" src="https://picsum.photos/230/230/?random" alt="imagem do docente"/>
@@ -65,7 +68,7 @@ class Docente extends Component {
             </a>           
         </div>
         </div>
-        
+        ) : <DocenteLoader></DocenteLoader>}
     </div>
       </React.Fragment>
     );

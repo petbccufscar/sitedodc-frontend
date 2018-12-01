@@ -1,28 +1,35 @@
 import React, { Component } from "react";
-import Card from "./Card";
+import Card, { CardImage, CardBody, CardFooter } from "./Card";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
+import { Link } from "react-router-dom";
+import NoticiaLoader from "./NoticiaLoader";
+
 class Noticias extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.ready !== nextState.ready) {
+      return true;
+    }
+    return false;
+  }
   state = {};
   constructor() {
     super();
     this.state = {
       noticias: [],
-      ready:false
+      ready: false
     };
   }
-  componentDidMount() {
-    fetch(
-      "https://sitedodc-backend.herokuapp.com/noticia?_sort=createdAt:desc&_limit=" +
-        this.props.quantidade
-    )
-      .then(res => {
-        return res.json();
-      })
-      .then(json => {
-        this.setState({ noticias: json, ready:true });
-      
-      });
+  async componentDidMount() {
+
+    try {
+      const response = await fetch("https://sitedodc-backend.herokuapp.com/noticia?_sort=createdAt:desc&_limit=" +
+        this.props.quantidade);
+      const json = await response.json();
+      this.setState({ noticias: json, ready: true });
+    } catch (error) {
+      console.log(error);
+    }
   }
   render() {
     return (
@@ -30,19 +37,34 @@ class Noticias extends Component {
         className="card-columns"
         style={{ columnCount: this.props.quantidade_por_linha }}
       >
-        {this.state.ready && this.state.noticias.map(noticia => (
+        {this.state.ready ? this.state.noticias.map(noticia => (
           <Card
             key={noticia["Título"]}
-            img_topo
-            titulo={noticia["Título"].substring(0, 100).concat("...")}
-            subtitulo={noticia["Descrição"].substring(0, 100).concat("...")}
-            rodape={this.FormatarData(noticia["createdAt"])}
-            link={"/noticia/" + noticia["_id"]}
-            //imagem={noticia["Imagem"]}
-            imagem="https://picsum.photos/300/100/?random"
-            imagem_descricao={"noticia.imagem_descricao"}
-          />
-        ))}
+            className="hoverable"
+          >
+            <CardImage
+              img="https://picsum.photos/300/100/?random"
+              alt={"noticia.imagem_descricao"}
+            />
+            <CardBody>
+              <Link to={"/noticia/" + noticia["_id"]} >
+                <h5 className="card-title">{noticia["Título"].substring(0, 100).concat("...")}</h5>
+                <p className="card-text">{noticia["Descrição"].substring(0, 100).concat("...")}
+                </p>
+              </Link>
+            </CardBody>
+            <CardFooter>
+              <small>
+                {this.FormatarData(noticia["createdAt"])}
+              </small>
+            </CardFooter>
+          </Card>
+        )):
+        (<React.Fragment>
+          <NoticiaLoader></NoticiaLoader>
+        <NoticiaLoader></NoticiaLoader>
+        </React.Fragment>
+        )}
       </div>
     );
   }

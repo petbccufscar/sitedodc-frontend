@@ -13,7 +13,7 @@ class Inicio extends Component {
         <main role="main" className="container">
           <BotoesArea />
           <div className="row inicio" id="conteudo">
-            <div className="col">
+            <div className="col-12 col-md-8">
               <div className="d-flex justify-content-between mb-3">
                 <h4>Notícias</h4>
                 <Link to="/mais-noticias" className="btn btn-link">
