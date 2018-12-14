@@ -1,6 +1,5 @@
 import React from "react";
 import { Tab } from "react-web-tabs";
-import classNames from "classnames";
 
 class VTab extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -20,10 +19,7 @@ class VTab extends React.Component {
       <React.Fragment>
         {showHeader && <h6 className="p-2 mt-4">{header}</h6>}
         <Tab
-          className={classNames("nav-link", {
-            show: selected,
-            active: selected
-          })}
+          className={"nav-link" + (selected ? " show active" : "")}
           tabFor={panelId}
         >
           {children}
