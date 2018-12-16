@@ -1,0 +1,16 @@
+.rwt__tab {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+.rwt__tab[aria-selected="false"] {
+  color: #275e87;
+}
+
+.rwt__tab[aria-selected="false"]:hover {
+  color: #16354c;
+}
