@@ -58,9 +58,9 @@ class LinksSuporte extends Component {
                 <div className="container">
                     <h4>Sistemas</h4>
                     <div className="card-columns">
-                        {Suporte.map(link => (
+                        {Suporte.map((link,index) => (
                                 <Card className="hoverable"
-                                    key={link.link}
+                                    key={index}
                                 > 
                                     <CardBody>
                                         <Link to={link.Link} >

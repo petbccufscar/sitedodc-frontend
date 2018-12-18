@@ -49,10 +49,10 @@ class Docente extends Component {
               return (
                 <div className="row">
                   {data.docente.Foto && (
-                    <div class="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
+                    <div className="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
                       <img id="img-docente" className="rounded-circle" src={"http://159.89.232.182:1337" + data.docente.Foto.url} alt="imagem do docente" />
                     </div>)}
-                  <div class="col-sm col-lg-9 col-md-8" id="docente-conteudo">
+                  <div className="col-sm col-lg-9 col-md-8" id="docente-conteudo">
                     <h3 className="text-center text-sm-left">{data.docente.Nome}</h3>
                     <h5 className="text-muted text-center text-sm-left">{data.docente.Tipo + "-" + data.docente.Horas + "h/DE"}</h5>
                     <p className="text-justify">{data.docente.Descricao}</p>
@@ -96,7 +96,7 @@ class Docente extends Component {
   }
 
   listAreas(areas) {
-    let list = areas.map(area => <line>{area.Nome}; </line>);
+    let list = areas.map((area,index) => <span key={index}>{area.Nome}; </span>);
     return list;
   }
 }
