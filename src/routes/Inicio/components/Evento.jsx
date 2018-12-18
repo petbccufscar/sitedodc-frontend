@@ -1,8 +1,8 @@
 import React from "react";
 const Evento = ({ titulo, data }) => (
-  <a
+  <div
     key={titulo}
-    href="www.algo.br"
+
     style={{ textDecoration: "none" }}
     className="d-flex flex-row align-items-start border-bottom"
   >
@@ -10,7 +10,7 @@ const Evento = ({ titulo, data }) => (
     <div className="p-2 align-self-center text-primary ml-2">
       <h5>{titulo}</h5>
     </div>
-  </a>
+  </div>
 );
 
 const ConverterData = data => {

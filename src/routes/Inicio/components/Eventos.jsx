@@ -4,32 +4,25 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import EventosLoader from "./EventosLoader";
 
+
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+
+const GET_EVENTOS = gql`
+query{
+  eventos(limit:3, sort:"Data:ASC"){
+  Titulo
+  Data
+  }
+}
+`;
+
+
 class Eventos extends Component {
-  shouldComponentUpdate (nextProps, nextState) {
-    if(this.state.ready !== nextState.ready) {
-      return true;
-    }
-    return false;
-  }
-  state = {};
-  constructor() {
-    super();
-    this.state = {
-      eventos: [],
-      ready:false
-    };
-  }
-  async componentDidMount() {
-    try {
-      const response = await fetch("https://sitedodc-backend.herokuapp.com/evento?_limit=4");
-      const json = await response.json();
-      this.setState({ eventos: json, ready: true });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+
   render() {
     return (
+
       <div className=" pt-5 pt-md-0">
         <div className="d-flex justify-content-between mb-3 ">
           <h4>Eventos</h4>
@@ -40,10 +33,20 @@ class Eventos extends Component {
             Ver mais eventos   <FontAwesomeIcon className="ml-2" icon="plus" />
           </Link>
         </div>
-        {this.state.ready ? this.state.eventos.map(evento => (
-          <Evento titulo={evento["Título"]} data={evento["Data do evento"]} />
-        )):
-      (<EventosLoader></EventosLoader>)}
+        <Query query={GET_EVENTOS}>
+          {({ loading, error, data }) => {
+            if (loading) return (<EventosLoader></EventosLoader>)
+            if (error) return `Error! ${error.message}`;
+
+            return (data.eventos.map((evento,index) => (
+              <Evento
+              key={index}
+                titulo={evento.Titulo}
+                data={evento.Data} />
+            )))
+
+          }}
+        </Query>
 
       </div>
     );

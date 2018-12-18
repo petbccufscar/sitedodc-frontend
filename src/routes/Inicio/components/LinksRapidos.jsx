@@ -1,46 +1,40 @@
 import React, { Component } from "react";
 import LinkRapido from "./LinkRapido";
 import LinksRapidosLoader from "./LinksRapidosLoader";
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+
+const GET_LINKS_RAPIDOS = gql`
+query{
+  links(limit:12){
+  Link
+  Imagem {
+    url
+  }
+  }
+}
+`;
+
 class LinksRapidos extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.state.ready !== nextState.ready) {
-      return true;
-    }
-    return false;
-  }
-  state = {};
-  constructor() {
-    super();
-    this.state = {
-      links: [],
-      ready: false
-    };
-  }
-  async componentDidMount() {
-    try {
-      const response = await fetch("https://sitedodc-backend.herokuapp.com/link");
-      const json = await response.json();
-      this.setState({ links: json, ready: true });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+
   render() {
     return (
       <div className=" pt-5 pt-md-4">
         <h4 className="mb-3">Links rápidos</h4>
+        <div className="d-flex flex-wrap">
+          <Query query={GET_LINKS_RAPIDOS}>
+            {({ loading, error, data }) => {
+              if (loading) return (<LinksRapidosLoader />)
+              if (error) return `Error! ${error.message}`;
 
-        {
-          this.state.ready ? <div className="d-flex flex-wrap">
-            {
-              this.state.links.map((link, index) => (
-                <LinkRapido link={link.Link} key={index} />
+              return (data.links.map((link, index) => (
+                <LinkRapido link={link.Link} imagem={"http://159.89.232.182:1337/" + link.Imagem.url} key={index} />
+              )))
 
+            }}
+          </Query>
 
-              ))} </div> : (<LinksRapidosLoader />)
-
-
-        }
+        </div>
       </div>
     );
   }

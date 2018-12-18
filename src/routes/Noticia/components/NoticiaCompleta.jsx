@@ -7,15 +7,15 @@ const Noticia = ({ noticia }) => (
   <React.Fragment>
     <div className="mb-4 pb-4 border-bottom">
       <h4>
-        <Data data={noticia["createdAt"]} />
-        {noticia["Título"]}
+        <Data data={noticia.createdAt} />
+        {noticia.Titulo}
       </h4>
-      <small>{noticia["Descrição"]}</small>
+      <small>{noticia.Descricao}</small>
     </div>
     {noticia.Imagem && (
-      <img src={noticia.Imagem} class="img-fluid" alt="Responsive" />
+      <img src={"http://159.89.232.182:1337"+noticia.Imagem.url} className="img-fluid" alt="Responsive" />
     )}
-    <ReactMarkdown source={noticia["Conteúdo"]} />
+    <ReactMarkdown source={noticia.Conteudo} />
     </React.Fragment>
 );
 const Data = ({ data = "01/01/2018" }) => (

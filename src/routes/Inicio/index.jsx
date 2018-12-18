@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Noticias from "../../components/Noticias";
+import Noticias from "./../../components/Noticias";
 import BarraLateral from "./components/BarraLateral";
 import BotoesArea from "./components/BotoesArea";
 import { Link } from "react-router-dom";

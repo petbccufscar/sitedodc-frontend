@@ -2,31 +2,30 @@ import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import DocenteCard from "./components/docente_card"
 import { Facebook } from 'react-content-loader'
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+
+const GET_DOCENTES = gql`
+query{
+    docentes(sort:"Nome:desc"){
+    _id
+    Nome
+    Tipo
+    Areas{
+      Nome
+    }
+    Horas
+    Email
+    Telefone
+    Nivel
+    Foto{
+      url
+    }
+    }
+  }
+`;
 
 class Docentes extends Component {
-    shouldComponentUpdate(nextProps, nextState) {
-        if (this.state.ready !== nextState.ready) {
-            return true;
-        }
-        return false;
-    }
-    state = {};
-    constructor() {
-        super();
-        this.state = {
-            docentes: [],
-            ready: false
-        };
-    }
-    async componentDidMount() {
-        try {
-            const response = await fetch("https://sitedodc-backend.herokuapp.com/docente");
-            const json = await response.json();
-            this.setState({ docentes: json, ready: true });
-        } catch (error) {
-            console.log(error);
-        }
-    }
 
     render() {
         return (
@@ -42,13 +41,17 @@ class Docentes extends Component {
                         className="card-columns"
                         style={{ columnCount: this.props.quantidade_por_linha }}
                     >
-                        {
-                            this.state.ready ?
-                                this.state.docentes.map(docente =>
-                                    (<DocenteCard docente={docente} />)
-                                )
-                                : <Facebook />
-                        }
+                        <Query query={GET_DOCENTES}>
+                            {({ loading, error, data }) => {
+                                if (loading) return (<Facebook />)
+                                if (error) return `Error! ${error.message}`;
+
+                                return (data.docentes.map((docente, index) => (
+                                    <DocenteCard docente={docente} key={index} />
+                                )))
+
+                            }}
+                        </Query>
                     </div>
                 </div>
             </React.Fragment>

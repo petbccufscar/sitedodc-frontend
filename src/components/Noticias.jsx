@@ -5,68 +5,70 @@ import pt from "date-fns/locale/pt";
 import { Link } from "react-router-dom";
 import NoticiaLoader from "./NoticiaLoader";
 
-class Noticias extends Component {
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.state.ready !== nextState.ready) {
-      return true;
-    }
-    return false;
-  }
-  state = {};
-  constructor() {
-    super();
-    this.state = {
-      noticias: [],
-      ready: false
-    };
-  }
-  async componentDidMount() {
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
 
-    try {
-      const response = await fetch("https://sitedodc-backend.herokuapp.com/noticia?_sort=createdAt:desc&_limit=" +
-        this.props.quantidade);
-      const json = await response.json();
-      this.setState({ noticias: json, ready: true });
-    } catch (error) {
-      console.log(error);
+const GET_NOTICIAS = gql`
+  query Noticias($qnt: Int!){
+    noticias(limit:$qnt, sort:"_id:desc"){
+      _id
+      Imagem{
+        url
+      }
+      Imagem_texto_alternativo
+      Titulo
+      Descricao
+      createdAt
     }
   }
+`;
+
+class Noticias extends Component {
   render() {
     return (
       <div
         className="card-columns"
         style={{ columnCount: this.props.quantidade_por_linha }}
       >
-        {this.state.ready ? this.state.noticias.map(noticia => (
-          <Card
-            key={noticia["Título"]}
-            className="hoverable"
-          >
-            <CardImage
-              img="https://picsum.photos/300/100/?random"
-              alt={"noticia.imagem_descricao"}
-            />
-            <CardBody>
-              <Link to={"/noticia/" + noticia["_id"]} >
-                <h5 className="card-title">{noticia["Título"].substring(0, 100).concat("...")}</h5>
-                <p className="card-text">{noticia["Descrição"].substring(0, 100).concat("...")}
-                </p>
-              </Link>
-            </CardBody>
-            <CardFooter>
-              <small>
-                {this.FormatarData(noticia["createdAt"])}
-              </small>
-            </CardFooter>
-          </Card>
-        )):
-        (<React.Fragment>
-          <NoticiaLoader></NoticiaLoader>
-        <NoticiaLoader></NoticiaLoader>
-        </React.Fragment>
-        )}
-      </div>
-    );
+        <Query query={GET_NOTICIAS} variables={{qnt:parseInt(this.props.quantidade)}}>
+          {({ loading, error, data }) => {
+            if (loading) return (<React.Fragment>
+              <NoticiaLoader></NoticiaLoader>
+              <NoticiaLoader></NoticiaLoader>
+            </React.Fragment>
+            );
+            if (error) return `Error! ${error.message}`;
+
+            return (
+              data.noticias.map((noticia,index) => (
+                <Card
+                  key={index}
+                  className="hoverable"
+                >
+                {noticia.Imagem &&
+                <CardImage
+                    img={"http://159.89.232.182:1337/"+noticia.Imagem.url}
+                    alt={noticia.Imagem_texto_alternativo}
+                  /> 
+                }
+                  
+                  <CardBody>
+                    <Link to={"/noticia/" + noticia._id} >
+                      <h5 className="card-title">{noticia.Titulo}</h5>
+                      <p className="card-text">{noticia.Descricao}
+                      </p>
+                    </Link>
+                  </CardBody>
+                  <CardFooter>
+                    <small>
+                      {this.FormatarData(noticia.createdAt)}
+                    </small>
+                  </CardFooter>
+                </Card>
+              )
+              ))
+          }}
+        </Query></div>)
   }
 
   FormatarData(data) {

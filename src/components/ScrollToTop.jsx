@@ -15,7 +15,6 @@ class ScrollToTop extends Component {
   }
   shouldComponentUpdate(nextProps, nextState) {
     if (this.props.location !== nextProps.location) {
-      console.log("aloo");
       return true;
     }
     return false;

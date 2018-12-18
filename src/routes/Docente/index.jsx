@@ -2,32 +2,36 @@ import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DocenteLoader from "./DocenteLoader";
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+
+const GET_DOCENTE = gql`
+query Docente($id: ID!){
+  docente(id: $id){
+  _id
+  Nome
+  Areas{
+    Nome
+  }
+  Descricao
+  Horas
+  Lattes
+  Tipo
+  Nivel
+  Telefone
+  Email
+  Site
+  Nome
+  Foto{
+    url
+  }
+  }
+}
+`;
 
 
 class Docente extends Component {
-  state = {};
-  constructor() {
-    super();
-    this.state = {
-      docente: [],
-      ready:false
-    };
-    
-  }
-  async componentDidMount() {
-    try {
-      const id = this.props.match.params.id;
-      const response = await fetch("https://sitedodc-backend.herokuapp.com/Docente/" + id);
-      const json = await response.json();
-      this.setState({ docente: json, ready: true });
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
-
   render() {
-    console.log(this.state.docente);
     return (
       <React.Fragment>
         <Breadcrumbs>
@@ -35,47 +39,57 @@ class Docente extends Component {
           <Breadcrumb endereco="/Docentes">Docentes</Breadcrumb>
           <Breadcrumb bold>Visualizando docente</Breadcrumb>
         </Breadcrumbs>
-        <div className="container">
-        {this.state.ready ? (
-        <div className="row">
-        <div class="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
-            <img id="img-docente" className="rounded-circle" src="https://picsum.photos/230/230/?random" alt="imagem do docente"/>
-        </div>
-        <div class="col-sm col-lg-9 col-md-8" id="docente-conteudo">
-            <h3 className="text-center text-sm-left">{this.state.docente["Nome"]}</h3>
-            <h5 className="text-muted text-center text-sm-left">{this.state.docente["Tipo"] + "-" +  this.state.docente["Horas"] + "h/DE"}</h5>
-            <p className="text-justify">{this.state.docente["Descrição"]}</p>
-            <p>
-                <FontAwesomeIcon icon="graduation-cap" className="d-inline-block mr-2" />
-                Nível: {this.state.docente["Nível"]}
-            </p>
-            <p>{this.renderAreas(this.state.docente["Áreas"])}</p>
-            <p>
-                <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
-                Email: {this.state.docente["Email"]}
-            </p> 
-            <p>
-            <FontAwesomeIcon icon="phone" className="d-inline-block mr-2" /> Ramal: {this.state.docente["Ramal"]}        
+      
+              <div className="container">
+              <Query query={GET_DOCENTE} variables={{ id: this.props.match.params.id }} >
+          {({ loading, error, data }) => {
+            if (loading) return (<DocenteLoader />)
+            if (error) return `Error! ${error.message}`;
 
-            </p>
-            <a href={this.state.docente["Lattes"]} className="mr-4">
-                <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
-                Lattes
+            return (
+                <div className="row">
+                  {data.docente.Foto && (
+                    <div class="col-sm col-lg-3 col-md-4 mb-3 d-flex justify-content-center" id="docente-foto">
+                      <img id="img-docente" className="rounded-circle" src={"http://159.89.232.182:1337"+data.docente.Foto.url} alt="imagem do docente" />
+                    </div>)}
+                  <div class="col-sm col-lg-9 col-md-8" id="docente-conteudo">
+                    <h3 className="text-center text-sm-left">{data.docente.Nome}</h3>
+                    <h5 className="text-muted text-center text-sm-left">{data.docente.Tipo + "-" + data.docente.Horas + "h/DE"}</h5>
+                    <p className="text-justify">{data.docente.Descricao}</p>
+                    <p>
+                      <FontAwesomeIcon icon="graduation-cap" className="d-inline-block mr-2" />
+                      Nível: {data.docente.Nivel}
+                    </p>
+                    <p>{this.renderAreas(data.docente.Areas)}</p>
+                    <p>
+                      <FontAwesomeIcon icon="envelope" className="d-inline-block mr-2" />
+                      Email: {data.docente.Email}
+                    </p>
+                    <p>
+                      <FontAwesomeIcon icon="phone" className="d-inline-block mr-2" /> Telefone: {data.docente.Telefone}
+
+                    </p>
+                    <a href={data.docente.Lattes} className="mr-4">
+                      <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2" />
+                      Lattes
             </a>
-            <a href={this.state.docente["Site pessoal"]} className="mr-4">
-                <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2"/>
-                Página Pessoal
-            </a>           
-        </div>
-        </div>
-        ) : <DocenteLoader></DocenteLoader>}
-    </div>
+                    <a href={data.docente.Site} className="mr-4">
+                      <FontAwesomeIcon icon="globe-americas" className="d-inline-block mr-2" />
+                      Página Pessoal
+            </a>
+                  </div>
+                </div>
+        )
+      }}
+    </Query>
+              </div>
+    
       </React.Fragment>
     );
   }
 
   renderAreas(areas) {
-    if(areas) {
+    if (areas) {
       if (areas.length === 0) {
         return;
       } else {
@@ -89,7 +103,7 @@ class Docente extends Component {
     } else {
       return (<p></p>)
     }
-    
+
   }
 
   listAreas(areas) {

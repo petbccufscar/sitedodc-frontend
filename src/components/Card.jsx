@@ -2,10 +2,10 @@ import React from "react";
 
 const  Card = ({
   className,
-  key,
+
   children
 }) => (
-    <div className={"card "+ className} key={key}>
+    <div className={"card "+ className} >
       {children}
     </div>
   );

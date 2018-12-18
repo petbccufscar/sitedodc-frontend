@@ -12,7 +12,9 @@ body {
     object-fit: cover;
     object-position: top;
 }
-
+.no-decoration {
+    text-decoration: none !important;
+}
 #card-img-rounded {
     width: 100px;
     height: 100px;
