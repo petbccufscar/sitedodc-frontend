@@ -5,11 +5,6 @@ import { Link } from "react-router-dom";
 
 const suporte = [
   {
-    title: "Ambiente Virtual de Aprendizado (AVA)",
-    subTitle: "",
-    link: "https://ava.ead.ufscar.br/"
-  },
-  {
     title: "Ambiente de aprendizado (Moodle DC)",
     subTitle: "Moodle do dc.",
     link: "http://moodle.dc.ufscar.br/"
