@@ -27,12 +27,12 @@ class LinhaDoTempo extends React.Component {
               <div className="d-flex flex-row align-items-center my-3">
                 <div className=" mr-3">         <img src="http://www.dc.ufscar.br/imagens/capa-40-anos"
                   height="100px" width="80px"
-                  alt="Capa - 40 anos" class="image-right"
+                  alt="Capa - 40 anos" className="image-right"
                   title="Capa - 40 anos" /></div>
                 <div>
-                  <a class="external-link" href="http://www2.dc.ufscar.br/revista40anos">
+                  <a className="external-link" href="http://www2.dc.ufscar.br/revista40anos">
                   </a><h2>Relatorio Anual - Edicão Comemorativa - 40 Anos</h2>
-                  <p>Conheça a atuação do DC em ensino, pesquisa e extensão, um pouco da história do DC-UFSCar e um pouco da história da computação, no <a class="external-link" href="http://www2.dc.ufscar.br/revista40anos">Relatorio Anual - Edição Comemorativa - 40 Anos</a>.</p>
+                  <p>Conheça a atuação do DC em ensino, pesquisa e extensão, um pouco da história do DC-UFSCar e um pouco da história da computação, no <a className="external-link" href="http://www2.dc.ufscar.br/revista40anos">Relatorio Anual - Edição Comemorativa - 40 Anos</a>.</p>
                 </div>
               </div>
 

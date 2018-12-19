@@ -19,7 +19,7 @@ class Grupos extends Component {
                 link="https://petbcc.secompufscar.com.br/"
                 foto="https://petbcc.secompufscar.com.br/static/site2016/images/equipe.jpg"/>
 
-            <div class="row border-bottom mt-3"></div>
+            <div className="row border-bottom mt-3"></div>
 
             <Grupo titulo="SECOMP"
                 descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis leo tellus, in elementum felis pretium volutpat.
@@ -28,7 +28,7 @@ class Grupos extends Component {
                 link="https://secompufscar.com.br/"
                 foto="https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/22728645_10156775249124196_3639172201758646992_n.jpg?_nc_cat=107&oh=28608feab4b036f7f4ace5d4066fa82a&oe=5C89B427"/>
 
-            <div class="row border-bottom mt-3"></div>    
+            <div className="row border-bottom mt-3"></div>    
 
             <Grupo titulo="CATI Jr"
                 descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis leo tellus, in elementum felis pretium volutpat.
@@ -37,7 +37,7 @@ class Grupos extends Component {
                 link="http://www.catijr.com.br"
                 foto="http://www.catijr.com.br/wp-content/uploads/2017/06/catitodoslindosefederados-1024x576.jpg"/>
 
-            <div class="row border-bottom mt-3"></div>    
+            <div className="row border-bottom mt-3"></div>    
 
             <Grupo titulo="PyLadies"
                 descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis leo tellus, in elementum felis pretium volutpat.
