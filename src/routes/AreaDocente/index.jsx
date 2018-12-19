@@ -1,67 +1,85 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import Card, { CardBody } from "../../components/Card";
+import { Link } from "react-router-dom";
 
-const Sistemas = [
-  {
-    Titulo: "Siga",
-    Link: "#",
-    Subtitulo: "Sistema integrado de gestão acadêmica."
-  },
-  {
-    Titulo: "SAGUI",
-    Link: "https://sistemas.ufscar.br/sagui/",
-    Subtitulo: "Sistema de Apoio à Gestão Universitária Integrada (SAGUI)."
-  },
-  {
-    Titulo: "Proex Web",
-    Link: "www.proex.ufscar.br/",
-    Subtitulo: "Pró-reitoria de extensão"
-  },
-  {
-    Titulo: "Reserva de salas",
-    Link: "http://reserva.dc.ufscar.br",
-    Subtitulo: "Ferramenta para reserva de salas no departamento."
-  }
-];
-
-const Documentos = [
-  {
-    Titulo: "Afastamento",
-    Link: "#",
-    Subtitulo: "Formulário de afastamento."
-  },
-  {
-    Titulo: "Agendamento de bancas",
-    Link: "#",
-    Subtitulo: "Formulário para agendamento de bancas."
-  }
-];
-
-const Suporte = [
-  {
-    Titulo: "Criação de salas no Moodle",
-    Link: "#",
-    Subtitulo: "Guia de como criar salas no Moodle."
-  },
-  {
-    Titulo: "Sistema de suporte",
-    Link: "#",
-    Subtitulo: "Contato com o suporte do DC."
-  },
-  {
-    Titulo: "Periodicos",
-    Link: "#",
-    Subtitulo: "Acesso á periodicos disponiveis."
-  },
-  {
-    Titulo: "Eduroam",
-    Link: "#",
-    Subtitulo: "Como acessar a rede Eduroam."
-  }
-];
+const data = {
+  Sistemas: [
+    {
+      title: "Siga",
+      subTitle: "Sistema integrado de gestão acadêmica.",
+      link: "https://siga.ufscar.br"
+    },
+    {
+      title: "SAGUI",
+      subTitle: "Sistema de Apoio à Gestão Universitária Integrada (SAGUI).",
+      link: "https://sistemas.ufscar.br/sagui/"
+    },
+    {
+      title: "Proex Web",
+      subTitle: "Pró-reitoria de extensão",
+      link: "http://www.proex.ufscar.br"
+    },
+    {
+      title: "Reserva de salas",
+      subTitle: "Ferramenta para reserva de salas no departamento.",
+      link: "http://reserva.dc.ufscar.br"
+    }
+  ],
+  Documentos: [
+    {
+      title: "Afastamento",
+      subTitle: "Formulário de afastamento.",
+      link: "#"
+    },
+    {
+      title: "Agendamento de bancas",
+      subTitle: "Formulário para agendamento de bancas.",
+      link: "#"
+    }
+  ],
+  Suporte: [
+    {
+      title: "Criação de salas no Moodle",
+      subTitle: "Guia de como criar salas no Moodle.",
+      link: "#"
+    },
+    {
+      title: "Sistema de suporte",
+      subTitle: "Contato com o suporte do DC.",
+      link: "#"
+    },
+    {
+      title: "Periodicos",
+      subTitle: "Acesso á periodicos disponiveis.",
+      link: "#"
+    },
+    {
+      title: "Eduroam",
+      subTitle: "Como acessar a rede Eduroam.",
+      link:
+        "http://www.sin.ufscar.br/servicos/conectividade/rede-sem-fio-eduroam-1"
+    }
+  ]
+};
 
 class AreaDocentes extends Component {
+  renderLink(link, title, subTitle) {
+    const content = (
+      <React.Fragment>
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{subTitle}</p>
+      </React.Fragment>
+    );
+    const isExternal = link.search("^[/#]") === -1;
+
+    return isExternal ? (
+      <a href={link}>{content}</a>
+    ) : (
+      <Link to={link}>{content}</Link>
+    );
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -70,60 +88,20 @@ class AreaDocentes extends Component {
           <Breadcrumb bold>Área do docente</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-          <h4>Sistemas</h4>
-          <div className="card-deck mb-4">
-            {Sistemas.map(link => (
-              <Card className="hoverable">
-                <CardBody>
-                  <a href={link.Link} >
-                    <h5 className="card-title">
-                      {link.Titulo}
-                    </h5>
-                    <p
-                      className="card-text">{link.Subtitulo}
-                    </p>
-                  </a>
-                </CardBody>
-              </Card>
-            )
-            )}
-          </div>
-          <h4>Documentos</h4>
-          <div className="card-deck mb-4">
-            {Documentos.map(link => (
-              <Card className="hoverable">
-                <CardBody>
-                  <a href={link.Link} >
-                    <h5 className="card-title">
-                      {link.Titulo}
-                    </h5>
-                    <p
-                      className="card-text">{link.Subtitulo}
-                    </p>
-                  </a>
-                </CardBody>
-              </Card>
-            )
-            )}
-          </div>
-          <h4>Suporte</h4>
-          <div className="card-deck">
-            {Suporte.map(link => (
-              <Card className="hoverable">
-                <CardBody>
-                  <a href={link.Link} >
-                    <h5 className="card-title">
-                      {link.Titulo}
-                    </h5>
-                    <p
-                      className="card-text">{link.Subtitulo}
-                    </p>
-                  </a>
-                </CardBody>
-              </Card>
-            )
-            )}
-          </div>
+          {Object.keys(data).map(section => (
+            <React.Fragment>
+              <h4>{section}</h4>
+              <div className="card-deck mb-4">
+                {data[section].map(card => (
+                  <Card className="hoverable">
+                    <CardBody>
+                      {this.renderLink(card.link, card.title, card.subTitle)}
+                    </CardBody>
+                  </Card>
+                ))}
+              </div>
+            </React.Fragment>
+          ))}
         </div>
       </React.Fragment>
     );
