@@ -27,7 +27,7 @@ const BarraDeAcessibilidade = props => (
           </Badge>
         </ul>
         <ul id="botoes" className="list-inline mb-0 ml-auto">
-          <Badge link="acessibilidade">
+          <Badge link="/acessibilidade">
             <FontAwesomeIcon icon="universal-access" className="mr-1" />
             <span className="d-none d-sm-inline-block">Acessibilidade</span>
           </Badge>
@@ -35,7 +35,7 @@ const BarraDeAcessibilidade = props => (
             <FontAwesomeIcon icon="adjust" className="mr-1" />
             <span className="d-none d-sm-inline-block">Alto contraste</span>
           </Badge>
-          <Badge link="mapa-do-site">
+          <Badge link="/mapa-do-site">
             <FontAwesomeIcon icon="globe" className="mr-1" />
             <span className="d-none d-sm-inline-block">Mapa do site</span>
           </Badge>
