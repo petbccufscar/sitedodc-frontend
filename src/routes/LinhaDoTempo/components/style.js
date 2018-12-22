@@ -26,6 +26,7 @@ export default {
     max-width: 95%;
     list-style: none;
     &:before {
+      z-index: 1;
       background-color: black;
       content: '';
       margin-left: -1px;
@@ -40,6 +41,7 @@ export default {
     position: relative;
   `,
   icon: css`
+    z-index: 2;
     border-radius:50%;
     background-color: DodgerBlue ;
     outline: 10px solid white;
