@@ -162,9 +162,10 @@ a.badge,
   text-decoration: underline;
 }
 
-input[type="text"],
-select,
-textarea {
+/* Forms */
+.contrast input[type="text"],
+.contrast select,
+.contrast textarea {
   background: black !important;
   border: 1px solid white !important;
   color: white !important;
