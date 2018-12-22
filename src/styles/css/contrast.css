@@ -98,6 +98,9 @@ button[role=tab] {
   }
 
 /* Botões áreas */
+.contrast #botoes-area {
+  border-color: white !important;
+}
 .contrast #botoes-area button {
   background-color: black;
   color: white !important;
