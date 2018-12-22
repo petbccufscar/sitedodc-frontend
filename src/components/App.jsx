@@ -48,7 +48,6 @@ class App extends Component {
         <React.Fragment>
           <ScrollToTop>
             <TopBar onClick={this.handleHighContrastClick} />
-            <main role="main" id="conteudo" className="container-fluid m-0 p-0">
               <Switch>
                 <Route exact path="/" component={Inicio} />
                 <Route exact path="/inicio" component={Inicio} />
@@ -86,7 +85,6 @@ class App extends Component {
 
                 <Route path="*" component={NaoEncontrado} />
               </Switch>
-            </main>
             <Rodape />
           </ScrollToTop>
         </React.Fragment>
