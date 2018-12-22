@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 const BotaoArea = ({ area = "aluno", texto = "Aluno", className }) => (
   <Link
     to={"/area-" + area}
-    className={"btn btn-white py-3 px-md-4  text-primary  " + className }
-  >
-    <span className="d-none d-sm-inline">Área do </span>{texto}
+    
+  > <button className={"btn btn-white py-3 px-md-4  text-primary  " + className }> 
+    <span className="d-none d-sm-inline" style={{color: "parent"}}>Área do </span>{texto}
+    </button>
   </Link>
 );
+
 const BotoesArea = () => (
   <div className="row justify-content-around ">
     <div

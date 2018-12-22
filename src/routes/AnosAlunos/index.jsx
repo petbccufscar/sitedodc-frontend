@@ -47,7 +47,7 @@ class AnosAlunos extends Component {
 
   Ano(ano, curso) {
     return (
-      <Link to={"/alunos/" + curso + "/" + ano}  className="btn no-decoration mt-3 ml-2 mr-2 btn-link hoverable"> {ano} </Link>
+      <Link to={"/alunos/" + curso + "/" + ano}  className="ano-aluno btn no-decoration mt-3 ml-2 mr-2 btn-link hoverable"> {ano} </Link>
     );
   }
 }

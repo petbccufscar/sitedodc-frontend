@@ -1,0 +1,175 @@
+.contrast,
+.contrast nav,
+.contrast div,
+.contrast li,
+.contrast ol,
+.contrast header,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article,
+.contrast .badge {
+  background: black !important;
+  color: white !important;
+  border-color: white;
+}
+
+.contrast a,
+.contrast a:hover,
+.contrast a:visited {
+  color: yellow;
+}
+
+/* Cards */
+.card,
+.contrast .card {
+  border: 2px solid transparent;
+}
+  .contrast .card:hover {
+    border-color: white;
+  }
+  .contrast .card a:hover * {
+    text-decoration: underline white;
+}
+
+/* Ano Aluno */
+.contrast .ano-aluno:hover {
+  text-decoration: underline !important;
+}
+
+/* Vertical-Tabs */
+button[role=tab] {
+  border: 3px solid transparent !important;
+  outline: none;
+}
+.contrast button[role="tab"] {
+  border-radius: 0;
+  background-color: black !important;
+  color: white !important;
+}
+  .contrast button[aria-selected="true"],
+  .contrast button[aria-selected="false"]:hover {
+    background-color: white !important;
+    color: black !important; }
+  .contrast button[role="tab"]:focus {
+    border-color: yellow !important;
+  }
+
+/* timeline */
+.contrast .timeline:before {
+  background-color: white;
+}
+  .contrast .timeline label {
+    outline-color: black;
+    background-color: white;
+  }
+  .contrast .timeline-date {
+    background-color: white;
+    color: black !important;
+  }
+
+/* Imagens */
+.contrast img {
+  background-color: white;
+}
+.contrast svg {
+  color: white;
+}
+
+/* Links rápidos */
+.contrast .links-rapidos {
+  background-color: white;
+  position: relative;
+}
+  .contrast .links-rapidos:after {
+    content: "";
+    top: -3px;
+    right: -3px;
+    left: -3px;
+    bottom: -3px;
+    display: block;
+    position: absolute;
+    border-radius: 0.25rem;
+    border: 3px solid transparent;
+  }
+  .contrast .links-rapidos:hover:after {
+    border-color: yellow;
+  }
+
+/* Botões áreas */
+.contrast #botoes-area {
+  border-color: white !important;
+}
+.contrast #botoes-area button {
+  background-color: black;
+  color: white !important;
+}
+  .contrast #botoes-area button:hover {
+    background-color: white;
+    color: black !important;
+  }
+
+/* Menu */
+.nav-link {
+  border: 1px solid transparent;
+}
+  .contrast .nav-link:hover,
+  .contrast .nav-link:focus {
+    border-color: white !important;
+    
+  }
+.contrast .dropdown-item {
+  background-color: black;
+}
+  .contrast .dropdown-item:hover {
+    text-decoration: underline;
+  }
+
+/* Texto */
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6,
+.contrast p,
+.contrast label,
+.contrast strong,
+.contrast em,
+.contrast cite,
+.contrast q,
+.contrast i,
+.contrast b,
+.contrast u,
+.contrast code {
+  color: white !important;
+}
+.contrast span {
+  color: parent;
+}
+
+/* Badges */
+a.badge,
+.contrast a.badge {
+  border: 2px solid transparent;
+}
+  
+  .contrast a.badge button:focus,
+  .contrast a.badge:hover {
+    border: 2px solid white !important;
+  }
+
+/* logo */
+#logo:hover * {
+  text-decoration: underline;
+}
+
+/* Forms */
+.contrast input[type="text"],
+.contrast select,
+.contrast textarea {
+  background: black !important;
+  border: 1px solid white !important;
+  color: white !important;
+}

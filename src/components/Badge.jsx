@@ -1,14 +1,11 @@
 import React from "react";
 
-const Badge = ({ link, children, color="dark" }) => (
-
-    
-    <li className="list-inline-item ">
-        <a className={"badge badge-"+ color +" font-weight-normal"} href={link}>
+const Badge = ({ id, link, children, color="dark", onClick, accessKey=''}) => (
+    <li id={id} className="list-inline-item ">
+        <a className={"badge badge-" + color + " font-weight-normal"} accessKey={accessKey} onClick={onClick} href={link}>
             {children}
         </a>
     </li>
-
 )
 
 export default Badge;
