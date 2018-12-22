@@ -120,7 +120,7 @@ class TopBar extends Component {
                       </span>
                     <Link
                     
-                      to={"/pos-graducao/stricto"}
+                      to={"/pos-graducao/stricto-sensu"}
                       className="dropdown-item"
                     >
                       <FontAwesomeIcon icon={faAngleRight} className="mr-2"> </FontAwesomeIcon>Stricto Sensu</Link>
