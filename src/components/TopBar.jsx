@@ -31,10 +31,10 @@ class TopBar extends Component {
   render() {
     return (
       <header className="fixed-top ">
-        <BarraDeAcessibilidade></BarraDeAcessibilidade>
+        <BarraDeAcessibilidade onClick={this.props.onClick} />
         <nav id="menu" className={this.NavBarClasses()}>
           <div className="container">
-            <Link className="navbar-brand d-flex flex-row" to="/">
+            <Link id="logo" className="navbar-brand d-flex flex-row" to="/">
               <img
                 className="d-inline-block align-self-center mr-3 "
                 src={LogoDC}
