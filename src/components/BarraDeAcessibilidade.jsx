@@ -16,13 +16,13 @@ const BarraDeAcessibilidade = props => (
         id="acessibilidade"
       >
         <ul id="atalhos" className="list-inline mb-0 d-none d-lg-block">
-          <Badge link="#">
+          <Badge link="#" accessKey="1">
             <span className="d-none d-sm-inline-block">Ir para topo</span>
           </Badge>
-          <Badge link="#conteudo">
+          <Badge link="#conteudo" accessKey="2">
             <span className="d-none d-sm-inline-block">Ir para conteudo</span>
           </Badge>
-          <Badge link="#rodape">
+          <Badge link="#rodape" accessKey="3">
             <span className="d-none d-sm-inline-block">Ir para rodapé</span>
           </Badge>
         </ul>
