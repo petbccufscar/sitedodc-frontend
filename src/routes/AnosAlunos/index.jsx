@@ -3,7 +3,6 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 
 class AnosAlunos extends Component {
-  state = {};
   constructor() {
     super();
     this.state = {
