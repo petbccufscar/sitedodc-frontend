@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 class Rodape extends Component {
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
   render() {
@@ -22,12 +22,15 @@ class Rodape extends Component {
                 <li>E-mail: dc@ufscar.br</li>
                 <li>Telefone: +55 16 3351-8232</li>
                 <li>Fax: +55 16 3351-8233</li>
+                <li>
+                  Contato: <a href="/contato">clique aqui</a>
+                </li>
               </ul>
             </div>
 
             <div className="col-md-8">
               <iframe
-              title="Iframe do Google Maps"
+                title="Iframe do Google Maps"
                 height="220px"
                 width="100%"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3699.8238490302215!2d-47.88273818439348!3d-21.979722710974197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8711e42fdad05%3A0x6a0cd2ccbce13d28!2sDepartamento+de+Computa%C3%A7%C3%A3o%2C+Universidade+Federal+de+S%C3%A3o+Carlos!5e0!3m2!1sen!2sus!4v1480425559308"
