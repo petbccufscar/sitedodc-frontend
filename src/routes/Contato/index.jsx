@@ -12,14 +12,20 @@ class Contato extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
-              <legend align="center">Contato</legend>
+            <div className="col-md-6 d-none border-right  d-md-block">
+              <legend className="border-down" align="center">
+                Contato
+              </legend>
               <br />
-              <h4>Precisa de atendimento técnico?</h4>
+              <h5>Precisa de atendimento técnico?</h5>
               <p>
                 Você navegou no site e não achou uma solução técnica para seu
-                problema? Acesse suporte.dc.ufscar.br (informando seu username e
-                senha no DC) e abra um chamado.
+                problema? Acesse{" "}
+                <a href="http://suporte.dc.ufscar.br/">
+                  {" "}
+                  suporte.dc.ufscar.br{" "}
+                </a>
+                (informando seu username e senha no DC) e abra um chamado.
               </p>
               <br />
 
@@ -36,94 +42,100 @@ class Contato extends Component {
               </p>
             </div>
             <div className="col-md-6">
-              <form className="form-horizontal">
-                <fieldset>
-                  <legend align="center">Formulário de contato</legend>
-                  <br />
-                  <div className="form-group">
-                    <label className="col-md-4 control-label" for="nome">
-                      Nome
-                    </label>
-                    <div className="col-md-6">
-                      <input
-                        id="nome"
-                        name="nome"
-                        type="text"
-                        placeholder=""
-                        className="form-control input-md"
-                        required=""
-                      />
-                      <span className="help-block">
-                        Por favor, insira o seu nome completo
-                      </span>
-                    </div>
+              <legend className="border-down" align="center">
+                Formulário de contato
+              </legend>
+              <br />
+              <form>
+                <div className="form-group row">
+                  <label for="nome" className="col-4 col-form-label">
+                    Nome
+                  </label>
+                  <div className="col-8">
+                    <input
+                      id="nome"
+                      name="nome"
+                      type="text"
+                      className="form-control here"
+                      aria-describedby="nomeHelpBlock"
+                      required="required"
+                    />
+                    <span id="nomeHelpBlock" className="form-text text-muted">
+                      Por favor, insira o seu nome completo
+                    </span>
                   </div>
-
-                  <div className="form-group">
-                    <label className="col-md-4 control-label" for="email">
-                      E-mail
-                    </label>
-                    <div className="col-md-5">
-                      <input
-                        id="email"
-                        name="email"
-                        type="text"
-                        placeholder=""
-                        className="form-control input-md"
-                        required=""
-                      />
-                      <span className="help-block">
-                        Por favor, insira o seu endereço de e-mail para contato
-                      </span>
-                    </div>
+                </div>
+                <div className="form-group row">
+                  <label for="email" className="col-4 col-form-label">
+                    E-mail
+                  </label>
+                  <div className="col-8">
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      aria-describedby="emailHelpBlock"
+                      className="form-control here"
+                      required="required"
+                    />
+                    <span id="emailHelpBlock" className="form-text text-muted">
+                      Por favor, insira o seu e-mail
+                    </span>
                   </div>
-
-                  <div className="form-group">
-                    <label className="col-md-4 control-label" for="assunto">
-                      Assunto
-                    </label>
-                    <div className="col-md-5">
-                      <input
-                        id="assunto"
-                        name="assunto"
-                        type="text"
-                        placeholder=""
-                        className="form-control input-md"
-                        required=""
-                      />
-                      <span className="help-block">
-                        Por favor, insira o assunto da mensagem
-                      </span>
-                    </div>
+                </div>
+                <div className="form-group row">
+                  <label for="assunto" className="col-4 col-form-label">
+                    Assunto
+                  </label>
+                  <div className="col-8">
+                    <input
+                      id="assunto"
+                      name="assunto"
+                      type="text"
+                      aria-describedby="assuntoHelpBlock"
+                      className="form-control here"
+                    />
+                    <span
+                      id="assuntoHelpBlock"
+                      className="form-text text-muted"
+                    >
+                      Por favor, insira o assunto da mensagem
+                    </span>
                   </div>
-
-                  <div className="form-group">
-                    <label className="col-md-4 control-label" for="mensagem">
-                      Mensagem
-                    </label>
-                    <div className="col-md-4">
-                      <textarea
-                        className="form-control"
-                        id="mensagem"
-                        name="mensagem"
-                      />
-                      <span className="help-block">
-                        Por favor, insira a mensagem a ser enviada
-                      </span>
-                    </div>
+                </div>
+                <div className="form-group row">
+                  <label for="mensagem" className="col-4 col-form-label">
+                    Mensagem
+                  </label>
+                  <div className="col-8">
+                    <textarea
+                      id="mensagem"
+                      name="mensagem"
+                      cols="40"
+                      rows=""
+                      className="form-control"
+                      aria-describedby="mensagemHelpBlock"
+                      required="required"
+                    />
+                    <span
+                      id="mensagemHelpBlock"
+                      className="form-text text-muted"
+                    >
+                      Por favor, insira a mensagem a ser enviada
+                    </span>
                   </div>
-                  <div className="form-group">
-                    <div className="col-md-12" align="center">
-                      <button
-                        id="enviar"
-                        className="enviar"
-                        class="btn btn-primary"
-                      >
-                        Enviar
-                      </button>
-                    </div>
+                </div>
+                <div className="form-group row">
+                  <div className="offset-4 col-8">
+                    <button
+                      name="enviar"
+                      type="submit"
+                      className="btn btn-primary"
+                    >
+                      Enviar
+                    </button>
                   </div>
-                </fieldset>
+                </div>
               </form>
             </div>
           </div>
