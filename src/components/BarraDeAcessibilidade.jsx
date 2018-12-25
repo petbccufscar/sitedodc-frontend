@@ -1,3 +1,5 @@
+/* eslint "jsx-a11y/no-access-key": 0 */
+
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from "./Badge";

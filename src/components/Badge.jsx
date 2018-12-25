@@ -1,3 +1,5 @@
+/* eslint "jsx-a11y/no-access-key": 0 */
+
 import React from "react";
 
 const Badge = ({ id, link, children, color="dark", onClick, accessKey=''}) => (
