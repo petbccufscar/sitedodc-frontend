@@ -174,3 +174,12 @@ a.badge,
   border: 1px solid white !important;
   color: white !important;
 }
+
+.contrast form button {
+  background-color: black !important;
+  border: none;
+  color: yellow !important;
+}
+.contrast form button:hover {
+  text-decoration: underline;
+}
