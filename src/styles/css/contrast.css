@@ -22,12 +22,9 @@
 }
 
 /* Cards */
-.card,
 .contrast .card {
-  border: 2px solid transparent;
-}
-  .contrast .card:hover {
-    border-color: white;
+  border-color: white !important;
+  box-shadow: none !important;
   }
   .contrast .card a:hover * {
     text-decoration: underline white;
