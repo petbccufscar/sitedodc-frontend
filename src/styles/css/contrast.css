@@ -108,6 +108,9 @@ button[role="tab"] {
   background-color: white;
   color: black !important;
 }
+.contrast #botoes li:nth-child(2) span {
+  text-decoration: underline !important;
+}
 
 /* Menu */
 .nav-link {
