@@ -1,56 +1,57 @@
-import React, { Component } from "react";
+import React from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { Link } from "react-router-dom";
 
-class AnosAlunos extends Component {
-  state = {};
-  constructor() {
-    super();
-    this.state = {
-      anos: [2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990, 1989, 1988, 1987, 1986, 1985, 1984, 1983, 1982, 1981, 1980, 1979, 1978, 1977, 1976, 1975, 1974, 1973, 1972]
-    };
+const generateLinkToYear = (year, curso) => {
+  return (
+    <Link
+      to={`/alunos/${curso}/${year}`}
+      className="ano-aluno btn no-decoration mt-3 mx-2 btn-link hoverable"
+    >
+      {year}
+    </Link>
+  );
+};
+
+const Curso = ({ name, links, classnames = "" }) => {
+  return (
+    <div className={classnames}>
+      <h4>{name}</h4>
+      <div className="row" style={{ columnCount: 8 }}>
+        {links}
+      </div>
+    </div>
+  );
+};
+
+const AnosAlunos = () => {
+  const currentYear = 2018;
+  const startYear = 1972;
+  const years = currentYear - startYear + 1;
+
+  let bccLinks = Array.apply(null, { size: years });
+  let encLinks = Array.apply(null, { size: years });
+  for (let year = currentYear, i = 0; year >= startYear; year--, i++) {
+    bccLinks[i] = generateLinkToYear(year, "bcc");
+    encLinks[i] = generateLinkToYear(year, "enc");
   }
 
-  render() {
-    let anosBCC = this.state.anos.map(ano => {
-      return this.Ano(ano, "bcc");
-    });
-    let anosENC = this.state.anos.map(ano => {
-      return this.Ano(ano, "enc");
-    });
-    return (
-      <React.Fragment>
-        <Breadcrumbs>
-          <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>Alunos</Breadcrumb>
-        </Breadcrumbs>
-
-        <div className="container">
-          <h4>Bacharelado em Ciência da Computação</h4>
-          <div className="row"
-          style={{ columnCount: 8 }}>
-            {anosBCC}
-          </div>
-        </div>
-
-        <div className="container mt-4">
-          <h4>Engenharia da Computação</h4>
-          <div className="row"
-          style={{ columnCount: 8 }}>
-            {anosENC}
-          </div>
-        </div>
-        
-      </React.Fragment>
-    );
-  }
-
-  Ano(ano, curso) {
-    return (
-      <Link to={"/alunos/" + curso + "/" + ano}  className="ano-aluno btn no-decoration mt-3 ml-2 mr-2 btn-link hoverable"> {ano} </Link>
-    );
-  }
-}
+  return (
+    <React.Fragment>
+      <Breadcrumbs>
+        <Breadcrumb endereco="/">Início</Breadcrumb>
+        <Breadcrumb bold>Alunos</Breadcrumb>
+      </Breadcrumbs>
+      <main role="main" className="container" id="conteudo">
+        <Curso name="Bacharelado em Ciência da Computação" links={bccLinks} />
+        <Curso
+          name="Engenharia da Computação"
+          links={encLinks}
+          classnames="mt-4"
+        />
+      </main>
+    </React.Fragment>
+  );
+};
 
 export default AnosAlunos;
-

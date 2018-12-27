@@ -6,7 +6,7 @@ body {
     padding-top: 110px;
 }
 
-#img-docente {
+.img-docente {
     width: 230px;
     height: 230px;
     object-fit: cover;
@@ -15,7 +15,7 @@ body {
 .no-decoration {
     text-decoration: none !important;
 }
-#card-img-rounded {
+.card-img-rounded {
     width: 100px;
     height: 100px;
     object-fit: cover;
@@ -64,18 +64,21 @@ body {
     transition: min-height 100ms linear;
 }
 
+@include media-breakpoint-up(md) {
+    #botoes-area {
+        margin-top: -120px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 80px;
+    }
+}
+
 @include media-breakpoint-up(sm) {
     .mais-noticias .card-columns {
         column-count: 4 !important;
     }
     .card-columns {
         column-count: 2 !important;
-    }
-    #botoes-area {
-        margin-top: -120px;
-        border-radius: 20px;
-        overflow: hidden;
-        margin-bottom: 80px;
     }
     .navbar {
         min-height: 80px;

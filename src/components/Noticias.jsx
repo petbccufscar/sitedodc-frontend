@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card, { CardImage, CardBody, CardFooter } from "./Card";
+import Card, { CardBody, CardFooter } from "./Card";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import NoticiaLoader from "./NoticiaLoader";
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
+import { ImageLoader } from "./image-loader";
 
 const GET_NOTICIAS = gql`
   query Noticias($qnt: Int!){
@@ -45,13 +46,14 @@ class Noticias extends Component {
                   key={index}
                   className="hoverable"
                 >
-                {noticia.Imagem &&
-                <CardImage
-                    img={"http://159.89.232.182:1337/"+noticia.Imagem.url}
+                  {noticia.Imagem &&
+                <ImageLoader
+                    classnames={"card-img-top"}
+                    src={"http://159.89.232.182:1337/"+noticia.Imagem.url}
                     alt={noticia.Imagem_texto_alternativo}
+                    loaderHeight="8rem"
                   /> 
                 }
-                  
                   <CardBody>
                     <Link to={"/noticia/" + noticia._id} >
                       <h5 className="card-title">{noticia.Titulo}</h5>
