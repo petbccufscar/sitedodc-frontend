@@ -1,6 +1,7 @@
 import React from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { Timeline, Event } from "./components/Timeline";
+import { ImageLoader } from "../../components/image-loader";
 
 class LinhaDoTempo extends React.Component {
   constructor(props) {
@@ -37,20 +38,18 @@ class LinhaDoTempo extends React.Component {
               <div className="d-flex flex-row align-items-center my-3">
                 <div className=" mr-3">
                   {" "}
-                  <img
+                  <ImageLoader
                     src="http://www.dc.ufscar.br/imagens/capa-40-anos"
                     height="100px"
                     width="80px"
+                    loaderHeight="100px"
+                    loaderWidth="80px"
                     alt="Capa - 40 anos"
-                    className="image-right"
+                    classnames="image-right"
                     title="Capa - 40 anos"
                   />
                 </div>
                 <div>
-                  <a
-                    className="external-link"
-                    href="http://www2.dc.ufscar.br/revista40anos"
-                  />
                   <h2>Relatorio Anual - Edicão Comemorativa - 40 Anos</h2>
                   <p>
                     Conheça a atuação do DC em ensino, pesquisa e extensão, um
@@ -101,11 +100,13 @@ class LinhaDoTempo extends React.Component {
                   <i>lato sensu</i>).
                 </p>
                 <div className="mr-3 float-left">
-                  <img
+                  <ImageLoader
                     src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
                     title=" Foto: Régua de cálculo"
-                    height="153"
-                    width="271"
+                    height="153px"
+                    width="271px"
+                    loaderHeight="153px"
+                    loaderWidth="271px"
                     alt="Foto: Régua de cálculo"
                   />
                 </div>
@@ -122,11 +123,13 @@ class LinhaDoTempo extends React.Component {
                   de pesquisa bastante atuante.
                 </p>
                 <div className="ml-3  float-right">
-                  <img
+                  <ImageLoader
                     src="http://www.dc.ufscar.br/imagens/foto-patio-interno"
                     alt="Foto: Pátio interno"
-                    height="153"
-                    width="271"
+                    height="153px"
+                    width="271px"
+                    loaderHeight="153px"
+                    loaderWidth="271px"
                     title="Foto: Pátio interno"
                   />
                 </div>

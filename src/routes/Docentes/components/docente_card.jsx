@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import Card, { CardBody, CardFooter } from "../../../components/Card"
 import Badge from "../../../components/Badge"
+import { ImageLoader } from "../../../components/image-loader";
 
 
 const DocenteCard = ({ docente }) => (
@@ -14,8 +15,8 @@ const DocenteCard = ({ docente }) => (
     <CardBody >
       {docente.Foto && (
         <div className="mr-4">
-          <img id="card-img-rounded"
-            className="rounded-circle"
+          <ImageLoader
+            classnames="card-img-rounded rounded-circle"
             src={"http://159.89.232.182:1337" + docente.Foto.url}
             alt={"alt"}
           />
