@@ -44,7 +44,7 @@ class ImageLoader extends React.Component {
     const { loaded } = this.state;
 
     return (
-      <div>
+      <React.Fragment>
         {!loaded && (
           <Loader
             classnames={classnames}
@@ -61,7 +61,7 @@ class ImageLoader extends React.Component {
             width={width}
           />
         )}
-      </div>
+      </React.Fragment>
     );
   }
 }
