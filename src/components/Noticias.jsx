@@ -52,7 +52,6 @@ class Noticias extends Component {
                     src={"http://159.89.232.182:1337/"+noticia.Imagem.url}
                     alt={noticia.Imagem_texto_alternativo}
                     loaderHeight="8rem"
-                    title={"a"}
                   /> 
                 }
                   <CardBody>
