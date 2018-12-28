@@ -27,6 +27,7 @@ import Rodape from "./Rodape";
 import ScrollToTop from "./ScrollToTop";
 import Sobre from "../routes/Sobre";
 import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
+import Infraestrutura from "../routes/Infraestrutura"
 import TopBar from "./TopBar";
 
 class App extends Component {
@@ -74,6 +75,7 @@ class App extends Component {
               <Route exact path="/alunos/:curso/:ano" component={Alunos} />
 
               <Route exact path="/sobre" component={Sobre} />
+              <Route exact path="/infraestrutura" component={Infraestrutura} />
               <Route exact path="/linha-do-tempo" component={LinhaDoTempo} />
               <Route exact path="/suporte/links" component={LinksSuporte} />
               <Route exact path="/graduacao/bcc" component={BCC} />
