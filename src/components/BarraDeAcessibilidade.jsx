@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from "./Badge";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 
 const BarraDeAcessibilidade = props => (
   <div
@@ -36,7 +37,7 @@ const BarraDeAcessibilidade = props => (
             <span className="d-none d-sm-inline-block">Alto contraste</span>
           </Badge>
           <Badge link="/contato">
-            <FontAwesomeIcon icon="info-circle" className="mr-1" />
+            <FontAwesomeIcon icon={faInfoCircle} className="mr-1" />
             <span className="d-none d-sm-inline-block">Contato</span>
           </Badge>
           <Badge link="/mapa-do-site">
