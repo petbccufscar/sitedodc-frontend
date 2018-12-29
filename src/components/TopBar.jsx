@@ -212,9 +212,6 @@ class TopBar extends Component {
                     <Link to={"/infraestrutura"} className="dropdown-item">
                       Infraestrutura
                     </Link>
-                    <Link to={"/contato"} className="dropdown-item">
-                      Contato
-                    </Link>
                   </div>
                 </li>
 

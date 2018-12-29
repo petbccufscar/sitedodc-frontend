@@ -35,6 +35,10 @@ const BarraDeAcessibilidade = props => (
             <FontAwesomeIcon icon="adjust" className="mr-1" />
             <span className="d-none d-sm-inline-block">Alto contraste</span>
           </Badge>
+          <Badge link="/contato">
+            <FontAwesomeIcon icon="info-circle" className="mr-1" />
+            <span className="d-none d-sm-inline-block">Contato</span>
+          </Badge>
           <Badge link="/mapa-do-site">
             <FontAwesomeIcon icon="globe" className="mr-1" />
             <span className="d-none d-sm-inline-block">Mapa do site</span>
