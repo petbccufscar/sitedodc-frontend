@@ -4,13 +4,12 @@ import banner2 from "../../../images/banner2.jpg";
 import banner3 from "../../../images/banner3.jpg";
 
 const Banner = ({ banner, active }) => (
-  <div  className={active ? "carousel-item active" : "carousel-item"}>
+  <div className={active ? "carousel-item active" : "carousel-item"}>
     <img className="d-block w-100" src={banner} alt="descrição qualquer" />
   </div>
 );
 
 class BannerRotativo extends Component {
-  state = {};
   constructor() {
     super();
     this.state = {

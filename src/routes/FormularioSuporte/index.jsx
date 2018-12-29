@@ -14,8 +14,8 @@ class FormularioSuporte extends Component {
         </Breadcrumbs>
 
         <div className="container">
-          <div class="row justify-content-between">
-            <div class="col-md-4 d-none border-right  d-md-block">
+          <div className="row justify-content-between">
+            <div className="col-md-4 d-none border-right  d-md-block">
               <h5 style={{ marginBottom: "20px" }}>
                 {" "}
                 <FontAwesomeIcon
@@ -34,12 +34,14 @@ class FormularioSuporte extends Component {
                 auxilia a lembrar.
               </p>
             </div>
-            <div class="col-md-8 ">
-              <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+
+            <div className="col-md-8 ">
+              <div className="well well-sm">
+                <form className="form-horizontal" method="post">
                   <fieldset>
-                    <div class="form-group">
-                      <div class="col">
+                    <div className="form-group">
+                      <div className="col">
+
                         <label for="sel1">Email</label>
 
                         <input
@@ -47,12 +49,14 @@ class FormularioSuporte extends Component {
                           name="name"
                           type="text"
                           placeholder="user@mail.com"
-                          class="form-control"
+
+                          className="form-control"
                         />
                       </div>
                     </div>
-                    <div class="form-group">
-                      <div class="col">
+                    <div className="form-group">
+                      <div className="col">
+
                         <label for="sel1">Username do DC</label>
 
                         <input
@@ -60,27 +64,33 @@ class FormularioSuporte extends Component {
                           name="name"
                           type="text"
                           placeholder="User"
-                          class="form-control"
+
+                          className="form-control"
+
                         />
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <div class="col">
+
+                    <div className="form-group">
+                      <div className="col">
                         <label for="sel1">Tipo de problema:</label>
-                        <select class="form-control" id="sel1">
+                        <select className="form-control" id="sel1">
+
                           <option>Problema no laboratório</option>
                           <option>Outros</option>
                         </select>{" "}
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <div class="col">
+
+                    <div className="form-group">
+                      <div className="col">
                         <label for="sel1">Descrição do problema:</label>
 
                         <textarea
-                          class="form-control"
+                          className="form-control"
+
                           id="message"
                           name="message"
                           placeholder="O computador 3 do L2 quebrou"
@@ -89,9 +99,14 @@ class FormularioSuporte extends Component {
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary btn-lg">
+
+                    <div className="form-group">
+                      <div className="col-md-12 text-center">
+                        <button
+                          type="submit"
+                          className="btn btn-primary btn-lg"
+                        >
+
                           Enviar
                         </button>
                       </div>
