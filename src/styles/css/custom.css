@@ -6315,7 +6315,7 @@ a.text-dark:hover, a.text-dark:focus {
 body {
   padding-top: 110px; }
 
-#img-docente {
+.img-docente {
   width: 230px;
   height: 230px;
   object-fit: cover; }

@@ -7,9 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 class TopBar extends Component {
-  state = { small: false };
   constructor() {
     super();
+    this.state = { small: false };
     this.handleScroll = this.handleScroll.bind(this);
   }
   componentWillMount() {
@@ -212,6 +212,7 @@ class TopBar extends Component {
                     <Link to={"/infraestrutura"} className="dropdown-item">
                       Infraestrutura
                     </Link>
+
                   </div>
                 </li>
 
@@ -228,9 +229,6 @@ class TopBar extends Component {
                     </Link>
                     <Link to={"/suporte/reportar"} className="dropdown-item">
                       Reportar problemas
-                    </Link>
-                    <Link to={"/contato"} className="dropdown-item">
-                      Entre em contato
                     </Link>
                   </div>
                 </li>
