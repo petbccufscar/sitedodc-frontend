@@ -13,7 +13,11 @@ const Noticia = ({ noticia }) => (
       <small>{noticia.Descricao}</small>
     </div>
     {noticia.Imagem && (
-      <img src={"http://159.89.232.182:1337"+noticia.Imagem.url} className="img-fluid" alt="Responsive" />
+      <img
+        src={"http://159.89.232.182:1337" + noticia.Imagem.url}
+        className="img-fluid"
+        alt="Responsive"
+      />
     )}
     <ReactMarkdown source={noticia.Conteudo} />
   </React.Fragment>

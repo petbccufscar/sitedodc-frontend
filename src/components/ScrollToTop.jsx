@@ -5,7 +5,7 @@ class ScrollToTop extends Component {
   componentDidUpdate() {
     window.scrollTo(0, 0);
     var menu = document.getElementById("navbarSupportedContent");
-    if(menu.classList.contains("show")) {
+    if (menu.classList.contains("show")) {
       menu.classList.remove("show");
     }
   }
@@ -18,7 +18,6 @@ class ScrollToTop extends Component {
       return true;
     }
     return false;
-
   }
 }
 

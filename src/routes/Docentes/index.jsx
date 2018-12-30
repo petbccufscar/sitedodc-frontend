@@ -6,27 +6,26 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 
 const GET_DOCENTES = gql`
-query{
-    docentes(sort:"Nome:desc"){
-    _id
-    Nome
-    Tipo
-    Areas{
+  query {
+    docentes(sort: "Nome:desc") {
+      _id
       Nome
-    }
-    Horas
-    Email
-    Telefone
-    Nivel
-    Foto{
-      url
-    }
+      Tipo
+      Areas {
+        Nome
+      }
+      Horas
+      Email
+      Telefone
+      Nivel
+      Foto {
+        url
+      }
     }
   }
 `;
 
 class Docentes extends Component {
-
   render() {
     return (
       <React.Fragment>
@@ -35,7 +34,6 @@ class Docentes extends Component {
           <Breadcrumb bold>Docentes</Breadcrumb>
         </Breadcrumbs>
 
-
         <div className="container">
           <div
             className="card-columns"
@@ -43,13 +41,12 @@ class Docentes extends Component {
           >
             <Query query={GET_DOCENTES}>
               {({ loading, error, data }) => {
-                if (loading) return (<Facebook />);
+                if (loading) return <Facebook />;
                 if (error) return `Error! ${error.message}`;
 
-                return (data.docentes.map((docente, index) => (
+                return data.docentes.map((docente, index) => (
                   <DocenteCard docente={docente} key={index} />
-                )));
-
+                ));
               }}
             </Query>
           </div>

@@ -76,7 +76,6 @@ const mapa = [
   }
 ];
 
-
 const MapaDoSite = () => {
   return (
     <React.Fragment>
@@ -93,7 +92,9 @@ const MapaDoSite = () => {
               {section.header}
               <ul>
                 {section.items.map(item => (
-                  <li><Link to={item.href}>{item.title}</Link></li>
+                  <li>
+                    <Link to={item.href}>{item.title}</Link>
+                  </li>
                 ))}
               </ul>
             </React.Fragment>

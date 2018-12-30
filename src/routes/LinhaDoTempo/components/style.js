@@ -2,14 +2,14 @@ import { css } from "emotion";
 
 export default {
   container: css`
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: 0.05em;
     * {
       box-sizing: border-box;
-  
+
       margin: 0;
       padding: 0;
       border: 0;
@@ -18,7 +18,7 @@ export default {
       vertical-align: baseline;
     }
     p {
-      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
   `,
   timeline: css`
@@ -28,7 +28,7 @@ export default {
     &:before {
       z-index: 1;
       background-color: black;
-      content: '';
+      content: "";
       margin-left: -1px;
       position: absolute;
       top: 0;
@@ -42,8 +42,8 @@ export default {
   `,
   icon: css`
     z-index: 2;
-    border-radius:50%;
-    background-color: DodgerBlue ;
+    border-radius: 50%;
+    background-color: DodgerBlue;
     outline: 10px solid white;
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
@@ -68,7 +68,7 @@ export default {
     }
   `,
   date: css`
-    border-radius:4px;
+    border-radius: 4px;
     color: white;
     background-color: black;
     box-shadow: inset 0 0 0 0em #ef795a;
@@ -83,5 +83,5 @@ export default {
     p {
       padding-bottom: 1.2em;
     }
-  `,
+  `
 };

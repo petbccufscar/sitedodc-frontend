@@ -1,6 +1,11 @@
-import React, {Component} from "react";
-import {Breadcrumbs, Breadcrumb} from "../../components/Breadcrumbs";
-import { VTab, SideMenu, TabPanelContainer, VerticalTabs } from "../../components/vertical-tabs";
+import React, { Component } from "react";
+import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
+import {
+  VTab,
+  SideMenu,
+  TabPanelContainer,
+  VerticalTabs
+} from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
 import { placeholder, placeholder2 } from "../../components/placeholders";
@@ -11,49 +16,49 @@ const tabs = [
       panelId: "motivacao",
       title: "Motivação",
       header: "Informações",
-      showHeader: true,
+      showHeader: true
     },
     content: {
       title: "Motivação para Estudar na UFSCar",
-      body: placeholder,
-    },
+      body: placeholder
+    }
   },
   {
     props: {
       panelId: "ingresso",
       title: "Como ingressar",
       header: "Informações",
-      showHeader: false,
+      showHeader: false
     },
     content: {
       title: "Como ingressar?",
       body: placeholder2
-    },
+    }
   },
   {
     props: {
       panelId: "auxilios",
       title: "Auxílios",
       header: "Informações",
-      showHeader: false,
+      showHeader: false
     },
     content: {
       title: "Auxílios Permanência",
-      body: placeholder,
-    },
+      body: placeholder
+    }
   },
   {
     props: {
       panelId: "saocarlos",
       title: "Sobre São Carlos",
       header: "Informações",
-      showHeader: false,
+      showHeader: false
     },
     content: {
       title: "Sobre São Carlos",
-      body: placeholder2,
-    },
-  },
+      body: placeholder2
+    }
+  }
 ];
 
 class AreaVisitante extends Component {

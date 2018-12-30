@@ -83,15 +83,16 @@ class Docente extends Component {
                       />
                       Nível: {data.docente.Nivel}
                     </p>
-                    {data.docente.Areas && data.docente.Areas.length > 0 && (
-                      <p className="card-text">
-                        <FontAwesomeIcon
-                          icon="microscope"
-                          className="d-inline-block mr-2"
-                        />
-                        Áreas: {this.listAreas(data.docente.Areas)}
-                      </p>
-                    )}
+                    {data.docente.Areas &&
+                      data.docente.Areas.length > 0 && (
+                        <p className="card-text">
+                          <FontAwesomeIcon
+                            icon="microscope"
+                            className="d-inline-block mr-2"
+                          />
+                          Áreas: {this.listAreas(data.docente.Areas)}
+                        </p>
+                      )}
                     <p>
                       <FontAwesomeIcon
                         icon="envelope"

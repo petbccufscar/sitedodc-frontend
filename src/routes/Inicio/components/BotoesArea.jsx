@@ -2,11 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const BotaoArea = ({ area = "aluno", texto = "Aluno", className }) => (
-  <Link
-    to={"/area-" + area}
-    
-  > <button className={"btn btn-white py-3 px-md-4  text-primary  " + className }> 
-      <span className="d-none d-sm-inline" style={{color: "parent"}}>Área do </span>{texto}
+  <Link to={"/area-" + area}>
+    {" "}
+    <button
+      className={"btn btn-white py-3 px-md-4  text-primary  " + className}
+    >
+      <span className="d-none d-sm-inline" style={{ color: "parent" }}>
+        Área do{" "}
+      </span>
+      {texto}
     </button>
   </Link>
 );
@@ -21,7 +25,7 @@ const BotoesArea = () => (
     >
       <BotaoArea area="aluno" className="px-4" texto="Aluno" />
       <BotaoArea area="visitante" className="px-4" texto="Visitante" />
-      <BotaoArea area="docente" className="px-4"  texto="Docente" />
+      <BotaoArea area="docente" className="px-4" texto="Docente" />
     </div>
   </div>
 );

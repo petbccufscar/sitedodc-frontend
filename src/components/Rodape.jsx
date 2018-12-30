@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 class Rodape extends Component {
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
   render() {

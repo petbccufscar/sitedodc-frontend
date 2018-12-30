@@ -3,7 +3,7 @@ import Noticias from "../../components/Noticias";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 
 class MaisNoticias extends Component {
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
   render() {

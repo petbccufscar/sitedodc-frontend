@@ -3,7 +3,7 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import TecnicoAdministrativo from "../../components/TecnicoAdministrativo";
 
 class TecnicoAdministrativos extends Component {
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
   render() {
@@ -13,10 +13,12 @@ class TecnicoAdministrativos extends Component {
           <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb bold>Técnico-admnistrativos</Breadcrumb>
         </Breadcrumbs>
-        
+
         <div className="container">
-          <h5 className="mb-4">Relação de funcionários técnicos e administrativos.</h5>
-          <TecnicoAdministrativo/>
+          <h5 className="mb-4">
+            Relação de funcionários técnicos e administrativos.
+          </h5>
+          <TecnicoAdministrativo />
         </div>
       </React.Fragment>
     );
