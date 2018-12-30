@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import s from './style'
+import s from "./style";
 
 
 export const Timeline = ({ children }) =>
@@ -8,7 +8,7 @@ export const Timeline = ({ children }) =>
     <ul className={"timeline " + s.timeline}>
       {children}
     </ul>
-  </div>
+  </div>;
 
 export const Event = ({ title, subtitle, interval, children }) =>
   <li className={s.event}>
@@ -21,4 +21,4 @@ export const Event = ({ title, subtitle, interval, children }) =>
         {children}
       </div>
     </div>
-  </li>
+  </li>;

@@ -1,5 +1,5 @@
-import React from "react"
-import ContentLoader from "react-content-loader"
+import React from "react";
+import ContentLoader from "react-content-loader";
 
 const NoticiaCompletaLoader = props => (
   <ContentLoader 
@@ -17,6 +17,6 @@ const NoticiaCompletaLoader = props => (
     <rect x="0" y="35" rx="3" ry="3" width="380" height="6.4" /> 
     <rect x="0" y="7" rx="3" ry="3" width="380" height="20" />
   </ContentLoader>
-)
+);
 
 export default NoticiaCompletaLoader;

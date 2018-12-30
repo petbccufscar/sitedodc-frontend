@@ -40,7 +40,7 @@ class FormularioSuporte extends Component {
                   <fieldset>
                     <div className="form-group">
                       <div className="col">
-                        <label for="sel1">Email</label>
+                        <label htmlFor="sel1">Email</label>
 
                         <input
                           id="fname"
@@ -53,7 +53,7 @@ class FormularioSuporte extends Component {
                     </div>
                     <div className="form-group">
                       <div className="col">
-                        <label for="sel1">Username do DC</label>
+                        <label htmlFor="sel1">Username do DC</label>
 
                         <input
                           id="lname"
@@ -67,7 +67,7 @@ class FormularioSuporte extends Component {
 
                     <div className="form-group">
                       <div className="col">
-                        <label for="sel1">Tipo de problema:</label>
+                        <label htmlFor="sel1">Tipo de problema:</label>
                         <select className="form-control" id="sel1">
                           <option>Problema no laboratório</option>
                           <option>Outros</option>
@@ -77,7 +77,7 @@ class FormularioSuporte extends Component {
 
                     <div className="form-group">
                       <div className="col">
-                        <label for="sel1">Descrição do problema:</label>
+                        <label htmlFor="sel1">Descrição do problema:</label>
 
                         <textarea
                           className="form-control"

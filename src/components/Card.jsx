@@ -5,10 +5,10 @@ const  Card = ({
 
   children
 }) => (
-    <div className={"card "+ className} >
-      {children}
-    </div>
-  );
+  <div className={"card "+ className} >
+    {children}
+  </div>
+);
 
 export const CardImage = ({ img, alt }) => (
 
@@ -17,20 +17,20 @@ export const CardImage = ({ img, alt }) => (
     src={img}
     alt={alt}
   />
-)
+);
 
 export const CardBody = ({ img, alt, children }) => (
 
   <div className="card-body d-flex flex-row">
     {children}
   </div>
-)
+);
 
 export const CardFooter = ({ children }) => (
 
   <div className="card-footer bg-white">
     {children}
   </div>
-)
+);
 
 export default Card;

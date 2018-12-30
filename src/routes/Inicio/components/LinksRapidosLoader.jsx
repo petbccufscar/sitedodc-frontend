@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import ContentLoader from "react-content-loader"
+import ContentLoader from "react-content-loader";
 
 const LinksRapidosLoader = props => (
   <ContentLoader 
@@ -18,6 +18,6 @@ const LinksRapidosLoader = props => (
 
 
   </ContentLoader>
-)
+);
 
 export default LinksRapidosLoader;

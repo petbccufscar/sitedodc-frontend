@@ -1,4 +1,4 @@
-import { css } from 'emotion'
+import { css } from "emotion";
 
 export default {
   container: css`
@@ -84,4 +84,4 @@ export default {
       padding-bottom: 1.2em;
     }
   `,
-}
+};

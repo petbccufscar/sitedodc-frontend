@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Evento from "./Evento";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EventosLoader from "./EventosLoader";
 
 
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
 
 const GET_EVENTOS = gql`
 query{
@@ -35,15 +35,15 @@ class Eventos extends Component {
         </div>
         <Query query={GET_EVENTOS}>
           {({ loading, error, data }) => {
-            if (loading) return (<EventosLoader></EventosLoader>)
+            if (loading) return (<EventosLoader></EventosLoader>);
             if (error) return `Error! ${error.message}`;
 
             return (data.eventos.map((evento,index) => (
               <Evento
-              key={index}
+                key={index}
                 titulo={evento.Titulo}
                 data={evento.Data} />
-            )))
+            )));
 
           }}
         </Query>

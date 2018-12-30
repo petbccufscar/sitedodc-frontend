@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import BannerRotativo from "./components/BannerRotativo";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import "../../styles/css/home.css"
+import "../../styles/css/home.css";
 
 class Inicio extends Component {
   render() {

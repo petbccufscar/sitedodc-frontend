@@ -27,12 +27,12 @@ import {
   faPhone
 } from "@fortawesome/free-solid-svg-icons";
 
-import { ApolloClient } from 'apollo-client';
-import { HttpLink } from 'apollo-link-http';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloClient } from "apollo-client";
+import { HttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
+import { ApolloProvider } from "react-apollo";
 
-import './styles/css/contrast.css'
+import "./styles/css/contrast.css";
 
 const client = new ApolloClient({
   // By default, this client will send queries to the

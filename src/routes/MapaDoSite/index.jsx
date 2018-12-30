@@ -90,12 +90,12 @@ const MapaDoSite = () => {
           <hr />
           {mapa.map(section => (
             <React.Fragment>
-            {section.header}
-            <ul>
-            {section.items.map(item => (
-              <li><Link to={item.href}>{item.title}</Link></li>
-            ))}
-            </ul>
+              {section.header}
+              <ul>
+                {section.items.map(item => (
+                  <li><Link to={item.href}>{item.title}</Link></li>
+                ))}
+              </ul>
             </React.Fragment>
           ))}
         </div>

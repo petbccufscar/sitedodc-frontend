@@ -1,8 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import Card, { CardBody, CardFooter } from "../../../components/Card"
-import Badge from "../../../components/Badge"
+import Card, { CardBody, CardFooter } from "../../../components/Card";
+import Badge from "../../../components/Badge";
 import { ImageLoader } from "../../../components/image-loader";
 
 

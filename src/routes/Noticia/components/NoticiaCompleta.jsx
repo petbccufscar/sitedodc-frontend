@@ -16,7 +16,7 @@ const Noticia = ({ noticia }) => (
       <img src={"http://159.89.232.182:1337"+noticia.Imagem.url} className="img-fluid" alt="Responsive" />
     )}
     <ReactMarkdown source={noticia.Conteudo} />
-    </React.Fragment>
+  </React.Fragment>
 );
 const Data = ({ data = "01/01/2018" }) => (
   <span className="mr-2 badge badge-primary">

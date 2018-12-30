@@ -8,9 +8,9 @@ const Botao = ({
   textcolor = "white",
   small = false
 }) => (
-    <a target="_blank" href={link} className={"btn btn-" + background + " text-" + textcolor + " mr-3"}>
+  <a target="_blank" href={link} className={"btn btn-" + background + " text-" + textcolor + " mr-3"}>
     {small ? (<small>{texto}</small>) : texto}
-    </a>
+  </a>
     
 );
 
