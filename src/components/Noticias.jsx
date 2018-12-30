@@ -76,7 +76,7 @@ class Noticias extends Component {
     return (
       "Postado em: " +
       format(new Date(data), "dddd, DD/MM/YYYY", {
-        locale: pt
+        locale: pt,
       })
     );
   }

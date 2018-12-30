@@ -25,7 +25,7 @@ const Noticia = ({ noticia }) => (
 const Data = ({ data = "01/01/2018" }) => (
   <span className="mr-2 badge badge-primary">
     {format(new Date(data), "DD/MM/YYYY", {
-      locale: pt
+      locale: pt,
     })}
   </span>
 );

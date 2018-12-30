@@ -4,7 +4,7 @@ import ReactIframeResizer from "react-iframe-resizer-super";
 
 const iframeResizerOptions = {
   checkOrigin: false,
-  heightCalculationMethod: "documentElementScroll"
+  heightCalculationMethod: "documentElementScroll",
 };
 
 class Catalogo extends Component {

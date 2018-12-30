@@ -83,5 +83,5 @@ export default {
     p {
       padding-bottom: 1.2em;
     }
-  `
+  `,
 };

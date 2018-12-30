@@ -8,7 +8,7 @@ const Badge = ({
   children,
   color = "dark",
   onClick,
-  accessKey = ""
+  accessKey = "",
 }) => (
   <li id={id} className="list-inline-item ">
     <a

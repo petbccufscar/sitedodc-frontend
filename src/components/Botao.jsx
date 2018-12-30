@@ -6,7 +6,7 @@ const Botao = ({
   link = "#",
   background = "primary",
   textcolor = "white",
-  small = false
+  small = false,
 }) => (
   <a
     target="_blank"

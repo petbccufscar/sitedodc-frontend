@@ -24,7 +24,7 @@ import {
   faPlus,
   faGlobeAmericas,
   faLink,
-  faPhone
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { ApolloClient } from "apollo-client";
@@ -40,7 +40,7 @@ const client = new ApolloClient({
   // Pass the configuration option { uri: YOUR_GRAPHQL_API_URL } to the `HttpLink` to connect
   // to a different host
   link: new HttpLink({ uri: "http://159.89.232.182:1337/graphql" }),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 });
 
 library.add(
