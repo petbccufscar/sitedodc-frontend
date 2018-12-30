@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faListAlt } from "@fortawesome/free-solid-svg-icons";
 
 class Contato extends Component {
   render() {
@@ -13,7 +16,15 @@ class Contato extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <legend align="">Formulário de contato</legend>
+              <h5 style={{ marginBottom: "15px" }}>
+                {" "}
+                <FontAwesomeIcon
+                  icon={faListAlt}
+                  style={{ marginLeft: "15px", paddingRight: "6px" }}
+                  color="gray"
+                />{" "}
+                Formulário de contato{" "}
+              </h5>
               <br />
               <form>
                 <div className="form-group row col-12">
@@ -64,7 +75,11 @@ class Contato extends Component {
                   </div>
                 </div>
                 <div className="form-group row col-12">
-                  <label for="mensagem" className="col-12 col-form-label">
+                  <label
+                    for="mensagem"
+                    style={{ marginBottom: "5px" }}
+                    className="col-12 col-form-label"
+                  >
                     Mensagem
                   </label>
                   <div className="col-12">
@@ -94,9 +109,19 @@ class Contato extends Component {
               </form>
             </div>
             <div className="col-md-6">
-              <legend align="">Contato</legend>
+              <h5 style={{ marginBottom: "15px" }}>
+                {" "}
+                <FontAwesomeIcon
+                  icon={faInfoCircle}
+                  style={{ paddingRight: "6px" }}
+                  color="gray"
+                />{" "}
+                Contato{" "}
+              </h5>
               <br />
-              <h5>Precisa de atendimento técnico?</h5>
+              <p>
+                <b>Precisa de atendimento técnico?</b>
+              </p>
               <p>
                 Você navegou no site e não achou uma solução técnica para seu
                 problema? Acesse{" "}
