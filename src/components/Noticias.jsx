@@ -36,13 +36,14 @@ class Noticias extends Component {
           variables={{ qnt: parseInt(this.props.quantidade) }}
         >
           {({ loading, error, data }) => {
-            if (loading)
+            if (loading) {
               return (
                 <React.Fragment>
                   <NoticiaLoader />
                   <NoticiaLoader />
                 </React.Fragment>
               );
+            }
             if (error) return `Error! ${error.message}`;
 
             return data.noticias.map((noticia, index) => (
@@ -62,7 +63,7 @@ class Noticias extends Component {
                   </Link>
                 </CardBody>
                 <CardFooter>
-                  <small>{this.FormatarData(noticia.createdAt)}</small>
+                  <small>{this.formatarData(noticia.createdAt)}</small>
                 </CardFooter>
               </Card>
             ));
@@ -72,7 +73,7 @@ class Noticias extends Component {
     );
   }
 
-  FormatarData(data) {
+  formatarData(data) {
     return (
       "Postado em: " +
       format(new Date(data), "dddd, DD/MM/YYYY", {

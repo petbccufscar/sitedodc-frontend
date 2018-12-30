@@ -87,12 +87,12 @@ const MapaDoSite = () => {
         <div className=" mt-5" id="conteudo">
           <h3>Mapa do Site</h3>
           <hr />
-          {mapa.map(section => (
-            <React.Fragment>
+          {mapa.map((section, index) => (
+            <React.Fragment key={`section_${index}`}>
               {section.header}
               <ul>
-                {section.items.map(item => (
-                  <li>
+                {section.items.map((item, index) => (
+                  <li key={`item_${index}`}>
                     <Link to={item.href}>{item.title}</Link>
                   </li>
                 ))}

@@ -28,8 +28,12 @@ class Eventos extends Component {
         </div>
         <Query query={GET_EVENTOS}>
           {({ loading, error, data }) => {
-            if (loading) return <EventosLoader />;
-            if (error) return `Error! ${error.message}`;
+            if (loading) {
+              return <EventosLoader />;
+            }
+            if (error) {
+              return `Error! ${error.message}`;
+            }
 
             return data.eventos.map((evento, index) => (
               <Evento key={index} titulo={evento.Titulo} data={evento.Data} />

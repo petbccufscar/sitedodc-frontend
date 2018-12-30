@@ -41,8 +41,12 @@ class Docentes extends Component {
           >
             <Query query={GET_DOCENTES}>
               {({ loading, error, data }) => {
-                if (loading) return <Facebook />;
-                if (error) return `Error! ${error.message}`;
+                if (loading) {
+                  return <Facebook />;
+                }
+                if (error) {
+                  return `Error! ${error.message}`;
+                }
 
                 return data.docentes.map((docente, index) => (
                   <DocenteCard docente={docente} key={index} />

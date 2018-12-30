@@ -23,8 +23,12 @@ class LinksRapidos extends Component {
         <div className="d-flex flex-wrap">
           <Query query={GET_LINKS_RAPIDOS}>
             {({ loading, error, data }) => {
-              if (loading) return <LinksRapidosLoader />;
-              if (error) return `Error! ${error.message}`;
+              if (loading) {
+                return <LinksRapidosLoader />;
+              }
+              if (error) {
+                return `Error! ${error.message}`;
+              }
 
               return data.links.map((link, index) => (
                 <LinkRapido

@@ -40,8 +40,12 @@ class Noticia extends Component {
             variables={{ id: this.props.match.params.id }}
           >
             {({ loading, error, data }) => {
-              if (loading) return <NoticiaCompletaLoader />;
-              if (error) return `Error! ${error.message}`;
+              if (loading) {
+                return <NoticiaCompletaLoader />;
+              }
+              if (error) {
+                return `Error! ${error.message}`;
+              }
               return <NoticiaCompleta noticia={data.noticia} />;
             }}
           </Query>
