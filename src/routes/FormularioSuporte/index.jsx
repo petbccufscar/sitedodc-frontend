@@ -44,7 +44,7 @@ class FormularioSuporte extends Component {
                   {" "}
                   <FontAwesomeIcon
                     icon={faListAlt}
-                    style={{ paddingRight: "6px" }}
+                    style={{ marginLeft: "15px", paddingRight: "6px" }}
                     color="gray"
                   />{" "}
                   Formulário{" "}
