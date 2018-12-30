@@ -15,7 +15,7 @@ class Contato extends Component {
 
         <div className="container">
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 ">
               <h5 style={{ marginBottom: "15px" }}>
                 {" "}
                 <FontAwesomeIcon
@@ -108,7 +108,7 @@ class Contato extends Component {
                 </div>
               </form>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 border-left">
               <h5 style={{ marginBottom: "15px" }}>
                 {" "}
                 <FontAwesomeIcon
