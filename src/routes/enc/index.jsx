@@ -4,7 +4,7 @@ import {
   VTab,
   SideMenu,
   TabPanelContainer,
-  VerticalTabs
+  VerticalTabs,
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
@@ -16,97 +16,97 @@ const tabs = [
       panelId: "apresentacao",
       title: "Apresentação",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Apresentação",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "historico",
       title: "Histórico",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Histórico",
-      body: placeholder2
-    }
+      body: placeholder2,
+    },
   },
   {
     props: {
       panelId: "perfil",
       title: "Perfil do Profissional",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Perfil do Profissional",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "distribuicao_disciplinas",
       title: "Distribuição de Disciplinas",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Distribuição de Disciplinas",
-      body: placeholder2
-    }
+      body: placeholder2,
+    },
   },
   {
     props: {
       panelId: "estagio",
       title: "Estágio",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Estágio",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "objetivos",
       title: "Objetivos do Curso",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Objetivos do Curso",
-      body: placeholder2
-    }
+      body: placeholder2,
+    },
   },
   {
     props: {
       panelId: "infraestrutura",
       title: "Infraestrutura",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Infraestrutura",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "bolsas-auxilios",
       title: "Bolsas e auxílios",
       header: "",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Bolsas e auxílios",
-      body: placeholder2
-    }
-  }
+      body: placeholder2,
+    },
+  },
 ];
 
 class ENC extends Component {

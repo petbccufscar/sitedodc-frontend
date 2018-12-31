@@ -3,7 +3,7 @@ import Noticias from "../../components/Noticias";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 
 class MaisNoticias extends Component {
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
   render() {
@@ -14,9 +14,9 @@ class MaisNoticias extends Component {
           <Breadcrumb bold>Notícias</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-        <div className="col">
-          <div className="row mt-5 mais-noticias" id="conteudo">
-            <Noticias quantidade_por_linha="4" quantidade="12" />
+          <div className="col">
+            <div className="row mt-5 mais-noticias" id="conteudo">
+              <Noticias quantidade_por_linha="4" quantidade="12" />
             </div>
           </div>
         </div>

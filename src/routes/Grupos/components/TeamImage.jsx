@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { ImageLoader } from "../../../components/image-loader";
 
-import { imageContainer, groupImage } from './style';
+import { imageContainer, groupImage } from "./style";
 
 const TeamImage = ({ src, title, alt }) => (
   <div className={imageContainer}>

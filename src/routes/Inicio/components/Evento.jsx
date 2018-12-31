@@ -2,7 +2,6 @@ import React from "react";
 const Evento = ({ titulo, data }) => (
   <div
     key={titulo}
-
     style={{ textDecoration: "none" }}
     className="d-flex flex-row align-items-start border-bottom"
   >

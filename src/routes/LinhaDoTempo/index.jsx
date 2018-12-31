@@ -102,7 +102,8 @@ class LinhaDoTempo extends React.Component {
                   Engenharia de Computação e Sistemas de Informação. Também é
                   responsável pelo curso de pós-graduação (<i>stricto sensu</i>)
                   em Ciência da Computação e oferece cursos de especialização (
-                  <i>lato sensu</i>).
+                  <i>lato sensu</i>
+                  ).
                 </p>
                 <div className="mr-3 float-left">
 

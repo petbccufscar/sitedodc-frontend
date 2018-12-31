@@ -21,10 +21,10 @@ class Sobre extends Component {
             graduação de Bacharelado em Ciência da Computação, Engenharia de
             Computação e Sistemas de Informação. Também é responsável pelo curso
             de pós-graduação (<i>stricto sensu</i>) em Ciência da Computação e
-            oferece cursos de especialização (<i>lato sensu</i>).
+            oferece cursos de especialização (<i>lato sensu</i>
+            ).
           </p>
           <div className="mr-3 float-left ">
-            
             <ImageLoader
               src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
               title="Foto: Régua de cálculo"

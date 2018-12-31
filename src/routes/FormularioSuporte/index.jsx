@@ -54,7 +54,7 @@ class FormularioSuporte extends Component {
                   <fieldset>
                     <div className="form-group row col-12">
                       <div className="col-12 col-sm-3">
-                        <label className=" col-form-label" for="email">
+                        <label className=" col-form-label" htmlFor="email">
                           Email
                         </label>
                       </div>
@@ -68,10 +68,9 @@ class FormularioSuporte extends Component {
                         />
                       </div>
                     </div>
-
                     <div className="form-group row col-12">
                       <div className="col-12 col-sm-3">
-                        <label className=" col-form-label" for="username">
+                        <label className=" col-form-label" htmlFor="username">
                           Username (DC)
                         </label>
                       </div>
@@ -85,10 +84,9 @@ class FormularioSuporte extends Component {
                         />
                       </div>
                     </div>
-
                     <div className="form-group row col-12">
                       <div className="col-12 col-sm-3">
-                        <label className=" col-form-label" for="problem">
+                        <label className=" col-form-label" htmlFor="problem">
                           Tipo de problema
                         </label>
                       </div>
@@ -102,10 +100,9 @@ class FormularioSuporte extends Component {
 
                     <div className="form-group row col-12">
                       <div className="col">
-                        <label for="desc" style={{ marginBottom: "20px" }}>
+                        <label htmlFor="desc" style={{ marginBottom: "20px" }}>
                           Descrição do problema
                         </label>
-
                         <textarea
                           className="form-control"
                           id="desc"

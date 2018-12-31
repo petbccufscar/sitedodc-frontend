@@ -15,8 +15,8 @@ const placeholder = [
       title: "",
       src:
         "https://petbcc.secompufscar.com.br/static/site2016/images/equipe.jpg",
-      alt: ""
-    }
+      alt: "",
+    },
   },
   {
     title: "SECOMP",
@@ -26,8 +26,8 @@ const placeholder = [
       title: "",
       src:
         "https://scontent-gru2-2.xx.fbcdn.net/v/t1.0-9/22728645_10156775249124196_3639172201758646992_n.jpg?_nc_cat=107&oh=28608feab4b036f7f4ace5d4066fa82a&oe=5C89B427",
-      alt: ""
-    }
+      alt: "",
+    },
   },
   {
     title: "CATI Jr",
@@ -37,8 +37,8 @@ const placeholder = [
       title: "",
       src:
         "http://www.catijr.com.br/wp-content/uploads/2017/06/catitodoslindosefederados-1024x576.jpg",
-      alt: ""
-    }
+      alt: "",
+    },
   },
   {
     title: "PyLadies",
@@ -48,9 +48,9 @@ const placeholder = [
       title: "",
       src:
         "https://pbs.twimg.com/profile_images/590334811560091648/ZqUGyjIv_400x400.png",
-      alt: ""
-    }
-  }
+      alt: "",
+    },
+  },
 ];
 
 // TODO: pegar da api

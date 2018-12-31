@@ -14,7 +14,7 @@ class ImageLoader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false
+      loaded: false,
     };
   }
 
@@ -25,7 +25,7 @@ class ImageLoader extends React.Component {
     img.src = src;
     img.onload = () => {
       this.setState({
-        loaded: true
+        loaded: true,
       });
     };
   }
@@ -39,7 +39,7 @@ class ImageLoader extends React.Component {
       loaderHeight,
       loaderWidth,
       width,
-      height
+      height,
     } = this.props;
     const { loaded } = this.state;
 

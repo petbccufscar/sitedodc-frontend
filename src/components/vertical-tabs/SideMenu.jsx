@@ -10,7 +10,9 @@ const SideMenu = props => {
     <div className="col-md-3 mb-5" id="menu_area">
       <MenuButton header={header} title={title} onClick={onClick} />
       <div
-        className={"border-right pr-2" + (!showMenu ? " d-none d-md-block" : "")}
+        className={
+          "border-right pr-2" + (!showMenu ? " d-none d-md-block" : "")
+        }
         id="side-menu"
       >
         <TabList className={"nav nav-pills flex-column pr-2"}>
