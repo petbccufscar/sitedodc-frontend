@@ -9,7 +9,7 @@ const BarraDeAcessibilidade = props => (
     className="container-fluid"
     style={{
       backgroundColor: "black",
-      color: "#0f0f0f"
+      color: "#0f0f0f",
     }}
   >
     <div className="container">

@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import PosGrad from "../../images/print-pos.png";
 
-
 class PosGraduacao extends Component {
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false;
   }
   render() {
@@ -17,13 +16,11 @@ class PosGraduacao extends Component {
 
         <div className="container">
           <h5 className="mb-4">Retirado do documento de conteúdo</h5>
-          <img alt="Descrição de conteudo" src={PosGrad}/>
+          <img alt="Descrição de conteudo" src={PosGrad} />
         </div>
-        
       </React.Fragment>
     );
   }
 }
 
 export default PosGraduacao;
-

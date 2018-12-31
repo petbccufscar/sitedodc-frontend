@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const TeamBody = ({
   title = "Sem titulo",
   description = "Sem descrição",
-  link
+  link,
 }) => (
   <React.Fragment>
     <h3>{title}</h3>

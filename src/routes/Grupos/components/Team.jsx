@@ -1,6 +1,6 @@
 import React from "react";
-import TeamImage from './TeamImage';
-import TeamBody from './TeamBody';
+import TeamImage from "./TeamImage";
+import TeamBody from "./TeamBody";
 
 // TODO: pegar da api
 const Team = ({ title, description, link, img }) => (

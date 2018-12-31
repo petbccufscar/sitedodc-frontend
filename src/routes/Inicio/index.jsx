@@ -4,9 +4,9 @@ import BarraLateral from "./components/BarraLateral";
 import BotoesArea from "./components/BotoesArea";
 import { Link } from "react-router-dom";
 import BannerRotativo from "./components/BannerRotativo";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import "../../styles/css/home.css"
+import "../../styles/css/home.css";
 
 class Inicio extends Component {
   render() {
@@ -20,8 +20,8 @@ class Inicio extends Component {
               <div className="d-flex justify-content-between mb-3">
                 <h4>Notícias</h4>
                 <Link to="/mais-noticias" className="btn btn-link">
-                  Ver todas as notícias     <FontAwesomeIcon className="ml-2" icon="plus" />
-
+                  Ver todas as notícias{" "}
+                  <FontAwesomeIcon className="ml-2" icon="plus" />
                 </Link>
               </div>
               <Noticias quantidade_por_linha="2" quantidade="4" />

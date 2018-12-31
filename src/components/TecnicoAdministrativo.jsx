@@ -4,7 +4,7 @@ import { ImageLoader } from "./image-loader";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Placeholder = () => (
-    <Card>
+  <Card>
     <CardBody>
       <div className="mr-4">
         <ImageLoader

@@ -13,7 +13,7 @@ class BannerRotativo extends Component {
   constructor() {
     super();
     this.state = {
-      carrosseis: []
+      carrosseis: [],
     };
   }
 

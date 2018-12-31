@@ -10,9 +10,9 @@ class VerticalTabs extends React.Component {
       tabSelected: {
         panelId: null,
         header: null,
-        title: null
+        title: null,
       },
-      showMenu: false
+      showMenu: false,
     };
 
     this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -27,7 +27,7 @@ class VerticalTabs extends React.Component {
   scrollToTop() {
     window.scrollTo({
       top: 0,
-      behaviour: "smooth"
+      behaviour: "smooth",
     });
   }
 
@@ -38,9 +38,9 @@ class VerticalTabs extends React.Component {
       tabSelected: {
         panelId: tab.props.panelId,
         title: tab.props.title,
-        header: tab.props.header
+        header: tab.props.header,
       },
-      showMenu: false
+      showMenu: false,
     });
     if (window.innerWidth < 768) {
       this.scrollToTop();
@@ -62,7 +62,7 @@ class VerticalTabs extends React.Component {
               {React.cloneElement(this.props.children[0], {
                 tabSelected: tabSelected,
                 showMenu: showMenu,
-                onClick: this.handleButtonClick
+                onClick: this.handleButtonClick,
               })}
               {this.props.children[1]}
             </div>

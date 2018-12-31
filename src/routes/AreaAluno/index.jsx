@@ -4,7 +4,7 @@ import {
   VTab,
   SideMenu,
   TabPanelContainer,
-  VerticalTabs
+  VerticalTabs,
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
@@ -16,85 +16,85 @@ const tabs = [
       panelId: "graduacao-home",
       title: "Home",
       header: "Graduação",
-      showHeader: true
+      showHeader: true,
     },
     content: {
       title: "Home",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "graduacao-suport",
       title: "Suporte",
       header: "Graduação",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Suporte",
-      body: placeholder2
-    }
+      body: placeholder2,
+    },
   },
   {
     props: {
       panelId: "graduacao-dist-disciplina",
       title: "Distribuição de Disciplinas",
       header: "Graduação",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Distribuição de Disciplinas",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "graduacao-estagio",
       title: "Estágio",
       header: "Graduação",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Estágio",
-      body: placeholder2
-    }
+      body: placeholder2,
+    },
   },
   {
     props: {
       panelId: "graduacao-documentos",
       title: "Documentos",
       header: "Graduação",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Documentos",
-      body: placeholder
-    }
+      body: placeholder,
+    },
   },
   {
     props: {
       panelId: "pos-graduacao-home",
       title: "Home",
       header: "Pós-graduação",
-      showHeader: true
+      showHeader: true,
     },
     content: {
       title: "Home",
-      body: placeholder2
-    }
+      body: placeholder2,
+    },
   },
   {
     props: {
       panelId: "pos-graduacao-documentos",
       title: "Documentos",
       header: "Pós-graduação",
-      showHeader: false
+      showHeader: false,
     },
     content: {
       title: "Documentos",
-      body: placeholder
-    }
-  }
+      body: placeholder,
+    },
+  },
 ];
 
 class AreaAluno extends Component {
