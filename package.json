@@ -23,7 +23,7 @@
     "react-iframe-resizer-super": "^0.2.2",
     "react-markdown": "^4.0.4",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.5",
+    "react-scripts": "^2.1.2",
     "react-web-tabs": "^1.0.1",
     "source-map-explorer": "^1.6.0"
   },
