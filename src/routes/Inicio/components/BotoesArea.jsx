@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 const BotaoArea = ({ to, children }) => (
   <Link to={to}>
-    <button className={"btn btn-white py-3 px-4  text-primary"}>
+    <button className={"btn btn-white py-3 px-4 text-primary"}>
       <span className="d-none d-sm-inline">
         Área do{" "}
       </span>
