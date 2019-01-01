@@ -1,18 +1,29 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const BreadcrumbDivisor = () => (
   <div className="divider-breadcrumbs">
     <FontAwesomeIcon icon="angle-right" />
   </div>
 );
+
 export const Breadcrumb = ({ endereco, bold, children }) => (
   <li className={bold ? "item-breadcrumb font-weight-bold" : "item-breadcrumb"}>
     <BreadcrumbDivisor />
     {endereco ? <Link to={endereco}>{children}</Link> : children}
   </li>
 );
+Breadcrumb.propTypes = {
+  endereco: PropTypes.string,
+  bold: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
+
 export const Breadcrumbs = ({ children }) => (
   <nav
     id="breadcrumb"
@@ -23,3 +34,9 @@ export const Breadcrumbs = ({ children }) => (
     </div>
   </nav>
 );
+Breadcrumbs.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
