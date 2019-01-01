@@ -1,6 +1,7 @@
 /* eslint "jsx-a11y/no-access-key": 0 */
 
 import React from "react";
+import PropTypes from "prop-types";
 
 const Badge = ({
   id,
@@ -21,5 +22,16 @@ const Badge = ({
     </a>
   </li>
 );
+Badge.propTypes = {
+  id:PropTypes.string.isRequired,
+  link:PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  color:PropTypes.string,
+  onClick:PropTypes.func,
+  accessKey:PropTypes.string,
+};
 
 export default Badge;
