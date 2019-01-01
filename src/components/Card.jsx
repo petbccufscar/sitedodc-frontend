@@ -1,21 +1,36 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Card = ({
   className,
-
   children,
 }) => <div className={"card " + className}>{children}</div>;
 
-export const CardImage = ({ img, alt }) => (
-  <img className="card-img-top" src={img} alt={alt} />
-);
+Card.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
 
-export const CardBody = ({ img, alt, children }) => (
+export const CardBody = ({ children }) => (
   <div className="card-body d-flex flex-row">{children}</div>
 );
+CardBody.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
 
 export const CardFooter = ({ children }) => (
   <div className="card-footer bg-white">{children}</div>
 );
-
+CardFooter.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
+};
 export default Card;
