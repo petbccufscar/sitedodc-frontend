@@ -3,6 +3,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from "./Badge";
+import PropTypes from "prop-types";
 
 const BarraDeAcessibilidade = props => (
   <div
@@ -46,5 +47,8 @@ const BarraDeAcessibilidade = props => (
     </div>
   </div>
 );
+BarraDeAcessibilidade.propTypes = {
+  onClick:PropTypes.func
+};
 
 export default BarraDeAcessibilidade;
