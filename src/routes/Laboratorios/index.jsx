@@ -37,6 +37,20 @@ const tabs = [
           email: 'marcondes@dc.ufscar.br',
           homePageLink: 'https://about.me/cesarmarcondes',
           curriculumLink: 'lala'
+        },
+        {
+          nome: 'Dr. Hermes Senger',
+          funcao: 'Professor Adjunto',
+          email: 'hermes@dc.ufscar.br',
+          homePageLink: 'nda',
+          curriculumLink: 'nda'
+        },
+        {
+          nome: 'Álvaro Shiokawa Alvarez',
+          funcao: 'Mestrando em Ciência da Computação, área de Redes de Computadores',
+          email: 'alvaro@comp.ufscar.br',
+          homePageLink: 'nda',
+          curriculumLink: 'nda'
         }
       ],
       externalLinks: 'links do site de pesquisa ...'
@@ -77,7 +91,8 @@ class Laboratorios extends Component {
                   </ul>
                   <hr />
                   <h3> Pesquisadores </h3>
-                  <ResearchersCard nome={ tab.content.researchers[0].nome } funcao={ tab.content.researchers[0].funcao } email={ tab.content.researchers[0].email } links={ tab.content.researchers[0].homePageLink }/>
+                  <br />
+                  { tab.content.researchers.map( researcher => <ResearchersCard nome={ researcher.nome } funcao={ researcher.funcao } email={ researcher.email }/> )}
                 </TabPanel>
               );
             })}
