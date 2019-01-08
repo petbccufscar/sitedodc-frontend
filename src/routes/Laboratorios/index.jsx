@@ -8,9 +8,8 @@ import {
   VerticalTabs,
 } from "../../components/vertical-tabs";
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
 import { TabPanel } from "react-web-tabs";
-import ResearchersCard from "./components/researchersCard";
+import LabsContent from "./components/labsContent";
 
 const tabs = [
   {
@@ -22,13 +21,33 @@ const tabs = [
     },
     content: {
       title: "Asgard - Above cloud computing",
-      body: "Qualquer coisa",
+      body: (
+        <div className="container-fluid">
+          <h4 className="text-muted">Sobre nós</h4>
+          <br />
+          <p>O laboratório ASGARD foi criado em 2012, situado na Universidade Federal de São Carlos (UFSCar), no Departamento de Computação (DC), sendo dirigido pelos professores César Marcondes e Hermes Senger.</p>
+          <p>Em nosso laboratório trabalhamos com redes de computadores (Em específico, Internet do futuro) e sistemas distribuídos.</p>
+          <p>E temos uma cafeteira própria ;D!</p>
+        </div>
+      ),
       researchLine: [
-        'a',
-        'b',
-        'c',
-        'd',
-        'e'
+        'Controle de congestionamento avançado (TCP)',
+        'Inteligência artificial aplicada a redes',
+        'Estimativas de características na Internet',
+        'Desenvolvimento de projetos de rede em hardware reconfigurável',
+        'Sistemas embarcados críticos',
+        'Software Defined Radio (SDR)',
+        'Software Defined Networks (SDN)',
+        'Sistemas de Alto Desempenho e Bioinformática.',
+        'Computação paralela e distribuída',
+        'Computação de alto desempenho (Clusters, grades e clouds computacionais)',
+        'Avaliação de desempenho',
+        'Escalonamento',
+        'Tolerância a falhas',
+        'Segurança',
+        'Infraestrutura computacional',
+        'Big Data',
+        'Aplicações para e-Ciência'
       ],
       researchers: [
         {
@@ -36,7 +55,7 @@ const tabs = [
           funcao: 'Professor Adjunto',
           email: 'marcondes@dc.ufscar.br',
           homePageLink: 'https://about.me/cesarmarcondes',
-          curriculumLink: 'lala'
+          curriculumLink: 'nda'
         },
         {
           nome: 'Dr. Hermes Senger',
@@ -44,17 +63,47 @@ const tabs = [
           email: 'hermes@dc.ufscar.br',
           homePageLink: 'nda',
           curriculumLink: 'nda'
-        },
+        }
+      ],
+      externalLinks: 'links do site de pesquisa ...'
+    }
+  },
+  {
+    props: {
+      panelId: "grupo-BIPG ",
+      title: "BIPG ",
+      header: "Grupos de pesquisa",
+      showHeader: false,
+    },
+    content: {
+      title: "BIPG - Biomedical Image Processing Group ",
+      body: (
+        <div className="container-fluid">
+          <h4 className="text-muted">Sobre nós</h4>
+          <br />
+          <p>O laboratório ASGARD foi criado em 2012, situado na Universidade Federal de São Carlos (UFSCar), no Departamento de Computação (DC), sendo dirigido pelos professores César Marcondes e Hermes Senger.</p>
+          <p>Em nosso laboratório trabalhamos com redes de computadores (Em específico, Internet do futuro) e sistemas distribuídos.</p>
+          <p>E temos uma cafeteira própria ;D!</p>
+        </div>
+      ),
+      researchLine: [
+        'Biomedical Image',
+        'Video Processing',
+        'Computer Vision',
+        'Machine Learning',
+        'Pattern Recognition'
+      ],
+      researchers: [
         {
-          nome: 'Álvaro Shiokawa Alvarez',
-          funcao: 'Mestrando em Ciência da Computação, área de Redes de Computadores',
-          email: 'alvaro@comp.ufscar.br',
+          nome: 'Ricardo José Ferrari',
+          funcao: 'Professor Adjunto',
+          email: 'rferrari@dc.ufscar.br',
           homePageLink: 'nda',
           curriculumLink: 'nda'
         }
       ],
       externalLinks: 'links do site de pesquisa ...'
-    },
+    }
   }
 ];
 
@@ -81,18 +130,7 @@ class Laboratorios extends Component {
             {tabs.map((tab, index) => {
               return (
                 <TabPanel key={"p_" + index} tabId={tab.props.panelId}>
-                  <h3>{tab.content.title}</h3>
-                  <hr />
-                  {tab.content.body}
-                  <hr />
-                  <h3> Áreas de pesquisa</h3>
-                  <ul>
-                    {tab.content.researchLine.map( research => <li> { research } </li>)}
-                  </ul>
-                  <hr />
-                  <h3> Pesquisadores </h3>
-                  <br />
-                  { tab.content.researchers.map( researcher => <ResearchersCard nome={ researcher.nome } funcao={ researcher.funcao } email={ researcher.email }/> )}
+                  <LabsContent tabContent={ tab.content } />
                 </TabPanel>
               );
             })}
