@@ -23,7 +23,7 @@ const ResearchersCard = props =>{
                      />
                 </div>
 
-                <div className="col-8" style={
+                <div className="col-md-8" style={
                     { padding: '1.2rem' }
                 }>
                     <h5 className="card-title"> { nome } </h5>

@@ -7,7 +7,19 @@ const LabsContent = props => {
     return(
         <React.Fragment>
             <div className="container-fluid">
-                <h3>{ tabContent.title }</h3>
+                <div className="row">
+                    <div className="col-2 align-self-center text-center">
+                        <img
+                            src={require('../../../../src/images/logos/bcc.png')}
+                            width="50"
+                            height="55"
+                            alt="Logo do grupo de pesquisa"
+                        />
+                    </div>
+                    <div className="col">
+                        <h2>{ tabContent.title }</h2>
+                    </div>
+                </div>
                 <hr />
                 { tabContent.body }
                 <br />

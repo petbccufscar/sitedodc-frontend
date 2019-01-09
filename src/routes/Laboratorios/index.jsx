@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import Labs from "../../images/print-lab.png";
+
 import {
   VTab,
   SideMenu,
@@ -65,7 +65,7 @@ const tabs = [
           curriculumLink: 'nda'
         }
       ],
-      externalLinks: 'links do site de pesquisa ...'
+      externalLinks: 'links do site de pesquisa ...',
     }
   },
   {
