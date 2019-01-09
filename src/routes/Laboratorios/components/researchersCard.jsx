@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import ImageLoader from "../../../components/image-loader/ImageLoader";
 
 import "../../../styles/css/labs.css";
