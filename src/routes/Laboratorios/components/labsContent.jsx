@@ -1,7 +1,7 @@
 import React from "react";
 import ResearchersCard from "./researchersCard";
 
-const LabsContent = props => {
+const LabsContent = (props) => {
     const { tabContent } = props;
 
     return(
@@ -10,7 +10,7 @@ const LabsContent = props => {
                 <div className="row">
                     <div className="col-2 align-self-center text-center">
                         <img
-                            src={require('../../../../src/images/logos/bcc.png')}
+                            src={require("../../../../src/images/logos/bcc.png")}
                             width="50"
                             height="55"
                             alt="Logo do grupo de pesquisa"
@@ -38,6 +38,6 @@ const LabsContent = props => {
             </div> 
         </React.Fragment>
     );
-}
+};
 
 export default LabsContent;
