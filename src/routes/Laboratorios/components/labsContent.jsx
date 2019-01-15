@@ -1,5 +1,6 @@
 import React from "react";
 import ResearchersCard from "./researchersCard";
+import PropTypes from "prop-types";
 
 const LabsContent = (props) => {
     const { tabContent } = props;
@@ -41,3 +42,7 @@ const LabsContent = (props) => {
 };
 
 export default LabsContent;
+
+LabsContent.propTypes = {
+    tabContent:PropTypes.string.isRequired
+}

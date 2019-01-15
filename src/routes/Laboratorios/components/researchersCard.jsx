@@ -1,5 +1,6 @@
 import React from "react";
 import ImageLoader from "../../../components/image-loader/ImageLoader";
+import PropTypes from "prop-types";
 
 import "../../../styles/css/labs.css";
 
@@ -20,6 +21,7 @@ const ResearchersCard = (props) => {
                         background-position= "center"
                         height="100%"
                         width="100%"
+                        alt="Imagem professor responsável"
                      />
                 </div>
 
@@ -38,4 +40,10 @@ const ResearchersCard = (props) => {
 };
 
 export default ResearchersCard;
+
+ResearchersCard.PropTypes = {
+    nome:PropTypes.string.isRequired,
+    funcao:PropTypes.string.isRequired,
+    email:PropTypes.string.isRequired
+}
 
