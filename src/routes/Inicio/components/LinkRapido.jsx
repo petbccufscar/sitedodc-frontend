@@ -1,5 +1,6 @@
 import React from "react";
 import { ImageLoader } from "../../../components/image-loader";
+import PropTypes from "prop-types";
 
 const LinkRapido = ({ imagem, link, alt }) => (
   <a
@@ -17,5 +18,9 @@ const LinkRapido = ({ imagem, link, alt }) => (
     />
   </a>
 );
-
+LinkRapido.propTypes = {
+  imagem:PropTypes.string.isRequired,
+  link:PropTypes.string.isRequired,
+  alt:PropTypes.string.isRequired,
+};
 export default LinkRapido;

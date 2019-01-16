@@ -5,6 +5,7 @@ import DocenteLoader from "./DocenteLoader";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { ImageLoader } from "../../components/image-loader";
+import PropTypes from "prop-types";
 
 const GET_DOCENTE = gql`
   query Docente($id: ID!) {
@@ -84,15 +85,14 @@ class Docente extends Component {
                       Nível: {data.docente.Nivel}
                     </p>
                     {data.docente.Areas &&
-                      data.docente.Areas.length > 0 && (
-                        <p className="card-text">
-                          <FontAwesomeIcon
-                            icon="microscope"
-                            className="d-inline-block mr-2"
-                          />
-                          Áreas: {this.listAreas(data.docente.Areas)}
-                        </p>
-                      )}
+                      data.docente.Areas.length > 0 &&
+                      (<p className="card-text">
+                        <FontAwesomeIcon
+                          icon="microscope"
+                          className="d-inline-block mr-2"
+                        />
+                        Áreas: {this.listAreas(data.docente.Areas)}
+                      </p>)}
                     <p>
                       <FontAwesomeIcon
                         icon="envelope"
@@ -138,5 +138,11 @@ class Docente extends Component {
     return list;
   }
 }
-
+Docente.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired
+    })
+  })
+};
 export default Docente;

@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 const Evento = ({ titulo, data }) => (
   <div
     key={titulo}
@@ -11,6 +13,10 @@ const Evento = ({ titulo, data }) => (
     </div>
   </div>
 );
+Evento.propTypes = {
+  titulo:PropTypes.string.isRequired,
+  data:PropTypes.string.isRequired
+};
 
 const ConverterData = data => {
   var dataObj = new Date(data.substring(0, data.length - 1));
