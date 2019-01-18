@@ -45,9 +45,9 @@ const ResearchersCard = (props) => {
 
 export default ResearchersCard;
 
-ResearchersCard.PropTypes = {
+ResearchersCard.propTypes = {
     nome:PropTypes.string.isRequired,
     funcao:PropTypes.string.isRequired,
-    email:PropTypes.string.isRequired
-}
+    email:PropTypes.string.isRequired,
+};
 

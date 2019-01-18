@@ -2,8 +2,9 @@ import React from "react";
 import ResearchersCard from "./researchersCard";
 import PropTypes from "prop-types";
 
+
 const LabsContent = (props) => {
-    const { tabContent } = props;
+    const { children } = props;
 
     return(
         <React.Fragment>
@@ -18,21 +19,21 @@ const LabsContent = (props) => {
                         />
                     </div>
                     <div className="col">
-                        <h2>{ tabContent.title }</h2>
+                        <h2>{ children.content.title }</h2>
                     </div>
                 </div>
                 <hr />
-                { tabContent.body }
+                { children.content.body }
                 <br />
                 <h3> Áreas de pesquisa</h3>
                 <br />
                 <ul>
-                    { tabContent.researchLine.map( (research, index) => <li key={ index }> { research } </li>) }
+                    { children.content.researchLine.map( (research, index) => <li key={ index }> { research } </li>) }
                 </ul>
                 <hr />
                 <h3> Professores responsáveis </h3>
                 <br />
-                { tabContent.researchers.map( (researcher, index) => <ResearchersCard key={ index } nome={ researcher.nome } funcao={ researcher.funcao } email={ researcher.email }/> )}
+                { children.content.researchers.map( (researcher, index) => <ResearchersCard key={ index } nome={ researcher.nome } funcao={ researcher.funcao } email={ researcher.email }/> )}
                 <br />
                 <h3> Informações Adicionais </h3>
                 <h1> ... </h1>   
@@ -42,7 +43,3 @@ const LabsContent = (props) => {
 };
 
 export default LabsContent;
-
-LabsContent.propTypes = {
-    tabContent:PropTypes.string.isRequired
-}

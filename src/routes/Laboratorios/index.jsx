@@ -130,7 +130,9 @@ class Laboratorios extends Component {
             {tabs.map((tab, index) => {
               return (
                 <TabPanel key={"p_" + index} tabId={tab.props.panelId}>
-                  <LabsContent tabContent={ tab.content } />
+                  <LabsContent>
+                      { tab }
+                  </LabsContent>
                 </TabPanel>
               );
             })}
