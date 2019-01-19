@@ -30,7 +30,7 @@ class BannerRotativo extends Component {
         className="carousel slide carousel-fade d-none d-md-block"
         data-ride="carousel"
       >
-        <div class="carousel-inner">
+        <div className="carousel-inner">
           <Banner key="1" banner={banner1} active />
           <Banner key="2" banner={banner3} />
           <Banner key="3" banner={banner2} />

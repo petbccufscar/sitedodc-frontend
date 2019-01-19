@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 
@@ -7,7 +6,6 @@ const MenuButton = ({ titulo, endereco, icone, dropdown }) => (
   <button
     className="nav-link ml-2 d-flex d-sm-block py-3 py-sm-0 align-items-center "
     data-toggle={dropdown ? "dropdown" : ""}
-    role="button"
     aria-haspopup="true"
     aria-expanded="false"
   >
