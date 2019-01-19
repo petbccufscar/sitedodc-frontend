@@ -42,8 +42,8 @@ const LabsContent = (props) => {
     );
 };
 
-LabsContent.proTypes = {
-    children: PropTypes.shape({
+LabsContent.propTypes = {
+    children:PropTypes.shape({
         title:PropTypes.string.isRequired,
         body:PropTypes.node,
         researchLine:PropTypes.arrayOf(PropTypes.string),
@@ -54,7 +54,7 @@ LabsContent.proTypes = {
             homePageLink:PropTypes.string.isRequired,
             curriculumLink:PropTypes.string.isRequired,
         })),
-    }),
+    }).isRequired,
 };
 
 export default LabsContent;
