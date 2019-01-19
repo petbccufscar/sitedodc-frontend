@@ -22,6 +22,12 @@ body {
   object-position: top;
 }
 
+.card-img-researchers {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+}
+
 .links-rapidos {
   max-width: 68px;
   max-height: 68px;
@@ -104,6 +110,18 @@ body {
     column-count: 2 !important;
   }
 }
+
+@include media-breakpoint-down(sm) {
+  .card-breakpoint{
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-sm-align-center{
+    margin: 0 auto;
+  }
+}
+
 
 #rodape {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
