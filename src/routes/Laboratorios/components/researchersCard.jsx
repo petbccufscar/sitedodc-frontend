@@ -11,7 +11,7 @@ const ResearchersCard = (props) => {
     return(
        <Card className="hoverable mb-3">
            <CardBody>
-               <div className="row justify-content-center">
+               <div className="row justify-content-center card-sm-align-center">
                     <div className="mr-4 ml-4">
                         <ImageLoader
                             classnames="card-img-researchers rounded-circle"
@@ -19,8 +19,8 @@ const ResearchersCard = (props) => {
                             alt="Imagem professor responsável"
                         />
                     </div>
-                    <div className="card-content align-self-center" style={{ padding: "1rem" }}>
-                        <h4 className="card-title"> { nome } </h4>
+                    <div className="card-content align-self-center card-breakpoint" style={{ padding: "1rem" }}>
+                        <h5 className="card-title"> { nome } </h5>
                         <p className="card-subtitle mb-2 text-muted">{ funcao }</p>
                         <p className="card-text"><b> Email: </b>{ email } </p>
                     </div>

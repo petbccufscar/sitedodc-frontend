@@ -22,13 +22,13 @@ const tabs = [
     content: {
       title: "Asgard - Above cloud computing",
       body: (
-        <div className="container-fluid">
-          <h4 className="text-muted">Sobre nós</h4>
+        <React.Fragment>
+          <h3>Sobre nós</h3>
           <br />
           <p>O laboratório ASGARD foi criado em 2012, situado na Universidade Federal de São Carlos (UFSCar), no Departamento de Computação (DC), sendo dirigido pelos professores César Marcondes e Hermes Senger.</p>
           <p>Em nosso laboratório trabalhamos com redes de computadores (Em específico, Internet do futuro) e sistemas distribuídos.</p>
           <p>E temos uma cafeteira própria ;D!</p>
-        </div>
+        </React.Fragment>
       ),
       researchLine: [
         "Controle de congestionamento avançado (TCP)",
@@ -51,7 +51,7 @@ const tabs = [
       ],
       researchers: [
         {
-          nome: "Dr. César Augusto Cavalheiro Marcondes",
+          nome: "Dr. César Marcondes",
           funcao: "Professor Adjunto",
           email: "marcondes@dc.ufscar.br",
           homePageLink: "https://about.me/cesarmarcondes",
@@ -78,13 +78,13 @@ const tabs = [
     content: {
       title: "BIPG - Biomedical Image Processing Group ",
       body: (
-        <div className="container-fluid">
-          <h4 className="text-muted">Welcome to the Biomedical Image Processing (BIP) Group</h4>
+        <React.Fragment>
+          <h3>Sobre nós</h3>
           <br />
           <p>Founded in 2011 by professor Ricardo J. Ferrari, Ph.D. with the goal of developing practical and efficient solutions to significant problems in the biomedical field, the BIPGroup researches image and video processing, computer vision, machine learning, and pattern recognition techniques.</p>
           <p>Primary applications are in segmentation and analysis of 3D magnetic resonance (MR) brain images of neurodegenerative diseases (such as Alzheimer"s, Parkinson´s and Multiple Sclerosis diseases), dynamic analysis of cells in in-vivo studies using intravital microscopy, and quantification of abdominal and thighs adipose tissues in CT images among others.</p>
           <p>... ... ... Retirado do site deles (Exemplo)</p>
-        </div>
+        </React.Fragment>
       ),
       researchLine: [
         "Biomedical Image",
