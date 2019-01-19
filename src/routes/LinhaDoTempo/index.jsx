@@ -1,6 +1,7 @@
 import React from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { Timeline, Event } from "./components/Timeline";
+
 import { ImageLoader } from "../../components/image-loader";
 
 class LinhaDoTempo extends React.Component {
@@ -8,6 +9,7 @@ class LinhaDoTempo extends React.Component {
     super(props);
     this.state = { value: 0, previous: 0 };
   }
+
   shouldComponentUpdate() {
     return false;
   }
@@ -38,6 +40,7 @@ class LinhaDoTempo extends React.Component {
               <div className="d-flex flex-row align-items-center my-3">
                 <div className=" mr-3">
                   {" "}
+
                   <ImageLoader
                     src="http://www.dc.ufscar.br/imagens/capa-40-anos"
                     height="100px"
@@ -46,10 +49,12 @@ class LinhaDoTempo extends React.Component {
                     loaderWidth="80px"
                     alt="Capa - 40 anos"
                     classnames="image-right"
+
                     title="Capa - 40 anos"
                   />
                 </div>
                 <div>
+
                   <h2>Relatorio Anual - Edicão Comemorativa - 40 Anos</h2>
                   <p>
                     Conheça a atuação do DC em ensino, pesquisa e extensão, um
@@ -101,6 +106,7 @@ class LinhaDoTempo extends React.Component {
                   ).
                 </p>
                 <div className="mr-3 float-left">
+
                   <ImageLoader
                     src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
                     title=" Foto: Régua de cálculo"
@@ -143,6 +149,7 @@ class LinhaDoTempo extends React.Component {
                   em Informática, aplicando os conhecimentos adquiridos durante
                   o curso
                 </p>
+
                 <h2>Docentes</h2>
                 <p>
                   O quadro de docentes do DC é formado por professores

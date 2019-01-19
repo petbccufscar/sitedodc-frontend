@@ -22,6 +22,9 @@ class Rodape extends Component {
                 <li>E-mail: dc@ufscar.br</li>
                 <li>Telefone: +55 16 3351-8232</li>
                 <li>Fax: +55 16 3351-8233</li>
+                <li>
+                  Contato: <a href="/contato">clique aqui</a>
+                </li>
               </ul>
             </div>
 
