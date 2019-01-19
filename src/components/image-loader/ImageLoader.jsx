@@ -1,25 +1,21 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-import { box, loader } from "./style";
-
-const Loader = ({ style, classnames }) => {
-  return (
-    <div className={`${box} ${classnames}`} style={style}>
-      <div className={loader} />
-    </div>
-  );
-};
+import Loader from "./Loader";
+import Img from "./Img";
 
 class ImageLoader extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
+      imgSrc: this.props.src,
+
     };
   }
 
   componentDidMount() {
-    const { src } = this.props;
+    const { src, fallback } = this.props;
 
     const img = new Image();
     img.src = src;
@@ -28,42 +24,55 @@ class ImageLoader extends React.Component {
         loaded: true,
       });
     };
+
+    img.onerror = () => {
+      if (fallback) {
+      this.setState({
+        loaded: true,
+        imgSrc: fallback,
+      });
+    }
+    };
   }
 
   render() {
     const {
       classnames,
-      title,
-      alt,
-      src,
       loaderHeight,
       loaderWidth,
-      width,
-      height,
+
+      src,
+      fallback,
+      
+      ...imgProps
     } = this.props;
-    const { loaded } = this.state;
+    const { loaded, imgSrc } = this.state;
 
     return (
       <React.Fragment>
         {!loaded && (
           <Loader
             classnames={classnames}
-            style={{ height: loaderHeight, width: loaderWidth }}
+            height={loaderHeight}
+            width={loaderWidth}
           />
         )}
-        {loaded && (
-          <img
-            className={classnames}
-            src={src}
-            alt={alt}
-            title={title}
-            height={height}
-            width={width}
-          />
-        )}
+        {loaded && <Img classnames={classnames} src={imgSrc} {...imgProps} />}
       </React.Fragment>
     );
   }
+}
+
+ImageLoader.propTypes = {
+  classnames: PropTypes.string,
+  loaderHeight: PropTypes.string,
+  loaderWidth: PropTypes.string,
+  height: PropTypes.string,
+  width: PropTypes.string,
+  src: PropTypes.string.isRequired,
+  fallback: PropTypes.string,
+  title: PropTypes.string,
+  alt: PropTypes.string.isRequired,
 }
 
 export default ImageLoader;
