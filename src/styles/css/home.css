@@ -1,5 +1,6 @@
 #botoes-area {
   border: 2px solid transparent !important;
+  z-index: 2;
 }
 #botoes-area a:nth-child(1) button {
   content: "";
