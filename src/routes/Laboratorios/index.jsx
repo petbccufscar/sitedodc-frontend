@@ -31,7 +31,7 @@ const tabs = [
         </div>
       ),
       researchLine: [
-        "Controle de congestionamento avançado (TCP",
+        "Controle de congestionamento avançado (TCP)",
         "Inteligência artificial aplicada a redes",
         "Estimativas de características na Internet",
         "Desenvolvimento de projetos de rede em hardware reconfigurável",
@@ -131,7 +131,7 @@ class Laboratorios extends Component {
               return (
                 <TabPanel key={"p_" + index} tabId={tab.props.panelId}>
                   <LabsContent>
-                      { tab }
+                      { tab.content }
                   </LabsContent>
                 </TabPanel>
               );

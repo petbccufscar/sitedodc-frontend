@@ -43,11 +43,11 @@ const ResearchersCard = (props) => {
     );
 };
 
-export default ResearchersCard;
-
 ResearchersCard.propTypes = {
     nome:PropTypes.string.isRequired,
     funcao:PropTypes.string.isRequired,
     email:PropTypes.string.isRequired,
 };
+
+export default ResearchersCard;
 

@@ -19,27 +19,42 @@ const LabsContent = (props) => {
                         />
                     </div>
                     <div className="col">
-                        <h2>{ children.content.title }</h2>
+                        <h2>{ children.title }</h2>
                     </div>
                 </div>
                 <hr />
-                { children.content.body }
+                { children.body }
                 <br />
                 <h3> Áreas de pesquisa</h3>
                 <br />
                 <ul>
-                    { children.content.researchLine.map( (research, index) => <li key={ index }> { research } </li>) }
+                    { children.researchLine.map( (research, index) => <li key={ index }> { research } </li>) }
                 </ul>
                 <hr />
                 <h3> Professores responsáveis </h3>
                 <br />
-                { children.content.researchers.map( (researcher, index) => <ResearchersCard key={ index } nome={ researcher.nome } funcao={ researcher.funcao } email={ researcher.email }/> )}
+                { children.researchers.map( (researcher, index) => <ResearchersCard key={ index } nome={ researcher.nome } funcao={ researcher.funcao } email={ researcher.email }/> )}
                 <br />
                 <h3> Informações Adicionais </h3>
                 <h1> ... </h1>   
             </div> 
         </React.Fragment>
     );
+};
+
+LabsContent.proTypes = {
+    children: PropTypes.shape({
+        title:PropTypes.string.isRequired,
+        body:PropTypes.node,
+        researchLine:PropTypes.arrayOf(PropTypes.string),
+        researchers:PropTypes.arrayOf(PropTypes.shape({
+            nome:PropTypes.string.isRequired,
+            funcao:PropTypes.string.isRequired,
+            email:PropTypes.string.isRequired,
+            homePageLink:PropTypes.string.isRequired,
+            curriculumLink:PropTypes.string.isRequired,
+        })),
+    }),
 };
 
 export default LabsContent;
