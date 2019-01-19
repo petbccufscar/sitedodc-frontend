@@ -11,8 +11,8 @@ const Banner = ({ banner, active }) => (
 );
 
 Banner.propTypes = {
-  banner:PropTypes.string.isRequired,
-  active:PropTypes.bool,
+  banner: PropTypes.string.isRequired,
+  active: PropTypes.bool,
 };
 
 class BannerRotativo extends Component {
@@ -30,9 +30,11 @@ class BannerRotativo extends Component {
         className="carousel slide carousel-fade d-none d-md-block"
         data-ride="carousel"
       >
-        <Banner key="1" banner={banner1} active />
-        <Banner key="2" banner={banner3} />
-        <Banner key="3" banner={banner2} />
+        <div class="carousel-inner">
+          <Banner key="1" banner={banner1} active />
+          <Banner key="2" banner={banner3} />
+          <Banner key="3" banner={banner2} />
+        </div>
       </div>
     );
   }
