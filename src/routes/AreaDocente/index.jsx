@@ -8,59 +8,59 @@ const data = {
     {
       title: "Siga",
       subTitle: "Sistema integrado de gestão acadêmica.",
-      link: "https://siga.ufscar.br"
+      link: "https://siga.ufscar.br",
     },
     {
       title: "SAGUI",
       subTitle: "Sistema de Apoio à Gestão Universitária Integrada (SAGUI).",
-      link: "https://sistemas.ufscar.br/sagui/"
+      link: "https://sistemas.ufscar.br/sagui/",
     },
     {
       title: "Proex Web",
       subTitle: "Pró-reitoria de extensão",
-      link: "http://www.proex.ufscar.br"
+      link: "http://www.proex.ufscar.br",
     },
     {
       title: "Reserva de salas",
       subTitle: "Ferramenta para reserva de salas no departamento.",
-      link: "http://reserva.dc.ufscar.br"
-    }
+      link: "http://reserva.dc.ufscar.br",
+    },
   ],
   Documentos: [
     {
       title: "Afastamento",
       subTitle: "Formulário de afastamento.",
-      link: "#"
+      link: "#",
     },
     {
       title: "Agendamento de bancas",
       subTitle: "Formulário para agendamento de bancas.",
-      link: "#"
-    }
+      link: "#",
+    },
   ],
   Suporte: [
     {
       title: "Criação de salas no Moodle",
       subTitle: "Guia de como criar salas no Moodle.",
-      link: "#"
+      link: "#",
     },
     {
       title: "Sistema de suporte",
       subTitle: "Contato com o suporte do DC.",
-      link: "#"
+      link: "#",
     },
     {
       title: "Periodicos",
       subTitle: "Acesso á periodicos disponiveis.",
-      link: "#"
+      link: "#",
     },
     {
       title: "Eduroam",
       subTitle: "Como acessar a rede Eduroam.",
       link:
-        "http://www.sin.ufscar.br/servicos/conectividade/rede-sem-fio-eduroam-1"
-    }
-  ]
+        "http://www.sin.ufscar.br/servicos/conectividade/rede-sem-fio-eduroam-1",
+    },
+  ],
 };
 
 class AreaDocentes extends Component {

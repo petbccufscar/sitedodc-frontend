@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import ReactIframeResizer from 'react-iframe-resizer-super';
+import ReactIframeResizer from "react-iframe-resizer-super";
 
-const iframeResizerOptions = { 
+const iframeResizerOptions = {
   checkOrigin: false,
-   heightCalculationMethod: 'documentElementScroll'
+  heightCalculationMethod: "documentElementScroll",
 };
 
 class Catalogo extends Component {
-
   render() {
     return (
       <React.Fragment>
@@ -18,14 +17,14 @@ class Catalogo extends Component {
         </Breadcrumbs>
 
         <div className="container">
-        <ReactIframeResizer fframeResizerOptions={iframeResizerOptions}  src="http://dctemp.dc.ufscar.br/static/lattes/index.html"></ReactIframeResizer>
+          <ReactIframeResizer
+            fframeResizerOptions={iframeResizerOptions}
+            src="http://dctemp.dc.ufscar.br/static/lattes/index.html"
+          />
         </div>
-        
       </React.Fragment>
-      
     );
   }
 }
 
 export default Catalogo;
-

@@ -1,16 +1,16 @@
 #botoes-area {
-    border: 2px solid transparent !important;
-  }
-  #botoes-area a:nth-child(1) button {
-    content: '';
-    border-radius: 15px 0 0 15px;
-  }
-  #botoes-area a:nth-child(2) button {
-    content: '';
-    border-radius: 0;
-  }
-  #botoes-area a:nth-child(3) button {
-    content: '';
-    border-radius: 0 15px 15px 0;
-  }
-
+  border: 2px solid transparent !important;
+  z-index: 2;
+}
+#botoes-area a:nth-child(1) button {
+  content: "";
+  border-radius: 15px 0 0 15px;
+}
+#botoes-area a:nth-child(2) button {
+  content: "";
+  border-radius: 0;
+}
+#botoes-area a:nth-child(3) button {
+  content: "";
+  border-radius: 0 15px 15px 0;
+}

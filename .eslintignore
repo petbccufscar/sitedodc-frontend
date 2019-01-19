@@ -1,0 +1,8 @@
+public
+*.md
+screenshot.png
+*.css
+*.scss
+*css.map
+**/images
+*.json

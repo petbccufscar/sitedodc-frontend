@@ -4,12 +4,16 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from "./Badge";
 
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
+
+
 const BarraDeAcessibilidade = props => (
   <div
     className="container-fluid"
     style={{
       backgroundColor: "black",
-      color: "#0f0f0f"
+      color: "#0f0f0f",
     }}
   >
     <div className="container">
@@ -37,6 +41,10 @@ const BarraDeAcessibilidade = props => (
             <FontAwesomeIcon icon="adjust" className="mr-1" />
             <span className="d-none d-sm-inline-block">Alto contraste</span>
           </Badge>
+          <Badge link="/contato">
+            <FontAwesomeIcon icon={faInfoCircle} className="mr-1" />
+            <span className="d-none d-sm-inline-block">Contato</span>
+          </Badge>
           <Badge link="/mapa-do-site">
             <FontAwesomeIcon icon="globe" className="mr-1" />
             <span className="d-none d-sm-inline-block">Mapa do site</span>
@@ -46,5 +54,8 @@ const BarraDeAcessibilidade = props => (
     </div>
   </div>
 );
+BarraDeAcessibilidade.propTypes = {
+  onClick:PropTypes.func
+};
 
 export default BarraDeAcessibilidade;

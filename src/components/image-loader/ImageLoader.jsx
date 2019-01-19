@@ -10,6 +10,7 @@ class ImageLoader extends React.Component {
     this.state = {
       loaded: false,
       imgSrc: this.props.src,
+
     };
   }
 

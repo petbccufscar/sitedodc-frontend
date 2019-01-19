@@ -183,3 +183,7 @@ a.badge,
 .contrast form button:hover {
   text-decoration: underline;
 }
+
+.contrast button.nav-link {
+  background: black;
+}
