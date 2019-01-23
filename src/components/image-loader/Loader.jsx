@@ -7,7 +7,7 @@ const Loader = ({ classnames, height, width }) => {
   return (
     <div
       className={`${box} ${classnames}`}
-      style={{ height: height, width: width }}
+      style={{ height, width }}
     >
       <div className={loader} />
     </div>
