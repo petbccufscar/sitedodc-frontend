@@ -12,12 +12,13 @@ const Img = ({
   fallback,
 }) => {
   return (
-    <div style={{ height: height, width: width }}>
+    <div>
       <img
         className={classnames}
         src={hasError ? fallback : src}
         alt={alt}
         title={title}
+        style={{ height: height, width: width }}
       />
     </div>
   );

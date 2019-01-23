@@ -14,7 +14,9 @@ class Sobre extends Component {
           <Breadcrumb bold>Sobre o departamento</Breadcrumb>
         </Breadcrumbs>
 
-        <div className="container">
+        <div className="container text-justify">
+          <h1>O Departamento</h1>
+          <hr/>
           <p>
             O Departamento de Computação da Universidade Federal de São Carlos
             (DC-UFSCar) existe desde 1972, sendo responsável pelos cursos de
@@ -24,54 +26,73 @@ class Sobre extends Component {
             oferece cursos de especialização (<i>lato sensu</i>
             ).
           </p>
-          <div className="mr-3 float-left ">
-            <ImageLoader
-              src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
-              title="Foto: Régua de cálculo"
-              loaderHeight="153px"
-              loaderWidth="271px"
-              height="153px"
-              width="271px"
-              alt="Foto: Régua de cálculo"
-            />
+
+          <div className="row ">
+            <div className="col-md-auto m-3 text-center align-self-center">
+              <ImageLoader
+                src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
+                title="Foto: Régua de cálculo"
+                loaderHeight="200px"
+                loaderWidth="315px"
+                height="200px"
+                width="315px"
+                alt="Foto: Régua de cálculo"
+              />
+            </div>
+
+            <div className="col align-self-center">
+              <p>
+                Em sua existência, o DC-UFSCar tem habilitado e colocado anualmente
+                no mercado de trabalho cerca de uma centena de profissionais, que
+                atuam em empresas e em Instituições de Ensino Superior.
+              </p>
+              <p>
+                Atento à constante evolução na área de computação, o DC-UFSCar tem
+                atuado na vanguarda deste desenvolvimento tecnológico, firmando-se
+                no cenário nacional e internacional como um centro de pesquisa
+                bastante atuante.
+              </p>
+            </div>
           </div>
-          <p>
-            Em sua existência, o DC-UFSCar tem habilitado e colocado anualmente
-            no mercado de trabalho cerca de uma centena de profissionais, que
-            atuam em empresas e em Instituições de Ensino Superior.
-          </p>
-          <p>
-            Atento à constante evolução na área de computação, o DC-UFSCar tem
-            atuado na vanguarda deste desenvolvimento tecnológico, firmando-se
-            no cenário nacional e internacional como um centro de pesquisa
-            bastante atuante.
-          </p>
-          <div className="ml-3 float-right">
-            <ImageLoader
-              src="http://www.dc.ufscar.br/imagens/foto-patio-interno"
-              alt="Foto: Pátio interno"
-              title="Foto: Pátio interno"
-              loaderWidth="518px"
-              loaderHeight="291px"
-              width="518px"
-              height="291px"
-            />
+          <br/>
+
+          <div className="row">
+            <div className="col align-self-center">
+              <p>
+                    O DC entende que a teoria deve ser sempre integrada com atividades
+                práticas, especialmente em cursos de tecnologia, onde a aplicação do
+                conhecimento é fundamental. Desta forma, no último ano letivo, os
+                alunos têm de realizar estágio curricular em empresas, ou desenvolver
+                atividades de pesquisa em Informática, aplicando os conhecimentos
+                adquiridos durante o curso
+              </p>
+
+              <h3 className="mt-4">Docentes</h3>
+              <p>
+                O quadro de docentes do DC é formado por professores associados,
+                adjuntos, assistentes e titulares, sendo a maioria formada por
+                doutores e com dedicação exclusiva. A experiência e capacitação dos
+                professores podem ser observadas na qualidade de formação de alunos
+                de graduação e de pós-graduação <i>stricto-sensu</i>, em cursos
+                regulares da UFSCar.
+              </p>
+            </div>
+
+            <div className="col-lg-auto text-center align-self-center">
+              <ImageLoader
+                  classnames="responsive-image"
+                  src="http://www.dc.ufscar.br/imagens/foto-patio-interno"
+                  alt="Foto: Pátio interno"
+                  title="Foto: Pátio interno"
+                  loaderWidth="518px"
+                  loaderHeight="291px"
+                  width="518px"
+                  height="291px"
+                />
+            </div>
           </div>
-          O DC entende que a teoria deve ser sempre integrada com atividades
-          práticas, especialmente em cursos de tecnologia, onde a aplicação do
-          conhecimento é fundamental. Desta forma, no último ano letivo, os
-          alunos têm de realizar estágio curricular em empresas, ou desenvolver
-          atividades de pesquisa em Informática, aplicando os conhecimentos
-          adquiridos durante o curso
-          <h3 className="mt-4">Docentes</h3>
-          <p>
-            O quadro de docentes do DC é formado por professores associados,
-            adjuntos, assistentes e titulares, sendo a maioria formada por
-            doutores e com dedicação exclusiva. A experiência e capacitação dos
-            professores podem ser observadas na qualidade de formação de alunos
-            de graduação e de pós-graduação <i>stricto-sensu</i>, em cursos
-            regulares da UFSCar.
-          </p>
+        
+    
           <h3 className="mt-4">Educação continuada</h3>
           <p>
             A educação continuada, na área de computação, sempre mereceu atenção
