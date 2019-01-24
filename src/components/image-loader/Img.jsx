@@ -18,7 +18,7 @@ const Img = ({
         src={hasError ? fallback : src}
         alt={alt}
         title={title}
-        style={{ height: height, width: width }}
+        style={{ height, width }}
       />
     </div>
   );
