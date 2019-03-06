@@ -18,7 +18,7 @@ class Infraestrutura extends Component {
           <h1>Infraestrutura</h1>
           <hr />
           <h3 className="mt-4">Chefia</h3>
-          <ul class="list-unstyled">
+          <ul className="list-unstyled">
             <li>Vânia Paula de Almeida Neris</li>
             <li>Valter Vieira de Camargo</li>
           </ul>
