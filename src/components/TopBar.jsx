@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LogoDC from "../images/logos/logo_DC_noText.png";
+import LogoDC from "../images/logos/LOGO-DC.svg";
 import { Link } from "react-router-dom";
 import MenuButton from "./MenuButton";
 import BarraDeAcessibilidade from "./BarraDeAcessibilidade";

@@ -25,6 +25,7 @@ import NaoEncontrado from "./NaoEncontrado";
 import PosGraduacao from "../routes/PosGraduacao";
 import Rodape from "./Rodape";
 import ScrollToTop from "./ScrollToTop";
+import Infraestrutura from "../routes/Infraestrutura";
 import Sobre from "../routes/Sobre";
 import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
 import TopBar from "./TopBar";
@@ -73,7 +74,7 @@ class App extends Component {
               <Route exact path="/catalogo" component={Catalogo} />
               <Route exact path="/alunos" component={AnosAlunos} />
               <Route exact path="/alunos/:curso/:ano" component={Alunos} />
-
+              <Route exact path="/infraestrutura" component={Infraestrutura}/>
               <Route exact path="/sobre" component={Sobre} />
               <Route exact path="/linha-do-tempo" component={LinhaDoTempo} />
               <Route exact path="/suporte/links" component={LinksSuporte} />
