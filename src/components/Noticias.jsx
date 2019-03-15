@@ -8,6 +8,7 @@ import NoticiaLoader from "./NoticiaLoader";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { ImageLoader } from "./image-loader";
+import { API_URL } from "../conf";
 
 const GET_NOTICIAS = gql`
   query Noticias($qnt: Int!) {
@@ -51,7 +52,7 @@ class Noticias extends Component {
                 {noticia.Imagem && (
                   <ImageLoader
                     classnames={"card-img-top"}
-                    src={"http://159.89.232.182:1337/" + noticia.Imagem.url}
+                    src={API_URL + noticia.Imagem.url}
                     alt={noticia.Imagem_texto_alternativo}
                     loaderHeight="8rem"
                   />

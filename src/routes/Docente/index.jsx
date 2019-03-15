@@ -6,6 +6,7 @@ import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { ImageLoader } from "../../components/image-loader";
 import PropTypes from "prop-types";
+import { API_URL } from "../../conf";
 
 const GET_DOCENTE = gql`
   query Docente($id: ID!) {
@@ -60,7 +61,7 @@ class Docente extends Component {
                       <ImageLoader
                         classnames="img-docente rounded-circle"
                         src={
-                          "http://159.89.232.182:1337" + data.docente.Foto.url
+                         API_URL + data.docente.Foto.url
                         }
                         alt="imagem do docente"
                       />
