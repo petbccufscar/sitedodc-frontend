@@ -184,3 +184,11 @@ button.nav-link {
   max-width: 100%;
   height: auto;
 }
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.dropdown > .dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
