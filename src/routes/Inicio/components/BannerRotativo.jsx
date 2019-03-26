@@ -16,9 +16,9 @@ Banner.propTypes = {
 };
 
 const ControleBanner = ({ direction }) => (
-  <a class={"carousel-control-" + direction} href="#carrossel" role="button" data-slide={direction}>
-    <span class={"carousel-control-" + direction + "-icon"} aria-hidden="true"></span>
-    <span class="sr-only"></span>
+  <a className={"carousel-control-" + direction} href="#carrossel" role="button" data-slide={direction}>
+    <span className={"carousel-control-" + direction + "-icon"} aria-hidden="true"></span>
+    <span className="sr-only"></span>
   </a>
 );
 
