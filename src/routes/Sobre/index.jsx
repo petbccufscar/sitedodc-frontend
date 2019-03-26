@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { ImageLoader } from "../../components/image-loader";
+import ImgRegua from "../../images/sobre1.jpg";
+import ImgPatio from "../../images/sobre2.jpg";
+
 
 class Sobre extends Component {
   shouldComponentUpdate() {
@@ -30,7 +33,7 @@ class Sobre extends Component {
           <div className="row ">
             <div className="col-md-auto m-3 text-center align-self-center">
               <ImageLoader
-                src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
+                src={ImgRegua}
                 title="Foto: Régua de cálculo"
                 loaderHeight="200px"
                 loaderWidth="315px"
@@ -81,7 +84,7 @@ class Sobre extends Component {
             <div className="col-lg-auto text-center align-self-center">
               <ImageLoader
                   classnames="responsive-image"
-                  src="http://www.dc.ufscar.br/imagens/foto-patio-interno"
+                  src={ImgPatio}
                   alt="Foto: Pátio interno"
                   title="Foto: Pátio interno"
                   loaderWidth="518px"
