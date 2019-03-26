@@ -15,6 +15,17 @@ Banner.propTypes = {
   active: PropTypes.bool,
 };
 
+const ControleBanner = ({ direction }) => (
+  <a className={"carousel-control-" + direction} href="#carrossel" role="button" data-slide={direction}>
+    <span className={"carousel-control-" + direction + "-icon"} aria-hidden="true"></span>
+    <span className="sr-only"></span>
+  </a>
+);
+
+ControleBanner.propTypes = {
+  direction: PropTypes.string.isRequired,
+};
+
 class BannerRotativo extends Component {
   constructor() {
     super();
@@ -35,6 +46,8 @@ class BannerRotativo extends Component {
           <Banner key="2" banner={banner3} />
           <Banner key="3" banner={banner2} />
         </div>
+        <ControleBanner direction="prev"/>
+        <ControleBanner direction="next"/>
       </div>
     );
   }

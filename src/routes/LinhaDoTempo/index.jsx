@@ -4,6 +4,10 @@ import { Timeline, Event } from "./components/Timeline";
 
 import { ImageLoader } from "../../components/image-loader";
 
+import ImgCapa from "../../images/capa40anos.png";
+import ImgRegua from "../../images/sobre1.jpg";
+import ImgPatio from "../../images/sobre2.jpg";
+
 class LinhaDoTempo extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +46,7 @@ class LinhaDoTempo extends React.Component {
                   {" "}
 
                   <ImageLoader
-                    src="http://www.dc.ufscar.br/imagens/capa-40-anos"
+                    src={ImgCapa}
                     height="100px"
                     width="80px"
                     loaderHeight="100px"
@@ -108,7 +112,7 @@ class LinhaDoTempo extends React.Component {
                 <div className="mr-3 float-left">
 
                   <ImageLoader
-                    src="http://www.dc.ufscar.br/imagens/foto-regua-de-calculo"
+                    src={ImgRegua}
                     title=" Foto: Régua de cálculo"
                     height="153px"
                     width="271px"
@@ -131,7 +135,7 @@ class LinhaDoTempo extends React.Component {
                 </p>
                 <div className="ml-3  float-right">
                   <ImageLoader
-                    src="http://www.dc.ufscar.br/imagens/foto-patio-interno"
+                    src={ImgPatio}
                     alt="Foto: Pátio interno"
                     height="153px"
                     width="271px"
