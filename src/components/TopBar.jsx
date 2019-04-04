@@ -113,7 +113,7 @@ class TopBar extends Component {
                       Pós-graduação
                     </span>
                     <Link
-                      to={"/pos-graducao/stricto-sensu"}
+                      to={"/pos-graduacao/stricto-sensu"}
                       className="dropdown-item"
                     >
                       <FontAwesomeIcon icon={faAngleRight} className="mr-2">
@@ -122,7 +122,7 @@ class TopBar extends Component {
                       Stricto Sensu
                     </Link>
                     <Link
-                      to={"/pos-graducao/lato-sensu"}
+                      to={"/pos-graduacao/lato-sensu"}
                       className="dropdown-item"
                     >
                       <FontAwesomeIcon icon={faAngleRight} className="mr-2">
