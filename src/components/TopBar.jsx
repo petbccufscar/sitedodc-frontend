@@ -3,8 +3,6 @@ import LogoDC from "../images/logos/LOGO-DC.svg";
 import { Link } from "react-router-dom";
 import MenuButton from "./MenuButton";
 import BarraDeAcessibilidade from "./BarraDeAcessibilidade";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 class TopBar extends Component {
   constructor() {
@@ -21,7 +19,7 @@ class TopBar extends Component {
     // If this component is unmounted, stop listening
     window.removeEventListener("scroll", this.handleScroll);
   }
-  handleScroll(e) {
+  handleScroll() {
     if (!this.state.small && window.pageYOffset > 0) {
       this.setState({ small: true });
     } else if (window.pageYOffset === 0) {
@@ -77,58 +75,11 @@ class TopBar extends Component {
                     dropdown
                   />
                   <div className="dropdown-menu">
-                    <span className="pb-2 pl-3  d-block"> Graduação</span>
-                    <Link to={"/graduacao/bcc"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Ciência da Computação
+                    <Link to={"/graduacao"} className="dropdown-item">
+                      Graduação
                     </Link>
-                    <Link to={"/graduacao/enc"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2">
-                        {" "}
-                      </FontAwesomeIcon>
-                      Engenharia da Computação
-                    </Link>
-                    <Link to={"/graduacao/si"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Sistemas de Informação
-                    </Link>
-                    <Link to={"/graduacao/estagio"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Estágio
-                    </Link>
-
-                    <Link
-                      to={"/graduacao/alunos-externos"}
-                      className="dropdown-item"
-                    >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Alunos externos
-                    </Link>
-                    <Link to={"/graduacao/tcc"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      TCC
-                    </Link>
-
-                    <span className="pb-2 pt-3 pl-3  d-block">
-                      Pós-graduação
-                    </span>
-                    <Link
-                      to={"/pos-graducao/stricto-sensu"}
-                      className="dropdown-item"
-                    >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2">
-                        {" "}
-                      </FontAwesomeIcon>
-                      Stricto Sensu
-                    </Link>
-                    <Link
-                      to={"/pos-graducao/lato-sensu"}
-                      className="dropdown-item"
-                    >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2">
-                        {" "}
-                      </FontAwesomeIcon>
-                      Lato Sensu
+                    <Link to={"/pos-graduacao"} className="dropdown-item">
+                      Pós Graduação
                     </Link>
                   </div>
                 </li>
@@ -204,15 +155,12 @@ class TopBar extends Component {
                   />
                   <div className="dropdown-menu">
                     <Link to={"/sobre"} className="dropdown-item">
+                      O Departamento
+                    </Link>
+                    // Ver esse route: 
+                    <Link to={"/sobre"} className="dropdown-item">
                       Sobre
                     </Link>
-                    <Link to={"/linha-do-tempo"} className="dropdown-item">
-                      Linha do tempo
-                    </Link>
-                    <Link to={"/infraestrutura"} className="dropdown-item">
-                      Infraestrutura
-                    </Link>
-
                   </div>
                 </li>
 
