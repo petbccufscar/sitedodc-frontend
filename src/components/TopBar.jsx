@@ -157,7 +157,7 @@ class TopBar extends Component {
                     <Link to={"/sobre"} className="dropdown-item">
                       O Departamento
                     </Link>
-                    // Ver esse route: 
+                    {/* Ver esse route:  */}
                     <Link to={"/sobre"} className="dropdown-item">
                       Sobre
                     </Link>
