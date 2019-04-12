@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import { ImageLoader } from "../../components/image-loader";
-import ImgRegua from "../../images/sobre1.jpg";
-import ImgPatio from "../../images/sobre2.jpg";
+// import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
+import { ImageLoader } from "../../../components/image-loader";
+import ImgRegua from "../../../images/sobre1.jpg";
+import ImgPatio from "../../../images/sobre2.jpg";
 
 
 class Sobre extends Component {
@@ -12,14 +12,8 @@ class Sobre extends Component {
   render() {
     return (
       <React.Fragment>
-        <Breadcrumbs>
-          <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>Sobre o departamento</Breadcrumb>
-        </Breadcrumbs>
-
         <div className="container text-justify">
-          <h1>O Departamento</h1>
-          <hr/>
+        
           <p>
             O Departamento de Computação da Universidade Federal de São Carlos
             (DC-UFSCar) existe desde 1972, sendo responsável pelos cursos de

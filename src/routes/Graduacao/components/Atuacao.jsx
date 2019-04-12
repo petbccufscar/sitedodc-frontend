@@ -70,7 +70,7 @@ const Atuacao = (
               aesthetic synth nesciunt you probably haven't heard of them
               accusamus labore sustainable VHS.
             </p>
-            <a to="http://bcc.dc.ufscar.br/">
+            <a href="http://bcc.dc.ufscar.br/">
               <FontAwesomeIcon
                 icon="globe-americas"
                 className="d-inline-block mr-2"
