@@ -26,7 +26,6 @@ import PosGraduacao from "../routes/PosGraduacao";
 import Rodape from "./Rodape";
 import ScrollToTop from "./ScrollToTop";
 import Infraestrutura from "../routes/Infraestrutura";
-import Sobre from "../routes/Sobre";
 import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
 import TopBar from "./TopBar";
 import Contato from "../routes/Contato";

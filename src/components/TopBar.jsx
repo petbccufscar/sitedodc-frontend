@@ -78,58 +78,8 @@ class TopBar extends Component {
                     <Link to={"/graduacao"} className="dropdown-item">
                       Graduação
                     </Link>
-<<<<<<< HEAD
                     <Link to={"/pos-graduacao"} className="dropdown-item">
                       Pós Graduação
-=======
-                    <Link to={"/graduacao/enc"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2">
-                        {" "}
-                      </FontAwesomeIcon>
-                      Engenharia da Computação
-                    </Link>
-                    <Link to={"/graduacao/si"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Sistemas de Informação
-                    </Link>
-                    <Link to={"/graduacao/estagio"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Estágio
-                    </Link>
-
-                    <Link
-                      to={"/graduacao/alunos-externos"}
-                      className="dropdown-item"
-                    >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      Alunos externos
-                    </Link>
-                    <Link to={"/graduacao/tcc"} className="dropdown-item">
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2" />
-                      TCC
-                    </Link>
-
-                    <span className="pb-2 pt-3 pl-3  d-block">
-                      Pós-graduação
-                    </span>
-                    <Link
-                      to={"/pos-graduacao/stricto-sensu"}
-                      className="dropdown-item"
-                    >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2">
-                        {" "}
-                      </FontAwesomeIcon>
-                      Stricto Sensu
-                    </Link>
-                    <Link
-                      to={"/pos-graduacao/lato-sensu"}
-                      className="dropdown-item"
-                    >
-                      <FontAwesomeIcon icon={faAngleRight} className="mr-2">
-                        {" "}
-                      </FontAwesomeIcon>
-                      Lato Sensu
->>>>>>> 99546d0879c19bc31011feaa111f9f33c7a56922
                     </Link>
                   </div>
                 </li>

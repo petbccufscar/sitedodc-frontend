@@ -9,8 +9,9 @@ import {
 import { TabPanel } from "react-web-tabs";
 
 import { placeholder, placeholder2 } from "../../components/placeholders";
-import Sobre from "./components/Sobre";
+import sobre from "./components/Sobre";
 import LinhaDoTempo from "./components/LinhaDoTempo";
+import infraestrutura from "./components/Infraestrutura";
 
 const tabs = [
   {
@@ -22,7 +23,7 @@ const tabs = [
     },
     content: {
       title: "O Departamento",
-      body: <Sobre/>,
+      body: sobre,
     }
   },
   {
@@ -47,6 +48,42 @@ const tabs = [
     content: {
       title: "Linha do Tempo",
       body: <LinhaDoTempo/>, 
+    }
+  },
+  {
+    props: {
+      panelId: "galeria-da-chefia",
+      title: "Galeria da Chefia",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Galeria da Chefia",
+      body: placeholder, 
+    }
+  },
+  {
+    props: {
+      panelId: "infraestrutura",
+      title: "Infraestrutura",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Infraestrutura",
+      body: infraestrutura, 
+    }
+  },
+  {
+    props: {
+      panelId: "dc-pelo-mundo",
+      title: "DC pelo mundo",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "DC pelo mundo",
+      body: placeholder, 
     }
   },
 ];
