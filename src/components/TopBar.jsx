@@ -112,14 +112,14 @@ class TopBar extends Component {
                       className="dropdown-item"
                       href="#"
                     >
-                      Alunos em ação
+                      Alunos em Ação
                     </Link>
                     <Link
-                      to={"/projetos-e-acoes"}
+                      to={"/atividades"}
                       className="dropdown-item"
                       href="#"
                     >
-                      Projetos e ações
+                      Atividades
                     </Link>
                   </div>
                 </li>
