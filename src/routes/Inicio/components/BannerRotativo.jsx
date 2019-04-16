@@ -6,11 +6,11 @@ import banner4 from "../../../images/banner4.jpg";
 import banner5 from "../../../images/banner5.jpg";
 import PropTypes from "prop-types";
 
-const Banner = ({ banner, active, texto }) => (
+const Banner = ({ banner, active, texto, alt }) => (
   <div
-    className={active ? "carousel-item active banner" : "carousel-item banner"}
+    className={active ? "carousel-item active" : "carousel-item"}
   >
-    <img className="w-100" src={banner} alt="descrição qualquer" />
+    <img className="w-100 banner rounded" src={banner} alt={alt}/>
     <div class="carousel-caption d-none d-md-block">
       <p>{texto}</p>
     </div>
@@ -20,7 +20,8 @@ const Banner = ({ banner, active, texto }) => (
 Banner.propTypes = {
   banner: PropTypes.string.isRequired,
   active: PropTypes.bool,
-  texto: PropTypes.string
+  texto: PropTypes.string,
+  alt: PropTypes.string
 };
 
 const ControleBanner = ({ direction }) => (
