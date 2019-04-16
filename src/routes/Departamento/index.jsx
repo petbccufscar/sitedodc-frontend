@@ -4,71 +4,97 @@ import {
   VTab,
   SideMenu,
   TabPanelContainer,
-  VerticalTabs,
+  VerticalTabs
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
 import { placeholder, placeholder2 } from "../../components/placeholders";
-import atuacao from "./components/Atuacao";
+import sobre from "./components/Sobre";
+import LinhaDoTempo from "./components/LinhaDoTempo";
+import infraestrutura from "./components/Infraestrutura";
 
 const tabs = [
   {
     props: {
-      panelId: "atuacao",
-      title: "Atuação",
+      panelId: "sobre",
+      title: "O Departamento",
       header: "",
-      showHeader: false,
+      showHeader: false
     },
     content: {
-      title: "Atuação",
-      body: atuacao, 
+      title: "O Departamento",
+      body: sobre,
     }
   },
   {
     props: {
-      panelId: "alunos-externos",
-      title: "Alunos Externos",
+      panelId: "historico",
+      title: "Histórico",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Alunos Externos",
+      title: "Histórico",
       body: placeholder, 
     }
   },
   {
     props: {
-      panelId: "estagios",
-      title: "Estágios",
+      panelId: "linha_do_tempo",
+      title: "Linha do Tempo",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Estágios",
+      title: "Linha do Tempo",
+      body: <LinhaDoTempo/>, 
+    }
+  },
+  {
+    props: {
+      panelId: "galeria-da-chefia",
+      title: "Galeria da Chefia",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Galeria da Chefia",
       body: placeholder, 
     }
   },
   {
     props: {
-      panelId: "tcc",
-      title: "TTC",
+      panelId: "infraestrutura",
+      title: "Infraestrutura",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "TTC",
+      title: "Infraestrutura",
+      body: infraestrutura, 
+    }
+  },
+  {
+    props: {
+      panelId: "dc-pelo-mundo",
+      title: "DC pelo mundo",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "DC pelo mundo",
       body: placeholder, 
     }
-  }
-]
+  },
+];
 
-class Graduacao extends Component {
+class Departamento extends Component {
   render() {
     return (
-      <React.Fragment>
+        <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>Graduação</Breadcrumb>
+          <Breadcrumb bold>O Departamento</Breadcrumb>
         </Breadcrumbs>
         <VerticalTabs>
           <SideMenu defaultTab={tabs[0].props.panelId}>
@@ -97,4 +123,4 @@ class Graduacao extends Component {
   }
 }
 
-export default Graduacao;
+export default Departamento;

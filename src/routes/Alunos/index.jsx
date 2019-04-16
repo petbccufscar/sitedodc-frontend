@@ -29,7 +29,7 @@ const placeholder = [
   {
     nome: "Daniel Lucio Masselani de Moura",
     foto:
-      "https://avatars3.githubusercontent.com/u/26843282?s=400&u=ba4dd1dfbb265deacb1dbcf6223236d0f03ecf56&v=4",
+      "",
   },
   {
     nome: "Nome Do Aluno",

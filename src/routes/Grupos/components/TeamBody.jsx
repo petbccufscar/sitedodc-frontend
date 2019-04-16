@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TeamBody = ({
@@ -11,13 +10,13 @@ const TeamBody = ({
     <h3>{title}</h3>
     <p className="text-justify">{description}</p>
     <p>
-      <Link to={link}>
+      <a href={link}>
         <FontAwesomeIcon
           icon="globe-americas"
           className="d-inline-block mr-2"
         />
         Visitar Site
-      </Link>
+      </a>
     </p>
   </React.Fragment>
 );

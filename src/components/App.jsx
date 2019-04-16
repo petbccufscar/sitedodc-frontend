@@ -26,10 +26,10 @@ import PosGraduacao from "../routes/PosGraduacao";
 import Rodape from "./Rodape";
 import ScrollToTop from "./ScrollToTop";
 import Infraestrutura from "../routes/Infraestrutura";
-import Sobre from "../routes/Sobre";
 import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
 import TopBar from "./TopBar";
 import Contato from "../routes/Contato";
+import Departamento from "../routes/Departamento";
 
 class App extends Component {
   constructor(props) {
@@ -75,12 +75,13 @@ class App extends Component {
               <Route exact path="/alunos" component={AnosAlunos} />
               <Route exact path="/alunos/:curso/:ano" component={Alunos} />
               <Route exact path="/infraestrutura" component={Infraestrutura}/>
-              <Route exact path="/sobre" component={Sobre} />
-              <Route exact path="/linha-do-tempo" component={LinhaDoTempo} />
+              {/* <Route exact path="/sobre" component={Sobre} /> */}
+              {/* <Route exact path="/linha-do-tempo" component={LinhaDoTempo} /> */}
               <Route exact path="/suporte/links" component={LinksSuporte} />
               <Route exact path="/graduacao/bcc" component={BCC} />
               <Route exact path="/graduacao/enc" component={ENC} />
               <Route exact path="/contato" component={Contato} />
+              <Route exact path="/departamento" component={Departamento} />
 
               <Route
                 exact
