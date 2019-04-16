@@ -18,7 +18,7 @@ class Inicio extends Component {
               <BannerRotativo />
             </div>
             <div className="col-3">
-              <p>Aqui vai ter as áreas</p>
+              <BotoesArea/>
             </div>
           </div>
           <div className="row inicio" id="conteudo">
