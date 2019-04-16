@@ -68,12 +68,7 @@ class TopBar extends Component {
             >
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item dropdown  text-center">
-                  <MenuButton
-                    titulo="Ensino"
-                    endereco={"/ensino"}
-                    icone="graduation-cap"
-                    dropdown
-                  />
+                  <MenuButton titulo="Ensino" icone="graduation-cap" dropdown />
                   <div className="dropdown-menu">
                     <Link to={"/graduacao"} className="dropdown-item">
                       Graduação
@@ -84,12 +79,7 @@ class TopBar extends Component {
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
-                  <MenuButton
-                    titulo="Pesquisa"
-                    endereco={"/pesquisa"}
-                    icone="book"
-                    dropdown
-                  />
+                  <MenuButton titulo="Pesquisa" icone="book" dropdown />
                   <div className="dropdown-menu">
                     <Link to={"/catalogo"} className="dropdown-item">
                       Catálogo
@@ -100,12 +90,7 @@ class TopBar extends Component {
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
-                  <MenuButton
-                    titulo="Extensão"
-                    endereco={"/extensao"}
-                    icone="home"
-                    dropdown
-                  />
+                  <MenuButton titulo="Extensão" icone="home" dropdown />
                   <div className="dropdown-menu">
                     <Link
                       to={"/alunos-em-acao"}
@@ -114,22 +99,13 @@ class TopBar extends Component {
                     >
                       Alunos em Ação
                     </Link>
-                    <Link
-                      to={"/atividades"}
-                      className="dropdown-item"
-                      href="#"
-                    >
+                    <Link to={"/atividades"} className="dropdown-item" href="#">
                       Atividades
                     </Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
-                  <MenuButton
-                    titulo="Pessoas"
-                    endereco={"/pessoas"}
-                    icone="user"
-                    dropdown
-                  />
+                  <MenuButton titulo="Pessoas" icone="user" dropdown />
                   <div className="dropdown-menu">
                     <Link to={"/alunos"} className="dropdown-item" href="#">
                       Alunos
@@ -146,31 +122,17 @@ class TopBar extends Component {
                     </Link>
                   </div>
                 </li>
-                <li className="nav-item dropdown text-center">
-                  <MenuButton
-                    titulo="Institucional"
-                    endereco={"/institucional"}
-                    icone="university"
-                    dropdown
-                  />
-                  <div className="dropdown-menu">
-                    <Link to={"/departamento"} className="dropdown-item">
-                      O Departamento
-                    </Link>
-                    {/* Ver esse route:  */}
-                    <Link to={"/sobre"} className="dropdown-item">
-                      Sobre
-                    </Link>
-                  </div>
+                <li className="nav-item text-center pointer">
+                  <Link to="/institucional">
+                    <MenuButton
+                      titulo="Institucional"
+                      icone="university"
+                    />
+                  </Link>
                 </li>
 
                 <li className="nav-item dropdown text-center">
-                  <MenuButton
-                    titulo="Suporte"
-                    endereco={"/suporte"}
-                    icone="wrench"
-                    dropdown
-                  />
+                  <MenuButton titulo="Suporte" icone="wrench" dropdown />
                   <div className="dropdown-menu">
                     <Link to={"/suporte/links"} className="dropdown-item">
                       Links úteis

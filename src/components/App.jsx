@@ -28,7 +28,7 @@ import ScrollToTop from "./ScrollToTop";
 import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
 import TopBar from "./TopBar";
 import Contato from "../routes/Contato";
-import Departamento from "../routes/Departamento";
+import Institucional from "../routes/Institucional";
 
 class App extends Component {
   constructor(props) {
@@ -77,7 +77,7 @@ class App extends Component {
               <Route exact path="/graduacao/bcc" component={BCC} />
               <Route exact path="/graduacao/enc" component={ENC} />
               <Route exact path="/contato" component={Contato} />
-              <Route exact path="/departamento" component={Departamento} />
+              <Route exact path="/institucional" component={Institucional} />
 
               <Route
                 exact
