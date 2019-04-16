@@ -12,9 +12,15 @@ class Inicio extends Component {
   render() {
     return (
       <React.Fragment>
-        <BannerRotativo />
         <main role="main" className="container">
-          <BotoesArea />
+          <div className="row mb-4 mt-4">
+            <div className="col-9">
+              <BannerRotativo />
+            </div>
+            <div className="col-3">
+              <p>Aqui vai ter as áreas</p>
+            </div>
+          </div>
           <div className="row inicio" id="conteudo">
             <div className="col-12 col-md-8">
               <div className="d-flex justify-content-between mb-3">
