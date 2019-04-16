@@ -162,24 +162,24 @@ const Atuacao = (
         </div>
       </div>
       <div class="card">
-        <div class="card-header" id="heading-tcc">
+        <div class="card-header" id="heading-outros">
           <h5 class="mb-0">
             <button
               class="btn btn-link collapsed"
               type="button"
               data-toggle="collapse"
-              data-target="#tcc"
+              data-target="#outros"
               aria-expanded="false"
-              aria-controls="tcc"
+              aria-controls="outros"
             >
-              TCC
+              Outros Cursos
             </button>
           </h5>
         </div>
         <div
-          id="tcc"
+          id="outros"
           class="collapse"
-          aria-labelledby="heading-tcc"
+          aria-labelledby="heading-outros"
           data-parent="#accordionExample"
         >
           <div class="card-body">
