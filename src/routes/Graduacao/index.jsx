@@ -51,12 +51,12 @@ const tabs = [
   {
     props: {
       panelId: "tcc",
-      title: "TTC",
+      title: "TCC",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "TTC",
+      title: "TCC",
       body: placeholder, 
     }
   }

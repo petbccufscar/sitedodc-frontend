@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const MenuButton = ({ titulo, endereco, icone, dropdown }) => (
   <button
@@ -17,9 +18,9 @@ const MenuButton = ({ titulo, endereco, icone, dropdown }) => (
   </button>
 );
 MenuButton.propTypes = {
-  titulo:PropTypes.string.isRequired,
-  endereco:PropTypes.string,
-  icone:PropTypes.string,
-  dropdown:PropTypes.bool,
+  titulo: PropTypes.string.isRequired,
+  endereco: PropTypes.string,
+  icone: PropTypes.string,
+  dropdown: PropTypes.bool
 };
 export default MenuButton;

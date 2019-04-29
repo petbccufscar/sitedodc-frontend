@@ -88,13 +88,13 @@ const tabs = [
   },
 ];
 
-class Departamento extends Component {
+class Institucional extends Component {
   render() {
     return (
         <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>O Departamento</Breadcrumb>
+          <Breadcrumb bold>Institucional</Breadcrumb>
         </Breadcrumbs>
         <VerticalTabs>
           <SideMenu defaultTab={tabs[0].props.panelId}>
@@ -123,4 +123,4 @@ class Departamento extends Component {
   }
 }
 
-export default Departamento;
+export default Institucional;
