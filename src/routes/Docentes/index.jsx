@@ -2,28 +2,9 @@ import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import DocenteCard from "./components/docente_card";
 import { Facebook } from "react-content-loader";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 
-const GET_DOCENTES = gql`
-  query {
-    docentes(sort: "Nome:desc") {
-      _id
-      Nome
-      Tipo
-      Areas {
-        Nome
-      }
-      Horas
-      Email
-      Telefone
-      Nivel
-      Foto {
-        url
-      }
-    }
-  }
-`;
+import { Query } from "react-apollo";
+import { GET_DOCENTES } from '../../utils/queries';
 
 class Docentes extends Component {
   render() {

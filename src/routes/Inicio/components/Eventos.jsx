@@ -4,17 +4,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EventosLoader from "./EventosLoader";
 
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 
-const GET_EVENTOS = gql`
-  query {
-    eventos(limit: 3, sort: "Data:ASC") {
-      Titulo
-      Data
-    }
-  }
-`;
+import { Query } from "react-apollo";
+import { GET_EVENTOS } from "../../../utils/queries";
 
 class Eventos extends Component {
   render() {

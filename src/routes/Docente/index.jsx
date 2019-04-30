@@ -2,34 +2,10 @@ import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import DocenteLoader from "./DocenteLoader";
-import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import { ImageLoader } from "../../components/image-loader";
 import PropTypes from "prop-types";
-
-const GET_DOCENTE = gql`
-  query Docente($id: ID!) {
-    docente(id: $id) {
-      _id
-      Nome
-      Areas {
-        Nome
-      }
-      Descricao
-      Horas
-      Lattes
-      Tipo
-      Nivel
-      Telefone
-      Email
-      Site
-      Nome
-      Foto {
-        url
-      }
-    }
-  }
-`;
+import { GET_DOCENTE } from "../../utils/queries"
 
 class Docente extends Component {
   render() {

@@ -1,19 +1,9 @@
 import React, { Component } from "react";
 import LinkRapido from "./LinkRapido";
 import LinksRapidosLoader from "./LinksRapidosLoader";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 
-const GET_LINKS_RAPIDOS = gql`
-  query {
-    links(limit: 12) {
-      Link
-      Imagem {
-        url
-      }
-    }
-  }
-`;
+import { Query } from "react-apollo";
+import { GET_LINKS_RAPIDOS } from '../../../utils/queries';
 
 class LinksRapidos extends Component {
   render() {

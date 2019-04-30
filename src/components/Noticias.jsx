@@ -4,25 +4,10 @@ import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
 import { Link } from "react-router-dom";
 import NoticiaLoader from "./NoticiaLoader";
-
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 import { ImageLoader } from "./image-loader";
 
-const GET_NOTICIAS = gql`
-  query Noticias($qnt: Int!) {
-    noticias(limit: $qnt, sort: "_id:desc") {
-      _id
-      Imagem {
-        url
-      }
-      Imagem_texto_alternativo
-      Titulo
-      Descricao
-      createdAt
-    }
-  }
-`;
+import { Query } from "react-apollo";
+import { GET_NOTICIAS } from "../utils/queries";
 
 class Noticias extends Component {
   render() {
