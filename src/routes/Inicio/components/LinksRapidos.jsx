@@ -3,7 +3,6 @@ import LinkRapido from "./LinkRapido";
 import LinksRapidosLoader from "./LinksRapidosLoader";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
-import { API_URL } from "../../../conf";
 
 const GET_LINKS_RAPIDOS = gql`
   query {
@@ -34,7 +33,7 @@ class LinksRapidos extends Component {
               return data.links.map((link, index) => (
                 <LinkRapido
                   link={link.Link}
-                  imagem={API_URL + link.Imagem.url}
+                  imagem={`${process.env.REACT_APP_API_URL}/${link.Imagem.url}`}
                   key={index}
                 />
               ));

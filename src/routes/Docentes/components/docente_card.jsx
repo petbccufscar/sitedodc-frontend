@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Card, { CardBody, CardFooter } from "../../../components/Card";
 import Badge from "../../../components/Badge";
 import { ImageLoader } from "../../../components/image-loader";
-import { API_URL } from "../../../conf";
 
 const DocenteCard = ({ docente }) => (
   <Card key={docente["Nome"]} className="hoverable">
@@ -13,7 +12,7 @@ const DocenteCard = ({ docente }) => (
         <div className="mr-4">
           <ImageLoader
             classnames="card-img-rounded rounded-circle"
-            src={API_URL + docente.Foto.url}
+            src={`${process.env.REACT_APP_API_URL}/${docente.Foto.url}`}
             alt={"alt"}
           />
         </div>
