@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
+import { CardContainer } from "../../components/cards";
 import DocenteCard from "./components/docente_card";
 import { Facebook } from "react-content-loader";
 
@@ -16,10 +17,7 @@ class Docentes extends Component {
         </Breadcrumbs>
 
         <div className="container">
-          <div
-            className="card-columns"
-            style={{ columnCount: this.props.quantidade_por_linha }}
-          >
+          <CardContainer>
             <Query query={GET_DOCENTES}>
               {({ loading, error, data }) => {
                 if (loading) {
@@ -34,7 +32,7 @@ class Docentes extends Component {
                 ));
               }}
             </Query>
-          </div>
+          </CardContainer>
         </div>
       </React.Fragment>
     );
