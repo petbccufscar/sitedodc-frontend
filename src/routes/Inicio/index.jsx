@@ -9,6 +9,11 @@ import "../../styles/css/home.css";
 import Carousel from "./components/Carousel";
 import CarouselBanner from "./components/CarouselBanner";
 
+import Eventos from "./components/Eventos";
+import Evento from "./components/Evento";
+import LinksRapidos from "./components/LinksRapidos";
+import LinkRapido from "./components/LinkRapido";
+
 import { Query } from "react-apollo";
 import { GET_INICIO } from "../../utils/queries";
 
@@ -58,7 +63,27 @@ class Inicio extends Component {
                     <Noticias quantidade_por_linha="2" quantidade="4" />
                   </div>
                   <BarraLateral>
-                    
+                    <Eventos>
+                      {data.eventos.map((evento, index) => (
+                        <Evento
+                          key={index}
+                          titulo={evento.Titulo}
+                          data={evento.Data}
+                          local={evento.Local}
+                        />
+                      ))}
+                    </Eventos>
+                    <LinksRapidos>
+                      {data.links.map((link, index) => (
+                        <LinkRapido
+                          link={link.Link}
+                          imagem={`${process.env.REACT_APP_API_URL}/${
+                            link.Imagem.url
+                          }`}
+                          key={index}
+                        />
+                      ))}
+                    </LinksRapidos>
                   </BarraLateral>
                 </div>
               </React.Fragment>

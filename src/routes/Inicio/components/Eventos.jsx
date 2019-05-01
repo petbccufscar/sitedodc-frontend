@@ -1,40 +1,19 @@
-import React, { Component } from "react";
-import Evento from "./Evento";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import EventosLoader from "./EventosLoader";
 
-
-import { Query } from "react-apollo";
-import { GET_EVENTOS } from "../../../utils/queries";
-
-class Eventos extends Component {
-  render() {
-    return (
-      <div className=" pt-5 pt-md-0">
-        <div className="d-flex justify-content-between mb-3 ">
-          <h4>Eventos</h4>
-          <Link to="/" className="btn btn-link">
-            Ver mais eventos <FontAwesomeIcon className="ml-2" icon="plus" />
-          </Link>
-        </div>
-        <Query query={GET_EVENTOS}>
-          {({ loading, error, data }) => {
-            if (loading) {
-              return <EventosLoader />;
-            }
-            if (error) {
-              return `Error! ${error.message}`;
-            }
-
-            return data.eventos.map((evento, index) => (
-              <Evento key={index} titulo={evento.Titulo} data={evento.Data} />
-            ));
-          }}
-        </Query>
+const Eventos = ({ children }) => {
+  return (
+    <div className=" pt-5 pt-md-0">
+      <div className="d-flex justify-content-between mb-3 ">
+        <h4>Eventos</h4>
+        <Link to="/" className="btn btn-link">
+          Ver mais eventos <FontAwesomeIcon className="ml-2" icon="plus" />
+        </Link>
       </div>
-    );
-  }
-}
+      {children}
+    </div>
+  );
+};
 
 export default Eventos;

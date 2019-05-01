@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Evento = ({ titulo, data }) => (
+const Evento = ({ titulo, data, local }) => (
   <div
     key={titulo}
     style={{ textDecoration: "none" }}
@@ -10,6 +10,7 @@ const Evento = ({ titulo, data }) => (
     {ConverterData(data)}
     <div className="p-2 align-self-center text-primary ml-2">
       <h5>{titulo}</h5>
+      <p className="my-0">{local}</p>
     </div>
   </div>
 );
