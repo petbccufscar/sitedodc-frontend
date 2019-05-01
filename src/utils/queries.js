@@ -1,5 +1,40 @@
 import gql from "graphql-tag";
 
+export const GET_INICIO = gql`
+  query {
+    eventos(limit: 3, sort: "Publicacao:DESC") {
+      Titulo
+      Data
+      Local
+    }
+
+    links(limit: 8) {
+      Link
+      Imagem {
+        url
+      }
+    }
+
+    noticias(limit: 4, sort: "_id:desc") {
+      _id
+      Imagem {
+        url
+      }
+      Imagem_texto_alternativo
+      Titulo
+      Descricao
+      createdAt
+    }
+
+    banners(limit: 5, sort: "Order:ASC", where: { Ativo: true }) {
+      Imagem {
+        url
+      }
+      Texto_alternativo
+    }
+  }
+`;
+
 export const GET_EVENTOS = gql`
   query {
     eventos(limit: 3, sort: "Publicacao:DESC") {
@@ -28,9 +63,8 @@ export const GET_ALUNOS = gql`
       Foto {
         url
       }
+    }
   }
-}
-
 `;
 
 export const GET_FUNCIONARIOS = gql`
@@ -124,12 +158,12 @@ export const GET_DOCENTES = gql`
 `;
 
 export const GET_BANNERS = gql`
-query {
-  banners(sort: "Order:ASC", where: { Ativo: true }) {
-    Imagem {
-      url
+  query {
+    banners(sort: "Order:ASC", where: { Ativo: true }) {
+      Imagem {
+        url
+      }
+      Texto_alternativo
     }
-    Texto_alternativo
   }
-}
 `;
