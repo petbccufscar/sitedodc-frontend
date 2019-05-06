@@ -1,21 +1,35 @@
 import React, { Component } from "react";
-import Noticias from "./../../components/Noticias";
 import BarraLateral from "./components/BarraLateral";
 import BotoesArea from "./components/BotoesArea";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "../../styles/css/home.css";
-import Carousel from "./components/Carousel";
-import CarouselBanner from "./components/CarouselBanner";
 
-import Eventos from "./components/Eventos";
-import Evento from "./components/Evento";
-import LinksRapidos from "./components/LinksRapidos";
-import LinkRapido from "./components/LinkRapido";
+import {
+  NoticiaCard,
+  NoticiasContainer,
+  NoticiaLoader,
+} from "../../components/noticias";
+import {
+  LinkRapido,
+  LinksRapidosContainer,
+  LinksRapidosLoader,
+} from "../../components/links-rapidos";
+import {
+  Evento,
+  EventosContainer,
+  EventosLoader,
+} from "../../components/eventos";
+import {
+  Carousel,
+  CarouselBanner,
+  CarouselLoader,
+} from "../../components/carousel";
 
 import { Query } from "react-apollo";
 import { GET_INICIO } from "../../utils/queries";
+import NoticiasArea from "./components/NoticiasArea";
+import BotaoItem from "./components/BotaoItem";
+import BannerArea from "./components/BannerArea";
 
 class Inicio extends Component {
   render() {
@@ -23,67 +37,91 @@ class Inicio extends Component {
       <main role="main" className="container">
         <Query query={GET_INICIO}>
           {({ loading, error, data }) => {
-            if (loading) {
-              return "";
-              //return <EventosLoader />;
-            }
-            if (error) {
-              return `Error! ${error.message}`;
-            }
-
             return (
               <React.Fragment>
                 <div className="row mb-4 mt-4">
-                  <div className="col-9">
+                  <BannerArea>
                     <Carousel>
-                      {data.banners.map((banner, index) => (
-                        <CarouselBanner
-                          key={index}
-                          banner={
-                            process.env.REACT_APP_API_URL + banner.Imagem.url
-                          }
-                          active={index == 0}
-                        />
-                      ))}
+                      {loading ? (
+                        <CarouselLoader />
+                      ) : error ? (
+                        `Error! ${error.message}`
+                      ) : (
+                        data.banners.map((banner, index) => (
+                          <CarouselBanner
+                            key={index}
+                            banner={
+                              process.env.REACT_APP_API_URL + banner.Imagem.url
+                            }
+                            active={index == 0}
+                          />
+                        ))
+                      )}
                     </Carousel>
-                  </div>
-                  <div className="col-3">
-                    <BotoesArea />
-                  </div>
+                  </BannerArea>
+                  
+                    <BotoesArea>
+                      <BotaoItem to="/area-aluno">Aluno</BotaoItem>
+                      <BotaoItem to="/area-visitante">Visitante</BotaoItem>
+                      <BotaoItem to="/area-docente">Docente</BotaoItem>
+                    </BotoesArea>
+                
                 </div>
                 <div className="row inicio" id="conteudo">
-                  <div className="col-12 col-md-8">
-                    <div className="d-flex justify-content-between mb-3">
-                      <h4>Notícias</h4>
-                      <Link to="/mais-noticias" className="btn btn-link">
-                        Ver todas as notícias{" "}
-                        <FontAwesomeIcon className="ml-2" icon="plus" />
-                      </Link>
-                    </div>
-                    <Noticias quantidade_por_linha="2" quantidade="4" />
-                  </div>
+                  <NoticiasArea>
+                    <NoticiasContainer more={false}>
+                      {loading ? (
+                        <NoticiaLoader />
+                      ) : error ? (
+                        `Error! ${error.message}`
+                      ) : (
+                        data.noticias.map((noticia, index) => (
+                          <NoticiaCard
+                            id={noticia._id}
+                            title={noticia.Titulo}
+                            description={noticia.Descricao}
+                            imagem={noticia.Imagem}
+                            imageAlt={noticia.Imagem_texto_alternativo}
+                            date={noticia.createdAt}
+                          />
+                        ))
+                      )}
+                    </NoticiasContainer>
+                  </NoticiasArea>
                   <BarraLateral>
-                    <Eventos>
-                      {data.eventos.map((evento, index) => (
-                        <Evento
-                          key={index}
-                          titulo={evento.Titulo}
-                          data={evento.Data}
-                          local={evento.Local}
-                        />
-                      ))}
-                    </Eventos>
-                    <LinksRapidos>
-                      {data.links.map((link, index) => (
-                        <LinkRapido
-                          link={link.Link}
-                          imagem={`${process.env.REACT_APP_API_URL}/${
-                            link.Imagem.url
-                          }`}
-                          key={index}
-                        />
-                      ))}
-                    </LinksRapidos>
+                    <EventosContainer>
+                      {loading ? (
+                        <EventosLoader />
+                      ) : error ? (
+                        `Error! ${error.message}`
+                      ) : (
+                        data.eventos.map((evento, index) => (
+                          <Evento
+                            key={index}
+                            titulo={evento.Titulo}
+                            data={evento.Data}
+                            local={evento.Local}
+                          />
+                        ))
+                      )}
+                    </EventosContainer>
+                    <LinksRapidosContainer>
+                      {loading ? (
+                        <LinksRapidosLoader />
+                      ) : error ? (
+                        `Error! ${error.message}`
+                      ) : (
+                        data.links.map((link, index) => (
+                          <LinkRapido
+                            link={link.Link}
+                            imagem={`${process.env.REACT_APP_API_URL}/${
+                              link.Imagem.url
+                            }`}
+                            key={index}
+                          />
+                        ))
+                      )}
+                    </LinksRapidosContainer>
                   </BarraLateral>
                 </div>
               </React.Fragment>

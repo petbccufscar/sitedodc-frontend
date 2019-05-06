@@ -1,6 +1,6 @@
 import React from "react";
 
-const LinksRapidos = ({children}) => {
+const LinksRapidosContainer = ({children}) => {
     return (
       <div className=" pt-5 pt-md-4">
         <h4 className="mb-3">Links rápidos</h4>
@@ -11,4 +11,4 @@ const LinksRapidos = ({children}) => {
     );
 }
 
-export default LinksRapidos;
+export default LinksRapidosContainer;

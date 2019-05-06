@@ -22,6 +22,7 @@ Evento.propTypes = {
 const ConverterData = data => {
   var dataObj = new Date(data.substring(0, data.length - 1));
   // Tem um "Z" no final da string de tempo, por algum motivo ela buga completamente o parse
+  console.log(dataObj);
   return (
     <div className="p-2">
       <div>

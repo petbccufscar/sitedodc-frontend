@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageLoader } from "../../../components/image-loader";
+import { ImageLoader } from "../image-loader";
 import PropTypes from "prop-types";
 
 const LinkRapido = ({ imagem, link, alt }) => (

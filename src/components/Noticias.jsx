@@ -3,7 +3,7 @@ import Card, { CardBody, CardFooter } from "./Card";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
 import { Link } from "react-router-dom";
-import NoticiaLoader from "./NoticiaLoader";
+import { NoticiaLoader } from "./noticias";
 import { ImageLoader } from "./image-loader";
 
 import { Query } from "react-apollo";
