@@ -139,7 +139,7 @@ export const GET_DOCENTE = gql`
 
 export const GET_DOCENTES = gql`
   query {
-    docentes(sort: "Nome:desc") {
+    docentes(sort: "Nome:asc") {
       _id
       Nome
       Tipo
