@@ -13,6 +13,8 @@ const LinkRapido = ({ imagem, link, alt }) => (
       classnames={"img-fluid"}
       src={imagem}
       alt={alt}
+      height="50px"
+      widht="50px"
       loaderHeight="68px"
       loaderWidth="68px"
     />
