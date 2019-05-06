@@ -28,7 +28,7 @@ const ConverterData = data => {
       <div>
         <h3 className="font-weight-bold text-primary mb-0">
           {String(dataObj.getDate()).padStart(2, "0")}/
-          {String(dataObj.getMonth()).padStart(2, "0")}
+          {String(dataObj.getMonth()+1).padStart(2, "0")}
         </h3>
       </div>
       <h3 className="text-secondary font-weight-light mb-0">
