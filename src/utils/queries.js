@@ -57,8 +57,8 @@ export const GET_LINKS_RAPIDOS = gql`
 `;
 
 export const GET_ALUNOS = gql`
-  query Alunos($ano: Int) {
-    alunos(where: { Ano: $ano }, sort: "Nome:asc") {
+  query Alunos($ano: Int, $curso: String) {
+    alunos(where: { Ano: $ano, Curso: $curso }, sort: "Nome:asc") {
       Nome
       Foto {
         url
