@@ -69,7 +69,7 @@ export const GET_ALUNOS = gql`
 
 export const GET_FUNCIONARIOS = gql`
   query {
-    funcionarios(sort: "Nome:desc") {
+    funcionarios(sort: "Nome:asc") {
       Nome
       Area
       Foto {
