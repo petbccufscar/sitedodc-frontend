@@ -75,6 +75,8 @@ export const GET_FUNCIONARIOS = gql`
       Foto {
         url
       }
+      Telefone
+      Email
     }
   }
 `;

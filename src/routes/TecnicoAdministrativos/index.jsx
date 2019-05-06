@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import { CardContainer, CardBody} from "../../components/cards";
+import { CardContainer, CardBody } from "../../components/cards";
 import { TwoCards } from "../../components/cards";
 import { Facebook } from "react-content-loader";
 import { ImageLoader } from "../../components/image-loader";
@@ -36,16 +36,24 @@ class TecnicoAdministrativos extends Component {
                 return data.funcionarios.map((funcionario, index) => (
                   <TwoCards>
                     <CardBody>
-                      <div className="mr-4">
-                        <ImageLoader
-                          classnames="card-img-rounded rounded-circle"
-                          src={`${process.env.REACT_APP_API_URL}/${funcionario.Foto.url}`}
-                          alt={"alt"}
-                        />
-                      </div>
+                      {funcionario.Foto && (
+                        <div className="mr-4">
+                          <ImageLoader
+                            classnames="card-img-rounded rounded-circle"
+                            src={`${process.env.REACT_APP_API_URL}/${
+                              funcionario.Foto.url
+                            }`}
+                            alt={"alt"}
+                          />
+                        </div>
+                      )}
                       <div>
                         <h5 className="card-title">{funcionario.Nome}</h5>
-                        <p className="card-text">{funcionario.Area}</p>
+                        <p className="card-text">
+                          {funcionario.Area} <br />
+                          {`Telefone: ${funcionario.Telefone}`} <br />
+                          {`Email: ${funcionario.Email}`}
+                        </p>
                       </div>
                     </CardBody>
                   </TwoCards>
