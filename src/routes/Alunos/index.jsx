@@ -1,75 +1,22 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import {AlunoCard,
-  AlunosContainer,
+import {
   AlunoCardImage,
   AlunoCardBody,
 } from "./components/aluno_card";
+import { CardContainer, FourCards } from "../../components/cards";
 
-const placeholder = [
-  {
-    nome: "João Pedro Silva",
-    foto:
-      "https://media.licdn.com/dms/image/C4D03AQHbCeoAB_V90Q/profile-displayphoto-shrink_800_800/0?e=1548288000&v=beta&t=u2-VmC999jl8VXBnLA1cScTN5jFFHj3ps0Bo49wbHJ0",
-  },
-  {
-    nome: "Rene Ferrante Neto",
-    foto:
-      "https://media.licdn.com/dms/image/C4D03AQFhksJqcrVC7g/profile-displayphoto-shrink_800_800/0?e=1548288000&v=beta&t=q-12MDh4nlfaLlO_4esIbj2YX2BS5-SDdAmmRlyDdUA",
-  },
-  {
-    nome: "Alcides Mignoso e Silva",
-    foto:
-      "https://media.licdn.com/dms/image/C4E03AQFYxMpy88VG8Q/profile-displayphoto-shrink_800_800/0?e=1548288000&v=beta&t=GMa2BsedHExMhMbxSCXNAy4ZuO9Ak5HVsbeySMT9IAk",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Daniel Lucio Masselani de Moura",
-    foto:
-      "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-  {
-    nome: "Nome Do Aluno",
-    foto: "",
-  },
-];
+import { Query } from "react-apollo";
+import { GET_ALUNOS } from "../../utils/queries";
 
 class Alunos extends Component {
   render() {
     let path = window.location.pathname;
-    let curso = path.substring(8, 11).toUpperCase();
-    let ano = path.substring(12);
+    let curso, ano;
+    [curso, ano] = path
+      .toUpperCase()
+      .split("/")
+      .slice(2, 4);
     return (
       <React.Fragment>
         <Breadcrumbs>
@@ -81,16 +28,25 @@ class Alunos extends Component {
         </Breadcrumbs>
 
         <div className="container">
-          <AlunosContainer>
-            {placeholder.map(aluno => {
-              return (
-                <AlunoCard>
-                  <AlunoCardImage foto={aluno.foto} />
-                  <AlunoCardBody nome={aluno.nome} />
-                </AlunoCard>
-              );
-            })}
-          </AlunosContainer>
+        <CardContainer>
+            <Query query={GET_ALUNOS} variables={{ ano: parseInt(ano), curso: curso.toUpperCase() }}>
+              {({ loading, error, data }) => {
+                if (loading) {
+                  return <div />;
+                }
+                if (error) {
+                  return `Error! ${error.message}`;
+                }
+
+                return data.alunos.map((aluno, index) => (
+                  <FourCards>
+                    <AlunoCardImage foto={process.env.REACT_APP_API_URL + aluno.Foto.url} />
+                    <AlunoCardBody nome={aluno.Nome} />
+                  </FourCards>
+                ));
+              }}
+            </Query>
+          </CardContainer>
         </div>
       </React.Fragment>
     );

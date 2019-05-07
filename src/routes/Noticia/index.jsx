@@ -3,27 +3,9 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import NoticiaCompleta from "./components/NoticiaCompleta";
 import NoticiaCompletaLoader from "./components/noticia_completa_loader";
 
-import gql from "graphql-tag";
 import { Query } from "react-apollo";
+import { GET_NOTICIA_COMPLETA } from '../../utils/queries';
 
-const GET_NOTICIA = gql`
-  query Noticia($id: ID!) {
-    noticia(id: $id) {
-      _id
-      Titulo
-      createdAt
-      Tags {
-        Nome
-      }
-      Descricao
-      Conteudo
-      Imagem {
-        url
-      }
-      Imagem_texto_alternativo
-    }
-  }
-`;
 
 class Noticia extends Component {
   render() {
@@ -36,7 +18,7 @@ class Noticia extends Component {
         </Breadcrumbs>
         <div className="container">
           <Query
-            query={GET_NOTICIA}
+            query={GET_NOTICIA_COMPLETA}
             variables={{ id: this.props.match.params.id }}
           >
             {({ loading, error, data }) => {

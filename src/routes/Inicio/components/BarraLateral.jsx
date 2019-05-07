@@ -1,11 +1,8 @@
 import React from "react";
-import Eventos from "./Eventos";
-import LinksRapidos from "./LinksRapidos";
 
-const BarraLateral = () => (
+const BarraLateral = ({ children }) => (
   <div className="col-12 col-md-4 pl-3 border-left">
-    <Eventos />
-    <LinksRapidos />
+    {children}
   </div>
 );
 

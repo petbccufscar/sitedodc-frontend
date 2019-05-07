@@ -1,5 +1,5 @@
 import React from "react";
-import { ImageLoader } from "../../../components/image-loader";
+import { ImageLoader } from "../image-loader";
 import PropTypes from "prop-types";
 
 const LinkRapido = ({ imagem, link, alt }) => (
@@ -13,6 +13,8 @@ const LinkRapido = ({ imagem, link, alt }) => (
       classnames={"img-fluid"}
       src={imagem}
       alt={alt}
+      height="50px"
+      widht="50px"
       loaderHeight="68px"
       loaderWidth="68px"
     />

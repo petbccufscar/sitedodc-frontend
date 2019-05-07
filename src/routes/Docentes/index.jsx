@@ -1,29 +1,11 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
+import { CardContainer } from "../../components/cards";
 import DocenteCard from "./components/docente_card";
 import { Facebook } from "react-content-loader";
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
 
-const GET_DOCENTES = gql`
-  query {
-    docentes(sort: "Nome:desc") {
-      _id
-      Nome
-      Tipo
-      Areas {
-        Nome
-      }
-      Horas
-      Email
-      Telefone
-      Nivel
-      Foto {
-        url
-      }
-    }
-  }
-`;
+import { Query } from "react-apollo";
+import { GET_DOCENTES } from '../../utils/queries';
 
 class Docentes extends Component {
   render() {
@@ -35,10 +17,7 @@ class Docentes extends Component {
         </Breadcrumbs>
 
         <div className="container">
-          <div
-            className="card-columns"
-            style={{ columnCount: this.props.quantidade_por_linha }}
-          >
+          <CardContainer>
             <Query query={GET_DOCENTES}>
               {({ loading, error, data }) => {
                 if (loading) {
@@ -53,7 +32,7 @@ class Docentes extends Component {
                 ));
               }}
             </Query>
-          </div>
+          </CardContainer>
         </div>
       </React.Fragment>
     );

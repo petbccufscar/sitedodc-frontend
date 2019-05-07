@@ -3,27 +3,11 @@ import Card, { CardBody, CardFooter } from "./Card";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
 import { Link } from "react-router-dom";
-import NoticiaLoader from "./NoticiaLoader";
-
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
+import { NoticiaLoader } from "./noticias";
 import { ImageLoader } from "./image-loader";
-import { API_URL } from "../conf";
 
-const GET_NOTICIAS = gql`
-  query Noticias($qnt: Int!) {
-    noticias(limit: $qnt, sort: "_id:desc") {
-      _id
-      Imagem {
-        url
-      }
-      Imagem_texto_alternativo
-      Titulo
-      Descricao
-      createdAt
-    }
-  }
-`;
+import { Query } from "react-apollo";
+import { GET_NOTICIAS } from "../utils/queries";
 
 class Noticias extends Component {
   render() {
@@ -52,7 +36,7 @@ class Noticias extends Component {
                 {noticia.Imagem && (
                   <ImageLoader
                     classnames={"card-img-top"}
-                    src={API_URL + noticia.Imagem.url}
+                    src={`${process.env.REACT_APP_API_URL}/${noticia.Imagem.url}`}
                     alt={noticia.Imagem_texto_alternativo}
                     loaderHeight="8rem"
                   />

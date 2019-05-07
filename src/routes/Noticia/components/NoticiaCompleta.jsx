@@ -2,7 +2,6 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { format } from "date-fns";
 import pt from "date-fns/locale/pt";
-import { API_URL } from "../../../conf";
 
 const Noticia = ({ noticia }) => (
   <React.Fragment>
@@ -15,7 +14,7 @@ const Noticia = ({ noticia }) => (
     </div>
     {noticia.Imagem && (
       <img
-        src={API_URL + noticia.Imagem.url}
+        src={`${process.env.REACT_APP_API_URL}/${noticia.Imagem.url}`}
         className="img-fluid"
         alt="Responsive"
       />

@@ -1,33 +1,34 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import Card, { CardBody, CardFooter } from "../../../components/Card";
+import { CardBody, CardFooter } from "../../../components/Card";
+import { TwoCards } from "../../../components/cards";
 import Badge from "../../../components/Badge";
 import { ImageLoader } from "../../../components/image-loader";
-import { API_URL } from "../../../conf";
+
 
 const DocenteCard = ({ docente }) => (
-  <Card key={docente["Nome"]} className="hoverable">
+  <TwoCards key={docente["Nome"]} className="hoverable">
     <CardBody>
       {docente.Foto && (
         <div className="mr-4">
           <ImageLoader
             classnames="card-img-rounded rounded-circle"
-            src={API_URL + docente.Foto.url}
+            src={`${process.env.REACT_APP_API_URL}/${docente.Foto.url}`}
             alt={"alt"}
           />
         </div>
       )}
       <div>
-        <Link to={"/docente/" + docente._id}>
+        <Link to={`/docente/${docente._id}`}>
           <h5 className="card-title">{docente.Nome}</h5>
         </Link>
 
         <p className="card-text">
-          {docente.Tipo + "-" + docente.Horas + "h/DE"}
+          {`${docente.Tipo}-${docente.Horas}h/DE`}
           <br />
-          Telefone: {docente.Telefone} <br />
-          Email: {docente.Email}
+          {`Telefone: ${docente.Telefone}`} <br />
+          {`Email: ${docente.Email}`}
         </p>
       </div>
     </CardBody>
@@ -37,7 +38,7 @@ const DocenteCard = ({ docente }) => (
           <Badge
             key={index}
             color="extra-light"
-            link={"/docentes/por-area/" + area.Nome}
+            link={`/docentes/por-area/${area.Nome}`}
           >
             {area.Nome}
           </Badge>
@@ -45,7 +46,7 @@ const DocenteCard = ({ docente }) => (
         <FontAwesomeIcon icon="angle-right" size="sm" color="gray" />
       </ul>
     </CardFooter>
-  </Card>
+  </TwoCards>
 );
 
 export default DocenteCard;
