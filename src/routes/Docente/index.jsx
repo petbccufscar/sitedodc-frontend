@@ -56,7 +56,7 @@ class Docente extends Component {
                         icon="graduation-cap"
                         className="d-inline-block mr-2"
                       />
-                      Nível: {data.docente.Nivel}
+                      Nível: {data.docente.Nivel=='Pos' ? 'Pós Doutorado': data.docente.Nivel}
                     </p>
                     {data.docente.Areas &&
                       data.docente.Areas.length > 0 &&
