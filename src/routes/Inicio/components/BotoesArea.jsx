@@ -1,8 +1,8 @@
 import React from "react";
 
 const BotoesArea = ({ children }) => (
-  <div className="col-3">
-    <div className="d-flex flex-column">{children}</div>
+  <div className="col-3 p-0">
+    {children}
   </div>
 );
 

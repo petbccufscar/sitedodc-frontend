@@ -6,10 +6,25 @@ body {
   padding-top: 110px;
 }
 
+#moldura {
+  background-color: #4D94DD
+}
+
 .banner {
   height: 20rem;
   object-fit: cover;
   text-shadow: 1px 1px 4px black; 
+}
+
+.botao-item {
+  height: calc(20rem/3);
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.botao-item:hover {
+  background-color: #e0e0e03b;
 }
 
 .pointer {
