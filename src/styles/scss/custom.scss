@@ -2,218 +2,246 @@ $primary: #275e87;
 $secondary: #f89700;
 $light: #e0e0e0;
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
 body {
-  padding-top: 110px;
+    padding-top: 110px;
 }
 
 #moldura {
-  background-color: #4D94DD
+    background-color: #4D94DD
 }
 
 .banner {
-  height: 20rem;
-  object-fit: cover;
-  text-shadow: 1px 1px 4px black; 
+    height: 20rem;
+    object-fit: cover;
+    //text-shadow: 1px 1px 4px black; 
+}
+
+.carrossel-legenda {
+    background-color: #212529da;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 3px;
 }
 
 .botao-item {
-  height: calc(20rem/3);
-  display: flex;
-  text-align: center;
-  align-items: center;
+    height: calc(20rem/3);
+    display: flex;
+    align-items: center;
 }
 
 .botao-item:hover {
-  background-color: #e0e0e03b;
+    background-color: #e0e0e03b;
 }
 
 .pointer {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .img-docente {
-  width: 230px;
-  height: 230px;
-  object-fit: cover;
-  object-position: top;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: top;
 }
+
 .no-decoration {
-  text-decoration: none !important;
+    text-decoration: none !important;
 }
+
 .card-img-rounded {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  object-position: top;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .card-img-researchers {
-  width: 125px;
-  height: 125px;
-  object-fit: cover;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
 }
 
 .links-rapidos {
-  max-width: 68px;
-  max-height: 68px;
-  object-fit: cover;
+    max-width: 68px;
+    max-height: 68px;
+    object-fit: cover;
 }
 
 @include media-breakpoint-down(sm) {
-  #breadcrumb {
-    padding-bottom: 10px;
-    .divider-breadcrumbs {
-      margin-right: 10px;
-      padding: 1px 8px 1px 8px;
-      align-self: center;
+    #breadcrumb {
+        padding-bottom: 10px;
+
+        .divider-breadcrumbs {
+            margin-right: 10px;
+            padding: 1px 8px 1px 8px;
+            align-self: center;
+        }
+
+        .item-breadcrumb {
+            display: flex;
+            margin-right: 10px;
+            margin: 5px;
+
+            a {
+                line-height: 20px;
+            }
+        }
     }
-    .item-breadcrumb {
-      display: flex;
-      margin-right: 10px;
-      margin: 5px;
-      a {
-        line-height: 20px;
-      }
-    }
-  }
 }
 
 @include media-breakpoint-down(md) {
-  .card-columns {
-    column-count: 1 !important;
-  }
-  #botoes-area {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 70px;
-  }
+    .card-columns {
+        column-count: 1 !important;
+    }
+
+    #botoes-area {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 70px;
+    }
 }
 
 .navbar {
-  transition: min-height 100ms linear;
+    transition: min-height 100ms linear;
 }
 
 @include media-breakpoint-up(md) {
-  #botoes-area {
-    margin-top: -120px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 80px;
-  }
+    #botoes-area {
+        margin-top: -120px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 80px;
+    }
 }
 
 @include media-breakpoint-up(sm) {
-  .mais-noticias .card-columns {
-    column-count: 4 !important;
-  }
-  .card-columns {
-    column-count: 2 !important;
-  }
-  .navbar {
-    min-height: 80px;
-  }
-  .navbar.navbar-small {
-    min-height: 50px;
-    .nav-link > svg {
-      display: none !important;
+    .mais-noticias .card-columns {
+        column-count: 4 !important;
     }
-    h5 {
-      display: none;
-    }
-    .navbar-brand small {
-      display: none;
-    }
-  }
-  .mais-noticias {
+
     .card-columns {
-      column-count: 4 !important;
+        column-count: 2 !important;
     }
-  }
-  .card-columns {
-    column-count: 2 !important;
-  }
+
+    .navbar {
+        min-height: 80px;
+    }
+
+    .navbar.navbar-small {
+        min-height: 50px;
+
+        .nav-link>svg {
+            display: none !important;
+        }
+
+        h5 {
+            display: none;
+        }
+
+        .navbar-brand small {
+            display: none;
+        }
+    }
+
+    .mais-noticias {
+        .card-columns {
+            column-count: 4 !important;
+        }
+    }
+
+    .card-columns {
+        column-count: 2 !important;
+    }
 }
 
 @include media-breakpoint-down(sm) {
-  .card-breakpoint{
-    width: 100%;
-    text-align: center;
-  }
+    .card-breakpoint {
+        width: 100%;
+        text-align: center;
+    }
 
-  .card-sm-align-center{
-    margin: 0 auto;
-  }
+    .card-sm-align-center {
+        margin: 0 auto;
+    }
 }
 
 
 #rodape {
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .item-breadcrumb {
-  display: inline-block;
-  list-style: none;
-  margin-right: 20px;
-  a {
-    line-height: 80px;
-  }
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+
+    a {
+        line-height: 80px;
+    }
 }
 
 .divider-breadcrumbs {
-  display: inline !important;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  margin-right: 20px;
+    display: inline !important;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 .card {
-  a {
-    text-decoration: none;
-  }
+    a {
+        text-decoration: none;
+    }
 }
 
 .hoverable {
-  transition: all linear 300ms;
-  &:hover {
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-    border-color: rgba(0, 0, 0, 0.3);
-  }
+    transition: all linear 300ms;
+
+    &:hover {
+        -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+        border-color: rgba(0, 0, 0, 0.3);
+    }
 }
 
 .btn-white {
-  background-color: white;
-  color: $primary;
-  &:hover {
-    background-color: $light;
-  }
+    background-color: white;
+    color: $primary;
+
+    &:hover {
+        background-color: $light;
+    }
 }
 
 .badge-extra-light {
-  color: #212529;
-  background-color: #f7f7f7;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #212529;
+    background-color: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 button.nav-link {
-  background: white;
+    background: white;
 }
 
-.responsive-image{
-  max-width: 100%;
-  height: auto;
+.responsive-image {
+    max-width: 100%;
+    height: auto;
 }
 
-.dropdown:hover > .dropdown-menu {
+.dropdown:hover>.dropdown-menu {
     display: block;
 }
-.dropdown > .dropdown-toggle:active {
+
+.dropdown>.dropdown-toggle:active {
     /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }

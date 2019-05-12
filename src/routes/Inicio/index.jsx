@@ -53,6 +53,7 @@ class Inicio extends Component {
                             banner={
                               process.env.REACT_APP_API_URL + banner.Imagem.url
                             }
+                            texto="Legenda da foto aqui"
                             active={index == 0}
                           />
                         ))
