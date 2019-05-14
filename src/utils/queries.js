@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 
 export const GET_INICIO = gql`
   query {
-    eventos(limit: 3, sort: "Publicacao:DESC") {
+    eventos(limit: 5, sort: "Publicacao:DESC") {
       Titulo
       Data
       Local
