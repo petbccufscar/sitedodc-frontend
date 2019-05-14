@@ -39,7 +39,7 @@ class Inicio extends Component {
           {({ loading, error, data }) => {
             return (
               <React.Fragment>
-                <div className="row mb-4 mt-4">
+                <div className="row mb-4 mt-4 rounded" id="moldura">
                   <BannerArea>
                     <Carousel>
                       {loading ? (
@@ -53,20 +53,20 @@ class Inicio extends Component {
                             banner={
                               process.env.REACT_APP_API_URL + banner.Imagem.url
                             }
+                            texto="Legenda da foto aqui"
                             active={index == 0}
                           />
                         ))
                       )}
                     </Carousel>
                   </BannerArea>
-                  
-                    <BotoesArea>
-                      <BotaoItem to="/area-aluno">Aluno</BotaoItem>
-                      <BotaoItem to="/area-visitante">Visitante</BotaoItem>
-                      <BotaoItem to="/area-docente">Docente</BotaoItem>
-                    </BotoesArea>
-                
+                  <BotoesArea>
+                      <BotaoItem to="/area-aluno">Área do Aluno</BotaoItem>
+                      <BotaoItem to="/area-docente" className="border-top border-bottom">Área do Docente</BotaoItem>
+                      <BotaoItem to="/area-visitante">Área do Visitante</BotaoItem>
+                    </BotoesArea>     
                 </div>
+                
                 <div className="row inicio" id="conteudo">
                   <NoticiasArea>
                     <NoticiasContainer more={false}>
