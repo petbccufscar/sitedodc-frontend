@@ -1,5 +1,16 @@
 import gql from "graphql-tag";
 
+export const GET_INTERVALO = gql`
+  query {
+    inicio: anos(where: { Nome: "inicio" }) {
+      Ano
+    }
+    mais_recente: anos(where: { Nome: "mais_recente" }) {
+      Ano
+    }
+  }
+`;
+
 export const GET_INICIO = gql`
   query {
     eventos(limit: 5, sort: "Publicacao:DESC") {
