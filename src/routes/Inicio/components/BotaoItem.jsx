@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const BotaoItem = ({ to, children, className }) => (
   <Link to={to} className="text-decoration-none">
     <div className={"botao-item text-white pl-4 " + className}>
-      <h5>{children}</h5>
+      <h4>{children}</h4>
     </div>
   </Link>
 );
