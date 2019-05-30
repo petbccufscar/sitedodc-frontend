@@ -10,6 +10,7 @@ import { TabPanel } from "react-web-tabs";
 
 import { placeholder, placeholder2 } from "../../components/placeholders";
 import ofertas from "./components/Ofertas";
+import alunosEspeciais from "./components/AlunosEspeciais";
 
 const tabs = [
   {
@@ -33,7 +34,7 @@ const tabs = [
     },
     content: {
       title: "Alunos Especiais",
-      body: placeholder, 
+      body: alunosEspeciais, 
     }
   },
   {
