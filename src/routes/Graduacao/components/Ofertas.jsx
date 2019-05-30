@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Atuacao = (
+const Ofertas = (
   <React.Fragment>
     <div class="accordion" id="accordionExample">
       <div class="card">
@@ -202,4 +202,4 @@ const Atuacao = (
   </React.Fragment>
 );
 
-export default Atuacao;
+export default Ofertas;
