@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BarraLateral from "./components/BarraLateral";
 import BotoesArea from "./components/BotoesArea";
 
@@ -39,7 +40,7 @@ class Inicio extends Component {
           {({ loading, error, data }) => {
             return (
               <React.Fragment>
-                <div className="row mb-4 mt-4 rounded" id="moldura">
+                <div className="row mb-4 mt-4 rounded bg-primary" id="moldura">
                   <BannerArea>
                     <Carousel>
                       {loading ? (
@@ -61,9 +62,18 @@ class Inicio extends Component {
                     </Carousel>
                   </BannerArea>
                   <BotoesArea>
-                      <BotaoItem to="/area-aluno">Área do Aluno</BotaoItem>
-                      <BotaoItem to="/area-docente" className="border-top border-bottom">Área do Docente</BotaoItem>
-                      <BotaoItem to="/area-visitante">Área do Visitante</BotaoItem>
+                      <BotaoItem to="/area-aluno">
+                          <i class="fas fa-user-graduate mr-4"></i>
+                          Área do Aluno
+                      </BotaoItem>
+                      <BotaoItem to="/area-docente" className="border-top border-bottom">
+                          <FontAwesomeIcon icon="chalkboard-teacher" className="d-inline-block mr-3" />
+                          Área do Docente
+                      </BotaoItem>
+                      <BotaoItem to="/area-visitante">
+                          <FontAwesomeIcon icon="user" className="d-inline-block mr-4" />
+                          Área do Visitante
+                      </BotaoItem>
                     </BotoesArea>     
                 </div>
                 

@@ -9,31 +9,32 @@ import {
 import { TabPanel } from "react-web-tabs";
 
 import { placeholder, placeholder2 } from "../../components/placeholders";
-import atuacao from "./components/Atuacao";
+import ofertas from "./components/Ofertas";
+import alunosEspeciais from "./components/AlunosEspeciais";
 
 const tabs = [
   {
     props: {
-      panelId: "atuacao",
-      title: "Atuação",
+      panelId: "ofertas",
+      title: "Ofertas de Disciplinas",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Atuação",
-      body: atuacao, 
+      title: "Ofertas de Disciplinas",
+      body: ofertas, 
     }
   },
   {
     props: {
-      panelId: "alunos-externos",
-      title: "Alunos Externos",
+      panelId: "alunos-especiais",
+      title: "Alunos Especiais",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Alunos Externos",
-      body: placeholder, 
+      title: "Alunos Especiais",
+      body: alunosEspeciais, 
     }
   },
   {

@@ -44,7 +44,7 @@ class TopBar extends Component {
                 className=" d-none d-lg-inline-block"
                 style={{ lineHeight: "11px" }}
               >
-                <h5>Departamento de Computação</h5>
+                <h4>Departamento de Computação</h4>
                 <small style={{ fontSize: "14px" }}>
                   Universidade Federal de São Carlos
                 </small>
