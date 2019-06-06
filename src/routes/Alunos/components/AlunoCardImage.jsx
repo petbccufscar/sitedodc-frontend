@@ -8,7 +8,7 @@ import { ImageLoader } from "../../../components/image-loader";
 const AlunoCardImage = ({ foto }) => {
   return (
     <ImageLoader
-      classnames="card-img-top"
+      classnames="card-img-top fit-image"
       src={foto}
       fallback={avatar}
       alt="Foto do aluno"

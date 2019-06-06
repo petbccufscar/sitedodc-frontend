@@ -40,7 +40,7 @@ class Inicio extends Component {
           {({ loading, error, data }) => {
             return (
               <React.Fragment>
-                <div className="row mb-4 mt-4 rounded bg-primary" id="moldura">
+                <div className="row mb-4 mt-4 rounded bg-primary sm-hide">
                   <BannerArea>
                     <Carousel>
                       {loading ? (
@@ -75,6 +75,21 @@ class Inicio extends Component {
                           Área do Visitante
                       </BotaoItem>
                     </BotoesArea>     
+                </div>
+
+                <div className="mb-4 mt-4 rounded bg-primary sm-show">
+                      <BotaoItem to="/area-aluno">
+                          <i class="fas fa-user-graduate mr-4"></i>
+                          Área do Aluno
+                      </BotaoItem>
+                      <BotaoItem to="/area-docente" className="border-top border-bottom">
+                          <FontAwesomeIcon icon="chalkboard-teacher" className="d-inline-block mr-3" />
+                          Área do Docente
+                      </BotaoItem>
+                      <BotaoItem to="/area-visitante">
+                          <FontAwesomeIcon icon="user" className="d-inline-block mr-4" />
+                          Área do Visitante
+                      </BotaoItem>
                 </div>
                 
                 <div className="row inicio" id="conteudo">

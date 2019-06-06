@@ -7,8 +7,22 @@ body {
     padding-top: 110px;
 }
 
-#moldura {
-    //background-color: #4D94DD
+@include media-breakpoint-down(sm) {
+    .sm-hide {
+        display: none;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .sm-show {
+        display: none;
+    }
+}
+
+.fit-image {
+    height: 250px;
+    object-fit: cover;
+    // object-position: top;
 }
 
 .banner {

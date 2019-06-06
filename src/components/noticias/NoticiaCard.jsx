@@ -29,6 +29,9 @@ const NoticiaCard = ({ more, id, title, description, imagem, imageAlt, date }) =
       </CardImage>
       <CardBody>
         <Link to={`/noticia/${id}`}>
+          {/* Sugestão 
+            <CardTitle><b>{title}</b></CardTitle> 
+          */}
           <CardTitle>{title}</CardTitle>
           <CardText>{description}</CardText>
         </Link>
