@@ -67,19 +67,6 @@ const Sobre = (
             regulares da UFSCar.
           </p>
         </div>
-
-        <div className="col-lg-auto text-center align-self-center">
-          <ImageLoader
-            classnames="responsive-image"
-            src={ImgPatio}
-            alt="Foto: Pátio interno"
-            title="Foto: Pátio interno"
-            loaderWidth="518px"
-            loaderHeight="291px"
-            width="518px"
-            height="291px"
-          />
-        </div>
       </div>
 
       <h3 className="mt-4">Educação continuada</h3>

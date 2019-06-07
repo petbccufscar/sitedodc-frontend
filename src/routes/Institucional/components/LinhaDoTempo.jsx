@@ -72,12 +72,12 @@ class LinhaDoTempo extends React.Component {
               </div>
 
               <h3>Vídeos</h3>
-              <div className="d-flex flex-row flex-wrap justify-content-between mt-3">
+              <div className=" mt-3">
                 <div className="flex-fill">
                   <iframe
                     frameBorder="0"
                     title="Departamento de Computação UFSCar - Vídeo Institucional"
-                    width="100%"
+                    width="515"
                     height="290"
                     src="http://www.youtube.com/embed/65ErgsOfEtE"
                   />
@@ -86,7 +86,7 @@ class LinhaDoTempo extends React.Component {
                   <iframe
                     frameBorder="0"
                     title="Departamento de Computação da UFSCar - 40 Anos"
-                    width="100%"
+                    width="515"
                     height="290"
                     src="http://www.youtube.com/embed/UEklyABA7uc"
                   />
