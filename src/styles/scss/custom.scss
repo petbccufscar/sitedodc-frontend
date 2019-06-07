@@ -25,6 +25,22 @@ body {
     // object-position: top;
 }
 
+.card-img-top {
+    height: 8rem;
+    object-fit: cover;
+}
+
+
+.max-lines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-height: 1.5em;        /* fallback */
+    max-height: calc(1.5em*3);       /* fallback */
+ }
+
 .banner {
     height: 20rem;
     object-fit: cover;
