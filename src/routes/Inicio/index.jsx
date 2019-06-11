@@ -139,6 +139,7 @@ class Inicio extends Component {
                         data.links.map((link, index) => (
                           <LinkRapido
                             link={link.Link}
+                            alt={link.Texto_alternativo}
                             imagem={`${process.env.REACT_APP_API_URL}/${
                               link.Imagem.url
                             }`}
