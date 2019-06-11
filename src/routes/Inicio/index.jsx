@@ -120,7 +120,7 @@ class Inicio extends Component {
                       ) : error ? (
                         `Error! ${error.message}`
                       ) : (
-                        data.eventos.map((evento, index) => (
+                        data.eventos.sort(compare).map((evento, index) => (
                           <Evento
                             key={index}
                             titulo={evento.Titulo}
@@ -157,6 +157,12 @@ class Inicio extends Component {
       </main>
     );
   }
+}
+
+function compare(a, b) {
+  if ( a.Data < b.Data ) return -1;
+  else if ( a.Data > b.Data ) return 1;
+  return 0;
 }
 
 export default Inicio;
