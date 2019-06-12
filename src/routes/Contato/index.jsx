@@ -39,7 +39,7 @@ class Contato extends Component {
                       className="form-control here"
                       aria-describedby="nomeHelpBlock"
                       required="required"
-                      placeholder="Ex: Maurício Figueiredo"
+                      placeholder="Ex: José da Silva"
                     />
                   </div>
                 </div>
@@ -55,7 +55,7 @@ class Contato extends Component {
                       aria-describedby="emailHelpBlock"
                       className="form-control here"
                       required="required"
-                      placeholder="Ex: mauricio@dc.ufscar.br"
+                      placeholder="Ex: jose@dc.ufscar.br"
                     />
                   </div>
                 </div>
@@ -118,7 +118,13 @@ class Contato extends Component {
                 />{" "}
                 Contato{" "}
               </h5>
-              <br />
+              <p>
+                <b>Chefia:</b>
+                <br/>
+                Vânia Paula de Almeida Neris
+                <br/>
+                Valter Vieira de Camargo
+              </p>
               <p>
                 <b>Precisa de atendimento técnico?</b>
               </p>

@@ -7,9 +7,38 @@ body {
     padding-top: 110px;
 }
 
-#moldura {
-    //background-color: #4D94DD
+@include media-breakpoint-down(sm) {
+    .sm-hide {
+        display: none;
+    }
 }
+
+@include media-breakpoint-up(md) {
+    .sm-show {
+        display: none;
+    }
+}
+
+.fit-image-aluno {
+    height: 250px;
+    object-fit: cover;
+    // object-position: top;
+}
+
+.fit-image-noticia {
+    height: 8rem;
+    object-fit: cover;
+}
+
+.max-lines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-height: 1.5em;        /* fallback */
+    max-height: calc(1.5em*3);       /* fallback */
+ }
 
 .banner {
     height: 20rem;

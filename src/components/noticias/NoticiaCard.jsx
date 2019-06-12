@@ -20,16 +20,16 @@ const NoticiaCard = ({ more, id, title, description, imagem, imageAlt, date }) =
       <CardImage>
         {imagem && (
           <ImageLoader
-            classnames={"card-img-top"}
+            classnames={"card-img-top fit-image-noticia"}
             src={`${process.env.REACT_APP_API_URL}/${imagem.url}`}
             alt={imageAlt}
-            loaderHeight="8rem"
+            loaderHeight="4rem"
           />
         )}
       </CardImage>
       <CardBody>
         <Link to={`/noticia/${id}`}>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle><b>{title}</b></CardTitle>
           <CardText>{description}</CardText>
         </Link>
       </CardBody>

@@ -21,6 +21,7 @@ export const GET_INICIO = gql`
 
     links(limit: 8) {
       Link
+      Texto_alternativo
       Imagem {
         url
       }
@@ -72,6 +73,19 @@ export const GET_ALUNOS = gql`
     alunos(where: { Ano: $ano, Curso: $curso }, sort: "Nome:asc") {
       Nome
       Foto {
+        url
+      }
+    }
+  }
+`;
+
+export const GET_GRUPOS = gql`
+  query {
+    grupos(sort: "Nome:asc") {
+      Nome
+      Descricao
+      Site
+      Imagem {
         url
       }
     }
