@@ -19,17 +19,16 @@ body {
     }
 }
 
-.fit-image {
+.fit-image-aluno {
     height: 250px;
     object-fit: cover;
     // object-position: top;
 }
 
-.card-img-top {
+.fit-image-noticia {
     height: 8rem;
     object-fit: cover;
 }
-
 
 .max-lines {
     overflow: hidden;

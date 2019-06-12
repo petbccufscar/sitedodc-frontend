@@ -20,7 +20,7 @@ const NoticiaCard = ({ more, id, title, description, imagem, imageAlt, date }) =
       <CardImage>
         {imagem && (
           <ImageLoader
-            classnames={"card-img-top"}
+            classnames={"card-img-top fit-image-noticia"}
             src={`${process.env.REACT_APP_API_URL}/${imagem.url}`}
             alt={imageAlt}
             loaderHeight="4rem"

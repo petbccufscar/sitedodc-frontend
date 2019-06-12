@@ -4,6 +4,10 @@ import BarraLateral from "./components/BarraLateral";
 import BotoesArea from "./components/BotoesArea";
 
 import "../../styles/css/home.css";
+import banner1 from "../../images/banner1.jpg";
+import banner2 from "../../images/banner2.jpg";
+import banner3 from "../../images/banner3.jpg";
+
 
 import {
   NoticiaCard,
@@ -43,7 +47,7 @@ class Inicio extends Component {
                 <div className="row mb-4 mt-4 rounded bg-primary sm-hide">
                   <BannerArea>
                     <Carousel>
-                      {loading ? (
+                      {/* {loading ? (
                         <CarouselLoader />
                       ) : error ? (
                         `Error! ${error.message}`
@@ -58,7 +62,22 @@ class Inicio extends Component {
                             active={index == 0}
                           />
                         ))
-                      )}
+                      )} */}
+                    <CarouselBanner
+                            banner={banner1}
+                            texto="Legenda da foto aqui"
+                            active={true}
+                          />
+                    <CarouselBanner
+                            banner={banner2}
+                            texto="Legenda da foto 2 aqui"
+                            active={false}
+                          />
+                    <CarouselBanner
+                            banner={banner3}
+                            texto="Legenda da foto 3 aqui"
+                            active={false}
+                          />
                     </Carousel>
                   </BannerArea>
                   <BotoesArea>

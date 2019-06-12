@@ -40,7 +40,7 @@ class Alunos extends Component {
 
                 return data.alunos.map((aluno, index) => (
                   <FourCards>
-                    <AlunoCardImage foto={process.env.REACT_APP_API_URL + aluno.Foto.url} />
+                    <AlunoCardImage foto={aluno.Foto ? `${process.env.REACT_APP_API_URL}/${aluno.Foto.url}` : null} />
                     <AlunoCardBody nome={aluno.Nome} />
                   </FourCards>
                 ));

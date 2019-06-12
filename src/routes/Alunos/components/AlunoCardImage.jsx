@@ -8,11 +8,11 @@ import { ImageLoader } from "../../../components/image-loader";
 const AlunoCardImage = ({ foto }) => {
   return (
     <ImageLoader
-      classnames="card-img-top fit-image"
+      classnames="card-img-top fit-image-aluno"
       src={foto}
       fallback={avatar}
       alt="Foto do aluno"
-      loaderHeight="222px"
+      loaderHeight="250px"
     />
   );
 };
