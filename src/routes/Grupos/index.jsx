@@ -36,7 +36,7 @@ class Grupos extends Component {
                     }`}
                   />
     
-                  {index !== data.grupos.length && (
+                  {index !== data.grupos.length - 1 && (
                     <div className="row border-bottom mt-3" />
                   )}
                 </React.Fragment>
