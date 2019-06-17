@@ -25,8 +25,8 @@ const DocenteCard = ({ docente }) => (
         </Link>
 
         <p className="card-text">
-          {`${docente.Tipo}-${docente.Horas}h/DE`}
-          <br />
+          {`${docente.Tipo}-${docente.Horas}h/DE`} <br />
+          {`Nível: ${docente.Nivel=='Pos' ? 'Pós Doutorado': docente.Nivel}`} <br />
           {`Telefone: ${docente.Telefone}`} <br />
           {`Email: ${docente.Email}`}
         </p>
