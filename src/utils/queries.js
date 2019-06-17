@@ -184,6 +184,29 @@ export const GET_DOCENTES = gql`
   }
 `;
 
+export const GET_LABORATORIOS = gql`
+  query {
+    laboratorios(sort: "Nome:asc") {
+      Nome
+      NomeExpandido
+      Descricao
+      Logo {
+        url
+      }
+      Docentes {
+        Nome
+        Tipo
+        Email
+        Site
+        Lattes
+        Foto {
+          url
+        }
+      }
+    }
+  }
+`;
+
 export const GET_BANNERS = gql`
   query {
     banners(sort: "Order:ASC", where: { Ativo: true }) {
