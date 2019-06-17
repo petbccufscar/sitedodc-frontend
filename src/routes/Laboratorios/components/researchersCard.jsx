@@ -5,9 +5,7 @@ import Card, { CardBody, CardFooter } from "../../../components/Card";
 import PropTypes from "prop-types";
 
 
-const ResearchersCard = (props) => {
-    const { nome, funcao, email } = props;
-
+const ResearchersCard = ( { nome, foto, funcao, email, site, lattes } ) => {
     return(
        <Card className="hoverable mb-3">
            <CardBody>
@@ -15,7 +13,7 @@ const ResearchersCard = (props) => {
                     <div className="mr-4 ml-4">
                         <ImageLoader
                             classnames="card-img-researchers rounded-circle"
-                            src={ require("../../../../src/images/imageExample.jpg") }
+                            src={ foto }
                             alt="Imagem professor responsável"
                         />
                     </div>
@@ -26,19 +24,19 @@ const ResearchersCard = (props) => {
                     </div>
                </div>
            </CardBody>
-           <CardFooter>
+           {(site.length + lattes.length) ? <CardFooter>
                <div className="row justify-content-center">
-                    <a href= "#" className="card-link">
+                    {site.length ? <a href= {site} className="card-link">
                         <FontAwesomeIcon icon="user" className="align-self-center d-inline-block mr-2"/>
                         Página Pessoal
-                    </a>
-                    <a href="#" className="card-link">
+                    </a> : ''}
+                    {lattes.length ? <a href={lattes} className="card-link">
                         <FontAwesomeIcon icon="globe-americas" className="align-self-center d-inline-block mr-2"/>
                         Lattes
-                    </a>
+                    </a> : ''}
 
                </div> 
-           </CardFooter> 
+           </CardFooter> : ''}
        </Card>
     );
 };
