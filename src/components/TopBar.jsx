@@ -36,16 +36,19 @@ class TopBar extends Component {
               <img
                 className="d-inline-block align-self-center mr-3 "
                 src={LogoDC}
-                width="50"
-                height="35"
+                width={this.state.small ? "50" : "75"}
+                height={this.state.small ? "35" : "52.5"}
                 alt="Logo do departamento de computação"
               />
               <div
                 className=" d-none d-lg-inline-block"
                 style={{ lineHeight: "11px" }}
               >
-                <h4>Departamento de Computação</h4>
-                <small style={{ fontSize: "14px" }}>
+                {this.state.small ? 
+                  <span><br></br>Departamento de Computação</span> :
+                  <h4>Departamento de Computação</h4>
+                }
+                <small style={{ fontSize: "16px" }}>
                   Universidade Federal de São Carlos
                 </small>
               </div>
