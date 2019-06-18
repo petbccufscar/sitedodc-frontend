@@ -1,12 +1,12 @@
 import React from "react";
-import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
-import { Timeline, Event } from "./components/Timeline";
+// import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
+import { Timeline, Event } from "./timeline";
 
-import { ImageLoader } from "../../components/image-loader";
+import { ImageLoader } from "../../../components/image-loader";
 
-import ImgCapa from "../../images/capa40anos.png";
-import ImgRegua from "../../images/sobre1.jpg";
-import ImgPatio from "../../images/sobre2.jpg";
+import ImgCapa from "../../../images/capa40anos.png";
+import ImgRegua from "../../../images/sobre1.jpg";
+import ImgPatio from "../../../images/sobre2.jpg";
 
 class LinhaDoTempo extends React.Component {
   constructor(props) {
@@ -20,10 +20,6 @@ class LinhaDoTempo extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Breadcrumbs>
-          <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>Linha do tempo</Breadcrumb>
-        </Breadcrumbs>
 
         <div className="container">
           <Timeline>
@@ -76,12 +72,12 @@ class LinhaDoTempo extends React.Component {
               </div>
 
               <h3>Vídeos</h3>
-              <div className="d-flex flex-row flex-wrap justify-content-between mt-3">
+              <div className=" mt-3">
                 <div className="flex-fill">
                   <iframe
                     frameBorder="0"
                     title="Departamento de Computação UFSCar - Vídeo Institucional"
-                    width="100%"
+                    width="515"
                     height="290"
                     src="http://www.youtube.com/embed/65ErgsOfEtE"
                   />
@@ -90,7 +86,7 @@ class LinhaDoTempo extends React.Component {
                   <iframe
                     frameBorder="0"
                     title="Departamento de Computação da UFSCar - 40 Anos"
-                    width="100%"
+                    width="515"
                     height="290"
                     src="http://www.youtube.com/embed/UEklyABA7uc"
                   />

@@ -12,6 +12,7 @@ import { placeholder, placeholder2 } from "../../components/placeholders";
 import sobre from "./components/Sobre";
 import LinhaDoTempo from "./components/LinhaDoTempo";
 import infraestrutura from "./components/Infraestrutura";
+import historico from "./components/Historico";
 
 const tabs = [
   {
@@ -35,7 +36,7 @@ const tabs = [
     },
     content: {
       title: "Histórico",
-      body: placeholder, 
+      body: historico, 
     }
   },
   {
