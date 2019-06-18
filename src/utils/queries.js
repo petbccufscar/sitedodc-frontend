@@ -13,7 +13,7 @@ export const GET_INTERVALO = gql`
 
 export const GET_INICIO = gql`
   query {
-    eventos(limit: 5, sort: "Publicacao:DESC") {
+    eventos(limit: 5, sort: "Data:DESC") {
       Titulo
       Data
       Local
