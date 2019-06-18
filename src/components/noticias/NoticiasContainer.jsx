@@ -12,7 +12,7 @@ const NoticiasContainer = ({ children }) => {
           Ver todas as notícias <FontAwesomeIcon className="ml-2" icon="plus" />
         </Link>
       </div>
-      <CardContainer classnames="flex-grow-1">
+      <CardContainer >
       {children}
       </CardContainer>
     </React.Fragment>
