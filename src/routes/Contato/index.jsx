@@ -119,11 +119,15 @@ class Contato extends Component {
                 Contato{" "}
               </h5>
               <p>
-                <b>Chefia:</b>
+                <b className="mb-2">Chefia do DC:</b>
                 <br/>
-                Vânia Paula de Almeida Neris
+                Profa. Dra. Vânia Paula de Almeida Neris - Chefe
                 <br/>
-                Valter Vieira de Camargo
+                Prof. Dr. Valter Vieira de Camargo - Vice-Chefe
+                <br/>
+                <b>Email: </b>dcchefe@dc.ufscar.br
+                <br/>
+                
               </p>
               <p>
                 <b>Precisa de atendimento técnico?</b>
