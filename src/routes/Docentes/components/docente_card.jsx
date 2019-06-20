@@ -6,6 +6,11 @@ import { TwoCards } from "../../../components/cards";
 import Badge from "../../../components/Badge";
 import { ImageLoader } from "../../../components/image-loader";
 
+function getEmailImagePath(email) {
+  let index = email.indexOf("@");
+  let nome = email.slice(0,index);
+  return "../../images/emails/" + nome + "/.png";
+}
 
 const DocenteCard = ({ docente }) => (
   <TwoCards key={docente["Nome"]} className="hoverable">
@@ -28,7 +33,7 @@ const DocenteCard = ({ docente }) => (
           {`${docente.Tipo}-${docente.Horas}h/DE`} <br />
           {`Nível: ${docente.Nivel=='Pos' ? 'Pós Doutorado': docente.Nivel}`} <br />
           {`Telefone: ${docente.Telefone}`} <br />
-          {`Email: ${docente.Email}`}
+          {`Email:`}  <img src={getEmailImagePath(docente.Email)}/>
         </p>
       </div>
     </CardBody>

@@ -5,7 +5,7 @@ import DocenteLoader from "./DocenteLoader";
 import { Query } from "react-apollo";
 import { ImageLoader } from "../../components/image-loader";
 import PropTypes from "prop-types";
-import { GET_DOCENTE } from "../../utils/queries"
+import { GET_DOCENTE } from "../../utils/queries";
 
 class Docente extends Component {
   render() {
@@ -72,7 +72,7 @@ class Docente extends Component {
                         icon="envelope"
                         className="d-inline-block mr-2"
                       />
-                      Email: {data.docente.Email}
+                      Email: <img src={this.getEmailImagePath(data.docente.Email)}/>
                     </p>
                     <p>
                       <FontAwesomeIcon
@@ -110,6 +110,12 @@ class Docente extends Component {
       <span key={index}>{area.Nome}; </span>
     ));
     return list;
+  }
+
+  getEmailImagePath(email) {
+    let index = email.indexOf("@")
+    let nome = email.slice(0,index)
+    return "../../images/emails/" + nome + "/.png";
   }
 }
 Docente.propTypes = {

@@ -12,14 +12,17 @@ const Noticia = ({ noticia }) => (
       </h4>
       <small>{noticia.Descricao}</small>
     </div>
-    {noticia.Imagem && (
-      <img
-        src={`${process.env.REACT_APP_API_URL}/${noticia.Imagem.url}`}
-        className="img-fluid"
-        alt="Responsive"
-      />
-    )}
-    <ReactMarkdown source={noticia.Conteudo} />
+    <div className="d-flex justify-content-center">
+      {noticia.Imagem && (
+        <img
+          src={`${process.env.REACT_APP_API_URL}/${noticia.Imagem.url}`}
+          className="img-fluid"
+          alt="Responsive"
+          id="img-noticia"
+        />
+      )}
+    </div>
+    <ReactMarkdown className="text-justify mt-4" source={noticia.Conteudo} />
   </React.Fragment>
 );
 const Data = ({ data = "01/01/2018" }) => (
