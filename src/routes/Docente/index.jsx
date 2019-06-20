@@ -115,7 +115,7 @@ class Docente extends Component {
   getEmailImagePath(email) {
     let index = email.indexOf("@")
     let nome = email.slice(0,index)
-    return "../../images/emails/" + nome + "/.png";
+    return "/emails/" + nome + ".png";
   }
 }
 Docente.propTypes = {
