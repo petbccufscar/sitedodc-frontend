@@ -4,6 +4,7 @@ import BarraLateral from "./components/BarraLateral";
 import BotoesArea from "./components/BotoesArea";
 
 import "../../styles/css/home.css";
+import banner_secomp from "../../images/banner-secomp.jpg";
 import banner1 from "../../images/banner1.jpg";
 import banner2 from "../../images/banner2.jpg";
 import banner3 from "../../images/banner3.jpg";
@@ -65,17 +66,26 @@ class Inicio extends Component {
                       )} */}
                     <CarouselBanner
                             banner={banner1}
-                            texto="Legenda da foto aqui"
+                            texto="Departamento de Computação conta com 6 
+                            laboratórios de ensino e mais de 20 laboratórios de pesquisa."
                             active={true}
                           />
                     <CarouselBanner
                             banner={banner2}
-                            texto="Legenda da foto 2 aqui"
+                            texto="Engenharia de Computação da UFSCar obtém 
+                            nota máxima no ENADE 2017."
                             active={false}
                           />
                     <CarouselBanner
                             banner={banner3}
-                            texto="Legenda da foto 3 aqui"
+                            texto="Bacharelado em Ciência da Computação recebe 5 estrelas 
+                            no último Guia do Estudante."
+                            active={false}
+                          />
+                    <CarouselBanner
+                            banner={banner_secomp}
+                            texto="Mais de 3.600 alunos formados 
+                            no Departamento de Computação."
                             active={false}
                           />
                     </Carousel>

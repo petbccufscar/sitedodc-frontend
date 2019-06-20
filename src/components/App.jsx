@@ -17,7 +17,6 @@ import Graduacao from "../routes/Graduacao";
 import Grupos from "../routes/Grupos";
 import MapaDoSite from "../routes/MapaDoSite";
 import Laboratorios from "../routes/Laboratorios";
-import LinhaDoTempo from "../routes/LinhaDoTempo";
 import LinksSuporte from "../routes/LinksSuporte";
 import MaisNoticias from "../routes/MaisNoticias";
 import Noticia from "../routes/Noticia";

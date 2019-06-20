@@ -3,6 +3,7 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faListAlt } from "@fortawesome/free-solid-svg-icons";
+import email_chefia from "../../images/emails/chefia.png";
 
 class Contato extends Component {
   render() {
@@ -118,13 +119,29 @@ class Contato extends Component {
                 />{" "}
                 Contato{" "}
               </h5>
+              
+              <p><b>Chefia do DC:</b></p>
               <p>
-                <b>Chefia:</b>
+                Profa. Dra. Vânia Paula de Almeida Neris - Chefe
                 <br/>
-                Vânia Paula de Almeida Neris
+                Prof. Dr. Valter Vieira de Camargo - Vice-Chefe
                 <br/>
-                Valter Vieira de Camargo
+                <b>Email: </b> <img src={email_chefia}/>
+                <br/>
               </p>
+
+              <p><b>Secretaria do DC:</b></p>
+              <p>
+                Darli José Morcelli
+                <br/>
+                Marcella Salomão
+                <br/>
+                Vera de Moraes
+                <br/>
+                <b>Emails: </b>
+                <br/>
+              </p>
+              
               <p>
                 <b>Precisa de atendimento técnico?</b>
               </p>

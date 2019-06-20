@@ -16,7 +16,7 @@ class MaisNoticias extends Component {
         <div className="container">
           <div className="col">
             <div className="row mt-5 mais-noticias" id="conteudo">
-              <Noticias quantidade_por_linha="4" quantidade="12" />
+              <Noticias quantidade="12" />
             </div>
           </div>
         </div>

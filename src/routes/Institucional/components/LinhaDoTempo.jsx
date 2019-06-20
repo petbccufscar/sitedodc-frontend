@@ -23,162 +23,48 @@ class LinhaDoTempo extends React.Component {
 
         <div className="container">
           <Timeline>
-            <Event
-              interval={"2012"}
-              title={"40 ANOS"}
-              subtitle={"Em 2012 o DC comemorou seus 40 anos de existência."}
-            >
-              <h2>Apresentação</h2>
-              <p>
-                Ao longo dos seus primeiros 40 anos, o Departamento de
-                Computação colaborou diretamente na formação de 3.470
-                profissionais da computação, que ajudaram a construir outros
-                cursos de computação, ajudaram a construir as empresas de
-                computação que conhecemos hoje e as tecnologias que utilizamos
-                em nosso dia a dia.
-              </p>
-              <div className="d-flex flex-row align-items-center my-3">
-                <div className=" mr-3">
-                  {" "}
-
-                  <ImageLoader
-                    src={ImgCapa}
-                    height="100px"
-                    width="80px"
-                    loaderHeight="100px"
-                    loaderWidth="80px"
-                    alt="Capa - 40 anos"
-                    classnames="image-right"
-
-                    title="Capa - 40 anos"
-                  />
-                </div>
-                <div>
-
-                  <h2>Relatorio Anual - Edicão Comemorativa - 40 Anos</h2>
-                  <p>
-                    Conheça a atuação do DC em ensino, pesquisa e extensão, um
-                    pouco da história do DC-UFSCar e um pouco da história da
-                    computação, no{" "}
-                    <a
-                      className="external-link"
-                      href="http://www2.dc.ufscar.br/revista40anos"
-                    >
-                      Relatorio Anual - Edição Comemorativa - 40 Anos
-                    </a>
-                    .
-                  </p>
-                </div>
-              </div>
-
-              <h3>Vídeos</h3>
-              <div className=" mt-3">
-                <div className="flex-fill">
-                  <iframe
-                    frameBorder="0"
-                    title="Departamento de Computação UFSCar - Vídeo Institucional"
-                    width="515"
-                    height="290"
-                    src="http://www.youtube.com/embed/65ErgsOfEtE"
-                  />
-                </div>
-                <div className="flex-fill">
-                  <iframe
-                    frameBorder="0"
-                    title="Departamento de Computação da UFSCar - 40 Anos"
-                    width="515"
-                    height="290"
-                    src="http://www.youtube.com/embed/UEklyABA7uc"
-                  />
-                </div>
-              </div>
+            <Event interval={"2019"}
+              subtitle={"Reestruturação dos projetos pedagógicos dos cursos de Ciência da Computação e Engenharia da Computação."}/>
+            <Event interval={"2009"}
+              subtitle={"Criação do Doutorado em Ciência da Computação."}/>
+            <Event interval={"2007"}
+              subtitle={"Criação do curso de Bacharelado em Sistemas de Informação, na modalidade à distância."}/>
+            <Event interval={"2007"}
+              subtitle={"Mudança para o atual prédio, com 3.000 m2 acabados."}/>
+            <Event interval={"2003"}
+              subtitle={"Primeiras turmas da Pós-Graduação Lato Sensu em São Carlos"}/>
+            <Event interval={"1992"}
+              subtitle={"Criação do curso de Engenharia da Computação."}/>
+            <Event interval={"1990"}
+              subtitle={"Plano estratégico arrojado: 25% dos docentes afastados para titulação."}/>
+            <Event interval={"1988"}
+              subtitle={"Criação do Mestrado em Ciência da Computação, com dois doutores do DC e dois doutores externos."}/>
+            <Event interval={"1986"}
+              subtitle={"Divisão do DCEs em Departamento de Computação (DC) e Departamento de Estatística."}/>
+            <Event interval={"1981"}
+            subtitle={"Fabricação de computadores para uso no ensino"}>
+              <p>O modelo foi chamado de ProEn - Processador de Ensino, com 8 KBytes de memória.</p>
             </Event>
-            <Event interval={"1972"} title={"Fundação"}>
-              <div>
-                <p>
-                  O Departamento de Computação da Universidade Federal de São
-                  Carlos (DC-UFSCar) existe desde 1972, sendo responsável pelos
-                  cursos de graduação de Bacharelado em Ciência da Computação,
-                  Engenharia de Computação e Sistemas de Informação. Também é
-                  responsável pelo curso de pós-graduação (<i>stricto sensu</i>)
-                  em Ciência da Computação e oferece cursos de especialização (
-                  <i>lato sensu</i>
-                  ).
-                </p>
-                <div className="mr-3 float-left">
-
-                  <ImageLoader
-                    src={ImgRegua}
-                    title=" Foto: Régua de cálculo"
-                    height="153px"
-                    width="271px"
-                    loaderHeight="153px"
-                    loaderWidth="271px"
-                    alt="Foto: Régua de cálculo"
-                  />
-                </div>
-                <p>
-                  Em sua existência, o DC-UFSCar tem habilitado e colocado
-                  anualmente no mercado de trabalho cerca de uma centena de
-                  profissionais, que atuam em empresas e em Instituições de
-                  Ensino Superior.
-                </p>
-                <p>
-                  Atento à constante evolução na área de computação, o DC-UFSCar
-                  tem atuado na vanguarda deste desenvolvimento tecnológico,
-                  firmando-se no cenário nacional e internacional como um centro
-                  de pesquisa bastante atuante.
-                </p>
-                <div className="ml-3  float-right">
-                  <ImageLoader
-                    src={ImgPatio}
-                    alt="Foto: Pátio interno"
-                    height="153px"
-                    width="271px"
-                    loaderHeight="153px"
-                    loaderWidth="271px"
-                    title="Foto: Pátio interno"
-                  />
-                </div>
-                <p>
-                  O DC entende que a teoria deve ser sempre integrada com
-                  atividades práticas, especialmente em cursos de tecnologia,
-                  onde a aplicação do conhecimento é fundamental. Desta forma,
-                  no último ano letivo, os alunos têm de realizar estágio
-                  curricular em empresas, ou desenvolver atividades de pesquisa
-                  em Informática, aplicando os conhecimentos adquiridos durante
-                  o curso
-                </p>
-
-                <h2>Docentes</h2>
-                <p>
-                  O quadro de docentes do DC é formado por professores
-                  associados, adjuntos, assistentes e titulares, sendo a maioria
-                  formada por doutores e com dedicação exclusiva. A experiência
-                  e capacitação dos professores podem ser observadas na
-                  qualidade de formação de alunos de graduação e de
-                  pós-graduação <i>stricto-sensu</i>, em cursos regulares da
-                  UFSCar.
-                </p>
-                <h2>Educação continuada</h2>
-                <p>
-                  A educação continuada, na área de computação, sempre mereceu
-                  atenção da UFSCar e tem sido realizada por seminários,
-                  palestras, congressos, cursos de extensão e por cursos de
-                  especialização. Os cursos de especialização sempre foram
-                  realizados em parcerias de cooperação com outras Instituições
-                  de Ensino Superior. Por outro lado, a evidência das áreas da
-                  computação no mercado de trabalho tem gerado uma demanda
-                  crescente por cursos de formação específica, que podem ser
-                  oferecidos pelo DC.
-                </p>
-                <h2>Interação entre teoria e prática</h2>
-                <p>
-                  Os estudantes também têm a oportunidade de realizar estudos
-                  extras, paralelamente às aulas, através de bolsas de
-                  monitoria, de iniciação científica e de treinamento.
-                </p>
-              </div>
+            <Event interval={"1980"}
+            subtitle={"Mudança para o segundo prédio"}>
+              <p>Aproximadamente 1.000 m2, em um dos blocos do atual prédio do Departamento de Física.</p>
+              <p>O Computador em uso na UFSCar era o IBM 360/370, com interação através de cartão perfurado e 512 Kb / 1 MB de memória.</p>
+            </Event>
+            <Event interval={"1975"}
+              subtitle={"Criação do curso de Bacharelado em Ciência da Computação."}/>
+            <Event interval={"1974"}
+              subtitle={"Criação do curso de Processamento de Dados (extinto em 1986)."}/>
+            <Event interval={"1973"}
+              subtitle={"Criação da Divisão de Processamento de Dados (DPD)."}/>
+            <Event interval={"1973"}
+              subtitle={"Criação do curso de extensão universitária em Processamento de Dados."}/>
+            <Event interval={"24/07/1972"} 
+              title={"Fundação"} 
+              subtitle={"Criação do Departamento de Computação e Estatística (DCEs)."}>
+              <p>
+              O espaço físico era de aproximadamente 150 m2, no atual prédio do CECH.
+              O primeiro computador da UFSCar foi um HP 2100A, com leitora de fita de papel perfurado e 16 KBytes de memória.
+              </p>
             </Event>
           </Timeline>
         </div>
