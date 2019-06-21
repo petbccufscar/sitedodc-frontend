@@ -7,6 +7,7 @@ import { ImageLoader } from "../../components/image-loader";
 
 import { Query } from "react-apollo";
 import { GET_FUNCIONARIOS } from "../../utils/queries";
+import EmailsImage from "../../utils/emails";
 
 class TecnicoAdministrativos extends Component {
   shouldComponentUpdate() {
@@ -52,7 +53,7 @@ class TecnicoAdministrativos extends Component {
                         <p className="card-text">
                           {funcionario.Area} <br />
                           {`Telefone: ${funcionario.Telefone}`} <br />
-                          {`Email: ${funcionario.Email}`}
+                          {`Email:`} <img src={EmailsImage.getEmailImagePath(funcionario.Email)}/>
                         </p>
                       </div>
                     </CardBody>
