@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import {
-  AlunoCardImage,
-  AlunoCardBody,
-} from "./components/aluno_card";
+  AvatarCardImage,
+  AvatarCardBody,
+} from "../../components/avatar-card/avatar_card";
 import { CardContainer, FourCards } from "../../components/cards";
 
 import { Query } from "react-apollo";
@@ -40,8 +40,8 @@ class Alunos extends Component {
 
                 return data.alunos.map((aluno, index) => (
                   <FourCards>
-                    <AlunoCardImage foto={aluno.Foto ? `${process.env.REACT_APP_API_URL}/${aluno.Foto.url}` : null} />
-                    <AlunoCardBody nome={aluno.Nome} />
+                    <AvatarCardImage foto={aluno.Foto ? `${process.env.REACT_APP_API_URL}/${aluno.Foto.url}` : null} />
+                    <AvatarCardBody nome={aluno.Nome} />
                   </FourCards>
                 ));
               }}

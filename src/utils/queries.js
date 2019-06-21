@@ -11,6 +11,17 @@ export const GET_INTERVALO = gql`
   }
 `;
 
+export const GET_CHEFIA = gql`
+  query {
+    chefias(sort: "_id:desc") {
+      Nome
+      Foto {
+        url
+      }
+    }
+  }
+`;
+
 export const GET_INICIO = gql`
   query {
     eventos(limit: 5, sort: "Data:DESC") {

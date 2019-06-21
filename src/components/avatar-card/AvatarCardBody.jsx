@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlunoCardBody = ({ nome = ' '}) => {
+const AvatarCardBody = ({ nome = ' '}) => {
   return (
     <div className="card-body text-center">
       <h5 className="card-title">{ nome }</h5>
@@ -9,8 +9,8 @@ const AlunoCardBody = ({ nome = ' '}) => {
   );
 };
 
-AlunoCardBody.propTypes = {
+AvatarCardBody.propTypes = {
   nome: PropTypes.string.isRequired,
 }
 
-export default AlunoCardBody;
+export default AvatarCardBody;

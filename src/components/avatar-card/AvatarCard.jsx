@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { column, cell } from "./style";
 
-const AlunoCard = ({ children }) => {
+const AvatarCard = ({ children }) => {
   return (
     <div className={`${column}`}>
       <div className={`${cell} card h-100 mb-2`}>{children}</div>
@@ -11,8 +11,8 @@ const AlunoCard = ({ children }) => {
   );
 };
 
-AlunoCard.propTypes = {
+AvatarCard.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element),
 }
 
-export default AlunoCard;
+export default AvatarCard;

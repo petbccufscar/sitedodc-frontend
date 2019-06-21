@@ -13,6 +13,7 @@ import sobre from "./components/Sobre";
 import LinhaDoTempo from "./components/LinhaDoTempo";
 import infraestrutura from "./components/Infraestrutura";
 import historico from "./components/Historico";
+import galeria_chefia from "./components/GaleriaChefia";
 
 const tabs = [
   {
@@ -60,7 +61,7 @@ const tabs = [
     },
     content: {
       title: "Galeria da Chefia",
-      body: placeholder, 
+      body: galeria_chefia, 
     }
   },
   {
