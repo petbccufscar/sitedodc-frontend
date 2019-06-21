@@ -3,7 +3,7 @@ import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faListAlt } from "@fortawesome/free-solid-svg-icons";
-import email_chefia from "../../images/emails/chefia.png";
+import email_chefia from "../../images/email-chefia.png";
 
 class Contato extends Component {
   render() {
