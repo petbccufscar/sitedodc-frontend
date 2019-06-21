@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faListAlt } from "@fortawesome/free-solid-svg-icons";
 import email_chefia from "../../images/email-chefia.png";
+import email_marcella from "../../images/email-marcella.png";
+import email_darli from "../../images/email-darli.png";
+import email_vera from "../../images/email-vera.png";
 
 class Contato extends Component {
   render() {
@@ -138,8 +141,9 @@ class Contato extends Component {
                 <br/>
                 Vera de Moraes
                 <br/>
-                <b>Emails: </b>
+                <b>Emails: </b> <img src={email_darli}/>, <img src={email_marcella}/>, <img src={email_vera}/>
                 <br/>
+                <b>Telefones: </b>  (16) 3351-8231, 3351-8230, 3351-8232
               </p>
               
               <p>
