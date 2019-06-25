@@ -8,7 +8,10 @@ import {
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
+import motivacao from "./components/Motivacao";
+import ingresso from "./components/Ingresso";
+import auxilio from "./components/Auxilio";
+import sobre_sao_carlos from './components/SobreSaoCarlos';
 
 const tabs = [
   {
@@ -20,7 +23,7 @@ const tabs = [
     },
     content: {
       title: "Motivação para Estudar na UFSCar",
-      body: placeholder,
+      body: motivacao,
     },
   },
   {
@@ -32,7 +35,7 @@ const tabs = [
     },
     content: {
       title: "Como ingressar?",
-      body: placeholder2,
+      body: ingresso,
     },
   },
   {
@@ -44,7 +47,7 @@ const tabs = [
     },
     content: {
       title: "Auxílios Permanência",
-      body: placeholder,
+      body: auxilio,
     },
   },
   {
@@ -56,7 +59,7 @@ const tabs = [
     },
     content: {
       title: "Sobre São Carlos",
-      body: placeholder2,
+      body: sobre_sao_carlos,
     },
   },
 ];
