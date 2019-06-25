@@ -12,7 +12,7 @@ const suporte = [
   {
     title: "Reserva de Sala",
     subTitle: "Orientações e formulário para reserva de sala no DC.",
-    link: "/suporte/informacoes-iniciais/reserva-de-salas",
+    link: "http://reserva.dc.ufscar.br",
   },
   {
     title: "Solicitação de afastamento",
