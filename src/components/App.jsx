@@ -28,6 +28,7 @@ import TecnicoAdministrativos from "../routes/TecnicoAdministrativos";
 import TopBar from "./TopBar";
 import Contato from "../routes/Contato";
 import Institucional from "../routes/Institucional";
+import EmConstrucao from "./EmConstrucao";
 
 class App extends Component {
   constructor(props) {
@@ -69,7 +70,7 @@ class App extends Component {
               <Route exact path="/graduacao" component={Graduacao} />
               <Route exact path="/pos-graduacao" component={PosGraduacao} />
               <Route exact path="/laboratorios" component={Laboratorios} />
-              <Route exact path="/catalogo" component={Catalogo} />
+              <Route exact path="/catalogo" component={EmConstrucao} /> {/* Voltar para Catalogo quando finalizado */}
               <Route exact path="/alunos" component={AnosAlunos} />
               <Route exact path="/alunos/:curso/:ano" component={Alunos} />
               <Route exact path="/suporte/links" component={LinksSuporte} />
@@ -77,6 +78,7 @@ class App extends Component {
               <Route exact path="/graduacao/enc" component={ENC} />
               <Route exact path="/contato" component={Contato} />
               <Route exact path="/institucional" component={Institucional} />
+              <Route exact path="/atividades" component={EmConstrucao} />
 
               <Route
                 exact

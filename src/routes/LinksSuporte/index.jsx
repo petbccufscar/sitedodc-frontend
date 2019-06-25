@@ -35,7 +35,7 @@ const suporte = [
   {
     title: "Wi-Fi para visitantes",
     subTitle: "Guia de acesso Wi-Fi para Visitantes.",
-    link: "/suporte/nossa-rede/visitante-acesso-wi-fi",
+    link: "http://www.sin.ufscar.br/servicos/conectividade/rede-sem-fio-para-visitante",
   },
 ];
 
