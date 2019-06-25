@@ -57,7 +57,7 @@ const tabs = [
       showHeader: false,
     },
     content: {
-      title: "TCC",
+      title: "Atividades extra-currículares",
       body: placeholder, 
     }
   },
