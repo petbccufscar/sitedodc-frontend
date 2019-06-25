@@ -40,9 +40,10 @@ class Rodape extends Component {
           </div>
         </div>
 
-        <div className="footer-copyright py-3  bg-dark text-light text-center">
+        <div className="footer-copyright py-2 text-light text-center">
           © 2018 Departamento de Computação - UFSCar. Todos os direitos
-          reservados.
+          reservados.<br/>
+          <small> Desenvolvido pelo grupo <a target="blank" href="https://pet-bcc.ufscar.br">PET-BCC</a>.</small>
         </div>
       </footer>
     );
