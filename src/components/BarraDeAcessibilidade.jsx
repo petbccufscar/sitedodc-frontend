@@ -33,10 +33,10 @@ const BarraDeAcessibilidade = props => (
           </Badge>
         </ul>
         <ul id="botoes" className="list-inline mb-0 ml-auto">
-          <Badge link="/acessibilidade">
+          {/* <Badge link="/acessibilidade">
             <FontAwesomeIcon icon="universal-access" className="mr-1" />
             <span className="d-none d-sm-inline-block">Acessibilidade</span>
-          </Badge>
+          </Badge> */}
           <Badge link="#" onClick={e => props.onClick(e)}>
             <FontAwesomeIcon icon="adjust" className="mr-1" />
             <span className="d-none d-sm-inline-block">Alto contraste</span>
