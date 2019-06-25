@@ -51,6 +51,18 @@ const tabs = [
   },
   {
     props: {
+      panelId: "ativExtras",
+      title: "Atividades extra-currículares",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "TCC",
+      body: placeholder, 
+    }
+  },
+  {
+    props: {
       panelId: "tcc",
       title: "TCC",
       header: "",

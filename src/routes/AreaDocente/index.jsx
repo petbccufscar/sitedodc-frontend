@@ -30,7 +30,7 @@ const data = {
     {
       title: "Afastamento",
       subTitle: "Formulário de afastamento.",
-      link: "#",
+      link: "http://www3.dc.ufscar.br:8080/Afastamento/",
     },
     {
       title: "Agendamento de bancas",
@@ -47,7 +47,7 @@ const data = {
     {
       title: "Sistema de suporte",
       subTitle: "Contato com o suporte do DC.",
-      link: "#",
+      link: "http://suporte.dc.ufscar.br/otrs/customer.pl",
     },
     {
       title: "Periodicos",
