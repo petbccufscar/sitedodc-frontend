@@ -11,6 +11,8 @@ import { TabPanel } from "react-web-tabs";
 import { placeholder, placeholder2 } from "../../components/placeholders";
 import ofertas from "./components/Ofertas";
 import alunosEspeciais from "./components/AlunosEspeciais";
+import atividades from "./components/AtividadesExtra";
+import tcc from "./components/TCC";
 
 const tabs = [
   {
@@ -58,7 +60,7 @@ const tabs = [
     },
     content: {
       title: "Atividades extra-currículares",
-      body: placeholder, 
+      body: atividades, 
     }
   },
   {
@@ -70,7 +72,7 @@ const tabs = [
     },
     content: {
       title: "TCC",
-      body: placeholder, 
+      body: tcc, 
     }
   }
 ]
