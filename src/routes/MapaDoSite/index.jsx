@@ -25,7 +25,7 @@ const mapa = [
       { title: "Engenharia da Computação", href: "/graduacao/enc" },
       { title: "Sistemas de Informação", href: "/graduacao/si" },
       { title: "Estágio", href: "/graduacao/estagio" },
-      { title: "Alunos externos", href: "/graduacao/alunos-externos" },
+      { title: "Alunos especiais", href: "/graduacao/alunos-externos" },
       { title: "TCC", href: "/graduacao/tcc" },
     ],
   },
@@ -39,15 +39,13 @@ const mapa = [
   {
     header: <h4>Pesquisa</h4>,
     items: [
-      { title: "Catálogo", href: "/catalogo" },
       { title: "Laboratórios", href: "/laboratorios" },
     ],
   },
   {
     header: <h4>Extensão</h4>,
     items: [
-      { title: "Alunos em ação", href: "alunos-em-acao" },
-      { title: "Projetos e ações", href: "projetos-e-acoes" },
+      { title: "Alunos em ação", href: "/alunos-em-acao" },
     ],
   },
   {
@@ -61,10 +59,7 @@ const mapa = [
   {
     header: <h4>Institucional</h4>,
     items: [
-      { title: "Sobre", href: "/sobre" },
-      { title: "Linha do Tempo", href: "/linha-do-tempo" },
-      { title: "Infraestrutura", href: "/infraestrutura" },
-      { title: "Contato", href: "/contato" },
+      { title: "Institucional", href: "/institucional" },
     ],
   },
   {

@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const data = {
   Sistemas: [
     {
-      title: "Siga",
-      subTitle: "Sistema integrado de gestão acadêmica.",
+      title: "SIGA",
+      subTitle: "Sistema Integrado de Gestão Acadêmica",
       link: "https://siga.ufscar.br",
     },
     {
       title: "SAGUI",
-      subTitle: "Sistema de Apoio à Gestão Universitária Integrada (SAGUI).",
+      subTitle: "Sistema de Apoio à Gestão Universitária Integrada (SAGUI)",
       link: "https://sistemas.ufscar.br/sagui/",
     },
     {
@@ -22,7 +22,7 @@ const data = {
     },
     {
       title: "Reserva de salas",
-      subTitle: "Ferramenta para reserva de salas no departamento.",
+      subTitle: "Ferramenta para reserva de salas no departamento",
       link: "http://reserva.dc.ufscar.br",
     },
   ],
@@ -34,15 +34,15 @@ const data = {
     },
     {
       title: "Agendamento de bancas",
-      subTitle: "Formulário para agendamento de bancas.",
-      link: "#",
+      subTitle: "Formulário para agendamento de bancas",
+      link: "http://www2.dc.ufscar.br/inscricao/index.jsp?form=ppgcc/AprovacaoBanca",
     },
   ],
   Suporte: [
     {
       title: "Criação de salas no Moodle",
-      subTitle: "Guia de como criar salas no Moodle.",
-      link: "#",
+      subTitle: "Guia de como criar salas no Moodle",
+      link: "https://ava.ead.ufscar.br/siscad/",
     },
     {
       title: "Sistema de suporte",
@@ -50,13 +50,13 @@ const data = {
       link: "http://suporte.dc.ufscar.br/otrs/customer.pl",
     },
     {
-      title: "Periodicos",
-      subTitle: "Acesso á periodicos disponiveis.",
-      link: "#",
+      title: "Periódicos",
+      subTitle: "Acesso a periódicos disponíveis",
+      link: "http://www.periodicos.capes.gov.br/",
     },
     {
       title: "Eduroam",
-      subTitle: "Como acessar a rede Eduroam.",
+      subTitle: "Como acessar a rede Eduroam",
       link:
         "http://www.sin.ufscar.br/servicos/conectividade/rede-sem-fio-eduroam-1",
     },
