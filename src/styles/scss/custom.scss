@@ -7,11 +7,6 @@ body {
     padding-top: 110px;
 }
 
-none {
-    padding: 0;
-    margin: 0;
-}
-
 @include media-breakpoint-down(sm) {
     .sm-hide {
         display: none;
@@ -84,10 +79,6 @@ none {
     height: 230px;
     object-fit: cover;
     object-position: top;
-}
-
-.no-decoration {
-    text-decoration: none !important;
 }
 
 .card-img-rounded {

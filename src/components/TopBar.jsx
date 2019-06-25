@@ -125,7 +125,7 @@ class TopBar extends Component {
                     </Link>
                   </div>
                 </li>
-                <li className="nav-item text-center pointer">
+                <li className="nav-item text-center">
                   <Link to="/institucional">
                     <MenuButton
                       titulo="Institucional"

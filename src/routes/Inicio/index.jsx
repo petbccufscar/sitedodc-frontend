@@ -48,22 +48,6 @@ class Inicio extends Component {
                 <div className="row mb-4 mt-4 rounded bg-primary sm-hide">
                   <BannerArea>
                     <Carousel>
-                      {/* {loading ? (
-                        <CarouselLoader />
-                      ) : error ? (
-                        `Error! ${error.message}`
-                      ) : (
-                        data.banners.map((banner, index) => (
-                          <CarouselBanner
-                            key={index}
-                            banner={
-                              process.env.REACT_APP_API_URL + banner.Imagem.url
-                            }
-                            texto="Legenda da foto aqui"
-                            active={index == 0}
-                          />
-                        ))
-                      )} */}
                     <CarouselBanner
                             banner={banner1}
                             texto="Departamento de Computação conta com 6 
