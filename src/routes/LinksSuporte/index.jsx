@@ -10,11 +10,6 @@ const suporte = [
     link: "http://moodle.dc.ufscar.br/",
   },
   {
-    title: "Microsoft Imagine (Indisponível)",
-    subTitle: "Portal do DC de acesso ao Programa Microsoft Imagine.",
-    link: "/imagine",
-  },
-  {
     title: "Reserva de Sala",
     subTitle: "Orientações e formulário para reserva de sala no DC.",
     link: "/suporte/informacoes-iniciais/reserva-de-salas",
