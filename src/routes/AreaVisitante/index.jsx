@@ -7,6 +7,7 @@ import {
   VerticalTabs,
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
+import { placeholder, placeholder2 } from "../../components/placeholders";
 
 import motivacao from "./components/Motivacao";
 import ingresso from "./components/Ingresso";
@@ -36,6 +37,18 @@ const tabs = [
     content: {
       title: "Como ingressar?",
       body: ingresso,
+    },
+  },
+  {
+    props: {
+      panelId: "disciplinas",
+      title: "Ofertas de disciplinas",
+      header: "Informações",
+      showHeader: false,
+    },
+    content: {
+      title: "Ofertas de disciplinas",
+      body: placeholder,
     },
   },
   {

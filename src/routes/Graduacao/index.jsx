@@ -40,12 +40,12 @@ const tabs = [
   {
     props: {
       panelId: "estagios",
-      title: "Estágios",
+      title: "Estágio",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Estágios",
+      title: "Estágio",
       body: placeholder, 
     }
   },
