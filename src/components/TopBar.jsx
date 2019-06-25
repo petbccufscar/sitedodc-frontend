@@ -77,16 +77,16 @@ class TopBar extends Component {
                       Graduação
                     </Link>
                     <Link to={"/pos-graduacao"} className="dropdown-item">
-                      Pós Graduação
+                      Pós-graduação
                     </Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
                   <MenuButton titulo="Pesquisa" icone="book" dropdown />
                   <div className="dropdown-menu">
-                    <Link to={"/catalogo"} className="dropdown-item">
+                    {/*<Link to={"/catalogo"} className="dropdown-item">
                       Catálogo
-                    </Link>
+                      </Link>*/}
                     <Link to={"/laboratorios"} className="dropdown-item">
                       Laboratórios
                     </Link>
@@ -102,9 +102,9 @@ class TopBar extends Component {
                     >
                       Alunos em Ação
                     </Link>
-                    <Link to={"/atividades"} className="dropdown-item" href="#">
+                    {/*<Link to={"/atividades"} className="dropdown-item" href="#">
                       Atividades
-                    </Link>
+                    </Link>*/}
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">

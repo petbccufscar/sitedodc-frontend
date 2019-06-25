@@ -40,12 +40,24 @@ const tabs = [
   {
     props: {
       panelId: "estagios",
-      title: "Estágios",
+      title: "Estágio",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Estágios",
+      title: "Estágio",
+      body: placeholder, 
+    }
+  },
+  {
+    props: {
+      panelId: "ativExtras",
+      title: "Atividades extra-currículares",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Atividades extra-currículares",
       body: placeholder, 
     }
   },

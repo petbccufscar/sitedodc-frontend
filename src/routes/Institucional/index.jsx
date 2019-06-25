@@ -76,18 +76,6 @@ const tabs = [
       body: infraestrutura, 
     }
   },
-  {
-    props: {
-      panelId: "dc-pelo-mundo",
-      title: "DC pelo mundo",
-      header: "",
-      showHeader: false,
-    },
-    content: {
-      title: "DC pelo mundo",
-      body: placeholder, 
-    }
-  },
 ];
 
 class Institucional extends Component {
