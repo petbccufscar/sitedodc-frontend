@@ -4,7 +4,7 @@ import {
     AvatarCardBody,
     AvatarContainer,
 } from "../../../components/avatar-card/avatar_card";
-import { FourCards } from "../../../components/cards";
+import { ThreeCards } from "../../../components/cards";
 import { Query } from "react-apollo";
 import { GET_CHEFIA } from "../../../utils/queries";
 
@@ -56,10 +56,12 @@ const GaleriaChefia = (
                     }
 
                     return data.chefias.map((chefia) => (
-                        <FourCards>
-                            <AvatarCardImage  foto={chefia.Foto ? `${process.env.REACT_APP_API_URL}/${chefia.Foto.url}` : null}/>
-                            <AvatarCardBody nome={chefia.Nome} />
-                        </FourCards> 
+                        <ThreeCards>
+                            <AvatarCardImage foto={chefia.Foto ? `${process.env.REACT_APP_API_URL}/${chefia.Foto.url}` : null}/>
+                            <AvatarCardBody nome={chefia.Nome}>
+                                {/* TODO: colocar as outras info da chefia */}
+                            </AvatarCardBody>
+                        </ThreeCards> 
                     ));
                 }}
             </Query>

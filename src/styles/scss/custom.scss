@@ -7,6 +7,11 @@ body {
     padding-top: 110px;
 }
 
+none {
+    padding: 0;
+    margin: 0;
+}
+
 @include media-breakpoint-down(sm) {
     .sm-hide {
         display: none;
