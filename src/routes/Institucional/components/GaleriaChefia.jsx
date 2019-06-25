@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
     AvatarCardImage,
     AvatarCardBody,
@@ -8,40 +8,6 @@ import { ThreeCards } from "../../../components/cards";
 import { Query } from "react-apollo";
 import { GET_CHEFIA } from "../../../utils/queries";
 
-const chefias = [
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    },
-    {
-        Nome: "Vânia Neris",
-        Foto: "https://api.dc.ufscar.br//uploads/7a6d19b3e2794ed8b2ab12428c049a9e.png"
-    }
-]
 
 const GaleriaChefia = (
     <React.Fragment>
