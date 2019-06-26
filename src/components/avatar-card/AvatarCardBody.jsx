@@ -5,9 +5,7 @@ const AvatarCardBody = ({ nome = ' ', children}) => {
   return (
     <div className="card-body text-center">
       <h5 className="card-title">{ nome }</h5>
-      <div className="text-left">
         {children}
-      </div>
     </div>
   );
 };

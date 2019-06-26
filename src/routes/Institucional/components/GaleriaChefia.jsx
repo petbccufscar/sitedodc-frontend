@@ -8,6 +8,45 @@ import { ThreeCards } from "../../../components/cards";
 import { Query } from "react-apollo";
 import { GET_CHEFIA } from "../../../utils/queries";
 
+const chefias = [
+    {
+        Nome: "Vânia",
+        Titulo: "Chefe",
+        Ano: 2019,
+        Foto: "", 
+    },
+    {
+        Nome: "Valter",
+        Titulo: "Vice-Chefe",
+        Ano: 2019,
+        Foto: "", 
+    },
+    {
+        Nome: "Vânia",
+        Titulo: "Chefe",
+        Ano: 2019,
+        Foto: "", 
+    },
+    {
+        Nome: "Valter",
+        Titulo: "Vice-Chefe",
+        Ano: 2019,
+        Foto: "", 
+    },
+    {
+        Nome: "Vânia",
+        Titulo: "Chefe",
+        Ano: 2019,
+        Foto: "", 
+    },
+    {
+        Nome: "Valter",
+        Titulo: "Vice-Chefe",
+        Ano: 2019,
+        Foto: "", 
+    },
+]
+
 
 const GaleriaChefia = (
     <React.Fragment>
@@ -17,17 +56,18 @@ const GaleriaChefia = (
                     if (loading) {
                     return <div />;
                     }
-                    if (error) {
-                    return `Error! ${error.message}`;
-                    }
+                    // if (error) {
+                    // return `Error! ${error.message}`;
+                    // }
 
-                    return data.chefias.map((chefia) => (
+                    return chefias.map((chefia) => (
                         <ThreeCards>
                             <AvatarCardImage foto={chefia.Foto ? `${process.env.REACT_APP_API_URL}/${chefia.Foto.url}` : null}/>
                             <AvatarCardBody nome={chefia.Nome}>
-                                {/* TODO: colocar as outras info da chefia */}
+                                {chefia.Titulo} <br/>
+                                <small className="p-0">{chefia.Ano} - {chefia.Ano + 1}</small>
                             </AvatarCardBody>
-                        </ThreeCards> 
+                        </ThreeCards>
                     ));
                 }}
             </Query>
