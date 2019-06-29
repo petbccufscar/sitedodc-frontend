@@ -47,27 +47,26 @@ const chefias = [
     },
 ]
 
-
 const GaleriaChefia = (
     <React.Fragment>
         <div className="row">
             <div className="col-md-8">
                 <AvatarContainer>
                     <Query query={GET_CHEFIA}>
-                        {({loading}) => {
+                        {({data, loading, error}) => {
                             if (loading) {
                             return <div />;
                             }
-                            // if (error) {
-                            // return `Error! ${error.message}`;
-                            // }
+                            if (error) {
+                            return `Error! ${error.message}`;
+                            }
 
-                            return chefias.map((chefia) => (
+                            return data.chefias.sort(compare).map((chefia) => (
                                 <TwoCards>
                                     <AvatarCardImage foto={chefia.Foto ? `${process.env.REACT_APP_API_URL}/${chefia.Foto.url}` : null}/>
                                     <AvatarCardBody nome={chefia.Nome}>
                                         {chefia.Titulo} <br/>
-                                        <small className="p-0">{chefia.Ano} - {chefia.Ano + 1}</small>
+                                        <small className="p-0">{chefia.ano} - {chefia.ano + 1}</small>
                                     </AvatarCardBody>
                                 </TwoCards>
                             ));
@@ -79,5 +78,13 @@ const GaleriaChefia = (
         </div>
     </React.Fragment>
 );
+
+function compare(a,b) {
+    if (a.ano > b.ano) return -1;
+    if (a.ano < b.ano) return 1;
+    if (a.Titulo < b.Titulo) return -1;
+    if (a.Titulo > b.Titulo) return 1;
+    return 0; 
+}
 
 export default GaleriaChefia;
