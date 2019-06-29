@@ -7,7 +7,7 @@ const CarouselBanner = ({ banner, active, texto, creditos, alt }) => (
   <div className={active ? "carousel-item active" : "carousel-item"}>
     <img className="w-100 banner rounded-left" src={banner} alt={alt} />
     <div className="carrossel-legenda p-0">
-      <p className="pl-4 pt-2">{texto}<br/><small className="p-0">{creditos}</small></p>
+      <p className="pl-4 pt-2 mb-1">{texto}<br/><small>{creditos}</small></p>
     </div>
   </div>
 );
