@@ -42,15 +42,22 @@ const AnosAlunos = () => {
             if(loading || error) return <div />;
             console.log(data.inicio[0].Ano);
             const currentYear = data.mais_recente[0].Ano;
-            const startYear = data.inicio[0].Ano;
-            const years = currentYear - startYear + 1;
+            const startYearBCC = 1975;
+            const startYearENC = 1992;
+            const yearsBCC = currentYear - startYearBCC + 1;
+            const yearsENC = currentYear - startYearENC + 1;
           
-            let bccLinks = Array.apply(null, { size: years });
-            let encLinks = Array.apply(null, { size: years });
-            for (let year = currentYear, i = 0; year >= startYear; year--, i++) {
+            let bccLinks = Array.apply(null, { size: yearsBCC });
+            let encLinks = Array.apply(null, { size: yearsENC});
+            
+            for (let year = currentYear, i = 0; year >= startYearBCC; year--, i++) {
               bccLinks[i] = generateLinkToYear(year, "bcc");
+            }
+
+            for (let year = currentYear, i = 0; year >= startYearENC; year--, i++) {
               encLinks[i] = generateLinkToYear(year, "enc");
             }
+
             return (
               <React.Fragment>
                 <Curso
