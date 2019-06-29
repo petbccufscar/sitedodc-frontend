@@ -13,28 +13,16 @@ import { placeholder, placeholder2 } from "../../components/placeholders";
 const tabs = [
   {
     props: {
-      panelId: "lato-sensu",
-      title: "Lato Sensu",
+      panelId: "distribuicao",
+      title: "Distribuição de Disciplinas",
       header: "",
       showHeader: false
     },
     content: {
-      title: "Lato Sensu",
+      title: "Distribuição de Disciplinas",
       body: placeholder
     }
   },
-  {
-    props: {
-      panelId: "stricto-sensu",
-      title: "Stricto Sensu",
-      header: "",
-      showHeader: false
-    },
-    content: {
-      title: "Stricto Sensu",
-      body: placeholder2
-    }
-  }
 ];
 
 class PosGraduacao extends Component {

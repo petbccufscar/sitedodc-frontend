@@ -52,24 +52,28 @@ class Inicio extends Component {
                             banner={banner1}
                             texto="Departamento de Computação conta com 6 
                             laboratórios de ensino e mais de 20 laboratórios de pesquisa."
+                            creditos="Fotografia: Guilherme Rabello"
                             active={true}
                           />
                     <CarouselBanner
                             banner={banner2}
                             texto="Engenharia de Computação da UFSCar obtém 
                             nota máxima no ENADE 2017."
+                            creditos="Fotografia: Guilherme Rabello"
                             active={false}
                           />
                     <CarouselBanner
                             banner={banner3}
                             texto="Bacharelado em Ciência da Computação recebe 5 estrelas 
                             no último Guia do Estudante."
+                            creditos="Fotografia: Guilherme Rabello"
                             active={false}
                           />
                     <CarouselBanner
                             banner={banner_secomp}
                             texto="Mais de 3.600 alunos formados 
                             no Departamento de Computação."
+                            creditos="Fotografia: SECOMP"
                             active={false}
                           />
                     </Carousel>
