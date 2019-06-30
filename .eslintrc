@@ -15,12 +15,30 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y"],
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
   "rules": {
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "double"],
-    "semi": ["error", "always"]
+    "indent": [
+      "error",
+      2
+    ],
+    "jsx-a11y/img-has-alt": [
+      0
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
   },
   "settings": {
     "react": {
