@@ -28,7 +28,7 @@ que em cada um deles há as seguintes máquinas:
 **LE6**
 - 19 COMPUTADORES 
 - Intel core 2 Quad, 4GB, HD 320 e HD 250GB, monitor 17".
-`
+`;
 
 const Infraestrutura = (
   <React.Fragment>

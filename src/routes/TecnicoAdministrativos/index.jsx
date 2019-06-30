@@ -43,7 +43,7 @@ class TecnicoAdministrativos extends Component {
                             classnames="card-img-rounded rounded-circle"
                             src={`${process.env.REACT_APP_API_URL}/${
                               funcionario.Foto.url
-                            }`}
+                              }`}
                             alt={"alt"}
                           />
                         </div>
@@ -53,7 +53,7 @@ class TecnicoAdministrativos extends Component {
                         <p className="card-text">
                           {funcionario.Area} <br />
                           {`Telefone: ${funcionario.Telefone}`} <br />
-                          {`Email:`} <img src={EmailsImage.getEmailImagePath(funcionario.Email)}/>
+                          {`Email:`} <img src={EmailsImage.getEmailImagePath(funcionario.Email)} />
                         </p>
                       </div>
                     </CardBody>

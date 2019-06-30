@@ -45,10 +45,8 @@ class Laboratorios extends Component {
                 </SideMenu>
                 <TabPanelContainer>
                   {data.laboratorios.map((lab, index) => {
-                      {console.log(lab.NomeExpandido)}
 
                     return (
-
                         <TabPanel key={"p_" + index} tabId={`grupo-${lab.Nome}`}>
                         <LabsContent
                           logoSrc={`${process.env.REACT_APP_API_URL}/${

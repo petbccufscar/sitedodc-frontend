@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { row } from "./style";
 
@@ -9,6 +9,6 @@ const AvatarContainer = ({ children }) => {
 
 AvatarContainer.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element)
-}
+};
 
 export default AvatarContainer;

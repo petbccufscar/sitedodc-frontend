@@ -57,7 +57,7 @@ class Docente extends Component {
                         icon="graduation-cap"
                         className="d-inline-block mr-2"
                       />
-                      Nível: {data.docente.Nivel=='Pos' ? 'Pós Doutorado': data.docente.Nivel}
+                      Nível: {data.docente.Nivel == "Pos" ? "Pós Doutorado" : data.docente.Nivel}
                     </p>
                     {data.docente.Areas &&
                       data.docente.Areas.length > 0 &&
@@ -73,7 +73,7 @@ class Docente extends Component {
                         icon="envelope"
                         className="d-inline-block mr-2"
                       />
-                      Email: <img src={EmailsImage.getEmailImagePath(data.docente.Email)}/>
+                      Email: <img src={EmailsImage.getEmailImagePath(data.docente.Email)} alt={"e-mail do docente " + data.docente.Nome} />
                     </p>
                     <p>
                       <FontAwesomeIcon

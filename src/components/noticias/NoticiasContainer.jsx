@@ -13,7 +13,7 @@ const NoticiasContainer = ({ children }) => {
         </Link>
       </div>
       <CardContainer >
-      {children}
+        {children}
       </CardContainer>
     </React.Fragment>
   );

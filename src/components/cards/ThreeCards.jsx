@@ -1,5 +1,5 @@
 import React from "react";
-import { defaultCardThreeColumns } from './styles'
+import { defaultCardThreeColumns } from "./styles";
 import Card from "./Card";
 
 const FourCards = ({ classnames, children }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import Loader from "./Loader";
 import Img from "./Img";
@@ -27,11 +27,11 @@ class ImageLoader extends React.Component {
 
     img.onerror = () => {
       if (fallback) {
-      this.setState({
-        loaded: true,
-        imgSrc: fallback,
-      });
-    }
+        this.setState({
+          loaded: true,
+          imgSrc: fallback,
+        });
+      }
     };
   }
 
@@ -43,7 +43,7 @@ class ImageLoader extends React.Component {
 
       src,
       fallback,
-      
+
       ...imgProps
     } = this.props;
     const { loaded, imgSrc } = this.state;
@@ -73,6 +73,6 @@ ImageLoader.propTypes = {
   fallback: PropTypes.string,
   title: PropTypes.string,
   alt: PropTypes.string.isRequired,
-}
+};
 
 export default ImageLoader;

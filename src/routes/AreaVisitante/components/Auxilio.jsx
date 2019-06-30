@@ -12,9 +12,9 @@ temos a [bolsa alimentação](http://www.proace.ufscar.br/bolsa-e-auxilio-para-e
 `
 
 const Auxilio = (
- <React.Fragment>
-   <ReactMarkdown linkTarget="_blank" source={content}/>
- </React.Fragment>
+  <React.Fragment>
+    <ReactMarkdown linkTarget="_blank" source={content} />
+  </React.Fragment>
 );
 
 export default Auxilio;
