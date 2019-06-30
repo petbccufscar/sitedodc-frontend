@@ -1,12 +1,6 @@
 import React from "react";
 import { Timeline, Event } from "./timeline";
 
-import { ImageLoader } from "../../../components/image-loader";
-
-import ImgCapa from "../../../images/capa40anos.png";
-import ImgRegua from "../../../images/sobre1.jpg";
-import ImgPatio from "../../../images/sobre2.jpg";
-
 class LinhaDoTempo extends React.Component {
   constructor(props) {
     super(props);

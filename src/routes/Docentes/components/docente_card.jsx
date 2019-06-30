@@ -26,9 +26,9 @@ const DocenteCard = ({ docente }) => (
 
         <p className="card-text">
           {`${docente.Tipo}-${docente.Horas}h/DE`} <br />
-          {`Nível: ${docente.Nivel == 'Pos' ? 'Pós-doutorado' : docente.Nivel}`} <br />
+          {`Nível: ${docente.Nivel === "Pos" ? "Pós-doutorado" : docente.Nivel}`} <br />
           {`Telefone: ${docente.Telefone}`} <br />
-          {`Email:`}  <img src={EmailsImage.getEmailImagePath(docente.Email)} />
+          {`Email:`}  <img src={EmailsImage.getEmailImagePath(docente.Email)} alt={`e-mail do docente ${docente.Nome}`} />
         </p>
       </div>
     </CardBody>

@@ -8,45 +8,6 @@ import { TwoCards } from "../../../components/cards";
 import { Query } from "react-apollo";
 import { GET_CHEFIA } from "../../../utils/queries";
 
-const chefias = [
-    {
-        Nome: "Vânia",
-        Titulo: "Chefe",
-        Ano: 2019,
-        Foto: "",
-    },
-    {
-        Nome: "Valter",
-        Titulo: "Vice-Chefe",
-        Ano: 2019,
-        Foto: "",
-    },
-    {
-        Nome: "Vânia",
-        Titulo: "Chefe",
-        Ano: 2019,
-        Foto: "",
-    },
-    {
-        Nome: "Valter",
-        Titulo: "Vice-Chefe",
-        Ano: 2019,
-        Foto: "",
-    },
-    {
-        Nome: "Vânia",
-        Titulo: "Chefe",
-        Ano: 2019,
-        Foto: "",
-    },
-    {
-        Nome: "Valter",
-        Titulo: "Vice-Chefe",
-        Ano: 2019,
-        Foto: "",
-    },
-]
-
 const GaleriaChefia = (
     <React.Fragment>
         <div className="row">

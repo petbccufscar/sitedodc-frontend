@@ -53,7 +53,7 @@ class TecnicoAdministrativos extends Component {
                         <p className="card-text">
                           {funcionario.Area} <br />
                           {`Telefone: ${funcionario.Telefone}`} <br />
-                          {`Email:`} <img src={EmailsImage.getEmailImagePath(funcionario.Email)} />
+                          {`Email:`} <img src={EmailsImage.getEmailImagePath(funcionario.Email)} alt={`e-mail do técnico administrativo ${funcionario.Nome}`} />
                         </p>
                       </div>
                     </CardBody>

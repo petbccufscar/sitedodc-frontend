@@ -8,7 +8,6 @@ import {
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
 import sobre from "./components/Sobre";
 import LinhaDoTempo from "./components/LinhaDoTempo";
 import infraestrutura from "./components/Infraestrutura";
