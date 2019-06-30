@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 // import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { ImageLoader } from "../../../components/image-loader";
 import ImgRegua from "../../../images/sobre1.jpg";
-import ImgPatio from "../../../images/sobre2.jpg";
 
 const Sobre = (
   <React.Fragment>

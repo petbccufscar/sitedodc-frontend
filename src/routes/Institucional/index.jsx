@@ -8,7 +8,6 @@ import {
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
 import sobre from "./components/Sobre";
 import LinhaDoTempo from "./components/LinhaDoTempo";
 import infraestrutura from "./components/Infraestrutura";
@@ -37,7 +36,7 @@ const tabs = [
     },
     content: {
       title: "Histórico",
-      body: historico, 
+      body: historico,
     }
   },
   {
@@ -49,7 +48,7 @@ const tabs = [
     },
     content: {
       title: "Linha do Tempo",
-      body: <LinhaDoTempo/>, 
+      body: <LinhaDoTempo />,
     }
   },
   {
@@ -61,7 +60,7 @@ const tabs = [
     },
     content: {
       title: "Galeria da Chefia",
-      body: galeria_chefia, 
+      body: galeria_chefia,
     }
   },
   {
@@ -73,7 +72,7 @@ const tabs = [
     },
     content: {
       title: "Infraestrutura",
-      body: infraestrutura, 
+      body: infraestrutura,
     }
   },
 ];
@@ -81,7 +80,7 @@ const tabs = [
 class Institucional extends Component {
   render() {
     return (
-        <React.Fragment>
+      <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Início</Breadcrumb>
           <Breadcrumb bold>Institucional</Breadcrumb>

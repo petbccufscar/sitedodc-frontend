@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import { column, cell } from "./style";
 
@@ -13,6 +13,6 @@ const AvatarCard = ({ children }) => {
 
 AvatarCard.propTypes = {
   children: PropTypes.arrayOf(PropTypes.element),
-}
+};
 
 export default AvatarCard;

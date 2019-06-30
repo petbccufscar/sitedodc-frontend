@@ -36,7 +36,7 @@ class Laboratorios extends Component {
                         panelId={`grupo-${tab.Nome}`}
                         title={`${tab.Nome}`}
                         header="Grupos de pesquisa"
-                        showHeader={index == 0}
+                        showHeader={index === 0}
                       >
                         {tab.Nome}
                       </VTab>
@@ -45,15 +45,13 @@ class Laboratorios extends Component {
                 </SideMenu>
                 <TabPanelContainer>
                   {data.laboratorios.map((lab, index) => {
-                      {console.log(lab.NomeExpandido)}
 
                     return (
-
-                        <TabPanel key={"p_" + index} tabId={`grupo-${lab.Nome}`}>
+                      <TabPanel key={"p_" + index} tabId={`grupo-${lab.Nome}`}>
                         <LabsContent
                           logoSrc={`${process.env.REACT_APP_API_URL}/${
                             lab.Logo.url
-                          }`}
+                            }`}
                           name={lab.NomeExpandido}
                           description={lab.Descricao}
                           docentes={lab.Docentes}

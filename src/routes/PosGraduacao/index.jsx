@@ -8,7 +8,7 @@ import {
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
+import { placeholder } from "../../components/placeholders";
 
 const tabs = [
   {

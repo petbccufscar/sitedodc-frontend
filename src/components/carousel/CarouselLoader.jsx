@@ -3,8 +3,8 @@ import ContentLoader from "react-content-loader";
 
 const CarouselLoader = props => (
   <ContentLoader
-  width={700}
-  height={280}
+    width={700}
+    height={280}
     speed={2}
     primaryColor="#f3f3f3"
     secondaryColor="#ecebeb"

@@ -28,7 +28,7 @@ class Alunos extends Component {
         </Breadcrumbs>
 
         <div className="container">
-        <CardContainer>
+          <CardContainer>
             <Query query={GET_ALUNOS} variables={{ ano: parseInt(ano), curso: curso.toUpperCase() }}>
               {({ loading, error, data }) => {
                 if (loading) {
