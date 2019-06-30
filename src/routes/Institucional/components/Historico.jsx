@@ -19,11 +19,11 @@ Em 1988, foi criado o Mestrado em Ciência da Computação. Um dos grandes desaf
 Em 1992 foi criado o curso de Engenharia de Computação. Foi em 2003 que as primeiras turmas de Pós-Graduação Lato Sensu na área de Computação começaram a se constituir na UFSCar – São Carlos. Antes disso, estas especializações eram oferecidas pelo DC em parceria com outras instituições.
 
 Em 2007, o DC criou o Bacharelado em Sistemas de Informação, na modalidade à distância. No mesmo ano, ocorreu a mudança para o prédio atual, que hoje possui 3.600 metros quadrados de área construída. Já em 2009 foi possível realizar um antigo sonho: a criação do curso de Doutorado.
-`
+`;
 
 const Historico = (
     <React.Fragment>
-        <ReactMarkdown source={content}/>
+        <ReactMarkdown source={content} />
     </React.Fragment>
 );
 

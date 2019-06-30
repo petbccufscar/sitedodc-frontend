@@ -24,7 +24,7 @@ class Noticias extends Component {
                 </React.Fragment>
               );
             }
-            if (error) return `Error! ${error.message}`;
+            if (error){ return `Error! ${error.message}`;}
 
             return data.noticias.map((noticia, index) => (
               <NoticiaCard

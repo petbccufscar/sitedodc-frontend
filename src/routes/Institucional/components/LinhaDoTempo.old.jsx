@@ -1,5 +1,4 @@
 import React from "react";
-// import { Breadcrumbs, Breadcrumb } from "../../components/Breadcrumbs";
 import { Timeline, Event } from "./timeline";
 
 import { ImageLoader } from "../../../components/image-loader";

@@ -32,7 +32,7 @@ class Contato extends Component {
               <br />
               <form>
                 <div className="form-group row col-12">
-                  <label for="nome" className="col-4 col-form-label">
+                  <label htmlFor="nome" className="col-4 col-form-label">
                     Nome
                   </label>{" "}
                   <div className="col-12 col-sm-8">
@@ -48,7 +48,7 @@ class Contato extends Component {
                   </div>
                 </div>
                 <div className="form-group row col-12">
-                  <label for="email" className="col-4 col-form-label">
+                  <label htmlFor="email" className="col-4 col-form-label">
                     E-mail
                   </label>
                   <div className="col-12 col-sm-8">
@@ -64,7 +64,7 @@ class Contato extends Component {
                   </div>
                 </div>
                 <div className="form-group row col-12">
-                  <label for="assunto" className="col-4 col-form-label">
+                  <label htmlFor="assunto" className="col-4 col-form-label">
                     Assunto
                   </label>
                   <div className="col-12 col-sm-8">
@@ -79,11 +79,7 @@ class Contato extends Component {
                   </div>
                 </div>
                 <div className="form-group row col-12">
-                  <label
-                    for="mensagem"
-                    style={{ marginBottom: "5px" }}
-                    className="col-12 col-form-label"
-                  >
+                  <label htmlFor="mensagem" style={{ marginBottom: "5px" }} className="col-12 col-form-label">
                     Mensagem
                   </label>
                   <div className="col-12">
@@ -123,30 +119,30 @@ class Contato extends Component {
                 />{" "}
                 Contato{" "}
               </h5>
-              
+
               <p><b>Chefia do DC:</b></p>
               <p>
                 Profa. Dra. Vânia Paula de Almeida Neris - Chefe
-                <br/>
+                <br />
                 Prof. Dr. Valter Vieira de Camargo - Vice-Chefe
-                <br/>
-                <b>Email: </b> <img src={email_chefia}/>
-                <br/>
+                <br />
+                <b>Email: </b> <img src={email_chefia} alt="e-mail da Vânia" />
+                <br />
               </p>
 
               <p><b>Secretaria do DC:</b></p>
               <p>
                 Darli José Morcelli
-                <br/>
+                <br />
                 Marcella Salomão
-                <br/>
+                <br />
                 Vera de Moraes
-                <br/>
-                <b>Emails: </b> <img src={email_darli}/>, <img src={email_marcella}/>, <img src={email_vera}/>
-                <br/>
+                <br />
+                <b>Emails: </b> <img src={email_darli} alt="e-mail do Darli" />, <img src={email_marcella} alt="e-mail da Marcella" />, <img src={email_vera} alt="e-mail da Vera" />
+                <br />
                 <b>Telefones: </b>  (16) 3351-8231, 3351-8230, 3351-8232
               </p>
-              
+
               <p>
                 <b>Precisa de atendimento técnico?</b>
               </p>

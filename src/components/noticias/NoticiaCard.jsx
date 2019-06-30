@@ -38,11 +38,7 @@ const NoticiaCard = ({ more, id, title, description, imagem, imageAlt, date }) =
       </CardFooter>
     </React.Fragment>
   );
-  return more ? (
-    <FourCards>{content}</FourCards>
-  ) : (
-    <TwoCards >{content}</TwoCards>
-  );
+  return more ? (<FourCards>{content}</FourCards>) : (<TwoCards >{content}</TwoCards>);
 };
 
 function formatarData(data) {

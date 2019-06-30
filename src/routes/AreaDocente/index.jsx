@@ -73,11 +73,7 @@ class AreaDocentes extends Component {
     );
     const isExternal = link.search("^[/#]") === -1;
 
-    return isExternal ? (
-      <a href={link}>{content}</a>
-    ) : (
-      <Link to={link}>{content}</Link>
-    );
+    return isExternal ? (<a href={link}>{content}</a>) : (<Link to={link}>{content}</Link>);
   }
 
   render() {
@@ -92,7 +88,7 @@ class AreaDocentes extends Component {
             <React.Fragment>
               <h4>{section}</h4>
               <div className="card-deck mb-4">
-                {data[section].map(card => (
+                {data[section].map((card) => (
                   <Card className="hoverable">
                     <CardBody>
                       {this.renderLink(card.link, card.title, card.subTitle)}

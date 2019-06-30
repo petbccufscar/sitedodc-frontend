@@ -4,7 +4,7 @@ import NoticiaCompleta from "./components/NoticiaCompleta";
 import NoticiaCompletaLoader from "./components/noticia_completa_loader";
 
 import { Query } from "react-apollo";
-import { GET_NOTICIA_COMPLETA } from '../../utils/queries';
+import { GET_NOTICIA_COMPLETA } from "../../utils/queries";
 
 
 class Noticia extends Component {

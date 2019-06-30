@@ -10,11 +10,7 @@ import { TabPanel } from "react-web-tabs";
 import { Link } from "react-router-dom";
 
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
-import ofertas from "./components/Ofertas";
-import alunosEspeciais from "./components/AlunosEspeciais";
-import atividades from "./components/AtividadesExtra";
-import tcc from "./components/TCC";
+import { placeholder } from "../../components/placeholders";
 
 const tabs = [
   {
@@ -26,33 +22,9 @@ const tabs = [
     },
     content: {
       title: "Distribuição de Disciplinas",
-      body: placeholder, 
+      body: placeholder,
     }
   },
-  // {
-  //   props: {
-  //     panelId: "ofertas",
-  //     title: "Ofertas de Disciplinas",
-  //     header: "",
-  //     showHeader: false,
-  //   },
-  //   content: {
-  //     title: "Ofertas de Disciplinas",
-  //     body: ofertas, 
-  //   }
-  // },
-  // {
-  //   props: {
-  //     panelId: "alunos-especiais",
-  //     title: "Alunos Especiais",
-  //     header: "",
-  //     showHeader: false,
-  //   },
-  //   content: {
-  //     title: "Alunos Especiais",
-  //     body: alunosEspeciais, 
-  //   }
-  // },
   {
     props: {
       panelId: "estagios",
@@ -62,7 +34,7 @@ const tabs = [
     },
     content: {
       title: "Estágio",
-      body: placeholder, 
+      body: placeholder,
     }
   },
   {
@@ -74,34 +46,10 @@ const tabs = [
     },
     content: {
       title: "Suporte",
-      body: placeholder, 
+      body: placeholder,
     }
-  },
-  // {
-  //   props: {
-  //     panelId: "ativExtras",
-  //     title: "Atividades extracurriculares",
-  //     header: "",
-  //     showHeader: false,
-  //   },
-  //   content: {
-  //     title: "Atividades extracurriculares",
-  //     body: atividades, 
-  //   }
-  // },
-  // {
-  //   props: {
-  //     panelId: "tcc",
-  //     title: "TCC",
-  //     header: "",
-  //     showHeader: false,
-  //   },
-  //   content: {
-  //     title: "TCC",
-  //     body: tcc, 
-  //   }
-  // }
-]
+  }
+];
 
 class Graduacao extends Component {
   render() {
@@ -116,12 +64,12 @@ class Graduacao extends Component {
             {tabs.map((tab, index) => {
               return (
                 tab.props.panelId === "suporte" ?
-                <Link to="/suporte/reportar" className="nav-link">
-                  {tab.props.title}
-                </Link> :
-                <VTab key={"t_" + index} {...tab.props}>
-                  {tab.props.title}
-                </VTab> 
+                  <Link to="/suporte/reportar" className="nav-link">
+                    {tab.props.title}
+                  </Link> :
+                  <VTab key={"t_" + index} {...tab.props}>
+                    {tab.props.title}
+                  </VTab>
               );
             })}
           </SideMenu>
@@ -130,7 +78,7 @@ class Graduacao extends Component {
               return (
                 <TabPanel key={"p_" + index} tabId={tab.props.panelId}>
                   <h4>{tab.content.title}</h4>
-                  <hr/>
+                  <hr />
                   {tab.content.body}
                 </TabPanel>
               );

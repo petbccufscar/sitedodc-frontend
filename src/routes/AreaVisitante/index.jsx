@@ -7,12 +7,12 @@ import {
   VerticalTabs,
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
-import { placeholder, placeholder2 } from "../../components/placeholders";
+import { placeholder } from "../../components/placeholders";
 
 import motivacao from "./components/Motivacao";
 import ingresso from "./components/Ingresso";
 import auxilio from "./components/Auxilio";
-import sobre_sao_carlos from './components/SobreSaoCarlos';
+import sobre_sao_carlos from "./components/SobreSaoCarlos";
 
 const tabs = [
   {

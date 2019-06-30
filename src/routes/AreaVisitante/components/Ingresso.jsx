@@ -18,9 +18,9 @@ Assim, a partir do ano de 2009 a UFSCar passou a realizar processo seletivo espe
 `
 
 const Motivacao = (
- <React.Fragment>
-   <ReactMarkdown source={content}/>
- </React.Fragment>
+  <React.Fragment>
+    <ReactMarkdown source={content} />
+  </React.Fragment>
 );
 
 export default Motivacao;

@@ -7,7 +7,6 @@ import AreaAluno from "../routes/AreaAluno";
 import AreaDocente from "../routes/AreaDocente";
 import AreaVisitante from "../routes/AreaVisitante";
 import BCC from "../routes/bcc";
-import Catalogo from "../routes/Catalogo";
 import Inicio from "../routes/Inicio";
 import Docente from "../routes/Docente";
 import Docentes from "../routes/Docentes";

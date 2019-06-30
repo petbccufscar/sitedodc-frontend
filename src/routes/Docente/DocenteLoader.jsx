@@ -2,7 +2,7 @@ import React from "react";
 
 import ContentLoader from "react-content-loader";
 
-const DocenteLoader = props => (
+const DocenteLoader = (props) => (
   <ContentLoader
     height={90}
     width={200}

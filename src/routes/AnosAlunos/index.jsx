@@ -28,7 +28,7 @@ const Curso = ({ name, links, classnames = "" }) => {
 };
 
 const AnosAlunos = () => {
-  
+
 
   return (
     <React.Fragment>
@@ -39,22 +39,21 @@ const AnosAlunos = () => {
       <main role="main" className="container" id="conteudo">
         <Query query={GET_INTERVALO}>
           {({ loading, error, data }) => {
-            if(loading || error) return <div />;
-            console.log(data.inicio[0].Ano);
+            if (loading || error) return <div />;
             const currentYear = data.mais_recente[0].Ano;
             const startYearBCC = 1975;
             const startYearENC = 1992;
             const yearsBCC = currentYear - startYearBCC + 1;
             const yearsENC = currentYear - startYearENC + 1;
-          
+
             let bccLinks = Array.apply(null, { size: yearsBCC });
-            let encLinks = Array.apply(null, { size: yearsENC});
-            
-            for (let year = currentYear, i = 0; year >= startYearBCC; year--, i++) {
+            let encLinks = Array.apply(null, { size: yearsENC });
+
+            for (let year = currentYear, i = 0; year >= startYearBCC; year-- , i++) {
               bccLinks[i] = generateLinkToYear(year, "bcc");
             }
 
-            for (let year = currentYear, i = 0; year >= startYearENC; year--, i++) {
+            for (let year = currentYear, i = 0; year >= startYearENC; year-- , i++) {
               encLinks[i] = generateLinkToYear(year, "enc");
             }
 
