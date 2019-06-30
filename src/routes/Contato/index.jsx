@@ -97,14 +97,15 @@ class Contato extends Component {
                       required="required"
                       placeholder="Digite a mensagem"
                     />
-                  </div>
+                  </div> <br/>                   <label className="col-12 col-sm-12 text-center">Essa funcionalidade ainda está sendo implementada, favor entrar em contato via e-mail!</label>
+
                 </div>
                 <div className="form-group row">
                   <div className="offset-4 col-8">
                     <button
                       name="enviar"
                       type="submit"
-                      className="btn btn-primary"
+                      className="btn btn-primary" disabled
                     >
                       Enviar
                     </button>

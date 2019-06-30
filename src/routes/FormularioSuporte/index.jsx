@@ -49,6 +49,7 @@ class FormularioSuporte extends Component {
                   />{" "}
                   Formulário{" "}
                 </h5>
+               
                 <br />
                 <form className="form-horizontal" method="post">
                   <fieldset>
@@ -112,13 +113,13 @@ class FormularioSuporte extends Component {
                         />
                       </div>
                     </div>
-
+                    <label className="col-12 col-sm-12 text-center">Essa funcionalidade ainda está sendo implementada, favor entrar em contato via e-mail!</label>
                     <div className="form-group row">
                       <div className="offset-4 col-md-4 text-center">
                         <button
                           name="enviar"
                           type="submit"
-                          className="btn btn-primary"
+                          className="btn btn-primary" disabled
                         >
                           Enviar
                         </button>
