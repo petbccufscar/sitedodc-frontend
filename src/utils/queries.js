@@ -13,13 +13,14 @@ export const GET_INTERVALO = gql`
 
 export const GET_CHEFIA = gql`
   query {
-    chefias(sort: "ano:DESC") {
+    galeriachefias(sort: "Ano_inicio:DESC") {
       Nome
+      Cargo
+      Ano_inicio,
+      Ano_fim
       Foto {
         url
       }
-      ano
-      Titulo
     }
   }
 `;
