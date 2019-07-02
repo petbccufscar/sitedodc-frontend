@@ -95,7 +95,7 @@ class Inicio extends Component {
 
                 <div className="mb-4 mt-4 rounded bg-primary sm-show">
                       <BotaoItem to="/area-aluno">
-                          <FontAwesomeIcon icon="user-grauduate" className="d-inline-block mr-3" />
+                          <FontAwesomeIcon icon="user-graduate" className="d-inline-block mr-3" />
                           Área do Aluno
                       </BotaoItem>
                       <BotaoItem to="/area-docente" className="border-top border-bottom">
