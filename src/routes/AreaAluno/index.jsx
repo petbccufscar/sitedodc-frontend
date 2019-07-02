@@ -16,12 +16,12 @@ const tabs = [
   {
     props: {
       panelId: "graduacao-dist-disciplina",
-      title: "Distribuição de Disciplinas",
+      title: "Distribuição de disciplinas",
       header: "Graduação",
       showHeader: true,
     },
     content: {
-      title: "Distribuição de Disciplinas",
+      title: "Distribuição de disciplinas",
       body: Distribuicao,
     },
   },
@@ -39,19 +39,6 @@ const tabs = [
   },
   {
     props: {
-      panelId: "graduacao-documentos",
-      title: "Documentos",
-      header: "Graduação",
-      showHeader: false,
-    },
-    content: {
-      title: "Documentos",
-      body: placeholder,
-    },
-  },
-
-  {
-    props: {
       panelId: "pos-graduacao-distrib-disciplinas",
       title: "Distribuição de disciplinas",
       header: "Pós-graduação",
@@ -60,18 +47,6 @@ const tabs = [
     content: {
       title: "Distribuição de disciplinas",
       body: Distribuicao_pos,
-    },
-  },
-  {
-    props: {
-      panelId: "pos-graduacao-documentos",
-      title: "Documentos",
-      header: "Pós-graduação",
-      showHeader: false,
-    },
-    content: {
-      title: "Documentos",
-      body: placeholder,
     },
   },
 ];

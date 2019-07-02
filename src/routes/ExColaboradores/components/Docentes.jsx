@@ -2,6 +2,8 @@ import React from "react";
 
 const Docentes = (
   <React.Fragment>
+    <p>Pessoas que contribuíram para o crescimento e história do DC. Esta lista está em constante elaboração, podendo haver alguns nomes faltantes. Correções e sugestões são sempre bem-vindas.</p>
+
     <ul>
          <li>André Luiz Battaiola</li>
          <li>Andréa Gomes Campos Bianchi</li>

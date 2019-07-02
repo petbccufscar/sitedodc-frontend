@@ -117,7 +117,7 @@ class TopBar extends Component {
                       Docentes
                     </Link>
                     <Link to={"/tecnico-administrativos"} className="dropdown-item" href="#">
-                      Técnico-administrativos
+                      Técnicos-administrativos
                     </Link>
                     <Link to={"/ex-colaboradores"} className="dropdown-item" href="#">
                       Ex-colaboradores

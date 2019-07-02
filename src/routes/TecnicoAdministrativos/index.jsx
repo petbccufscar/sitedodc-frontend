@@ -18,7 +18,7 @@ class TecnicoAdministrativos extends Component {
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>Técnico-admnistrativos</Breadcrumb>
+          <Breadcrumb bold>Técnicos-admnistrativos</Breadcrumb>
         </Breadcrumbs>
 
         <div className="container">
