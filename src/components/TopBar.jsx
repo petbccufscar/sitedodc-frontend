@@ -142,9 +142,9 @@ class TopBar extends Component {
                     <Link to={"/suporte/reportar"} className="dropdown-item">
                       Reportar problemas
                     </Link>
-                    <Link to={"http://www.dc.ufscar.br/suporte"} className="dropdown-item">
+                    <a targer="blank" href="http://www.dc.ufscar.br/suporte" className="dropdown-item">
                       Página do suporte
-                    </Link>
+                    </a>
                   </div>
                 </li>
               </ul>
