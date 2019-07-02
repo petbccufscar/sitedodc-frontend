@@ -9,42 +9,20 @@ import {
 import { TabPanel } from "react-web-tabs";
 
 import { placeholder, placeholder2 } from "../../components/placeholders";
+import Distribuicao from "./components/Distribuicao";
+import Distribuicao_pos from "./components/Distribuicao_pos";
 
 const tabs = [
-  {
-    props: {
-      panelId: "graduacao-home",
-      title: "Home",
-      header: "Graduação",
-      showHeader: true,
-    },
-    content: {
-      title: "Home",
-      body: placeholder,
-    },
-  },
-  {
-    props: {
-      panelId: "graduacao-suport",
-      title: "Suporte",
-      header: "Graduação",
-      showHeader: false,
-    },
-    content: {
-      title: "Suporte",
-      body: placeholder2,
-    },
-  },
   {
     props: {
       panelId: "graduacao-dist-disciplina",
       title: "Distribuição de Disciplinas",
       header: "Graduação",
-      showHeader: false,
+      showHeader: true,
     },
     content: {
       title: "Distribuição de Disciplinas",
-      body: placeholder,
+      body: Distribuicao,
     },
   },
   {
@@ -71,16 +49,17 @@ const tabs = [
       body: placeholder,
     },
   },
+
   {
     props: {
-      panelId: "pos-graduacao-home",
-      title: "Home",
+      panelId: "pos-graduacao-distrib-disciplinas",
+      title: "Distribuição de disciplinas",
       header: "Pós-graduação",
       showHeader: true,
     },
     content: {
-      title: "Home",
-      body: placeholder2,
+      title: "Distribuição de disciplinas",
+      body: Distribuicao_pos,
     },
   },
   {

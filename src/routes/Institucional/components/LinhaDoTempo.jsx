@@ -18,6 +18,8 @@ class LinhaDoTempo extends React.Component {
           <Timeline>
             <Event interval={"2019"}
               subtitle={"Reestruturação dos projetos pedagógicos dos cursos de Ciência da Computação e Engenharia da Computação."} />
+            <Event interval={"2012"}
+              subtitle={"Comemoração dos 40 anos do Departamento de Computação."} />
             <Event interval={"2009"}
               subtitle={"Criação do Doutorado em Ciência da Computação."} />
             <Event interval={"2007"}

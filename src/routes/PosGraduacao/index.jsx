@@ -9,20 +9,22 @@ import {
 import { TabPanel } from "react-web-tabs";
 
 import { placeholder } from "../../components/placeholders";
+import Header from "./components/Header";
+import Distribuicao from "../AreaAluno/components/Distribuicao";
 
 const tabs = [
   {
     props: {
-      panelId: "distribuicao",
-      title: "Distribuição de Disciplinas",
+      panelId: "home",
+      title: "Home",
       header: "",
       showHeader: false
     },
     content: {
-      title: "Distribuição de Disciplinas",
-      body: placeholder
+      title: "Home",
+      body: Header
     }
-  },
+  }
 ];
 
 class PosGraduacao extends Component {

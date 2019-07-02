@@ -4,74 +4,64 @@ import {
   VTab,
   SideMenu,
   TabPanelContainer,
-  VerticalTabs,
+  VerticalTabs
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
-import { placeholder } from "../../components/placeholders";
 
-import motivacao from "./components/Motivacao";
-import ingresso from "./components/Ingresso";
-import auxilio from "./components/Auxilio";
-import sobre_sao_carlos from "./components/SobreSaoCarlos";
+import { placeholder } from "../../components/placeholders";
+import Docentes from "./components/Docentes";
+import DocentesSubstitutos from "./components/DocentesSubstitutos";
+import Funcionarios from "./components/Funcionarios";
 
 const tabs = [
   {
     props: {
-      panelId: "motivacao",
-      title: "Motivação",
-      header: "Informações",
-      showHeader: true,
+      panelId: "docentes",
+      title: "Docentes",
+      header: "",
+      showHeader: false
     },
     content: {
-      title: "Motivação para Estudar na UFSCar",
-      body: motivacao,
-    },
+      title: "Docentes",
+      body: Docentes
+    }
   },
   {
     props: {
-      panelId: "ingresso",
-      title: "Como ingressar",
-      header: "Informações",
-      showHeader: false,
+      panelId: "docentesSub",
+      title: "Docentes substitutos",
+      header: "",
+      showHeader: false
     },
     content: {
-      title: "Como ingressar?",
-      body: ingresso,
-    },
+      title: "Docentes substitutos",
+      body: DocentesSubstitutos
+    }
   },
   {
     props: {
-      panelId: "auxilios",
-      title: "Auxílios",
-      header: "Informações",
-      showHeader: false,
+      panelId: "funcionarios",
+      title: "Funcionários",
+      header: "",
+      showHeader: false
     },
     content: {
-      title: "Auxílios Permanência",
-      body: auxilio,
-    },
-  },
-  {
-    props: {
-      panelId: "saocarlos",
-      title: "Sobre São Carlos",
-      header: "Informações",
-      showHeader: false,
-    },
-    content: {
-      title: "Sobre São Carlos",
-      body: sobre_sao_carlos,
-    },
-  },
+      title: "Funcionários",
+      body: Funcionarios
+    }
+  }
 ];
 
-class AreaVisitante extends Component {
+class PosGraduacao extends Component {
+  shouldComponentUpdate() {
+    return false;
+  }
   render() {
     return (
       <React.Fragment>
         <Breadcrumbs>
           <Breadcrumb endereco="/">Início</Breadcrumb>
-          <Breadcrumb bold>Área do visitante</Breadcrumb>
+          <Breadcrumb bold>Visualizando ex-colaboradores</Breadcrumb>
         </Breadcrumbs>
         <VerticalTabs>
           <SideMenu defaultTab={tabs[0].props.panelId}>
@@ -100,4 +90,4 @@ class AreaVisitante extends Component {
   }
 }
 
-export default AreaVisitante;
+export default PosGraduacao;

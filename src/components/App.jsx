@@ -16,6 +16,7 @@ import Graduacao from "../routes/Graduacao";
 import Grupos from "../routes/Grupos";
 import MapaDoSite from "../routes/MapaDoSite";
 import Laboratorios from "../routes/Laboratorios";
+import ExColaboradores from "../routes/ExColaboradores";
 import LinksSuporte from "../routes/LinksSuporte";
 import MaisNoticias from "../routes/MaisNoticias";
 import Noticia from "../routes/Noticia";
@@ -60,12 +61,9 @@ class App extends Component {
               <Route exact path="/area-visitante" component={AreaVisitante} />
               <Route exact path="/docentes" component={Docentes} />
               <Route exact path="/docente/:id" component={Docente} />
+              <Route exact path="/ex-colaboradores" component={ExColaboradores} />
               <Route exact path="/alunos-em-acao" component={Grupos} />
-              <Route
-                exact
-                path="/tecnico-administrativos"
-                component={TecnicoAdministrativos}
-              />
+              <Route exact path="/tecnico-administrativos" component={TecnicoAdministrativos} />
               <Route exact path="/graduacao" component={Graduacao} />
               <Route exact path="/pos-graduacao" component={PosGraduacao} />
               <Route exact path="/laboratorios" component={Laboratorios} />

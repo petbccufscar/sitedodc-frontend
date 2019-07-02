@@ -11,18 +11,58 @@ import { Link } from "react-router-dom";
 
 
 import { placeholder } from "../../components/placeholders";
+import Disciplinas from "./components/Disciplinas";
+import AtividadesExtra from "./components/AtividadesExtra";
+import TCC from "./components/TCC";
+import AlunosEspeciais from "./components/AlunosEspeciais";
 
 const tabs = [
   {
     props: {
       panelId: "distribuicao",
-      title: "Distribuição de Disciplinas",
+      title: "Oferta de Disciplinas",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Distribuição de Disciplinas",
-      body: placeholder,
+      title: "Oferta de Disciplinas",
+      body: Disciplinas,
+    }
+  },
+  {
+    props: {
+      panelId: "ativ_extra",
+      title: "Atividades extracurriculares",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Atividades extracurriculares",
+      body: AtividadesExtra,
+    }
+  },
+  {
+    props: {
+      panelId: "tcc",
+      title: "TCC",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "TCC",
+      body: TCC,
+    }
+  },
+  {
+    props: {
+      panelId: "alunos_especiais",
+      title: "Alunos especiais",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Alunos especiais",
+      body: AlunosEspeciais,
     }
   },
   {
