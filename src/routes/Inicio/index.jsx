@@ -79,7 +79,7 @@ class Inicio extends Component {
                   </BannerArea>
                   <BotoesArea>
                       <BotaoItem to="/area-aluno">
-                          <i className="fas fa-user-graduate mr-4"></i>
+                          <FontAwesomeIcon icon="user-graduate" className="d-inline-block mr-3" />
                           Área do Aluno
                       </BotaoItem>
                       <BotaoItem to="/area-docente" className="border-top border-bottom">
@@ -95,7 +95,7 @@ class Inicio extends Component {
 
                 <div className="mb-4 mt-4 rounded bg-primary sm-show">
                       <BotaoItem to="/area-aluno">
-                          <i className="fas fa-user-graduate mr-4"></i>
+                          <FontAwesomeIcon icon="user-grauduate" className="d-inline-block mr-3" />
                           Área do Aluno
                       </BotaoItem>
                       <BotaoItem to="/area-docente" className="border-top border-bottom">
