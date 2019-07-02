@@ -7,7 +7,8 @@ const Estagio = (
 
     <ul>
       <li><a href="/estagio/Lei_do_Estagio.pdf" target="blank">Lei do Estágio</a></li>
-      <li><a href="/estagio/Orientacoes_sobre_Estagio.pdf" target="blank">Nova Cartilha do Estágio</a></li>
+      <li><a href="/estagio/Ministerio_do_Trabalho_Nova_Cartilha_do_Estagio.pdf
+" target="blank">Nova Cartilha do Estágio</a></li>
     </ul>
 
     <ul>

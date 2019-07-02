@@ -42,6 +42,18 @@ const tabs = [
   },
   {
     props: {
+      panelId: "linha-do-tempo",
+      title: "Linha do Tempo",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Linha do Tempo",
+      body: <LinhaDoTempo/>,
+    }
+  },
+  {
+    props: {
       panelId: "40_anos",
       title: "Quando o DC fez 40 anos",
       header: "",
@@ -50,18 +62,6 @@ const tabs = [
     content: {
       title: "Quando o DC fez 40 anos",
       body: quarenta,
-    }
-  },
-  {
-    props: {
-      panelId: "historico",
-      title: "Histórico",
-      header: "",
-      showHeader: false,
-    },
-    content: {
-      title: "Histórico",
-      body: historico,
     }
   },
   {
