@@ -25,7 +25,7 @@ const Disciplinas = (
        </a> apresenta, entre outras, as disciplinas oferecidas pelo DC aos alunos desse curso.
        Para outras informações, visite o <a target="blank"
         href="http://bcc.dc.ufscar.br/">
-        site do curso</a>.
+        site do curso de BCC</a>.
    </p>
     <p>
       No curso de Engenharia de Computação, o DC também oferece disciplinas de base e aquelas
@@ -37,7 +37,7 @@ const Disciplinas = (
     DC aos alunos desse curso.
        Para outras informações, visite o <a target="blank"
         href="http://enc.dc.ufscar.br/">
-        site do curso</a>.
+        site do curso de EnC</a>.
    </p>
     <p>
       Desde 2007, o DC oferece disciplinas na modalidade à distância para alunos do curso de
@@ -46,7 +46,7 @@ const Disciplinas = (
       pois reúne as tecnologias das áreas de Computação, de Sistemas de Informação e de Administração.
        Para outras informações, visite o <a target="blank"
         href="http://www.sead.ufscar.br/cursos/graduacao/sistemas-de-informacao/">
-        site do curso</a>.
+        site do curso de BSI</a>.
    </p>
   </React.Fragment>
 );
