@@ -15,13 +15,13 @@ import Distribuicao from "../AreaAluno/components/Distribuicao";
 const tabs = [
   {
     props: {
-      panelId: "home",
-      title: "Home",
+      panelId: "pos",
+      title: "Pós-graduação",
       header: "",
       showHeader: false
     },
     content: {
-      title: "Home",
+      title: "Pós-graduação",
       body: Header
     }
   }

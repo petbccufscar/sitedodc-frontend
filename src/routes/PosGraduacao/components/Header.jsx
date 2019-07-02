@@ -22,7 +22,7 @@ const Header = (
     <p>
     Os docentes participam dos programas de pós-graduação tanto ministrando aulas como orientando alunos.
      Também há participação de professores do DC em outros cursos de pós-graduação Lato Sensu como nos cursos de 
-     <a href="http://edutec.ead.ufscar.br/">Especialização em Educação e Tecnologias</a> e <a href="http://www2.sorocaba.ufscar.br/ees/">Especialização em Engenharia de Software</a>.
+     <a target="blank" href="http://edutec.ead.ufscar.br/">Especialização em Educação e Tecnologias</a> e <a target="blank" href="http://www2.sorocaba.ufscar.br/ees/">Especialização em Engenharia de Software</a>.
 
    </p>
     <p>
@@ -32,12 +32,12 @@ const Header = (
      Atualmente o PPGCC está estruturado em quatro linhas de pesquisa: Engenharia de Software, Banco de Dados e 
      Interação Humano Computador; Inteligência Artificial; Processamento de Imagens e Sinais: 
      Algoritmos e Arquitetura e Sistemas Distribuídos e Redes de Computadores.
-      <a href="http://ppgcc.dc.ufscar.br/">Visite o site do PPGCC</a>.
+      <a target="blank" href="http://ppgcc.dc.ufscar.br/">Visite o site do PPGCC</a>.
 
    </p>
     <p>
     Também há participação de servidores do DC em outros cursos de pós-graduação Stricto Sensu
-     como nos Programas de <a href="http://www.ppgee.ufscar.br/pt-br">Pós-Graduação em Engenharia Elétrica</a> e <a href="http://www.ppgcts.ufscar.br/">Pós-Graduação em Ciência, Tecnologia e Sociedade</a>.
+     como nos Programas de <a target="blank" href="http://www.ppgee.ufscar.br/pt-br">Pós-Graduação em Engenharia Elétrica</a> e <a target="blank" href="http://www.ppgcts.ufscar.br/">Pós-Graduação em Ciência, Tecnologia e Sociedade</a>.
    </p>
   </React.Fragment>
 );
