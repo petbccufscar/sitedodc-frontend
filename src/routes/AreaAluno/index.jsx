@@ -34,7 +34,7 @@ const tabs = [
     },
     content: {
       title: "Estágio",
-      body: placeholder2,
+      body: Estagio,
     },
   },
   {
