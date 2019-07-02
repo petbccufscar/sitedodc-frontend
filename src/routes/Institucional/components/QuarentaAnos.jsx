@@ -15,7 +15,7 @@ const QuarentaAnos = (
         title="Departamento de Computação UFSCar - Vídeo Institucional"	
         width="515"	
         height="290"	
-        src="http://www.youtube.com/embed/65ErgsOfEtE"	
+        src="https://www.youtube.com/embed/65ErgsOfEtE"	
         />	
     </div>	
     <div className="flex-fill">	
@@ -24,7 +24,7 @@ const QuarentaAnos = (
         title="Departamento de Computação da UFSCar - 40 Anos"	
         width="515"	
         height="290"	
-        src="http://www.youtube.com/embed/UEklyABA7uc"	
+        src="https://www.youtube.com/embed/UEklyABA7uc"	
         />	
     </div>	
     </div>
