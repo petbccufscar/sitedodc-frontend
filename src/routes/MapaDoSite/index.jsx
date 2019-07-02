@@ -14,26 +14,10 @@ const mapa = [
     ],
   },
   {
-    header: (
-      <React.Fragment>
-        <h4>Ensino</h4>
-        <h5>Graduação</h5>
-      </React.Fragment>
-    ),
+    header: <h4>Ensino</h4>,
     items: [
-      { title: "Ciência da Computação", href: "/graduacao/bcc" },
-      { title: "Engenharia da Computação", href: "/graduacao/enc" },
-      { title: "Sistemas de Informação", href: "/graduacao/si" },
-      { title: "Estágio", href: "/graduacao/estagio" },
-      { title: "Alunos especiais", href: "/graduacao/alunos-externos" },
-      { title: "TCC", href: "/graduacao/tcc" },
-    ],
-  },
-  {
-    header: <h5>Pós Graduação</h5>,
-    items: [
-      { title: "Stricto Sensu", href: "/pos-graduacao/stricto-sensu" },
-      { title: "Lato Sensu", href: "/pos-graduacao/lato-sensu" },
+      { title: "Graduação", href: "/graduacao" },
+      { title: "Pós-graduação", href: "/pos-graduacao" },
     ],
   },
   {
@@ -54,6 +38,7 @@ const mapa = [
       { title: "Alunos", href: "/alunos" },
       { title: "Docentes", href: "/docentes" },
       { title: "Técnico-administrativos", href: "/tecnicos-administrativos" },
+      { title: "Ex-colaboradores", href: "/ex-colaboradores" },
     ],
   },
   {
@@ -68,6 +53,10 @@ const mapa = [
       { title: "Links úteis", href: "/suporte/links" },
       { title: "Reportar problemas", href: "/suporte/reportar" },
     ],
+  },
+  {
+    header: <div> <h4>Link Externo</h4> <ul><li><a href="http://www.dc.ufscar.br/suporte" target="blank">Página do site do suporte</a></li></ul></div>,
+    items: [],
   },
 ];
 

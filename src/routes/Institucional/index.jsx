@@ -13,6 +13,7 @@ import LinhaDoTempo from "./components/LinhaDoTempo";
 import infraestrutura from "./components/Infraestrutura";
 import historico from "./components/Historico";
 import galeria_chefia from "./components/GaleriaChefia";
+import quarenta from "./components/QuarentaAnos";
 
 const tabs = [
   {
@@ -41,14 +42,26 @@ const tabs = [
   },
   {
     props: {
-      panelId: "linha_do_tempo",
-      title: "Linha do Tempo",
+      panelId: "40_anos",
+      title: "Quando o DC fez 40 anos",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Linha do Tempo",
-      body: <LinhaDoTempo />,
+      title: "Quando o DC fez 40 anos",
+      body: quarenta,
+    }
+  },
+  {
+    props: {
+      panelId: "historico",
+      title: "Histórico",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Histórico",
+      body: historico,
     }
   },
   {

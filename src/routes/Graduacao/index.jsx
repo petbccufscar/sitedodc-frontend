@@ -15,6 +15,7 @@ import Disciplinas from "./components/Disciplinas";
 import AtividadesExtra from "./components/AtividadesExtra";
 import TCC from "./components/TCC";
 import AlunosEspeciais from "./components/AlunosEspeciais";
+import Estagio from "../AreaAluno/components/Estagio";
 
 const tabs = [
   {
@@ -74,7 +75,7 @@ const tabs = [
     },
     content: {
       title: "Estágio",
-      body: placeholder,
+      body: Estagio,
     }
   },
   {
