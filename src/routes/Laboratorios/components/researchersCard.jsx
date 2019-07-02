@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Card, { CardBody, CardFooter } from "../../../components/Card";
 import PropTypes from "prop-types";
 
+import EmailsImage from "../../../utils/emails";
 
 const ResearchersCard = ( { nome, foto, funcao, email, site, lattes } ) => {
     return(
@@ -20,7 +21,8 @@ const ResearchersCard = ( { nome, foto, funcao, email, site, lattes } ) => {
                     <div className="card-content align-self-center card-breakpoint" style={{ padding: "1rem" }}>
                         <h5 className="card-title"> { nome } </h5>
                         <p className="card-subtitle mb-2 text-muted">{ funcao }</p>
-                        <p className="card-text"><b> Email: </b>{ email } </p>
+                        <p className="card-text"><b> Email: </b><img src={EmailsImage.getEmailImagePath(email)} 
+                            alt={`e-mail do docente ${nome}`} /></p>
                     </div>
                </div>
            </CardBody>
