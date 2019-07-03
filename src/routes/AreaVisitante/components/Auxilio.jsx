@@ -9,7 +9,7 @@ temos a [bolsa alimentação](http://www.proace.ufscar.br/bolsa-e-auxilio-para-e
 [bolsa moradia](http://www.proace.ufscar.br/bolsa-e-auxilio-para-estudantes-1/auxilio-moradia/), 
 [bolsa atividade](http://www.proace.ufscar.br/bolsa-e-auxilio-para-estudantes-1/bolsa-atividade) e 
 [bolsa emergencial](http://www.proace.ufscar.br/bolsa-e-auxilio-para-estudantes-1/acolhimento-emergencial).
-`
+`;
 
 const Auxilio = (
   <React.Fragment>

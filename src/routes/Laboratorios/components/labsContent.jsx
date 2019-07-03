@@ -3,10 +3,9 @@ import ResearchersCard from "./researchersCard";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
 
-import avatar from '../../../images/avatar.png';
+import avatar from "../../../images/avatar.png";
 
 const LabsContent = ({ logoSrc, name, description, docentes }) => {
-  console.log(name);
   return (
     <React.Fragment>
       <div className="container-fluid">
@@ -30,7 +29,7 @@ const LabsContent = ({ logoSrc, name, description, docentes }) => {
           <ResearchersCard
             key={index}
             nome={docente.Nome}
-            foto={docente.Foto ? `${process.env.REACT_APP_API_URL}/${docente.Foto.url}` : avatar }
+            foto={docente.Foto ? `${process.env.REACT_APP_API_URL}/${docente.Foto.url}` : avatar}
             funcao={docente.Tipo}
             email={docente.Email}
             site={docente.Site}

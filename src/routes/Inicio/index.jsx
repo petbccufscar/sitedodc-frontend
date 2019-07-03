@@ -176,8 +176,8 @@ class Inicio extends Component {
 }
 
 function compare(a, b) {
-  if ( a.Data > b.Data ) return -1;
-  else if ( a.Data < b.Data ) return 1;
+  if ( a.Data > b.Data ){ return -1;}
+  else if ( a.Data < b.Data ){ return 1;}
   return 0;
 }
 

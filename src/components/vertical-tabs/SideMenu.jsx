@@ -2,7 +2,7 @@ import React from "react";
 import { TabList } from "react-web-tabs";
 import MenuButton from "./MenuButton";
 
-const SideMenu = props => {
+const SideMenu = (props) => {
   const { children, showMenu, onClick } = props;
   const { panelId, header, title } = props.tabSelected;
 

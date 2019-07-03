@@ -25,7 +25,7 @@ class Laboratorios extends Component {
 
         <Query query={GET_LABORATORIOS}>
           {({ loading, error, data }) => {
-            if (loading || error) return <div />;
+            if (loading || error) { return <div />; }
             return (
               <VerticalTabs>
                 <SideMenu defaultTab={`grupo-${data.laboratorios[0].Nome}`}>
@@ -49,9 +49,7 @@ class Laboratorios extends Component {
                     return (
                       <TabPanel key={"p_" + index} tabId={`grupo-${lab.Nome}`}>
                         <LabsContent
-                          logoSrc={`${process.env.REACT_APP_API_URL}/${
-                            lab.Logo.url
-                            }`}
+                          logoSrc={`${process.env.REACT_APP_API_URL}/${lab.Logo.url}`}
                           name={lab.NomeExpandido}
                           description={lab.Descricao}
                           docentes={lab.Docentes}

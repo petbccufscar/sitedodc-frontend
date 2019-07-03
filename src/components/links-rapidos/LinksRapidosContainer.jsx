@@ -9,6 +9,6 @@ const LinksRapidosContainer = ({ children }) => {
       </div>
     </div>
   );
-}
+};
 
 export default LinksRapidosContainer;

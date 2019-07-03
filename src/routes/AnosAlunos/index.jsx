@@ -39,7 +39,7 @@ const AnosAlunos = () => {
       <main role="main" className="container" id="conteudo">
         <Query query={GET_INTERVALO}>
           {({ loading, error, data }) => {
-            if (loading || error) return <div />;
+            if (loading || error) { return <div />; }
             const currentYear = data.mais_recente[0].Ano;
             const startYearBCC = 1975;
             const startYearENC = 1992;

@@ -26,7 +26,7 @@ const GaleriaChefia = (
                                 <TwoCards>
                                     <AvatarCardImage foto={chefia.Foto ? `${process.env.REACT_APP_API_URL}/${chefia.Foto.url}` : null} />
                                     <AvatarCardBody nome={chefia.Nome}>
-                                        {chefia.Cargo === "chefia" ? "Chefe" : "Vice-chefe"} <br/>
+                                        {chefia.Cargo === "chefia" ? "Chefe" : "Vice-chefe"} <br />
                                         <small className="p-0">{chefia.Ano_inicio} - {chefia.Ano_fim}</small>
                                     </AvatarCardBody>
                                 </TwoCards>
@@ -41,10 +41,10 @@ const GaleriaChefia = (
 );
 
 function compare(a, b) {
-    if (a.Ano_inicio > b.Ano_inicio) return -1;
-    if (a.Ano_inicio < b.Ano_inicio) return 1;
-    if (a.Titulo < b.Titulo) return -1;
-    if (a.Titulo > b.Titulo) return 1;
+    if (a.Ano_inicio > b.Ano_inicio) { return -1; }
+    if (a.Ano_inicio < b.Ano_inicio) { return 1; }
+    if (a.Titulo < b.Titulo) { return -1; }
+    if (a.Titulo > b.Titulo) { return 1; }
     return 0;
 }
 
