@@ -8,7 +8,7 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
 
-const BarraDeAcessibilidade = props => (
+const BarraDeAcessibilidade = (props) => (
   <div
     className="container-fluid"
     style={{
@@ -37,7 +37,7 @@ const BarraDeAcessibilidade = props => (
             <FontAwesomeIcon icon="universal-access" className="mr-1" />
             <span className="d-none d-sm-inline-block">Acessibilidade</span>
           </Badge> */}
-          <Badge link="#" onClick={e => props.onClick(e)}>
+          <Badge link="#" onClick={(e) => props.onClick(e)}>
             <FontAwesomeIcon icon="adjust" className="mr-1" />
             <span className="d-none d-sm-inline-block">Alto contraste</span>
           </Badge>
@@ -55,7 +55,7 @@ const BarraDeAcessibilidade = props => (
   </div>
 );
 BarraDeAcessibilidade.propTypes = {
-  onClick:PropTypes.func
+  onClick: PropTypes.func
 };
 
 export default BarraDeAcessibilidade;

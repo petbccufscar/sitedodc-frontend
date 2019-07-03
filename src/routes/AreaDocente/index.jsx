@@ -84,7 +84,7 @@ class AreaDocentes extends Component {
           <Breadcrumb bold>Área do docente</Breadcrumb>
         </Breadcrumbs>
         <div className="container">
-          {Object.keys(data).map(section => (
+          {Object.keys(data).map((section) => (
             <React.Fragment>
               <h4>{section}</h4>
               <div className="card-deck mb-4">

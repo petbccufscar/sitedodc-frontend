@@ -8,9 +8,7 @@ import {
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
-import { placeholder } from "../../components/placeholders";
 import Header from "./components/Header";
-import Distribuicao from "../AreaAluno/components/Distribuicao";
 
 const tabs = [
   {

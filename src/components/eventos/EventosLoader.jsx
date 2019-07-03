@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const EventosLoader = props => (
+const EventosLoader = (props) => (
   <ContentLoader
     height={252}
     width={350}

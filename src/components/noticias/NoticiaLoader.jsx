@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const NoticiaLoader = props => (
+const NoticiaLoader = (props) => (
   <ContentLoader
     height={220}
     width={400}

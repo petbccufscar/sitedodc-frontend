@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuButton = props => {
+const MenuButton = (props) => {
   const { header, title, onClick } = props;
 
   return (

@@ -33,7 +33,7 @@ class VerticalTabs extends React.Component {
 
   handleChange(tabId) {
     const children = this.props.children[0].props.children;
-    const tab = children.find(tab => tab.props.panelId === tabId);
+    const tab = children.find((tab) => tab.props.panelId === tabId);
     this.setState({
       tabSelected: {
         panelId: tab.props.panelId,
@@ -52,7 +52,7 @@ class VerticalTabs extends React.Component {
 
     return (
       <TabProvider
-        onChange={tabId => this.handleChange(tabId)}
+        onChange={(tabId) => this.handleChange(tabId)}
         defaultTab={this.defaultTab}
         vertical
       >
@@ -60,8 +60,8 @@ class VerticalTabs extends React.Component {
           <div className="container">
             <div className="row mt-4">
               {React.cloneElement(this.props.children[0], {
-                tabSelected: tabSelected,
-                showMenu: showMenu,
+                tabSelected,
+                showMenu,
                 onClick: this.handleButtonClick,
               })}
               {this.props.children[1]}
