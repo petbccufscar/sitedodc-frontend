@@ -8,7 +8,6 @@ import {
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
 
-import { placeholder, placeholder2 } from "../../components/placeholders";
 import Distribuicao from "./components/Distribuicao";
 import Distribuicao_pos from "./components/Distribuicao_pos";
 import Estagio from "./components/Estagio";
