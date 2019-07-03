@@ -15,7 +15,7 @@ Em 09/06/2008, por meio da Portaria GR nº 941/08, a Universidade Federal de Sã
 A Lei nº 9474/97, de 20/07/97, define mecanismos para implementação do Estatuto dos Refugiados de 1951, prevendo em seu art. 44 que “o ingresso em instituições acadêmicas de todos os níveis deverá ser facilitado, levando-se em consideração a situação desfavorável vivenciada pelos refugiados”.
 
 Assim, a partir do ano de 2009 a UFSCar passou a realizar processo seletivo específico, com oferta de no mínimo uma vaga adicional em cada curso, para seleção de pessoas em situação de refúgio, desde que com o devido atestado emitido pelo Conare – Comitê Nacional para os Refugiados, vinculado ao Ministério da Justiça.
-`
+`;
 
 const Motivacao = (
   <React.Fragment>

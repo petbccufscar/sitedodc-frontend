@@ -44,7 +44,7 @@ class TopBar extends Component {
                 className=" d-none d-lg-inline-block"
                 style={{ lineHeight: "11px" }}
               >
-                {this.state.small ? 
+                {this.state.small ?
                   <span><br></br>Departamento de Computação</span> :
                   <h4>Departamento de Computação</h4>
                 }

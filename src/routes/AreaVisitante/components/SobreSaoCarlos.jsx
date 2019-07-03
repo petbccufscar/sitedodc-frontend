@@ -11,7 +11,7 @@ Diante da concentração de universidades e centros de pesquisas, São Carlos ap
 Já a atividade industrial é marcada pela presença de grandes indústrias: Volkswagen (motores), Tecumseh (compressores), Faber Castell (lápis), Electrolux (geladeiras e fogões), além de empresas têxteis, de embalagens, de máquinas, tintas, lavadoras, equipamentos ópticos e uma grande quantidade de indústrias médias e pequenas dos mais diversos setores de produção.
 
 O comércio atende às necessidades da cidade e da região, oferecendo produtos e serviços de qualidade. E o setor agropecuário é importante na produção de leite, cana, laranja, frango, carne bovina e milho. São Carlos também é servida por excelentes estradas, que permitem o deslocamento com segurança e rapidez a São Paulo (cerca de 228 Km) e às principais cidades do Estado.
-`
+`;
 
 const SobreSaoCarlos = (
   <React.Fragment>

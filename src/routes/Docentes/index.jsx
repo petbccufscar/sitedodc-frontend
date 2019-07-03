@@ -5,7 +5,7 @@ import DocenteCard from "./components/docente_card";
 import { Facebook } from "react-content-loader";
 
 import { Query } from "react-apollo";
-import { GET_DOCENTES } from '../../utils/queries';
+import { GET_DOCENTES } from "../../utils/queries";
 
 class Docentes extends Component {
   render() {

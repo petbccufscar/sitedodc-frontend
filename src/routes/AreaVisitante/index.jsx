@@ -7,7 +7,6 @@ import {
   VerticalTabs,
 } from "../../components/vertical-tabs";
 import { TabPanel } from "react-web-tabs";
-import { placeholder } from "../../components/placeholders";
 
 import motivacao from "./components/Motivacao";
 import ingresso from "./components/Ingresso";

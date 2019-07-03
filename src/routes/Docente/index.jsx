@@ -24,8 +24,8 @@ class Docente extends Component {
             variables={{ id: this.props.match.params.id }}
           >
             {({ loading, error, data }) => {
-              if (loading) return <DocenteLoader />;
-              if (error) return `Error! ${error.message}`;
+              if (loading) { return <DocenteLoader />; }
+              if (error) { return `Error! ${error.message}`; }
 
               return (
                 <div className="row">

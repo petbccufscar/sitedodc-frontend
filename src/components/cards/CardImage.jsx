@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const CardImage = ({ classnames, children }) => (
   <div className={`${classnames}`}>{children}</div>

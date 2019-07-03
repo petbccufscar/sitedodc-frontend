@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const NoticiaCompletaLoader = props => (
+const NoticiaCompletaLoader = (props) => (
   <ContentLoader
     height={160}
     width={400}

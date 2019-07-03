@@ -53,11 +53,7 @@ class LinksSuporte extends Component {
     );
     const isExternal = !link.startsWith("/");
 
-    return isExternal ? (
-      <a href={link}>{content}</a>
-    ) : (
-      <Link to={link}>{content}</Link>
-    );
+    return isExternal ? (<a href={link}>{content}</a>) : (<Link to={link}>{content}</Link>);
   }
 
   render() {
@@ -71,7 +67,7 @@ class LinksSuporte extends Component {
         <div className="container">
           <h4>Sistemas</h4>
           <div className="card-columns">
-            {suporte.map(card => (
+            {suporte.map((card) => (
               <Card className="hoverable" key={card.link}>
                 <CardBody>
                   {this.renderLink(card.link, card.title, card.subTitle)}

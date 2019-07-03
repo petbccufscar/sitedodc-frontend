@@ -1,7 +1,7 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const CarouselLoader = props => (
+const CarouselLoader = (props) => (
   <ContentLoader
     width={700}
     height={280}
