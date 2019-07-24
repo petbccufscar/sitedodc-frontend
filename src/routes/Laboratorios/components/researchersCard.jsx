@@ -13,7 +13,7 @@ const ResearchersCard = ( { nome, foto, funcao, email, site, lattes } ) => {
                <div className="row justify-content-center card-sm-align-center">
                     <div className="mr-4 ml-4">
                         <ImageLoader
-                            classnames="card-img-researchers rounded-circle"
+                            classnames="card-img-rounded rounded-circle"
                             src={ foto }
                             alt="Imagem professor responsável"
                         />
