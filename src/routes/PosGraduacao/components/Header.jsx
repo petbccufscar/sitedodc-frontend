@@ -19,6 +19,16 @@ const Header = (
       <a target="blank" href="http://edutec.ead.ufscar.br/"> Especialização em Educação e Tecnologias</a> e <a target="blank" href="http://www2.sorocaba.ufscar.br/ees/">Especialização em Engenharia de Software</a>.
    </p>
    <p>
+       Em Stricto Sensu, o DC abriga o Programa de Pós-Graduação em Ciência da
+      Computação (PPGCC). A proposta do PPGCC quanto à sua atuação em aspectos de
+      formação e pesquisa é cobrir de forma abrangente as grandes áreas da computação,
+      investindo na pesquisa e ensino de tópicos atuais e inovadores. Atualmente o PPGCC
+      está estruturado em quatro linhas de pesquisa: Engenharia de Software, Banco de
+      Dados e Interação Humano Computador; Inteligência Artificial; Processamento de
+      Imagens e Sinais: Algoritmos e Arquitetura e Sistemas Distribuídos e Redes de
+       Computadores. Visite o <a target="blank" href="http://ppgcc.dc.ufscar.br/"> site do PPGCC</a>.
+   </p>
+   <p>
        Também há participação de servidores do DC em outros cursos de pós-graduação Stricto Sensu como nos Programas de 
       <a target="blank" href="http://www.ppgee.ufscar.br/pt-br"> Pós-Graduação em Engenharia Elétrica </a>  
         e <a target="blank" href="http://www.ppgcts.ufscar.br/"> Pós-Graduação em Ciência, Tecnologia e Sociedade</a>.
