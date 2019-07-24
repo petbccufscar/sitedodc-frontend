@@ -33,12 +33,12 @@ const tabs = [
   {
     props: {
       panelId: "ativ_extra",
-      title: "Atividades extracurriculares",
+      title: "Atividades Complementares",
       header: "",
       showHeader: false,
     },
     content: {
-      title: "Atividades extracurriculares",
+      title: "Atividades Complementares",
       body: AtividadesExtra,
     }
   },
