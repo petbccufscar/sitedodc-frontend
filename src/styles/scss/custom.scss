@@ -27,8 +27,12 @@ body {
     }
 }
 
-#img-noticia {
-    height: 20rem;
+.img-noticia {
+    padding-top: 1.8rem;
+
+    img {
+        object-fit: cover;
+    }
 }
 
 .fit-image-aluno {

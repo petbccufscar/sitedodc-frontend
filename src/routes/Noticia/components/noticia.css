@@ -1,0 +1,21 @@
+.noticia-container img {
+    float: none;
+    height: 100%;
+    max-height: 16rem;
+    object-fit: cover;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 20px;
+    text-align: justify;
+}
+
+@media(min-width: 768px) {
+    .noticia-container img {
+        float: left;
+        min-height: 16rem;
+        max-height: 20rem;
+        width: auto;
+        margin: 10px 20px 10px 0;
+        padding: 0;
+    }
+}
