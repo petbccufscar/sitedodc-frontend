@@ -29,6 +29,7 @@ import TopBar from "./TopBar";
 import Contato from "../routes/Contato";
 import Institucional from "../routes/Institucional";
 import EmConstrucao from "./EmConstrucao";
+import PIES from "../routes/Graduacao/components/PIES";
 
 class App extends Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class App extends Component {
               <Route exact path="/docente/:id" component={Docente} />
               <Route exact path="/ex-colaboradores" component={ExColaboradores} />
               <Route exact path="/alunos-em-acao" component={Grupos} />
+              <Route exact path="/pies" component={PIES} />
               <Route exact path="/tecnico-administrativos" component={TecnicoAdministrativos} />
               <Route exact path="/graduacao" component={Graduacao} />
               <Route exact path="/pos-graduacao" component={PosGraduacao} />
