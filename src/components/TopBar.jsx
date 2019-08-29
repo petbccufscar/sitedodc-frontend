@@ -102,9 +102,9 @@ class TopBar extends Component {
                     >
                       Alunos em Ação
                     </Link>
-                    {/*<Link to={"/atividades"} className="dropdown-item" href="#">
-                      Atividades
-                    </Link>*/}
+                    <Link to={"/pies"} className="dropdown-item" href="#">
+                      PIEs
+                    </Link>
                   </div>
                 </li>
                 <li className="nav-item dropdown text-center">
