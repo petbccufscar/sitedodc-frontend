@@ -12,6 +12,7 @@ class PIES extends Component {
         <div className="container">
         <center><h3>Projetos Integradores Extensionistas (PIEs)</h3></center>
         <hr></hr>
+        <br></br>
         <p>
                 Projetos Integradores Extensionistas são projetos desenvolvidos por alunos do Departamento de Computação da UFSCar. O foco é o desenvolvimento de soluções, envolvendo software e/ou hardware, que beneficiem a comunidade em geral, como empresas, organizações públicas e a sociedade civil. 
                 </p>
