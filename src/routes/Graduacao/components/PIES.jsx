@@ -12,7 +12,7 @@ const PIES = (
     Maiores detalhes sobre como submeter PIEs podem ser encontrados no edital disponível
     
    <a target="blank"
-        href="pies.pdf">aqui.</a>.
+        href="pies.pdf"> aqui.</a>
   </p>
   <p>
   Dúvidas e esclarecimentos podem ser encaminhados para a Comissão de Avaliação de Acompanhamento (CAAP) dos PIEs, pelo e-mail: <b>caap-dc-ufscar AT googlegroups.com</b>	
