@@ -15,6 +15,7 @@ import Disciplinas from "./components/Disciplinas";
 import AtividadesExtra from "./components/AtividadesExtra";
 import TCC from "./components/TCC";
 import AlunosEspeciais from "./components/AlunosEspeciais";
+import PIES from "./components/PIES";
 import Estagio from "../AreaAluno/components/Estagio";
 
 const tabs = [
@@ -52,6 +53,18 @@ const tabs = [
     content: {
       title: "TCC",
       body: TCC,
+    }
+  },
+  {
+    props: {
+      panelId: "pie",
+      title: "PIEs",
+      header: "",
+      showHeader: false,
+    },
+    content: {
+      title: "Projetos Integradores Extensionistas (PIEs)",
+      body: PIES,
     }
   },
   {
