@@ -15,7 +15,7 @@ import Disciplinas from "./components/Disciplinas";
 import AtividadesExtra from "./components/AtividadesExtra";
 import TCC from "./components/TCC";
 import AlunosEspeciais from "./components/AlunosEspeciais";
-import PIES from "./components/PIES";
+import PIES from "../PIES/components/PIES";
 import Estagio from "../AreaAluno/components/Estagio";
 
 const tabs = [

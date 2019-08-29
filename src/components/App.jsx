@@ -29,7 +29,7 @@ import TopBar from "./TopBar";
 import Contato from "../routes/Contato";
 import Institucional from "../routes/Institucional";
 import EmConstrucao from "./EmConstrucao";
-import PIES from "../routes/Graduacao/components/PIES";
+import PIES from "../routes/PIES";
 
 class App extends Component {
   constructor(props) {
