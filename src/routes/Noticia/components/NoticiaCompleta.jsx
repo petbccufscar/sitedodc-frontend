@@ -17,7 +17,7 @@ const Noticia = ({ noticia }) => (
 			</h4>
 			<small>{noticia.Descricao}</small>
 		</div>
-		<div className="noticia-container">
+		<div className="noticia-container clearfix">
 			{noticia.Imagem && (
 				<img
 					src={`${process.env.REACT_APP_API_URL}/${noticia.Imagem.url}`}
@@ -27,22 +27,6 @@ const Noticia = ({ noticia }) => (
 			)}
 			<ReactMarkdown className="text-justify mt-4" source={noticia.Conteudo} />
 		</div>
-
-		{/* <div className="row">
-			<div className="col-lg-4 text-center img-noticia">
-				{noticia.Imagem && (
-					<img
-						src={`${process.env.REACT_APP_API_URL}/${noticia.Imagem.url}`}
-						className="img-fluid img-cover"
-						alt="Responsive"
-						id="img-noticia"
-					/>
-				)}
-			</div>
-			<div className="col-lg-8">
-				<ReactMarkdown className="text-justify mt-4" source={noticia.Conteudo} />
-			</div>
-		</div> */}
 	</React.Fragment>
 );
 const Data = ({ data = '01/01/2018' }) => (
