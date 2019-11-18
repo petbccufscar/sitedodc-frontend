@@ -1,8 +1,39 @@
 import React, { Component } from 'react';
 import { Breadcrumbs, Breadcrumb } from '../../components/Breadcrumbs';
-import logoPIES from '../../images/pies.jpeg';
 
-// import PiesFragment from './components/PIES';
+import { VTab, SideMenu, TabPanelContainer, VerticalTabs } from '../../components/vertical-tabs';
+
+import { TabPanel } from 'react-web-tabs';
+
+import PiesFragment from './components/PIES';
+import Projetos from './components/Projetos';
+
+const tabs = [
+	{
+		props: {
+			panelId: 'sobre',
+			title: 'Sobre',
+			header: '',
+			showHeader: false,
+		},
+		content: {
+			title: 'Projetos Integradores Extensionistas (PIEs)',
+			body: PiesFragment,
+		},
+	},
+	{
+		props: {
+			panelId: 'projetos',
+			title: 'Projetos à procura de alunos',
+			header: '',
+			showHeader: false,
+		},
+		content: {
+			title: 'Projetos Integradores Extensionistas (PIEs)',
+			body: Projetos,
+		},
+	},
+];
 
 class PIES extends Component {
 	render() {
@@ -12,40 +43,25 @@ class PIES extends Component {
 					<Breadcrumb endereco="/">Início</Breadcrumb>
 					<Breadcrumb bold>PIEs</Breadcrumb>
 				</Breadcrumbs>
-				<div className="container">
-					<center>
-						<h3>Projetos Integradores Extensionistas (PIEs)</h3>
-					</center>
-					<hr></hr>
-					<br></br>
-					<center>
-						<img src={logoPIES} />
-					</center>
-					<div className="text-justify">
-						<p>
-							Projetos Integradores Extensionistas são projetos desenvolvidos por alunos do Departamento
-							de Computação da UFSCar. O foco é o desenvolvimento de soluções, envolvendo software e/ou
-							hardware, que beneficiem a comunidade em geral, como empresas, organizações públicas e a
-							sociedade civil.
-						</p>
-						<p>
-							Quaisquer interessados podem submeter propostas de PIEs, desde alunos, técnicos
-							administrativos, professores, empresas e membros da sociedade civil. Os projetos submetidos
-							serão analisados por uma comissão interna que avaliará sua viabilidade de execução.
-						</p>
-						<p>
-							Maiores detalhes sobre como submeter PIEs podem ser encontrados no edital disponível
-							<a target="blank" href="pies.pdf">
-								{' '}
-								aqui.
-							</a>
-						</p>
-						<p>
-							Dúvidas e esclarecimentos podem ser encaminhados para a Comissão de Avaliação de
-							Acompanhamento (CAAP) dos PIEs, pelo e-mail: <b>caap-dc-ufscar AT googlegroups.com</b>
-						</p>
-					</div>
-				</div>
+
+				<VerticalTabs>
+					<SideMenu defaultTab={tabs[0].props.panelId}>
+						{tabs.map((tab, index) => (
+							<VTab key={'t_' + index} {...tab.props}>
+								{tab.props.title}
+							</VTab>
+						))}
+					</SideMenu>
+					<TabPanelContainer>
+						{tabs.map((tab, index) => (
+							<TabPanel key={'p_' + index} tabId={tab.props.panelId}>
+								<h4>{tab.content.title}</h4>
+								<hr />
+								{tab.content.body}
+							</TabPanel>
+						))}
+					</TabPanelContainer>
+				</VerticalTabs>
 			</React.Fragment>
 		);
 	}

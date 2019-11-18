@@ -3,7 +3,9 @@ import logoPIES from '../../../images/pies.jpeg';
 
 const PiesFragment = (
 	<React.Fragment>
-    <img src={logoPIES}/>
+		<center>
+			<img src={logoPIES} />
+		</center>
 		<div className="text-justify">
 			<p>
 				Projetos Integradores Extensionistas são projetos desenvolvidos por alunos do Departamento de Computação

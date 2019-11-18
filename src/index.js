@@ -27,6 +27,7 @@ import {
   faLink,
   faPhone,
   faChalkboardTeacher,
+  faFileDownload,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { ApolloClient } from "apollo-client";
@@ -65,7 +66,8 @@ library.add(
   faLink,
   faPhone,
   faGraduationCap,
-  faChalkboardTeacher
+  faChalkboardTeacher,
+  faFileDownload
 );
 
 ReactDOM.render(

@@ -1,5 +1,19 @@
 import gql from "graphql-tag";
 
+export const GET_PIES = gql`
+  query {
+    pies {
+      titulo
+      coordenador
+      nro_alunos
+      descricao
+      documento {
+        url
+      }
+    }
+  }
+`;
+
 export const GET_INTERVALO = gql`
   query {
     inicio: anos(where: { Nome: "inicio" }) {
