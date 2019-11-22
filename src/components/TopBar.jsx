@@ -125,12 +125,12 @@ class TopBar extends Component {
                   </div>
                 </li>
                 <li className="nav-item text-center">
-                  <Link to="/institucional">
+                  <a href="/institucional" tabIndex="-1">
                     <MenuButton
                       titulo="Institucional"
                       icone="university"
                     />
-                  </Link>
+                  </a>
                 </li>
 
                 <li className="nav-item dropdown text-center">
