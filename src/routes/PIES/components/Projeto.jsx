@@ -12,7 +12,7 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 						data-toggle="collapse"
 						data-target={'#collapse' + id}
 						aria-expanded="false"
-						aria-controls={'collapseOne' + id}
+						aria-controls={'collapse' + id}
 					>
 						<div className="text-left">
 							<h5 className="mb-1">{titulo}</h5>
@@ -34,7 +34,7 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 				<div className="card-body">
 					<p>{desc}</p>
 					<p>
-						<a href={"https://api.dc.ufscar.br" + doc} target="blank">
+						<a href={'https://api.dc.ufscar.br' + doc} target="blank">
 							{' '}
 							<FontAwesomeIcon icon="file-download" className="mr-2" />
 							Download do Documento com Detalhes do Projeto
