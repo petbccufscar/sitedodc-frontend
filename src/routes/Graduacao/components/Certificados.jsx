@@ -33,20 +33,29 @@ const certficados = [
 
 	{
 		titulo: 'Desenvolvimento Web e Móvel',
-		desc:
-			'Praticamente todo sistema de software atual tem uma interface web ou para dispositivos móveis. Por mais que existam diferentes capacidades e especialidades sendo requeridas no mercado de trabalho, sem dúvida a demanda por desenvolvedores "full-stack", que engloba o desenvolvimento web e móvel, é a que mais fortemente se apresenta para o profissional. Esta trilha tem como objetivo formar desenvolvedores altamente capacitados em projetar qualquer tipo de aplicação web e móvel, cobrindo os principais conceitos fundamentais de maneira que o estudante consiga implementar aplicações para diferentes domínios.',
+		desc: `Praticamente todo sistema de software atual tem uma interface web ou para dispositivos móveis. 
+			Por mais que existam diferentes capacidades e especialidades sendo requeridas no mercado de trabalho,
+			sem dúvida a demanda por desenvolvedores "full-stack", que engloba o desenvolvimento web e móvel, é a
+			que mais fortemente se apresenta para o profissional. Este certificado tem como objetivo formar desenvolvedores
+			altamente capacitados em projetar qualquer tipo de aplicação web e móvel, cobrindo os principais conceitos
+			fundamentais de maneira que o estudante consiga implementar aplicações para diferentes domínios.`,
 		id: 'dev-web-mobile',
 	},
 	{
 		titulo: 'Engenharia de Software',
-		desc:
-			'A demanda por profissionais capacitados na área de Engenharia de Software é crescente, uma vez que o mercado de tecnologia da informação busca profissionais treinados no desenvolvimento de sistemas de software complexos. Por isso, o DC-UFSCar oferece este certificado com o objetivo de capacitar estudante a desenvolver, reutilizar, testar, validar e gerenciar projetos de sistemas de software.',
+		desc: `A demanda por profissionais capacitados na área de Engenharia de Software é crescente, uma vez que o 
+			mercado de tecnologia da informação busca profissionais treinados no desenvolvimento de sistemas de
+			software complexos. Por isso, o DC-UFSCar oferece este certificado com o objetivo de capacitar o estudante a
+			desenvolver, reutilizar, testar, validar e gerenciar projetos de sistemas de software.`,
 		id: 'eng-software',
 	},
 	{
 		titulo: 'Resolução de Problemas Difíceis',
-		desc:
-			'Problemas computacionais complexos e desafiadores surgem nas mais variadas áreas. Pode ser muito difícil, ou mesmo impossível, encontrar algoritmos eficientes que sempre encontram a solução ótima para estes problemas. Para atacar tais problemas é importante usar abordagens avançadas e complementares que permitem o projeto e análise de algoritmos exatos, heurísticos e aproximados. O objetivo deste certificado é qualificar o estudante no uso destas variadas técnicas que permitem resolver problemas computacionais complexos, tipicamente NP-Difíceis.',
+		desc: `Problemas computacionais complexos e desafiadores surgem nas mais variadas áreas. Pode ser muito difícil, 
+			ou mesmo impossível, encontrar algoritmos eficientes que sempre encontram a solução ótima para estes problemas.
+			Para atacar tais problemas é importante usar abordagens avançadas e complementares que permitem o projeto e
+			análise de algoritmos exatos, heurísticos e aproximados. O objetivo deste certificado é qualificar o estudante
+			no uso destas variadas técnicas, que permitem resolver problemas computacionais complexos, tipicamente NP-Difíceis.`,
 		id: 'res-prob',
 	},
 	{
