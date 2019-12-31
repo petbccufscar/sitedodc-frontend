@@ -66,9 +66,10 @@ const certficados = [
 	},
 	{
 		titulo: 'Visão Computacional',
-		desc: '',
+		desc: `
+		Visão Computacional é uma área da ciência que se dedica a desenvolver teorias e métodos para a construção de sistemas artificiais que automaticamente extraem informações de imagens (e vídeos) digitais e as usam para a detecção, rastreamento e classificação de objetos nas imagens. O problema da visão por computador parece simples porque é trivialmente realizado por pessoas, mesmo crianças muito pequenas. Não obstante, permanece em grande parte um problema não resolvido, baseado tanto no entendimento limitado da visão biológica quanto na complexidade da percepção da visão em um mundo físico dinâmico e quase infinitamente variável. Aplicações de Visão Computacional estão presentes em diversos cenários, como reconhecimento ótico de caracteres, inspeção de peças em indústria, construção de modelos 3D em fotometria, imagens médicas, segurança automobilística, robótica, biometria (reconhecimento de íris e impressão digital), câmeras de segurança, entre outras. Como consequência, a demanda por profissionais de computação com conhecimentos específicos em manipulação de imagens e vídeos digitais segue aumentando. Portanto, o objetivo deste certificado é capacitar estudantes tanto do ponto de vista teórico quanto prático nas principais técnicas de visão computacional usadas em aplicações nas diversas áreas citadas acima. 
+		`,
 		id: '',
-		empty: true,
 	},
 ];
 
