@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 
 export const GET_PIES = gql`
   query {
-    pies {
+    pies(where: {em_andamento_ne: true}) {
       titulo
       coordenador
       nro_alunos
@@ -10,6 +10,20 @@ export const GET_PIES = gql`
       documento {
         url
       }
+    }
+  }
+`;
+
+export const GET_PROJETOS_ANDAMENTO = gql`
+  query {
+    pies(where: {em_andamento: true}) {
+      titulo
+      coordenador
+      alunos_envolvidos
+      descricao
+      data_inicio
+      data_termino
+      proex_num
     }
   }
 `;

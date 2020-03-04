@@ -7,6 +7,7 @@ import { TabPanel } from 'react-web-tabs';
 
 import PiesFragment from './components/PIES';
 import Projetos from './components/Projetos';
+import ProjetosAndamento from './components/ProjetosAndamento'
 
 const tabs = [
 	{
@@ -31,6 +32,18 @@ const tabs = [
 		content: {
 			title: 'Projetos Integradores Extensionistas (PIEs)',
 			body: Projetos,
+		},
+	},
+	{
+		props: {
+			panelId: 'projetos_andamento',
+			title: 'Projetos em andamento',
+			header: '',
+			showHeader: false,
+		},
+		content: {
+			title: 'Projetos em andamento',
+			body: ProjetosAndamento,
 		},
 	},
 ];

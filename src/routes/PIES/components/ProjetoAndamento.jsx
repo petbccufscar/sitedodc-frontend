@@ -1,7 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { format } from 'date-fns';
+import pt from 'date-fns/locale/pt';
 
-const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
+const ProjetoAndamento = ({ id, titulo, coordenador, alunosEnvolvidos, desc, proexNum, dataInicio, dataTermino }) => (
 	<React.Fragment>
 		<div className="card">
 			<div className="card-header" id={'heading-' + id}>
@@ -18,8 +19,7 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 							<h5 className="mb-1">{titulo}</h5>
 							<strong>Coordenador: </strong>
 							{coordenador} <br />
-							<strong>Nro de Alunos Exigidos: </strong>
-							{nro_alunos}
+							<strong>Número Proex:</strong> {proexNum}
 						</div>
 					</button>
 				</h5>
@@ -33,12 +33,16 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 			>
 				<div className="card-body">
 					<p>{desc}</p>
-					<p> { doc ? <a href={'https://api.dc.ufscar.br' + doc} target="blank">
-							{' '}
-							<FontAwesomeIcon icon="file-download" className="mr-2" />
-							Download do Documento com Detalhes do Projeto
-						</a> : <></>}
-						
+					<strong>Alunos Envolvidos: </strong>
+					<ul>
+						{alunosEnvolvidos.map(aluno => (
+							<li>{aluno}</li>
+						))}
+					</ul>
+					<p>
+						<strong>Início: </strong> {format(new Date(dataInicio), 'MM/YYYY')}
+						<br />
+						<strong>Termino: </strong> {format(new Date(dataTermino), 'MM/YYYY')}
 					</p>
 				</div>
 			</div>
@@ -46,4 +50,4 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 	</React.Fragment>
 );
 
-export default Projeto;
+export default ProjetoAndamento;

@@ -28,7 +28,7 @@ const Projetos = (
                 coordenador={projeto.coordenador}
                 nro_alunos={projeto.nro_alunos}
                 desc={projeto.descricao}
-                doc={projeto.documento.url}
+                doc={projeto.document ? projeto.documento.url : ''}
             />
           ));
         }}
