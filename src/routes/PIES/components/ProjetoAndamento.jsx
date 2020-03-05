@@ -19,7 +19,18 @@ const ProjetoAndamento = ({ id, titulo, coordenador, alunosEnvolvidos, desc, pro
 							<h5 className="mb-1">{titulo}</h5>
 							<strong>Coordenador: </strong>
 							{coordenador} <br />
-							<strong>Número Proex:</strong> {proexNum}
+							<strong>Número Proex:</strong> {proexNum}<br/>
+							<strong>Alunos Envolvidos: </strong>
+							<ul>
+								{alunosEnvolvidos.map(aluno => (
+									<li>{aluno}</li>
+								))}
+							</ul>
+							<p>
+								<strong>Início: </strong> {format(new Date(dataInicio), 'MM/YYYY')}
+								<br />
+								<strong>Término: </strong> {format(new Date(dataTermino), 'MM/YYYY')}
+							</p>
 						</div>
 					</button>
 				</h5>
@@ -33,17 +44,6 @@ const ProjetoAndamento = ({ id, titulo, coordenador, alunosEnvolvidos, desc, pro
 			>
 				<div className="card-body">
 					<p>{desc}</p>
-					<strong>Alunos Envolvidos: </strong>
-					<ul>
-						{alunosEnvolvidos.map(aluno => (
-							<li>{aluno}</li>
-						))}
-					</ul>
-					<p>
-						<strong>Início: </strong> {format(new Date(dataInicio), 'MM/YYYY')}
-						<br />
-						<strong>Termino: </strong> {format(new Date(dataTermino), 'MM/YYYY')}
-					</p>
 				</div>
 			</div>
 		</div>
