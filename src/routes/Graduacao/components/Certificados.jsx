@@ -26,9 +26,8 @@ const certficados = [
 	},
 	{
 		titulo: 'Controle, Automação e Robótica',
-		desc: '',
-		id: 'controle',
-		empty: true,
+		desc: 'Tecnologias inovadoras vem transformando as tarefas da produção industrial e do cotidiano das pessoas. Tarefas como a produção de um bem na indústria ou mesmo a realização de uma tarefa doméstica podem ser feitas de forma automática, sem a intervenção humana. Sistemas de controle tem se tornado mais eficientes, proporcionando a utilização de controladores programáveis e robótica móvel nesses ambientes. Esse certificado tem por objetivo capacitar os estudantes de graduação com conhecimentos em sistemas de controle, automação e dispositivos robóticos de forma a estarem aptos ao desenvolvimento e implementação de sistemas automatizados.',
+		id: 'controle'
 	},
 
 	{
