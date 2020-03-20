@@ -19,10 +19,13 @@ const PiesFragment = (
 			</p>
 			<p>
 				Maiores detalhes sobre como submeter PIEs podem ser encontrados no edital disponível
-				<a target="blank" href="pies.pdf">
+				<a target="_blank" href="edital_PIEs.pdf">
 					{' '}
 					aqui.
 				</a>
+			</p>
+			<p>
+				Para submeter seu projeto use como base nosso <a href="template_PIEs.docx" target="_blank">template!</a>
 			</p>
 			<p>
 				Dúvidas e esclarecimentos podem ser encaminhados para a Comissão de Avaliação de Acompanhamento (CAAP)
