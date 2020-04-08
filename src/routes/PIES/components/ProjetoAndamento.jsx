@@ -21,11 +21,8 @@ const ProjetoAndamento = ({ id, titulo, coordenador, alunosEnvolvidos, desc, pro
 							{coordenador} <br />
 							<strong>Número Proex:</strong> {proexNum}<br/>
 							<strong>Alunos Envolvidos: </strong>
-							<ul>
-								{alunosEnvolvidos == null ? "": alunosEnvolvidos.map(aluno => (
-									<li>{aluno}</li>
-								))}
-							</ul>
+								{alunosEnvolvidos == null ? "": alunosEnvolvidos}
+							
 							<p>
 								<strong>Início: </strong> {format(new Date(dataInicio), 'MM/YYYY')}
 								<br />
