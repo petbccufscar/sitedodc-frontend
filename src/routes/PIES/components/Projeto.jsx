@@ -19,7 +19,7 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 							<strong>Coordenador: </strong>
 							{coordenador} <br />
 							<strong>Nro de Alunos Exigidos: </strong>
-							{nro_alunos}
+							{nro_alunos == null ? "": nro_alunos}
 						</div>
 					</button>
 				</h5>

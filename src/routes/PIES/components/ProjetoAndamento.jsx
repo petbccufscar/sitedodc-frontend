@@ -22,7 +22,7 @@ const ProjetoAndamento = ({ id, titulo, coordenador, alunosEnvolvidos, desc, pro
 							<strong>Número Proex:</strong> {proexNum}<br/>
 							<strong>Alunos Envolvidos: </strong>
 							<ul>
-								{alunosEnvolvidos.map(aluno => (
+								{alunosEnvolvidos == null ? "": alunosEnvolvidos.map(aluno => (
 									<li>{aluno}</li>
 								))}
 							</ul>
