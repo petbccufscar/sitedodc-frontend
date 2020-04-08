@@ -19,7 +19,7 @@ export const GET_PROJETOS_ANDAMENTO = gql`
     pies(where: {em_andamento: true}) {
       titulo
       coordenador
-      alunos_envolvidos2
+      alunos_envolvidos
       descricao
       data_inicio
       data_termino
