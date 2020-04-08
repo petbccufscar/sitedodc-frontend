@@ -5,7 +5,7 @@ export const GET_PIES = gql`
     pies(where: {em_andamento_ne: true}) {
       titulo
       coordenador
-      alunos_envolvidos2
+      alunos_envolvidos
       descricao
       documento {
         url
