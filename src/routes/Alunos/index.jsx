@@ -29,7 +29,7 @@ class Alunos extends Component {
 
         <div className="container">
           <CardContainer>
-            <Query query={GET_ALUNOS} variables={{ ano: parseInt(ano), curso: curso.toUpperCase() }}>
+            <Query query={GET_ALUNOS(ano,curso)}>
               {({ loading, error, data }) => {
                 if (loading) {
                   return <div />;
