@@ -12,6 +12,7 @@ import AlunosEspeciais from './components/AlunosEspeciais';
 import PIES from '../PIES/components/PIES';
 import Estagio from '../AreaAluno/components/Estagio';
 import Certificados from './components/Certificados';
+import FAQ from './components/FAQ';
 
 const tabs = [
 	{
@@ -100,6 +101,18 @@ const tabs = [
 	},
 	{
 		props: {
+			panelId: 'faq',
+			title: 'FAQ',
+			header: '',
+			showHeader: false,
+		},
+		content: {
+			title: 'FAQ',
+			body: FAQ,
+		},
+	},
+	{
+		props: {
 			panelId: 'suporte',
 			title: 'Suporte',
 			header: '',
@@ -110,6 +123,7 @@ const tabs = [
 			body: placeholder,
 		},
 	},
+
 ];
 
 class Graduacao extends Component {
