@@ -20,7 +20,7 @@ const content = (<>
 
 const certficados = [
 	{
-		titulo: 'Existem planejamentos para recuperar esse primeiro semestre "perdido"?',
+		titulo: <div class="text-left">Existem planejamentos para recuperar esse primeiro semestre "perdido"?</div>,
 		desc: <div><p>O Conselho de Graduação tomou a decisão de cancelar o semestre 2020/1. Haverá então nova distribuição de
         disciplinas aos docentes e novo período de inscrição aos alunos, mas nada impede que disciplinas que haviam sido
         ofertadas em 2020/1 não sejam novamente. Tiveram, porém, duas exceções à esta decisão:
@@ -38,7 +38,7 @@ const certficados = [
 		id: 'semestre-perdido',
 	},
 	{
-		titulo: 'Haverá alguma pesquisa do departamento para identificar as disciplinas de maior interesse dos alunos?',
+		titulo: <div class="text-left">Haverá alguma pesquisa do departamento para identificar as disciplinas de maior interesse dos alunos?</div>,
 		desc:
             <p>
                 Sim, o departamento realizou uma consulta por meio de um forms para saber quais seriam as matérias do DC que os alunos teriam interesse em se inscrever no próximo semestre. O forms ficou disponível dos dias 08/07/2020 até 12/07/2020. Essa consulta visou apoiar a chefia e não garante que uma dada disciplina será oferecida, independentemente do número de alunos que a selecionaram.
@@ -48,7 +48,7 @@ const certficados = [
         id: 'pesquisa-interesse',
     },
     {
-		titulo: 'Qual é a data prevista para o início das atividades e como será o calendário do semestre de Ensino Remoto? ',
+		titulo: <div class="text-left">Qual é a data prevista para o início das atividades e como será o calendário do semestre de Ensino Remoto?</div>,
         desc:
         <div>
             <p>
@@ -64,7 +64,7 @@ const certficados = [
         id: 'calendario-remoto',
 	},
 	{
-		titulo:'Existe alguma movimentação para que os semestres oferecidos através do Ensino Remoto não contem no tempo que o aluno tem para concluir o curso?',
+		titulo:<div class="text-left">Existe alguma movimentação para que os semestres oferecidos através do Ensino Remoto não contem no tempo que o aluno tem para concluir o curso?</div>,
         desc:
         <div>   
             <p>
@@ -78,7 +78,7 @@ const certficados = [
 	},
 
 	{
-		titulo: 'Haverá algum limite de matérias/créditos que os alunos poderão cursar?',
+		titulo: <div class="text-left">Haverá algum limite de matérias/créditos que os alunos poderão cursar?</div>,
 		desc: 
             <p>
                 O limite provavelmente continuará o mesmo, contudo, considerando a especificidade de 3 blocos do novo calendário acadêmico 2020/1, a recomendação geral é que os estudantes não se inscrevam em mais de 3 atividades concomitantemente, independentemente de serem atividades ofertadas nos blocos A e C ou B e C.
@@ -86,7 +86,7 @@ const certficados = [
 		id: 'limite-creditos',
 	},
 	{
-		titulo: 'As disciplinas seguirão os mesmos requisitos que existem na normalidade?',
+		titulo: <div class="text-left">As disciplinas seguirão os mesmos requisitos que existem na normalidade?</div>,
 		desc: 
             <div>
                 <p>
@@ -99,7 +99,7 @@ const certficados = [
 		id: 'requisitos',
 	},
 	{
-		titulo: 'Como será o controle de frequência na modalidade de Ensino Remoto?',
+		titulo: <div class="text-left">Como será o controle de frequência na modalidade de Ensino Remoto?</div>,
 		desc: 
         <div>
             <p>
@@ -119,7 +119,7 @@ const certficados = [
 		id: 'controle-frequencia',
 	},
 	{
-		titulo: 'Está sendo pensado algo que possa minimizar o conflito de horários de disciplinas?',
+		titulo: <div class="text-left">Está sendo pensado algo que possa minimizar o conflito de horários de disciplinas?</div>,
 		desc:
         <p>
             A proposta do GT do CCET é que as disciplinas sejam assíncronas, ou seja, não tenham horários fixos, justamente 
@@ -128,7 +128,7 @@ const certficados = [
 		id: 'conflito-horario',
 	},
 	{
-		titulo: 'Se houver Ensino Remoto no segundo semestre de 2020, será eletivo ou obrigatório?',
+		titulo: <div class="text-left">Se houver Ensino Remoto no segundo semestre de 2020, será eletivo ou obrigatório?</div>,
         desc: 
         <div>   
             <p>
@@ -156,7 +156,7 @@ const certficados = [
 		id: 'eletivo-ou-obrigatorio',
     },
     {
-		titulo: 'Quando serão as férias e quanto tempo irão durar?',
+		titulo: <div class="text-left">Quando serão as férias e quanto tempo irão durar?</div>,
         desc: 
         <div>
             <p>
@@ -169,7 +169,7 @@ const certficados = [
 		id: 'ferias',
     },
     {
-		titulo: 'O Ensino Remoto em conjunto com o isolamento estão tendo um impacto negativo em meu estado psicológico. Existe algum canal da universidade para conseguir ajuda?',
+		titulo: <div class="text-left">O Ensino Remoto em conjunto com o isolamento estão tendo um impacto negativo em meu estado psicológico. Existe algum canal da universidade para conseguir ajuda?</div>,
         desc: 
         <div>
             <p>
@@ -182,7 +182,7 @@ const certficados = [
 		id: 'plantao-psico',
     },
     {
-		titulo: 'Vou ter dificuldades em cursar o semestre de forma remota, como posso informar isso ao departamento?',
+		titulo: <div class="text-left">Vou ter dificuldades em cursar o semestre de forma remota, como posso informar isso ao departamento?</div>,
         desc: 
         <p>Há duas formas indicadas para isso, a primeira é pelo <a href="https://forms.gle/XXSbfRAM78y9DnEH6" target="_blank">forms</a>. A segunda é por meio do <a href="mailto:secretaria.graduacao.dc@ufscar.br">email</a> da secretaria, porém recomendamos que use a primeira forma. 
         </p>
@@ -190,7 +190,7 @@ const certficados = [
 		id: 'sem-remota',
     },
     {
-		titulo: 'A quantidade de disciplinas que poderão ser pegas juntamente com o estágio obrigatório será mantida?',
+		titulo: <div class="text-left">A quantidade de disciplinas que poderão ser pegas juntamente com o estágio obrigatório será mantida?</div>,
         desc: 
         <p>
             Provavelmente. Como as disciplinas devem continuar contando o mesmo número de créditos, a contagem deverá ser a mesma. Por exemplo, uma disciplina de 4 créditos (4 horas semanais), continuará sendo de 4 créditos mesmo no formato remoto, então, ela continuará contando 4 horas semanais. 
@@ -199,7 +199,7 @@ const certficados = [
 		id: 'creditos',
     },
     {
-		titulo: 'Como a universidade pretende incluir os alunos com pouco ou nenhum acesso à dispositivos eletrônicos ou internet durante o Ensino Remoto? ',
+		titulo: <div class="text-left">Como a universidade pretende incluir os alunos com pouco ou nenhum acesso à dispositivos eletrônicos ou internet durante o Ensino Remoto?</div>,
         desc: 
         <div>
             <p>
