@@ -107,7 +107,7 @@ const tabs = [
 			showHeader: false,
 		},
 		content: {
-			title: 'FAQ',
+			title: 'Perguntas Frequentes Relacionadas ao Ensino Remoto no DC/UFSCar',
 			body: FAQ,
 		},
 	},
