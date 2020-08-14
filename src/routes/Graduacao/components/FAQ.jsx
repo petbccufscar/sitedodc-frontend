@@ -16,14 +16,18 @@ const content = (<>
         Caso possua dúvidas mais específicas que não são respondidas neste FAQ, existem duas maneiras de entrar em contato conosco. A primeira é por meio do endereço de e-mail secretaria.graduacao.dc@ufscar.br. A segunda forma é por chamada de voz;  a EADis (Equipe de Apoio aos Discentes) realiza rodas de conversa semanal todas às quartas-feiras, entre 10:00 e 11:00 da manhã. 
     </p>
 
-    <p>Última atualização: 05/08/2020</p></>);
+    <p>Última atualização: 14/08/2020</p></>);
 
 const certficados = [
-	{
+    {
+		titulo: <div class="text-left">O Departamento de Computação já divulgou a lista de disciplinas que será oferecida neste período remoto?</div>,
+		desc: <div><p>Sim, a lista de disciplinas com o docente responsável já pode ser consultada no site do DC, neste link: <a href="https://site.dc.ufscar.br/area-aluno" target="_blank">https://site.dc.ufscar.br/area-aluno</a>
+        </p></div>,
+		id: 'lista-disciplinas',
+	}, 
+    {
 		titulo: <div class="text-left">Existem planejamentos para recuperar esse primeiro semestre "perdido"?</div>,
-		desc: <div><p>O Conselho de Graduação tomou a decisão de cancelar o semestre 2020/1. Haverá então nova distribuição de
-        disciplinas aos docentes e novo período de inscrição aos alunos, mas nada impede que disciplinas que haviam sido
-        ofertadas em 2020/1 não sejam novamente. Tiveram, porém, duas exceções à esta decisão:
+		desc: <div><p>O Conselho de Graduação tomou a decisão de cancelar o semestre 2020/1. Houve então uma nova distribuição de disciplinas aos docentes e um novo período de inscrição aos alunos (que será no dia 24/08/2020), mas nada impede que disciplinas que haviam sido ofertadas em 2020/1 não sejam novamente. Tiveram, porém, <b>duas exceções</b> à esta decisão:
         </p>
         <p>
         As atividades de estágio já lançadas no SiGA em 2020/1 não serão canceladas para que não sejam prejudicados os
@@ -36,14 +40,38 @@ const certficados = [
         demais decisões dos Conselhos, mas sem alterar o que consta atualmente no Sistema SiGA.
         </p></div>,
 		id: 'semestre-perdido',
-	},
+    },
+    {
+		titulo: <div class="text-left">Será preciso fazer rematrícula no curso em algum momento para se inscrever nas disciplinas?</div>,
+		desc: <div><p>Não. Tecnicamente ainda estamos no período letivo 2020/1, portanto a rematrícula efetuada no início do ano ainda encontra-se vigente e inscrições em disciplinas poderão ser feitas normalmente.
+        </p></div>,
+		id: 'rematricula',
+    },
+    {
+		titulo: <div class="text-left">Sou aluno ingressante em 2020/1. Terei que me inscrever nas disciplinas manualmente também?</div>,
+		desc: <div><p>Não. Alunos ingressantes em 2020/1 serão automaticamente inscritos nas disciplinas do Perfil 1 recomendadas pelo departamento para calouros, como normalmente ocorre.
+        </p></div>,
+		id: 'ingressantes-automaticos',
+    },
+    {
+		titulo: <div class="text-left">A inscrição em disciplinas para Alunos Especiais funcionará normalmente?</div>,
+		desc: <div><p>Infelizmente, a matrícula e inscrição em disciplinas para Alunos Especiais não estará disponível durante este período de ENPE.
+        </p></div>,
+		id: 'alunos-especiais',
+    },
+    {
+		titulo: <div class="text-left">O processo de Transferência Externa será afetado?*</div>,
+		desc: <div><p>Não. Transferências continuarão a ocorrer normalmente sem alterações.
+        </p></div>,
+		id: 'transferencia-externa',
+    },
+    
 	{
-		titulo: <div class="text-left">Haverá alguma pesquisa do departamento para identificar as disciplinas de maior interesse dos alunos?</div>,
+		titulo: <div class="text-left">Houve alguma pesquisa do departamento para identificar as disciplinas de maior interesse dos alunos?</div>,
 		desc:
             <p>
-                Sim, o departamento realizou uma consulta por meio de um forms para saber quais seriam as matérias do DC que os alunos teriam interesse em se inscrever no próximo semestre. O forms ficou disponível dos dias 08/07/2020 até 12/07/2020. Essa consulta visou apoiar a chefia e não garante que uma dada disciplina será oferecida, independentemente do número de alunos que a selecionaram.
-                O mesmo foi feito para as disciplinas do DM, sendo que esse outro forms ficou disponível dos dias 10/07/2020 até
-                13/07/2020.
+                Sim, o departamento realizou uma consulta por meio de um formulário para saber quais seriam as matérias do DC que os alunos teriam interesse em se inscrever no próximo semestre. O formulário ficou disponível dos dias 08/07/2020 até 12/07/2020. Essa consulta visou apoiar a chefia e não garante que uma dada disciplina será oferecida, independentemente do número de alunos que a selecionaram.
+                O mesmo foi feito para as disciplinas do DM, sendo que esse outro formulário ficou disponível dos dias 10/07/2020 até 13/07/2020.
             </p>,    
         id: 'pesquisa-interesse',
     },
@@ -64,11 +92,11 @@ const certficados = [
         id: 'calendario-remoto',
 	},
 	{
-		titulo:<div class="text-left">Existe alguma movimentação para que os semestres oferecidos através do Ensino Remoto não contem no tempo que o aluno tem para concluir o curso?</div>,
+		titulo:<div class="text-left">Os semestres oferecidos por meio do Ensino Remoto contarão no tempo que o aluno tem para concluir o curso? Poderei jubilar durante este período?</div>,
         desc:
         <div>   
             <p>
-                Segundo a Resolução CoG n°332 de 27/07/2020 todos os discentes com matrícula ativa ou ingressantes durante o período de ensino remoto excepcional  terão seus prazos para integralização dos cursos estendidos por 2 anos. Além disso, poderão solicitar um pedido de trancamento de matrícula excepcional e adicional ao previsto no Regimento Geral dos Cursos de Graduação a qualquer momento durante a vigência do ENPE, com prazo de até 1 ano para cursos anuais e até 6 meses para cursos semestrais, prorrogáveis.  
+            Segundo a Resolução CoG n°332 de 27/07/2020 todos os discentes com matrícula ativa ou ingressantes durante o período de ensino remoto excepcional  terão seus prazos para integralização dos cursos estendidos por 2 anos. Além disso, poderão solicitar um pedido de trancamento de matrícula excepcional e adicional ao previsto no Regimento Geral dos Cursos de Graduação a qualquer momento durante a vigência do ENPE, com prazo de até 1 ano para cursos anuais e até 6 meses para cursos semestrais, prorrogáveis. Ou seja, não haverá jubilamento durante este período de ENPE.  
             </p>
             <p>    
                 A resolução mencionada acima se encontra neste <a href="http://www.prograd.ufscar.br/conselho-de-graduacao-1/arquivos-conselho-de-graduacao/reunioes/2020/resolucoes_2020/ResoluoCoG332.pdf" target="_blank">Link</a>.
@@ -81,7 +109,7 @@ const certficados = [
 		titulo: <div class="text-left">Haverá algum limite de matérias/créditos que os alunos poderão cursar?</div>,
 		desc: 
             <p>
-                O limite provavelmente continuará o mesmo, contudo, considerando a especificidade de 3 blocos do novo calendário acadêmico 2020/1, a recomendação geral é que os estudantes não se inscrevam em mais de 3 atividades concomitantemente, independentemente de serem atividades ofertadas nos blocos A e C ou B e C.
+                O limite continuará o mesmo dos períodos letivos regulares. Contudo, considerando a especificidade de 3 blocos do novo calendário acadêmico 2020/1, a recomendação geral é que os estudantes não se inscrevam em mais de 3 atividades concomitantes durante os blocos A e C ou B e C. 
             </p>,
 		id: 'limite-creditos',
 	},
@@ -90,10 +118,7 @@ const certficados = [
 		desc: 
             <div>
                 <p>
-                    Segundo a Resolução CoG n°332 de 27/07/2020 a quebra de pré-requisitos poderá ser autorizada por conselhos de curso em primeira instância mediante recurso, ouvindo-se os departamentos responsáveis pelas atividades.  
-                </p>
-                <p>
-                    A resolução mencionada acima se encontra neste <a href="http://www.prograd.ufscar.br/conselho-de-graduacao-1/arquivos-conselho-de-graduacao/reunioes/2020/resolucoes_2020/ResoluoCoG332.pdf" target="_blank">Link</a>. 
+                    SSim, os requisitos das disciplinas durante o ENPE serão os mesmos, porém ainda é possível entrar em contato com a coordenação do curso para requisitar uma quebra de requisitos excepcional, como ocorria nos períodos letivos normais.. 
                 </p>
             </div>,
 		id: 'requisitos',
@@ -117,22 +142,29 @@ const certficados = [
             </p>
         </div>,
 		id: 'controle-frequencia',
+    },
+    {
+		titulo: <div class="text-left">Como serão realizadas as avaliações das disciplinas?</div>,
+		desc:
+        <p>
+            Os métodos de avaliação de cada disciplina ficarão a critério do professor ministrante, porém os docentes foram orientados a favorecer o uso de avaliações contínuas, ou seja, múltiplas atividades/trabalhos que juntos irão compor a nota final do aluno. 
+        </p>,
+		id: 'avaliacoes',
 	},
 	{
 		titulo: <div class="text-left">Está sendo pensado algo que possa minimizar o conflito de horários de disciplinas?</div>,
 		desc:
         <p>
-            A proposta do GT do CCET é que as disciplinas sejam assíncronas, ou seja, não tenham horários fixos, justamente 
-            para dificultar a ocorrência desses conflitos.
+            No período de ensino remoto, o conflito de horários não deverá ser um problema. As disciplinas deverão basear suas atividades em momentos assíncronos, portanto os alunos não terão a necessidade de estarem disponíveis para a disciplina em horários específicos.
         </p>,
 		id: 'conflito-horario',
 	},
 	{
-		titulo: <div class="text-left">Se houver Ensino Remoto no segundo semestre de 2020, será eletivo ou obrigatório?</div>,
+		titulo: <div class="text-left">O novo semestre em ensino remoto emergencial será eletivo ou obrigatório?</div>,
         desc: 
         <div>   
             <p>
-                Será eletivo. Para minimizar possíveis dificuldades que os estudantes viriam a ter no ensino remoto a inscrição em atividades se tornou facultativa. Apenas os estudantes ingressantes em 2020 serão pré inscritos em atividades, contudo, os mesmos poderão realizar o cancelamento de tais atividades caso queiram.  
+            Será eletivo. Para minimizar possíveis dificuldades que os estudantes viriam a ter no ensino remoto a inscrição em atividades se tornou facultativa. Apenas os estudantes ingressantes em 2020 serão pré inscritos em atividades, contudo, os mesmos poderão realizar o cancelamento de tais atividades caso queiram.   
             </p>
             <p>
                 Algumas soluções que amparam essa decisão se encontram na <b>Resolução CoG n°332</b> de 27/07/2020, sendo elas: 
@@ -160,7 +192,7 @@ const certficados = [
         desc: 
         <div>
             <p>
-                Segundo o novo calendário acadêmico 2020/1 haverá um período de recesso entre os dias 27/10/2020 e 8/11/2020, contudo nada foi decidido sobre as férias após o final do semestre (16/01/2021). 
+            Segundo o novo calendário acadêmico 2020/1 haverão dois períodos de recesso, o primeiro será entre os dias 27/10/2020 e 8/11/2020 e o segundo de 19/12/2020 a 04/01/2021. Nada foi decidido sobre as férias após o final do semestre (16/01/2021).
             </p>
             <p>
                 O calendário completo está disponível <a href="http://www.prograd.ufscar.br/estudantes-de-graduacao/arquivos-estudantes/calendarios/2020/ENPE20201.pdf" target="_blank">aqui</a>
@@ -193,23 +225,10 @@ const certficados = [
 		titulo: <div class="text-left">A quantidade de disciplinas que poderão ser pegas juntamente com o estágio obrigatório será mantida?</div>,
         desc: 
         <p>
-            Provavelmente. Como as disciplinas devem continuar contando o mesmo número de créditos, a contagem deverá ser a mesma. Por exemplo, uma disciplina de 4 créditos (4 horas semanais), continuará sendo de 4 créditos mesmo no formato remoto, então, ela continuará contando 4 horas semanais. 
+          Sim. Como as disciplinas continuarão contando o mesmo número de créditos, a contagem deverá ser a mesma. Por exemplo, uma disciplina de 4 créditos (4 horas semanais), continuará sendo de 4 créditos mesmo no formato remoto, então, ela continuará contando 4 horas semanais.
         </p>
         ,
-		id: 'creditos',
-    },
-    {
-		titulo: <div class="text-left">Como a universidade pretende incluir os alunos com pouco ou nenhum acesso à dispositivos eletrônicos ou internet durante o Ensino Remoto?</div>,
-        desc: 
-        <div>
-            <p>
-                A proposta de retomada das atividades regulares em formato ENPE, publicada pelo GT - Planejamento no dia 16/07/2020 contém planos para a concessão de chips com acesso a pacote de dados de internet, bem como empréstimo de notebooks, ou concessão de recurso financeiro para a aquisição destes (a critério da Pró-Reitoria de Administração). Alunos interessados serão avaliados através de um processo seletivo onde serão priorizados discentes de menor renda familiar. Tenha em mente que <b>este planejamento ainda não foi aprovado pelo CoG e, portanto, está sujeito a mudanças </b>.  
-            </p>
-            <p>
-                Mais informações sobre a proposta do processo estão contidas <a href="http://www.prograd.ufscar.br/conselho-de-graduacao-1/arquivos-conselho-de-graduacao/Anexo5.Minuta_Processo_Seletivo_para_apoio_a_Inclusao_Digital.pdf">aqui</a>
-            </p>       
-        </div>,
-		id: 'psicologico',
+		id: 'creditos-estagio',
     },
 ];
 const Certificados = (
