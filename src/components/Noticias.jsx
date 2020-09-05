@@ -13,7 +13,7 @@ class Noticias extends Component {
       <CardContainer>
         <Query
           query={GET_NOTICIAS}
-          variables={{ qnt: parseInt(this.props.quantidade) }}
+          variables={{ qnt: this.props.quantidade, start:this.props.start }}
         >
           {({ loading, error, data }) => {
             if (loading) {
@@ -25,6 +25,10 @@ class Noticias extends Component {
               );
             }
             if (error){ return `Error! ${error.message}`;}
+
+            if(this.props.onLoad){
+              this.props.onLoad(data.noticias)
+            }
 
             return data.noticias.map((noticia, index) => (
               <NoticiaCard

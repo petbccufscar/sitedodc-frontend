@@ -149,8 +149,8 @@ export const GET_FUNCIONARIOS = gql`
 `;
 
 export const GET_NOTICIAS = gql`
-  query Noticias($qnt: Int!) {
-    noticias(limit: $qnt, sort: "_id:desc") {
+  query Noticias($qnt: Int!, $start: Int!) {
+    noticias(limit: $qnt, sort: "_id:desc", start: $start) {
       _id
       Imagem {
         url
