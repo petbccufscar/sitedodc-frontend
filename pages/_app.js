@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import withApollo from 'next-with-apollo';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient, { InMemoryCache } from 'apollo-boost';
+import Head from 'next/head'
 
 import "react-tippy/dist/tippy.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -73,6 +74,9 @@ function MyApp({ Component, pageProps, apollo }) {
 
   return (
     <ApolloProvider client={apollo}>
+      <Head>
+        <title>DC - UFSCar</title>
+      </Head>
       <TopBar onClick={handleHighContrastClick} />
       <Component {...pageProps} />
     </ApolloProvider>
