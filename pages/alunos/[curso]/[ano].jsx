@@ -76,7 +76,7 @@ export async function getStaticProps({ params}) {
     const data = await graphQlClient.request(GET_ALUNOS(ano,curso.toUpperCase()));
   
     // Pass data to the page via props
-    return { props: { data } }
+    return { props: { data }, revalidate: 24 * 60 * 60 }
 }
 
 export async function getStaticPaths(){
