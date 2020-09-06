@@ -123,4 +123,5 @@ Docente.propTypes = {
     })
   })
 };
+
 export default Docente;
