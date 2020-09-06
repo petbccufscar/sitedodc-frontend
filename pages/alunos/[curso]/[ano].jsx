@@ -17,7 +17,7 @@ const graphQlClient =  new GraphQLClient(`${process.env.REACT_APP_API_URL}/graph
 function Alunos ({data}){
   const router = useRouter()
 
-  if (!router.isFallback && (!data?.curso || data?.ano)) {
+  if (!router.isFallback && (!data?.curso || !data?.ano)) {
     return <NaoEncontrado />
   }
 
