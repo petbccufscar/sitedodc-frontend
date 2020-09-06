@@ -24,3 +24,12 @@ chrome-user-data
 *.swo
 package-lock.json
 .env
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# vercel
+.vercel
