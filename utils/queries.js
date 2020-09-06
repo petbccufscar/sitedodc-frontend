@@ -163,6 +163,14 @@ export const GET_NOTICIAS = gql`
   }
 `;
 
+export const GET_NOTICIAS_ID = gql`
+  query Noticias($qnt: Int!, $start: Int!) {
+    noticias(limit: $qnt, sort: "_id:desc", start: $start) {
+      _id
+    }
+  }
+`;
+
 export const GET_NOTICIA_COMPLETA = gql`
   query Noticia($id: ID!) {
     noticia(id: $id) {
