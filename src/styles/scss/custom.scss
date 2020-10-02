@@ -276,6 +276,17 @@ button.nav-link {
 	height: auto;
 }
 
+.dropdown {
+	padding: 16px;
+	margin: -16px;
+}
+
+.dropdown-menu {
+	position: relative;
+	margin-top: -16px;
+	z-index: 99;
+}
+
 .dropdown:hover > .dropdown-menu {
 	display: block;
 }
