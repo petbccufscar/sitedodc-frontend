@@ -26,7 +26,8 @@ const Projetos = (
             <Projeto id={index} 
                 titulo={projeto.titulo} 
                 coordenador={projeto.coordenador}
-                nro_alunos={projeto.nro_alunos}
+                // nro_alunos={projeto.nro_alunos}
+                alunosEnvolvidos={projeto.alunos_envolvidos}
                 desc={projeto.descricao}
                 doc={projeto.document ? projeto.documento.url : ''}
             />

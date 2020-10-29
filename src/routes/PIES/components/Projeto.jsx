@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
+const Projeto = ({ id, titulo, coordenador, alunosEnvolvidos, desc, doc }) => (
 	<React.Fragment>
 		<div className="card">
 			<div className="card-header" id={'heading-' + id}>
@@ -19,7 +19,7 @@ const Projeto = ({ id, titulo, coordenador, nro_alunos, desc, doc }) => (
 							<strong>Coordenador: </strong>
 							{coordenador} <br />
 							<strong>Nro de Alunos Exigidos: </strong>
-							{nro_alunos == null ? "": nro_alunos}
+							{alunosEnvolvidos == null ? "": alunosEnvolvidos}
 						</div>
 					</button>
 				</h5>
