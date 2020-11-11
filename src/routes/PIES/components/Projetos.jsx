@@ -29,7 +29,7 @@ const Projetos = (
                 // nro_alunos={projeto.nro_alunos}
                 alunosEnvolvidos={projeto.alunos_envolvidos}
                 desc={projeto.descricao}
-                doc={projeto.document ? projeto.documento.url : ''}
+                doc={projeto.documento ? projeto.documento.url : ''}
             />
           ));
         }}
