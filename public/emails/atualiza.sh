@@ -42,10 +42,10 @@ convert -background white -fill black -pointsize 16 label:"pcdparis@ufscar.br" p
 convert -background white -fill black -pointsize 16 label:"politano@ufscar.br" politano.png
 convert -background white -fill black -pointsize 16 label:"renato@ufscar.br" renato.png
 convert -background white -fill black -pointsize 16 label:"rferrari@ufscar.br" rferrari.png
-convert -background white -fill black -pointsize 16 label:"rrc@ufscar.br" ricardo.png
+convert -background white -fill black -pointsize 16 label:"rrc@ufscar.br" rrc.png
 convert -background white -fill black -pointsize 16 label:"rsinoue@ufscar.br" rsinoue.png
 convert -background white -fill black -pointsize 16 label:"sandra@ufscar.br" sabib.png
-convert -background white -fill black -pointsize 16 label:"scretaria.graduacao.dc@ufscar.br" secretaria.graduacao.dc.png
+convert -background white -fill black -pointsize 16 label:"secretaria.graduacao.dc@ufscar.br" secretaria.graduacao.dc.png
 convert -background white -fill black -pointsize 16 label:"ppgcc@ufscar.br" secretaria.ppgcc.png
 convert -background white -fill black -pointsize 16 label:"valtervcamargo@ufscar.br" valtervcamargo.png
 convert -background white -fill black -pointsize 16 label:"vania@dc.ufscar.br" vania.png
