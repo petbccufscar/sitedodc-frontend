@@ -122,9 +122,9 @@ class Contato extends Component {
 
               <p><b>Chefia do DC:</b></p>
               <p>
-                Profa. Dra. Vânia Paula de Almeida Neris - Chefe
+                Prof. Dr. Valter Vieira de Camargo - Chefe
                 <br />
-                Prof. Dr. Valter Vieira de Camargo - Vice-Chefe
+                Profa. Dra. Marcela Xavier Ribeiro - Vice-Chefe
                 <br />
                 <b>Email: </b> <img src={email_chefia} alt="e-mail da Vânia" />
                 <br />
