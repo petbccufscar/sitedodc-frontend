@@ -50,6 +50,6 @@ convert -background white -fill black -pointsize 16 label:"ppgcc@ufscar.br" secr
 convert -background white -fill black -pointsize 16 label:"valtervcamargo@ufscar.br" valtervcamargo.png
 convert -background white -fill black -pointsize 16 label:"vania@dc.ufscar.br" vania.png
 convert -background white -fill black -pointsize 16 label:"vera@dc.ufscar.br" vera.png
-convert -background white -fill black -pointsize 16 label:"vivaldini@dc.ufscar.br" vivaldini.png
+convert -background white -fill black -pointsize 16 label:"vivaldini@ufscar.br" vivaldini.png
 convert -background white -fill black -pointsize 16 label:"willian@ufscar.br" willian.png
 convert -background white -fill black -pointsize 16 label:"zorzo@ufscar.br" zorzo.png
