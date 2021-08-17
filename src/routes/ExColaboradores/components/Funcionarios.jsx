@@ -21,6 +21,7 @@ const Funcionarios = (
       <li>Maria da Graça do Prado Juliano</li>
       <li>Maria F. L. Dallantonia</li>
       <li>Maria José G. da Costa</li>
+      <li>Mariana Massimino Feres</li>
       <li>Noriberto Pereira</li>
       <li>Ofélia Aparecida Rodrigues de Oliveira</li>
       <li>Romildo Vitturi Rodrigues</li>

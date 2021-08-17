@@ -9,7 +9,7 @@ const DocentesSubstitutos = (
       <li>Ana Paula Appel</li>
       <li>Ana Paula do Carmo Marcheti</li>
       <li>André de Souza Tarallo</li>
-      <li>Ângelo César Colombini</li>
+      <li>Angelo César Colombini</li>
       <li>Antônio Carlos R. da Silva</li>
       <li>Antônio Diogo Hidee Ideguchi</li>
       <li>Antônio Fernando Traina</li>
@@ -33,6 +33,7 @@ const DocentesSubstitutos = (
       <li>Giampaolo Luiz Libralon</li>
       <li>Gilmar Cacao Ribeiro</li>
       <li>Guilherme Vaz Torres</li>
+      <li>Hendrik Marques Soares</li>
       <li>Isaura Nelsivânia Sombra</li>
       <li>Ivan João Foschini</li>
       <li>Jandira Guenka Palma</li>
@@ -41,6 +42,7 @@ const DocentesSubstitutos = (
       <li>José Alfredo Ferreira Costa</li>
       <li>José Roberto Caon Junior</li>
       <li>Josiel Maimoni de Figueiredo</li>
+      <li>Kamila Rios da Hora Rodrigues</li>
       <li>Laís Lemos de Olivera</li>
       <li>Leandro de Carvalho Gonçalves</li>
       <li>Lourenço Alves Pereira Junior</li>
@@ -56,6 +58,7 @@ const DocentesSubstitutos = (
       <li>Marcos Roberto Bombacini</li>
       <li>Mário Alexandre Gazziro</li>
       <li>Matheus Carvalho Viana</li>
+      <li>Maurício Acconcia Dias</li>
       <li>Maurício Falvo</li>
       <li>Mayb Iara Fiats</li>
       <li>Myrian Renata Barros Araújo</li>
@@ -65,6 +68,7 @@ const DocentesSubstitutos = (
       <li>Oswaldo Antônio Beraldo</li>
       <li>Paulo Afonso Parreira Junior</li>
       <li>Paulo Alexandre Bressan</li>
+      <li>Pedro Belin Castellucci</li>
       <li>Renê de Souza Pinto</li>
       <li>Ricardo Wagner Campos Martins</li>
       <li>Silvia Mara Abrahão</li>
@@ -72,6 +76,7 @@ const DocentesSubstitutos = (
       <li>Thiago Luís Lopes Siqueira</li>
       <li>Vinícius Fernandes Caridá</li>
       <li>Wesley Willy Oliveira de Souza</li>
+
 
     </ul>
   </React.Fragment>
